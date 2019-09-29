@@ -1,0 +1,17 @@
+ispLEVER Auto-Make Log File
+---------------------------
+
+Updating: Optimization Constraint
+Start to record tcl script...
+Finished recording TCL script.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\Synpwrap.exe -e CRAM -target mach -pro '
+
+Copyright (c) 1991-2010 Lattice Semiconductor Corporation,  All rights reserved.
+Version : 2.0.00.17.20.15
+
+Done sucessfully with exit code 1.
+Error output EDIF file z:/repos/cram/cpld_m5lv/CRAM.edi
+Error executing Synplicity VHDL/Verilog HDL Synthesizer with code 2
+
+Done: failed with exit code: 0002.
