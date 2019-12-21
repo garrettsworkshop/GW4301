@@ -14,393 +14,17 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 15450 4900 2    50   ~ 0
-~CS~
-Text Notes 15600 5000 0    50   ~ 0
-X
-Text Notes 17850 5000 0    50   ~ 0
-Unselected
-Text Notes 15600 5100 0    50   ~ 0
-1
-Text Notes 15350 5000 0    50   ~ 0
-1
-Text Notes 16750 4900 2    50   ~ 0
-R~CS~
-Text Notes 17000 4900 2    50   ~ 0
-D~OE~
-Text Notes 16650 5000 0    50   ~ 0
-1
-Text Notes 16900 5000 0    50   ~ 0
-1
-Text Notes 15350 5100 0    50   ~ 0
-0
-Text Notes 16650 5100 0    50   ~ 0
-1
-Text Notes 16900 5100 0    50   ~ 0
-1
-Text Notes 15300 6800 0    50   ~ 0
-R~CS~ = ~~((CS & ~A18~ & OE & ~RW~) | (CS & A18 & F~EN~ & OE & ~RW~) | (CS & ~A18~ & ~OE~ & RW) | (CS & A18 & F~EN~ & ~OE~ & RW))\nH~CS~ = ~~((CS & ~OE~ & RW & A18 & ~A17~))\nA~OE~ = ~~((CS & OE & ~RW~ & FEN & A18 & ~A17~))\nD~OE~ = ~~((CS & FEN & A18 & A17 & ~OE~ & RW) | (CS & FEN & A18 & A17 & OE & ~RW~))\nClk~E~ = ~~((CS & FEN & A18 & ~A17~ & OE & ~RW~) | (CS & FEN & A18 & A17 & OE & ~RW~) | (CS & FEN & A18 & A17 & ~OE~ & RW))\n~ROE~ = Ddir = RW
-Text Notes 16650 5300 0    50   ~ 0
-0
-Text Notes 16900 5300 0    50   ~ 0
-1
-Text Notes 15350 5200 0    50   ~ 0
-0
-Text Notes 15600 5200 0    50   ~ 0
-0
-Text Notes 16650 5200 0    50   ~ 0
-1
-Text Notes 16900 5200 0    50   ~ 0
-1
-Text Notes 17850 5100 0    50   ~ 0
-No cmd
-Text Notes 17850 5200 0    50   ~ 0
-Invalid cmd
-Text Notes 17850 5300 0    50   ~ 0
-Read ROM (always)
-Wire Wire Line
-	7300 1200 7300 1150
-Wire Wire Line
-	7300 900  7300 950 
-Wire Wire Line
-	7000 1200 7300 1200
 $Comp
 L Regulator_Linear:LD1117S33TR_SOT223 U3
 U 1 1 5C7854FA
-P 7000 900
-F 0 "U3" H 7000 1100 50  0000 C CNN
-F 1 "LD1117S33" H 7000 1000 50  0000 C BNN
-F 2 "stdpads:SOT-223" H 7000 1100 50  0001 C CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 7100 650 50  0001 C CNN
-	1    7000 900 
+P 7900 3800
+F 0 "U3" H 7900 4000 50  0000 C CNN
+F 1 "LD1117S33" H 7900 3900 50  0000 C BNN
+F 2 "stdpads:SOT-223" H 7900 4000 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 8000 3550 50  0001 C CNN
+	1    7900 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 16200 4900 2    50   ~ 0
-A18
-Text Notes 16450 4900 2    50   ~ 0
-A17
-Text Notes 15850 5000 0    50   ~ 0
-X
-Text Notes 15850 5100 0    50   ~ 0
-X
-Text Notes 15850 5200 0    50   ~ 0
-X
-Text Notes 15350 5300 0    50   ~ 0
-0
-Text Notes 15600 5300 0    50   ~ 0
-1
-Text Notes 15850 5300 0    50   ~ 0
-X
-Text Notes 16100 5000 0    50   ~ 0
-X
-Text Notes 16100 5100 0    50   ~ 0
-X
-Text Notes 16100 5200 0    50   ~ 0
-X
-Text Notes 16100 5300 0    50   ~ 0
-0
-Text Notes 16350 5300 0    50   ~ 0
-X
-Text Notes 16350 5200 0    50   ~ 0
-X
-Text Notes 16350 5100 0    50   ~ 0
-X
-Text Notes 16350 5000 0    50   ~ 0
-X
-Text Notes 16650 5400 0    50   ~ 0
-0
-Text Notes 16900 5400 0    50   ~ 0
-1
-Text Notes 17850 5400 0    50   ~ 0
-Write ROM (always)
-Text Notes 15350 5400 0    50   ~ 0
-0
-Text Notes 15600 5400 0    50   ~ 0
-0
-Text Notes 15850 5400 0    50   ~ 0
-X
-Text Notes 16100 5400 0    50   ~ 0
-0
-Text Notes 16350 5400 0    50   ~ 0
-X
-Text Notes 15550 4900 0    50   ~ 0
-~RW~
-Text Notes 15800 4900 0    50   ~ 0
-F~EN~
-Text Notes 16650 5500 0    50   ~ 0
-0
-Text Notes 16900 5500 0    50   ~ 0
-1
-Text Notes 17850 5500 0    50   ~ 0
-Read ROM (SPI disabled)
-Text Notes 15350 5500 0    50   ~ 0
-0
-Text Notes 15600 5500 0    50   ~ 0
-1
-Text Notes 15850 5500 0    50   ~ 0
-1
-Text Notes 16100 5500 0    50   ~ 0
-1
-Text Notes 16350 5500 0    50   ~ 0
-0
-Text Notes 16650 5600 0    50   ~ 0
-0
-Text Notes 16900 5600 0    50   ~ 0
-1
-Text Notes 17850 5600 0    50   ~ 0
-Write ROM (SPI disabled) & Overlay Control
-Text Notes 15350 5600 0    50   ~ 0
-0
-Text Notes 15600 5600 0    50   ~ 0
-0
-Text Notes 15850 5600 0    50   ~ 0
-1
-Text Notes 16100 5600 0    50   ~ 0
-1
-Text Notes 16350 5600 0    50   ~ 0
-0
-Text Notes 16650 5700 0    50   ~ 0
-0
-Text Notes 16900 5700 0    50   ~ 0
-1
-Text Notes 17850 5700 0    50   ~ 0
-Read ROM (SPI disabled)
-Text Notes 15350 5700 0    50   ~ 0
-0
-Text Notes 15600 5700 0    50   ~ 0
-1
-Text Notes 15850 5700 0    50   ~ 0
-1
-Text Notes 16100 5700 0    50   ~ 0
-1
-Text Notes 16350 5700 0    50   ~ 0
-1
-Text Notes 16650 5800 0    50   ~ 0
-0
-Text Notes 16900 5800 0    50   ~ 0
-1
-Text Notes 17850 5800 0    50   ~ 0
-Write ROM (SPI disabled)
-Text Notes 15350 5800 0    50   ~ 0
-0
-Text Notes 15600 5800 0    50   ~ 0
-0
-Text Notes 15850 5800 0    50   ~ 0
-1
-Text Notes 16100 5800 0    50   ~ 0
-1
-Text Notes 16350 5800 0    50   ~ 0
-1
-Text Notes 17250 4900 2    50   ~ 0
-H~CS~
-Text Notes 17150 5000 0    50   ~ 0
-1
-Text Notes 17150 5100 0    50   ~ 0
-1
-Text Notes 17150 5300 0    50   ~ 0
-1
-Text Notes 17150 5200 0    50   ~ 0
-1
-Text Notes 17150 5400 0    50   ~ 0
-1
-Text Notes 17150 5500 0    50   ~ 0
-1
-Text Notes 17150 5600 0    50   ~ 0
-0
-Text Notes 17150 5700 0    50   ~ 0
-1
-Text Notes 17150 5800 0    50   ~ 0
-1
-Text Notes 16900 5900 0    50   ~ 0
-1
-Text Notes 17850 5900 0    50   ~ 0
-SPI serial R/W
-Text Notes 15350 5900 0    50   ~ 0
-0
-Text Notes 15600 5900 0    50   ~ 0
-1
-Text Notes 15850 5900 0    50   ~ 0
-0
-Text Notes 16100 5900 0    50   ~ 0
-1
-Text Notes 16350 5900 0    50   ~ 0
-0
-Text Notes 16900 6000 0    50   ~ 0
-1
-Text Notes 17850 6000 0    50   ~ 0
-SPI Control/Overlay Control
-Text Notes 15350 6000 0    50   ~ 0
-0
-Text Notes 15600 6000 0    50   ~ 0
-0
-Text Notes 15850 6000 0    50   ~ 0
-0
-Text Notes 16100 6000 0    50   ~ 0
-1
-Text Notes 16350 6000 0    50   ~ 0
-0
-Text Notes 16900 6100 0    50   ~ 0
-0
-Text Notes 17850 6100 0    50   ~ 0
-SPI quad read
-Text Notes 15350 6100 0    50   ~ 0
-0
-Text Notes 15600 6100 0    50   ~ 0
-1
-Text Notes 15850 6100 0    50   ~ 0
-0
-Text Notes 16100 6100 0    50   ~ 0
-1
-Text Notes 16350 6100 0    50   ~ 0
-1
-Text Notes 16900 6200 0    50   ~ 0
-0
-Text Notes 17850 6200 0    50   ~ 0
-SPI quad write
-Text Notes 15350 6200 0    50   ~ 0
-0
-Text Notes 15600 6200 0    50   ~ 0
-0
-Text Notes 15850 6200 0    50   ~ 0
-0
-Text Notes 16100 6200 0    50   ~ 0
-1
-Text Notes 16350 6200 0    50   ~ 0
-1
-Text Notes 17150 5900 0    50   ~ 0
-1
-Text Notes 17150 6000 0    50   ~ 0
-0
-Text Notes 17150 6100 0    50   ~ 0
-1
-Text Notes 17150 6200 0    50   ~ 0
-1
-Text Notes 16650 5900 0    50   ~ 0
-1
-Text Notes 16650 6000 0    50   ~ 0
-1
-Text Notes 16650 6100 0    50   ~ 0
-1
-Text Notes 16650 6200 0    50   ~ 0
-1
-Wire Notes Line
-	17800 4900 17800 6250
-Wire Notes Line
-	15250 6250 15250 4900
-Wire Notes Line
-	16500 4900 16500 6250
-Wire Notes Line
-	16550 6250 16550 4900
-Text Notes 17500 4900 2    50   ~ 0
-A~OE~
-Text Notes 17400 5000 0    50   ~ 0
-1
-Text Notes 17400 5100 0    50   ~ 0
-1
-Text Notes 17400 5300 0    50   ~ 0
-1
-Text Notes 17400 5200 0    50   ~ 0
-1
-Text Notes 17400 5400 0    50   ~ 0
-1
-Text Notes 17400 5500 0    50   ~ 0
-1
-Text Notes 17400 5600 0    50   ~ 0
-1
-Text Notes 17400 5700 0    50   ~ 0
-1
-Text Notes 17400 6000 0    50   ~ 0
-1
-Text Notes 17400 5800 0    50   ~ 0
-1
-Text Notes 17400 6100 0    50   ~ 0
-1
-Text Notes 17400 6200 0    50   ~ 0
-1
-Text Notes 17400 5900 0    50   ~ 0
-0
-Text Notes 17750 4900 2    50   ~ 0
-Clk~E~
-Text Notes 17650 5000 0    50   ~ 0
-1
-Text Notes 17650 5100 0    50   ~ 0
-1
-Text Notes 17650 5300 0    50   ~ 0
-1
-Text Notes 17650 5200 0    50   ~ 0
-1
-Text Notes 17650 5400 0    50   ~ 0
-1
-Text Notes 17650 5500 0    50   ~ 0
-1
-Text Notes 17650 5600 0    50   ~ 0
-1
-Text Notes 17650 5700 0    50   ~ 0
-1
-Text Notes 17650 6000 0    50   ~ 0
-1
-Text Notes 17650 5800 0    50   ~ 0
-1
-Text Notes 17650 6100 0    50   ~ 0
-0
-Text Notes 17650 6200 0    50   ~ 0
-0
-Text Notes 17650 5900 0    50   ~ 0
-0
-Text Notes 16400 7400 0    50   ~ 0
-~Hsk1~ = ~~(~A7~ & A6 & ~A5~ & ~A4~ & ~A3~ & ~A2~ & ~A1~ & A0 & HCS) @ ~CS~\n~OEN~ = ~~((HCS & A7 & A6 & ~A5~ & A4 & ~A3~ & ~A2~ & A1 & ~A0~ & Hsk1 & HCS) | (HCS & A7 & OEN) | (~HCS~ & OEN)) @ ~CS~\nF~CS~ = ~~((HCS & A7 & ~A6~ & ~A5~ & ~A4~ & ~A3~ & ~A2~ & ~A1~ & OEN & A0) | (~HCS~ & FCS))@ ~CS~\nClk~S~ = Clk~E~d\nClk = Clk~E~d & Clk~S~d
-Text Notes 16150 7100 0    50   ~ 0
-0
-Text Notes 16100 7000 0    50   ~ 0
-Clk
-Text Notes 15850 7000 0    50   ~ 0
-Clk~S~
-Text Notes 15900 7100 0    50   ~ 0
-1
-Text Notes 15500 7000 0    50   ~ 0
-Clk~S~d
-Text Notes 15600 7200 0    50   ~ 0
-1
-Text Notes 15600 7100 0    50   ~ 0
-X
-Text Notes 15350 7200 0    50   ~ 0
-0
-Text Notes 15350 7100 0    50   ~ 0
-1
-Text Notes 15250 7000 0    50   ~ 0
-Clk~E~d
-Text Notes 15350 7300 0    50   ~ 0
-0
-Text Notes 15600 7300 0    50   ~ 0
-0
-Text Notes 15900 7200 0    50   ~ 0
-0
-Text Notes 16150 7200 0    50   ~ 0
-1
-Text Notes 15900 7300 0    50   ~ 0
-0
-Text Notes 16150 7300 0    50   ~ 0
-0
-Wire Notes Line
-	15250 7000 16300 7000
-Wire Notes Line
-	15250 7350 16300 7350
-Wire Notes Line
-	15250 7000 15250 7350
-Wire Notes Line
-	15500 7350 15500 7000
-Wire Notes Line
-	15750 7000 15750 7350
-Wire Notes Line
-	15800 7350 15800 7000
-Wire Notes Line
-	16050 7000 16050 7350
-Wire Notes Line
-	16300 7350 16300 7000
-Wire Notes Line
-	15250 4900 17800 4900
-Wire Notes Line
-	17800 6250 15250 6250
 Text Label 1000 7050 2    50   ~ 0
 TDI
 Text Label 3100 7050 0    50   ~ 0
@@ -549,10 +173,10 @@ F 3 "~" H 3550 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C12
+L Device:C_Small C14
 U 1 1 5DFA3B37
 P 600 3950
-F 0 "C12" H 508 3996 50  0000 R CNN
+F 0 "C14" H 508 3996 50  0000 R CNN
 F 1 "10p" H 508 3905 50  0000 R CNN
 F 2 "stdpads:C_0805" H 600 3950 50  0001 C CNN
 F 3 "~" H 600 3950 50  0001 C CNN
@@ -692,7 +316,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 5450 4400 5450
 $Comp
-L stdparts:DRAM_2Mx8 U6
+L GW_RAM:DRAM-2Mx8-SOP-28 U6
 U 1 1 5D8FA7A6
 P 7950 5450
 F 0 "U6" H 7950 6317 50  0000 C CNN
@@ -729,12 +353,12 @@ RA11
 $Comp
 L power:GND #PWR0102
 U 1 1 5D9079F0
-P 7550 6150
-F 0 "#PWR0102" H 7550 5900 50  0001 C CNN
-F 1 "GND" H 7550 6000 50  0000 C CNN
-F 2 "" H 7550 6150 50  0001 C CNN
-F 3 "" H 7550 6150 50  0001 C CNN
-	1    7550 6150
+P 7550 6050
+F 0 "#PWR0102" H 7550 5800 50  0001 C CNN
+F 1 "GND" H 7550 5900 50  0000 C CNN
+F 2 "" H 7550 6050 50  0001 C CNN
+F 3 "" H 7550 6050 50  0001 C CNN
+	1    7550 6050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -748,168 +372,168 @@ F 3 "" H 8350 4850 50  0001 C CNN
 	1    8350 4850
 	1    0    0    -1  
 $EndComp
-Text Label 8350 5950 0    50   ~ 0
-~RAS~
 Text Label 8350 5850 0    50   ~ 0
+~RAS~
+Text Label 8350 5750 0    50   ~ 0
 ~CAS~
-Text Label 8350 6050 0    50   ~ 0
+Text Label 8350 5950 0    50   ~ 0
 R~WE~
 $Comp
 L power:GND #PWR0117
 U 1 1 5D90F4BA
-P 8350 6150
-F 0 "#PWR0117" H 8350 5900 50  0001 C CNN
-F 1 "GND" H 8350 6000 50  0000 C CNN
-F 2 "" H 8350 6150 50  0001 C CNN
-F 3 "" H 8350 6150 50  0001 C CNN
-	1    8350 6150
+P 8350 6050
+F 0 "#PWR0117" H 8350 5800 50  0001 C CNN
+F 1 "GND" H 8350 5900 50  0000 C CNN
+F 2 "" H 8350 6050 50  0001 C CNN
+F 3 "" H 8350 6050 50  0001 C CNN
+	1    8350 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x22_Counter_Clockwise J1
 U 1 1 5D925932
-P 12000 2150
-F 0 "J1" H 12050 3367 50  0000 C CNN
-F 1 "C64" H 12050 3276 50  0000 C CNN
-F 2 "" H 12000 2150 50  0001 C CNN
-F 3 "~" H 12000 2150 50  0001 C CNN
-	1    12000 2150
+P 9050 2700
+F 0 "J1" H 9100 3917 50  0000 C CNN
+F 1 "C64" H 9100 3826 50  0000 C CNN
+F 2 "stdpads:AppleIIgsMemoryExpansion_Edge" H 9050 2700 50  0001 C CNN
+F 3 "~" H 9050 2700 50  0001 C CNN
+	1    9050 2700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0121
 U 1 1 5D929892
-P 11800 1150
-F 0 "#PWR0121" H 11800 900 50  0001 C CNN
-F 1 "GND" H 11800 1000 50  0000 C CNN
-F 2 "" H 11800 1150 50  0001 C CNN
-F 3 "" H 11800 1150 50  0001 C CNN
-	1    11800 1150
+P 8850 1700
+F 0 "#PWR0121" H 8850 1450 50  0001 C CNN
+F 1 "GND" H 8850 1550 50  0000 C CNN
+F 2 "" H 8850 1700 50  0001 C CNN
+F 3 "" H 8850 1700 50  0001 C CNN
+	1    8850 1700
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+5V #PWR0122
 U 1 1 5D92AD3D
-P 11700 1350
-F 0 "#PWR0122" H 11700 1200 50  0001 C CNN
-F 1 "+5V" H 11700 1500 50  0000 C CNN
-F 2 "" H 11700 1350 50  0001 C CNN
-F 3 "" H 11700 1350 50  0001 C CNN
-	1    11700 1350
+P 8750 1900
+F 0 "#PWR0122" H 8750 1750 50  0001 C CNN
+F 1 "+5V" H 8750 2050 50  0000 C CNN
+F 2 "" H 8750 1900 50  0001 C CNN
+F 3 "" H 8750 1900 50  0001 C CNN
+	1    8750 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11700 1350 11800 1350
+	8750 1900 8850 1900
 Wire Wire Line
-	11800 1350 11800 1250
-Connection ~ 11800 1350
-Text Label 11800 1450 2    50   ~ 0
+	8850 1900 8850 1800
+Connection ~ 8850 1900
+Text Label 8850 2000 2    50   ~ 0
 ~IRQ~
-Text Label 11800 1550 2    50   ~ 0
+Text Label 8850 2100 2    50   ~ 0
 R~W~
-Text Label 11800 1650 2    50   ~ 0
+Text Label 8850 2200 2    50   ~ 0
 DotClk
-Text Label 11800 1750 2    50   ~ 0
+Text Label 8850 2300 2    50   ~ 0
 ~IO1~
-Text Label 11800 1850 2    50   ~ 0
+Text Label 8850 2400 2    50   ~ 0
 ~GAME~
-Text Label 11800 1950 2    50   ~ 0
+Text Label 8850 2500 2    50   ~ 0
 ~EXROM~
-Text Label 11800 2050 2    50   ~ 0
+Text Label 8850 2600 2    50   ~ 0
 ~IO2~
-Text Label 11800 2150 2    50   ~ 0
+Text Label 8850 2700 2    50   ~ 0
 ~ROML~
-Text Label 11800 2250 2    50   ~ 0
+Text Label 8850 2800 2    50   ~ 0
 BA
-Text Label 11800 2350 2    50   ~ 0
+Text Label 8850 2900 2    50   ~ 0
 ~DMA~
-Text Label 11800 2450 2    50   ~ 0
+Text Label 8850 3000 2    50   ~ 0
 D7
-Text Label 11800 2550 2    50   ~ 0
+Text Label 8850 3100 2    50   ~ 0
 D6
-Text Label 11800 2650 2    50   ~ 0
+Text Label 8850 3200 2    50   ~ 0
 D5
-Text Label 11800 2750 2    50   ~ 0
+Text Label 8850 3300 2    50   ~ 0
 D4
-Text Label 11800 2850 2    50   ~ 0
+Text Label 8850 3400 2    50   ~ 0
 D3
-Text Label 11800 2950 2    50   ~ 0
+Text Label 8850 3500 2    50   ~ 0
 D2
-Text Label 11800 3050 2    50   ~ 0
+Text Label 8850 3600 2    50   ~ 0
 D1
-Text Label 11800 3150 2    50   ~ 0
+Text Label 8850 3700 2    50   ~ 0
 D0
 $Comp
 L power:GND #PWR0123
 U 1 1 5D93E4A2
-P 11800 3250
-F 0 "#PWR0123" H 11800 3000 50  0001 C CNN
-F 1 "GND" H 11800 3100 50  0000 C CNN
-F 2 "" H 11800 3250 50  0001 C CNN
-F 3 "" H 11800 3250 50  0001 C CNN
-	1    11800 3250
+P 8850 3800
+F 0 "#PWR0123" H 8850 3550 50  0001 C CNN
+F 1 "GND" H 8850 3650 50  0000 C CNN
+F 2 "" H 8850 3800 50  0001 C CNN
+F 3 "" H 8850 3800 50  0001 C CNN
+	1    8850 3800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0124
 U 1 1 5D93E7EE
-P 12300 3250
-F 0 "#PWR0124" H 12300 3000 50  0001 C CNN
-F 1 "GND" H 12300 3100 50  0000 C CNN
-F 2 "" H 12300 3250 50  0001 C CNN
-F 3 "" H 12300 3250 50  0001 C CNN
-	1    12300 3250
+P 9350 3800
+F 0 "#PWR0124" H 9350 3550 50  0001 C CNN
+F 1 "GND" H 9350 3650 50  0000 C CNN
+F 2 "" H 9350 3800 50  0001 C CNN
+F 3 "" H 9350 3800 50  0001 C CNN
+	1    9350 3800
 	1    0    0    -1  
 $EndComp
-Text Label 12300 3150 0    50   ~ 0
+Text Label 9350 3700 0    50   ~ 0
 ~ROMH~
-Text Label 12300 3050 0    50   ~ 0
+Text Label 9350 3600 0    50   ~ 0
 ~RESET~
-Text Label 12300 2950 0    50   ~ 0
+Text Label 9350 3500 0    50   ~ 0
 ~NMI~
-Text Label 12300 2850 0    50   ~ 0
+Text Label 9350 3400 0    50   ~ 0
 PHI2
-Text Label 12300 2750 0    50   ~ 0
+Text Label 9350 3300 0    50   ~ 0
 A15
-Text Label 12300 2650 0    50   ~ 0
+Text Label 9350 3200 0    50   ~ 0
 A14
-Text Label 12300 2550 0    50   ~ 0
+Text Label 9350 3100 0    50   ~ 0
 A13
-Text Label 12300 2450 0    50   ~ 0
+Text Label 9350 3000 0    50   ~ 0
 A12
-Text Label 12300 2350 0    50   ~ 0
+Text Label 9350 2900 0    50   ~ 0
 A11
-Text Label 12300 2250 0    50   ~ 0
+Text Label 9350 2800 0    50   ~ 0
 A10
-Text Label 12300 2150 0    50   ~ 0
+Text Label 9350 2700 0    50   ~ 0
 A9
-Text Label 12300 2050 0    50   ~ 0
+Text Label 9350 2600 0    50   ~ 0
 A8
-Text Label 12300 1950 0    50   ~ 0
+Text Label 9350 2500 0    50   ~ 0
 A7
-Text Label 12300 1850 0    50   ~ 0
+Text Label 9350 2400 0    50   ~ 0
 A6
-Text Label 12300 1750 0    50   ~ 0
+Text Label 9350 2300 0    50   ~ 0
 A5
-Text Label 12300 1650 0    50   ~ 0
+Text Label 9350 2200 0    50   ~ 0
 A4
-Text Label 12300 1550 0    50   ~ 0
+Text Label 9350 2100 0    50   ~ 0
 A3
-Text Label 12300 1450 0    50   ~ 0
+Text Label 9350 2000 0    50   ~ 0
 A2
-Text Label 12300 1350 0    50   ~ 0
+Text Label 9350 1900 0    50   ~ 0
 A1
-Text Label 12300 1250 0    50   ~ 0
+Text Label 9350 1800 0    50   ~ 0
 A0
 $Comp
 L power:GND #PWR0125
 U 1 1 5D94B9C2
-P 12300 1150
-F 0 "#PWR0125" H 12300 900 50  0001 C CNN
-F 1 "GND" H 12300 1000 50  0000 C CNN
-F 2 "" H 12300 1150 50  0001 C CNN
-F 3 "" H 12300 1150 50  0001 C CNN
-	1    12300 1150
+P 9350 1700
+F 0 "#PWR0125" H 9350 1450 50  0001 C CNN
+F 1 "GND" H 9350 1550 50  0000 C CNN
+F 2 "" H 9350 1700 50  0001 C CNN
+F 3 "" H 9350 1700 50  0001 C CNN
+	1    9350 1700
 	-1   0    0    1   
 $EndComp
 Text Label 3100 4950 0    50   ~ 0
@@ -987,31 +611,31 @@ Text Label 3100 5450 0    50   ~ 0
 Text Label 3100 3850 0    50   ~ 0
 ~ROMH~
 $Comp
-L stdparts:M5LV-PQFP100 U4
+L GW_PLD:M5LV-PQFP-100 U4
 U 1 1 5DEF5C07
 P 2050 5150
 F 0 "U4" H 2050 7800 50  0000 C CNN
 F 1 "M5LV-PQFP100" H 2050 7700 50  0000 C BNN
-F 2 "Package_QFP:PQFP-100_14x20mm_P0.65mm" H 2050 2550 50  0001 C TNN
+F 2 "stdpads:PQFP-100_14x20mm_P0.65mm" H 2050 2550 50  0001 C TNN
 F 3 "" H 2050 5150 50  0001 C CNN
 	1    2050 5150
 	1    0    0    -1  
 $EndComp
-Text Label 8350 5750 0    50   ~ 0
-RD7
-Text Label 8350 5050 0    50   ~ 0
-RD0
-Text Label 8350 5150 0    50   ~ 0
-RD1
-Text Label 8350 5250 0    50   ~ 0
-RD2
-Text Label 8350 5450 0    50   ~ 0
-RD4
-Text Label 8350 5550 0    50   ~ 0
-RD5
 Text Label 8350 5650 0    50   ~ 0
-RD6
+RD7
+Text Label 8350 4950 0    50   ~ 0
+RD0
+Text Label 8350 5050 0    50   ~ 0
+RD1
+Text Label 8350 5150 0    50   ~ 0
+RD2
 Text Label 8350 5350 0    50   ~ 0
+RD4
+Text Label 8350 5450 0    50   ~ 0
+RD5
+Text Label 8350 5550 0    50   ~ 0
+RD6
+Text Label 8350 5250 0    50   ~ 0
 RD3
 Text Label 1000 6850 2    50   ~ 0
 A3
@@ -1205,17 +829,6 @@ F 3 "~" H 4550 3700 50  0001 C CNN
 	1    4550 3700
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_Small R2
-U 1 1 5DB9EB4C
-P 4550 4000
-F 0 "R2" V 4400 4000 50  0000 C CNN
-F 1 "0" V 4500 4000 50  0000 C BNN
-F 2 "stdpads:R_0805" H 4550 4000 50  0001 C CNN
-F 3 "~" H 4550 4000 50  0001 C CNN
-	1    4550 4000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4800 3700 4700 3700
 Wire Wire Line
@@ -1362,103 +975,17 @@ $EndComp
 Wire Wire Line
 	4300 4000 4450 4000
 Connection ~ 6800 3400
-Connection ~ 7300 900 
-Connection ~ 7300 1200
-$Comp
-L power:GND #PWR0120
-U 1 1 5CC82E17
-P 8500 1200
-F 0 "#PWR0120" H 8500 950 50  0001 C CNN
-F 1 "GND" H 8500 1050 50  0000 C CNN
-F 2 "" H 8500 1200 50  0001 C CNN
-F 3 "" H 8500 1200 50  0001 C CNN
-	1    8500 1200
-	-1   0    0    -1  
-$EndComp
 $Comp
 L power:+3V3 #PWR0112
 U 1 1 5CC82E0E
-P 8500 900
-F 0 "#PWR0112" H 8500 750 50  0001 C CNN
-F 1 "+3V3" H 8500 1050 50  0000 C CNN
-F 2 "" H 8500 900 50  0001 C CNN
-F 3 "" H 8500 900 50  0001 C CNN
-	1    8500 900 
+P 8200 3800
+F 0 "#PWR0112" H 8200 3650 50  0001 C CNN
+F 1 "+3V3" H 8200 3950 50  0000 C CNN
+F 2 "" H 8200 3800 50  0001 C CNN
+F 3 "" H 8200 3800 50  0001 C CNN
+	1    8200 3800
 	1    0    0    -1  
 $EndComp
-Connection ~ 8500 1200
-Wire Wire Line
-	8500 1200 8500 1150
-Connection ~ 8500 900 
-Wire Wire Line
-	8500 900  8500 950 
-Wire Wire Line
-	7300 900  7700 900 
-Connection ~ 7700 900 
-Wire Wire Line
-	7700 950  7700 900 
-Wire Wire Line
-	7300 1200 7700 1200
-Connection ~ 7700 1200
-Wire Wire Line
-	7700 1200 7700 1150
-Wire Wire Line
-	7700 1200 8100 1200
-Wire Wire Line
-	8100 1200 8500 1200
-Connection ~ 8100 1200
-Wire Wire Line
-	8100 1200 8100 1150
-Wire Wire Line
-	7700 900  8100 900 
-Wire Wire Line
-	8100 900  8500 900 
-Connection ~ 8100 900 
-Wire Wire Line
-	8100 900  8100 950 
-$Comp
-L power:GND #PWR0136
-U 1 1 5CC73F9A
-P 6100 1200
-F 0 "#PWR0136" H 6100 950 50  0001 C CNN
-F 1 "GND" H 6100 1050 50  0000 C CNN
-F 2 "" H 6100 1200 50  0001 C CNN
-F 3 "" H 6100 1200 50  0001 C CNN
-	1    6100 1200
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6100 900  6100 950 
-Connection ~ 6100 900 
-$Comp
-L power:+5V #PWR0135
-U 1 1 5CC6DB21
-P 6100 900
-F 0 "#PWR0135" H 6100 750 50  0001 C CNN
-F 1 "+5V" H 6100 1050 50  0000 C CNN
-F 2 "" H 6100 900 50  0001 C CNN
-F 3 "" H 6100 900 50  0001 C CNN
-	1    6100 900 
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6100 900  6500 900 
-Wire Wire Line
-	6500 900  6700 900 
-Connection ~ 6500 900 
-Wire Wire Line
-	6500 900  6500 950 
-Connection ~ 7000 1200
-Wire Wire Line
-	6500 1200 7000 1200
-Wire Wire Line
-	6500 1200 6100 1200
-Connection ~ 6500 1200
-Wire Wire Line
-	6500 1200 6500 1150
-Connection ~ 6100 1200
-Wire Wire Line
-	6100 1200 6100 1150
 Connection ~ 4400 3100
 Wire Wire Line
 	5200 3100 5600 3100
@@ -1479,7 +1006,7 @@ L Device:R_Small R4
 U 1 1 5DF5642B
 P 3400 5850
 F 0 "R4" H 3341 5896 50  0000 R CNN
-F 1 "390" H 3341 5805 50  0000 R CNN
+F 1 "470" H 3341 5805 50  0000 R CNN
 F 2 "stdpads:R_0805" H 3400 5850 50  0001 C CNN
 F 3 "~" H 3400 5850 50  0001 C CNN
 	1    3400 5850
@@ -1616,12 +1143,12 @@ Size0
 $Comp
 L power:GND #PWR0119
 U 1 1 5E021D2F
-P 5200 4000
-F 0 "#PWR0119" H 5200 3750 50  0001 C CNN
-F 1 "GND" H 5200 3850 50  0000 C CNN
-F 2 "" H 5200 4000 50  0001 C CNN
-F 3 "" H 5200 4000 50  0001 C CNN
-	1    5200 4000
+P 6000 4000
+F 0 "#PWR0119" H 6000 3750 50  0001 C CNN
+F 1 "GND" H 6000 3850 50  0000 C CNN
+F 2 "" H 6000 4000 50  0001 C CNN
+F 3 "" H 6000 4000 50  0001 C CNN
+	1    6000 4000
 	-1   0    0    -1  
 $EndComp
 Connection ~ 5200 4000
@@ -1651,4 +1178,117 @@ F 3 "" H 6050 6000 50  0001 C CNN
 $EndComp
 Text Label 1000 5650 2    50   ~ 0
 ~Mode~
+$Comp
+L Device:C_Small C12
+U 1 1 5D9A3E72
+P 5600 3850
+F 0 "C12" H 5650 3900 50  0000 L CNN
+F 1 "2u2" H 5650 3800 50  0000 L CNN
+F 2 "stdpads:C_0805" H 5600 3850 50  0001 C CNN
+F 3 "~" H 5600 3850 50  0001 C CNN
+	1    5600 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 5D9A3E78
+P 6000 3850
+F 0 "C13" H 6050 3900 50  0000 L CNN
+F 1 "2u2" H 6050 3800 50  0000 L CNN
+F 2 "stdpads:C_0805" H 6000 3850 50  0001 C CNN
+F 3 "~" H 6000 3850 50  0001 C CNN
+	1    6000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3700 5600 3700
+Wire Wire Line
+	5600 3700 5600 3750
+Connection ~ 5200 3700
+Wire Wire Line
+	5600 3700 6000 3700
+Wire Wire Line
+	6000 3700 6000 3750
+Connection ~ 5600 3700
+Wire Wire Line
+	5200 4000 5600 4000
+Wire Wire Line
+	6000 4000 6000 3950
+Wire Wire Line
+	5600 3950 5600 4000
+Connection ~ 5600 4000
+Wire Wire Line
+	5600 4000 6000 4000
+Connection ~ 6000 4000
+$Comp
+L power:+5V #PWR0135
+U 1 1 5CC6DB21
+P 7600 3800
+F 0 "#PWR0135" H 7600 3650 50  0001 C CNN
+F 1 "+5V" H 7600 3950 50  0000 C CNN
+F 2 "" H 7600 3800 50  0001 C CNN
+F 3 "" H 7600 3800 50  0001 C CNN
+	1    7600 3800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 5CC73F9A
+P 7900 4100
+F 0 "#PWR0136" H 7900 3850 50  0001 C CNN
+F 1 "GND" H 7900 3950 50  0000 C CNN
+F 2 "" H 7900 4100 50  0001 C CNN
+F 3 "" H 7900 4100 50  0001 C CNN
+	1    7900 4100
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1000 3650
+NoConn ~ 1000 4050
+NoConn ~ 3100 6750
+NoConn ~ 1000 4950
+NoConn ~ 1000 5250
+NoConn ~ 1000 5350
+NoConn ~ 1000 5750
+NoConn ~ 1000 6350
+NoConn ~ 1000 6150
+Text Label 8350 6050 0    50   ~ 0
+R~OE~
+$Comp
+L Device:R_Small R2
+U 1 1 5DB9EB4C
+P 4550 4000
+F 0 "R2" V 4400 4000 50  0000 C CNN
+F 1 "0" V 4500 4000 50  0000 C BNN
+F 2 "stdpads:R_0805" H 4550 4000 50  0001 C CNN
+F 3 "~" H 4550 4000 50  0001 C CNN
+	1    4550 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5DDF797C
+P 6200 3700
+F 0 "C15" V 6050 3700 50  0000 C BNN
+F 1 "2u2" V 6100 3700 50  0000 C CNN
+F 2 "stdpads:C_0805" H 6200 3700 50  0001 C CNN
+F 3 "~" H 6200 3700 50  0001 C CNN
+	1    6200 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0120
+U 1 1 5DDF81F9
+P 6400 3700
+F 0 "#PWR0120" H 6400 3550 50  0001 C CNN
+F 1 "+3V3" H 6400 3850 50  0000 C CNN
+F 2 "" H 6400 3700 50  0001 C CNN
+F 3 "" H 6400 3700 50  0001 C CNN
+	1    6400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3700 6300 3700
+Wire Wire Line
+	6100 3700 6000 3700
+Connection ~ 6000 3700
 $EndSCHEMATC
