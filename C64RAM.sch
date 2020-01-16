@@ -34,37 +34,6 @@ TCK
 Text Label 3100 7150 0    50   ~ 0
 TDO
 $Comp
-L power:GND #PWR0128
-U 1 1 5C3D75F6
-P 4350 6650
-F 0 "#PWR0128" H 4350 6400 50  0001 C CNN
-F 1 "GND" H 4350 6500 50  0000 C CNN
-F 2 "" H 4350 6650 50  0001 C CNN
-F 3 "" H 4350 6650 50  0001 C CNN
-	1    4350 6650
-	-1   0    0    -1  
-$EndComp
-Text Label 4850 6250 0    50   ~ 0
-TDI
-Text Label 4850 6150 0    50   ~ 0
-TDO
-Text Label 4850 6050 0    50   ~ 0
-TMS
-Text Label 4850 5950 0    50   ~ 0
-TCK
-$Comp
-L Connector:AVR-JTAG-10 J4
-U 1 1 5C3D7607
-P 4350 6050
-F 0 "J4" H 3970 6096 50  0000 R CNN
-F 1 "JTAG" H 3970 6005 50  0000 R CNN
-F 2 "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical" V 4200 6200 50  0001 C CNN
-F 3 " ~" H 3075 5500 50  0001 C CNN
-	1    4350 6050
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4850 5850
-$Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5CC54EF4
 P 3550 7600
@@ -289,32 +258,6 @@ Wire Wire Line
 Wire Wire Line
 	600  3850 1000 3850
 Connection ~ 600  3850
-$Comp
-L power:+5V #PWR0129
-U 1 1 5C3D75FC
-P 4400 5450
-F 0 "#PWR0129" H 4400 5300 50  0001 C CNN
-F 1 "+5V" H 4400 5600 50  0000 C CNN
-F 2 "" H 4400 5450 50  0001 C CNN
-F 3 "" H 4400 5450 50  0001 C CNN
-	1    4400 5450
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0131
-U 1 1 5DCE26A4
-P 4200 5450
-F 0 "#PWR0131" H 4200 5300 50  0001 C CNN
-F 1 "+3V3" H 4200 5600 50  0000 C CNN
-F 2 "" H 4200 5450 50  0001 C CNN
-F 3 "" H 4200 5450 50  0001 C CNN
-	1    4200 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4200 5450 4250 5450
-Wire Wire Line
-	4350 5450 4400 5450
 $Comp
 L GW_RAM:DRAM-2Mx8-SOP-28 U6
 U 1 1 5D8FA7A6
@@ -1152,7 +1095,6 @@ F 3 "" H 6000 4000 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Connection ~ 5200 4000
-NoConn ~ 4850 5750
 $Comp
 L Device:R_Small R7
 U 1 1 5E0292A9
@@ -1291,4 +1233,55 @@ Wire Wire Line
 Wire Wire Line
 	6100 3700 6000 3700
 Connection ~ 6000 3700
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J4
+U 1 1 5E20123D
+P 5450 6600
+F 0 "J4" H 5500 6900 50  0000 C CNN
+F 1 "JTAG" H 5500 6300 50  0000 C CNN
+F 2 "" H 5450 6600 50  0001 C CNN
+F 3 "~" H 5450 6600 50  0001 C CNN
+	1    5450 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E201B49
+P 5850 6400
+F 0 "#PWR?" H 5850 6150 50  0001 C CNN
+F 1 "GND" H 5850 6250 50  0000 C CNN
+F 2 "" H 5850 6400 50  0001 C CNN
+F 3 "" H 5850 6400 50  0001 C CNN
+	1    5850 6400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6400 5750 6400
+Wire Wire Line
+	5750 6400 5750 6500
+Connection ~ 5750 6400
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E2050E2
+P 6050 6600
+F 0 "#PWR?" H 6050 6450 50  0001 C CNN
+F 1 "+3V3" H 6050 6750 50  0000 C CNN
+F 2 "" H 6050 6600 50  0001 C CNN
+F 3 "" H 6050 6600 50  0001 C CNN
+	1    6050 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 6600 5750 6600
+Text Label 5250 6400 2    50   ~ 0
+TCK
+Text Label 5250 6500 2    50   ~ 0
+TMS
+Text Label 5250 6600 2    50   ~ 0
+TDI
+Text Label 5250 6700 2    50   ~ 0
+TDO
+NoConn ~ 5750 6700
+NoConn ~ 5750 6800
+NoConn ~ 5250 6800
 $EndSCHEMATC
