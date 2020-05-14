@@ -1,0 +1,35 @@
+### Module positions - created on Thursday, May 14, 2020 at 06:26:41 PM ###
+### Printed by Pcbnew version kicad (5.1.5-0-10_14)
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val           Package                                            PosX       PosY       Rot  Side
+C1        2u2           C_0805                                         107.1000   -80.6450  180.0000  top
+C2        2u2           C_0805                                         110.8000   -74.3310  180.0000  top
+C4        2u2           C_0805                                         157.7730   -80.7720    0.0000  top
+C5        2u2           C_0805                                         108.5000   -60.6500  180.0000  top
+C6        2u2           C_0805                                         129.0500   -59.1500  180.0000  top
+C7        2u2           C_0805                                         143.4000   -69.9000  270.0000  top
+C8        2u2           C_0805                                         129.5750   -80.9500    0.0000  top
+C9        2u2           C_0805                                         115.8000   -69.3625  270.0000  top
+C10       2u2           C_0805                                         150.2020   -50.8000    0.0000  top
+C11       2u2           C_0805                                         150.2020   -72.3900    0.0000  top
+C12       2u2           C_0805                                         138.0500   -53.3500  270.0000  top
+C13       2u2           C_0805                                         140.5500   -53.3500  270.0000  top
+C14       10p           C_0805                                         122.5000   -56.0500    0.0000  top
+FID1      Fiducial      Fiducial                                       104.9020   -49.6570    0.0000  top
+FID2      Fiducial      Fiducial                                       159.2580   -49.6570    0.0000  top
+FID3      Fiducial      Fiducial                                       158.7500   -85.4710    0.0000  top
+FID4      Fiducial      Fiducial                                       105.4100   -85.4710    0.0000  top
+JP1       Mode          PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left   107.9500   -55.8800    0.0000  top
+JP2       Size          PinHeader_2x02_P2.54mm_Vertical_SMD            153.0350   -76.5810    0.0000  top
+R1        0             R_0805                                         122.5000   -50.1500  180.0000  top
+R2        0             R_0805                                         122.5000   -52.6500  180.0000  top
+R3        1k            R_0805                                         122.5000   -58.0500    0.0000  top
+R4        470           R_0805                                         118.1100   -81.5950  270.0000  top
+R5        22k           R_0805                                         154.7470   -72.3900    0.0000  top
+R6        22k           R_0805                                         152.8420   -80.7720  180.0000  top
+R7        22k           R_0805                                         109.6620   -51.8160  180.0000  top
+U3        LD1117S33     SOT-223                                        109.3500   -67.3000   90.0000  top
+U4        M5LV-PQFP100  PQFP-100_14x20mm_P0.65mm                       129.5750   -69.9750  270.0000  top
+U6        DRAM_2Mx8     SOJ-28-300mil                                  153.0350   -61.5950    0.0000  top
+## End

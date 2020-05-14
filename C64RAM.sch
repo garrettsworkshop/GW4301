@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:C64RAM-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -746,10 +745,6 @@ Connection ~ 6000 3100
 Wire Wire Line
 	5600 3400 6000 3400
 Connection ~ 6000 3400
-Wire Wire Line
-	4800 3100 4700 3100
-Wire Wire Line
-	4400 3100 4500 3100
 $Comp
 L power:+5V #PWR0108
 U 1 1 5DB9CE07
@@ -781,17 +776,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 3700 4650 3700
 Connection ~ 4700 3700
-$Comp
-L Device:C_Small C3
-U 1 1 5DB57F1C
-P 4600 3100
-F 0 "C3" V 4450 3100 50  0000 C BNN
-F 1 "2u2" V 4500 3100 50  0000 C CNN
-F 2 "stdpads:C_0805" H 4600 3100 50  0001 C CNN
-F 3 "~" H 4600 3100 50  0001 C CNN
-	1    4600 3100
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 5DC81FC4
@@ -929,7 +913,6 @@ F 3 "" H 8200 3800 50  0001 C CNN
 	1    8200 3800
 	1    0    0    -1  
 $EndComp
-Connection ~ 4400 3100
 Wire Wire Line
 	5200 3100 5600 3100
 Connection ~ 5200 3100
@@ -1206,33 +1189,6 @@ F 3 "~" H 4550 4000 50  0001 C CNN
 	1    4550 4000
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:C_Small C15
-U 1 1 5DDF797C
-P 6200 3700
-F 0 "C15" V 6050 3700 50  0000 C BNN
-F 1 "2u2" V 6100 3700 50  0000 C CNN
-F 2 "stdpads:C_0805" H 6200 3700 50  0001 C CNN
-F 3 "~" H 6200 3700 50  0001 C CNN
-	1    6200 3700
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR0120
-U 1 1 5DDF81F9
-P 6400 3700
-F 0 "#PWR0120" H 6400 3550 50  0001 C CNN
-F 1 "+3V3" H 6400 3850 50  0000 C CNN
-F 2 "" H 6400 3700 50  0001 C CNN
-F 3 "" H 6400 3700 50  0001 C CNN
-	1    6400 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 3700 6300 3700
-Wire Wire Line
-	6100 3700 6000 3700
-Connection ~ 6000 3700
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J4
 U 1 1 5E20123D
