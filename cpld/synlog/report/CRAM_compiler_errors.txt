@@ -1,0 +1,2 @@
+@E: CG478 :"C:\users\zane\documents\github\cram\cpld\cram.v":97:7:97:11|Expression size is either 0 or could not be determined.
+

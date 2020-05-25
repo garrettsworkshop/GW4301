@@ -1,0 +1,277 @@
+
+[DEVICE]
+Family = M5LV;
+PartType = M5LV-256/68;
+Package = 100PQFP;
+PartNumber = M5LV-256/68-7YC;
+Speed = -7;
+Operating_condition = COM;
+EN_Segment = Yes;
+Pin_MC_1to1 = Yes;
+EN_PinReserve_IO = No;
+EN_PinReserve_BIDIR = No;
+Voltage = 3.0;
+
+[REVISION]
+RCS = $Revision: 1.1 $;
+Parent = m5l200.lci;
+SDS_File = m5lv.sds;
+DATE = 2002;
+TIME = 0:00:00;
+Source_Format = Pure_Verilog_HDL;
+Type = TT2;
+Pre_Fit_Time = 1;
+
+[IGNORE ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+
+[CLEAR ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+
+[BACKANNOTATE ASSIGNMENTS]
+Pin_Block = No;
+Pin_Macrocell_Block = No;
+Routing = No;
+
+[GLOBAL PROJECT OPTIMIZATION]
+Balanced_Partitioning = No;
+Spread_Placement = No;
+Max_Pin_Percent = 100;
+Max_Macrocell_Percent = 100;
+Max_Blk_In_Percent = 95;
+
+[OPTIMIZATION OPTIONS]
+Logic_Reduction = Yes;
+Max_PTerm_Split = 16;
+Max_PTerm_Collapse = 16;
+XOR_Synthesis = Yes;
+EN_XOR_Synthesis = Yes;
+XOR_Gate = Yes;
+Node_Collapse = Yes;
+Keep_XOR = Yes;
+DT_Synthesis = Yes;
+Clock_PTerm = Min;
+Reset_PTerm = On;
+Preset_PTerm = On;
+Clock_Enable_PTerm = On;
+Output_Enable_PTerm = On;
+EN_DT_Synthesis = Yes;
+Cluster_PTerm = 4;
+FF_inv = No;
+EN_Use_CE = Yes;
+Use_CE = Yes;
+Use_Internal_COM_FB = No;
+EN_use_Internal_COM_FB = Yes;
+Set_Reset_Swap = No;
+EN_Set_Reset_Swap = No;
+Density = No;
+DeMorgan = Yes;
+T_FF = Yes;
+Max_Symbols = 20;
+
+[FITTER GLOBAL OPTIONS]
+Run_Time = 0;
+Set_Reset_Dont_Care = No;
+EN_Set_Reset_Dont_Care = No;
+In_Reg_Optimize = Yes;
+EN_In_Reg_Optimize = No;
+Clock_Optimize = No;
+Global_Clock_As_Pterm = No;
+Show_Iterations = No;
+Routing_Attempts = 2;
+Conf_Unused_IOs = Out_Low;
+
+[HARDWARE DEVICE OPTIONS]
+Zero_Hold_Time = No;
+Signature_Word = 0;
+Out_Slew_Rate = FAST, SLOW, 0;
+Device_max_fanin = 32;
+Device_max_pterms = 32;
+Usercode_Format = ASCII;
+
+[PIN RESERVATIONS]
+layer = OFF;
+
+[LOCATION ASSIGNMENT]
+layer = OFF;
+inst_PHI2reg = NODE, 4, A, 0;
+A_5_ = INPUT, 93, A, 0;
+A_6_ = INPUT, 94, A, 0;
+PHI2 = INPUT, 95, A, 0;
+nRWE = OUTPUT, 96, A, 0;
+A_3_ = INPUT, 97, A, 0;
+A_4_ = INPUT, 98, A, 0;
+A_0_ = INPUT, 99, A, 0;
+nDMA = OUTPUT, 100, A, 0;
+nCAS = OUTPUT, 4, A, 0;
+D_2_ = OUTPUT, 12, B, 0;
+D_1_ = OUTPUT, 11, B, 0;
+RD_3_ = OUTPUT, 10, B, 0;
+RD_0_ = OUTPUT, 9, B, 0;
+RD_1_ = OUTPUT, 8, B, 0;
+D_4_ = OUTPUT, 7, B, 0;
+D_3_ = OUTPUT, 6, B, 0;
+RD_2_ = OUTPUT, 5, B, 0;
+RA_11_ = OUTPUT, 38, A, 1;
+RD_7_ = OUTPUT, 37, A, 1;
+RD_4_ = OUTPUT, 33, A, 1;
+RD_5_ = OUTPUT, 32, A, 1;
+RD_6_ = OUTPUT, 31, A, 1;
+DelayOut = OUTPUT, 27, A, 1;
+S_2_ = NODE, 0, B, 1;
+Ref_0_ = NODE, 1, B, 1;
+inst_CASf = NODE, 2, B, 1;
+inst_nPHI2seen = NODE, 5, B, 1;
+Ref_1_ = NODE, 6, B, 1;
+S_3_ = NODE, 7, B, 1;
+Ref_2_ = NODE, 8, B, 1;
+Ref_3_ = NODE, 9, B, 1;
+inst_CASr = NODE, 10, B, 1;
+S_0_ = NODE, 14, B, 1;
+S_1_ = NODE, 15, B, 1;
+nIO1 = INPUT, 19, B, 1;
+D_0_ = OUTPUT, 20, B, 1;
+nRAS = OUTPUT, 21, B, 1;
+D_7_ = OUTPUT, 24, B, 1;
+D_6_ = OUTPUT, 25, B, 1;
+D_5_ = OUTPUT, 26, B, 1;
+nIRQ = OUTPUT, 59, B, 2;
+Window_2_ = NODE, 1, A, 3;
+Window_1_ = NODE, 9, A, 3;
+Block_2_ = NODE, 12, A, 3;
+Block_1_ = NODE, 14, A, 3;
+RA_0_ = OUTPUT, 88, A, 3;
+A_2_ = INPUT, 87, A, 3;
+A_7_ = INPUT, 86, A, 3;
+A_1_ = INPUT, 85, A, 3;
+RA_6_ = OUTPUT, 84, A, 3;
+RA_5_ = OUTPUT, 83, A, 3;
+RA_4_ = OUTPUT, 82, A, 3;
+RA_3_ = OUTPUT, 81, A, 3;
+nWE = INPUT, 77, A, 3;
+RA_8_ = OUTPUT, 69, B, 3;
+RA_7_ = OUTPUT, 70, B, 3;
+nRES = INPUT, 71, B, 3;
+RA_2_ = OUTPUT, 72, B, 3;
+RA_1_ = OUTPUT, 73, B, 3;
+RA_10_ = OUTPUT, 74, B, 3;
+nIO2 = INPUT, 75, B, 3;
+RA_9_ = OUTPUT, 76, B, 3;
+Window_3_ = NODE, 0, C, 3;
+Block_3_ = NODE, 3, C, 3;
+Window_0_ = NODE, 5, C, 3;
+Block_4_ = NODE, 8, C, 3;
+Block_0_ = NODE, 11, C, 3;
+Window_4_ = NODE, 13, C, 3;
+Block_6_ = NODE, 2, D, 3;
+Block_7_ = NODE, 3, D, 3;
+inst_RAsel = NODE, 7, D, 3;
+Window_5_ = NODE, 10, D, 3;
+Block_5_ = NODE, 11, D, 3;
+DotClk = INPUT, 13, -, -;
+
+[GROUP ASSIGNMENT]
+layer = OFF;
+
+[SPACE RESERVATIONS]
+layer = OFF;
+
+[BACKANNOTATE NETLIST]
+Delay_File = SDF;
+Netlist = VERILOG;
+VCC_GND = Cell;
+
+[FITTER REPORT FORMAT]
+Fitter_Options = Yes;
+Pinout_Diagram = No;
+Pinout_Listing = Yes;
+Detailed_Block_Segment_Summary = Yes;
+Input_Signal_List = Yes;
+Output_Signal_List = Yes;
+Bidir_Signal_List = Yes;
+Node_Signal_List = Yes;
+Signal_Fanout_List = Yes;
+Block_Segment_Fanin_List = Yes;
+Postfit_Eqn = Yes;
+Page_Break = Yes;
+
+[POWER]
+Powerlevel = Low, MedLow, MedHigh, High;
+Default = High;
+Type = GLB;
+
+[SOURCE CONSTRAINT OPTION]
+Import_source_constraint = Yes;
+Disable_warning_message = No;
+
+[TIMING ANALYZER]
+Last_source = ;
+Last_source_type = Fmax;
+
+[INPUT REGISTERS]
+
+[GLOBAL CONSTRAINTS]
+
+[LOCATION ASSIGNMENTS]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[GROUP ASSIGNMENTS]
+
+[RESOURCE RESERVATIONS]
+
+[RESOURCE RESERVATIONS LIST]
+
+[Pin attributes list]
+
+[NETLIST/DELAY FORMAT]
+
+[SLEWRATE]
+
+[Pullup]
+
+[global constraints list]
+
+[opt global constraints list]
+
+[Global Constraints Process Update]
+
+[Explorer Results]
+
+[Explorer User Settings]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]

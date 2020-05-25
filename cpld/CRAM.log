@@ -1,0 +1,16 @@
+Starting EDIF2BLIF....
+readEDIF ended normally.
+
+EDIF2BLIF: Warning: Remove floating instance: :
+	A[8]
+
+Inspect circuit CRAM
+    Number of input ports   : 14
+    Number of output ports  : 7
+    Number of bidir ports   : 2
+    Number of instances     : 345
+    Number of nets          : 383
+
+No design errors found in circuit CRAM
+
+WriteBLIF ended normally.

@@ -1,0 +1,121 @@
+
+[Device]
+Family = M5LV;
+PartNumber = M5LV-256/68-7YC;
+Package = 100PQFP;
+PartType = M5LV-256/68;
+Speed = -7;
+Operating_condition = COM;
+Status = Production;
+EN_PinGLB = Yes;
+EN_PinMacrocell = Yes;
+
+[Revision]
+Parent = m5l200.lci;
+DATE = 05/24/2020;
+TIME = 21:22:34;
+Source_Format = Pure_Verilog_HDL;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+NetList = VERILOG;
+
+[IO Types]
+layer = OFF;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;

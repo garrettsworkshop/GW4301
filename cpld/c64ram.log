@@ -1,0 +1,58 @@
+|------------------------------------------------------------------------------|
+ispLEVER Classic 2.0.00.17.20.15 Fitter Report File
+Copyright(C),1992-2015, Lattice Semiconductor Corporation. All Rights Reserved.
+|------------------------------------------------------------------------------|
+
+
+
+*** Source file is c64ram.tt4 . Device is M5LV-256/68-7YC .
+
+<Note>  z35109:  For this device, all input pairing is ignored since input
+                 registers or latches do not exist. All signals must pass
+                 through the central switch matrix before being latched or
+                 registered.
+<Note>  z40016:  0 pins have been reserved out of 72 .
+<Note>  z40021:  72 pins are available after reservation, 48 are required
+                 by the design.
+<Note>  z35065:  For outputs, implicit output enables will be set to VCC.
+<Warning>  z35064:  Output signal nIRQ has output enable set to GND.
+<Warning>  z35064:  Output signal nDMA has output enable set to GND.
+
+*** End of Pla2db. 
+Check preplaced pins/nodes
+Check preplaced blocks
+Check unreferenced pins/nodes
+Check clock rules
+
+List of global clocks:
+   DotClk:
+
+List of non-global clocks:
+   None.
+
+*** End of Normalization.
+
+*** End of DRC. 
+
+MACH5 DRC: ERROR count 0 WARNING count 2.
+
+Device Resource Checking(DRC) Completed.
+
+Reading equations.......
+<Note>  F45305  Generation of NODEs for equation minimization is on.
+
+................
+<Warning>  F45053  Symbol 'RA_11_' has a constant equation.
+<Warning>  F45053  Symbol 'nIRQ' has a constant equation.
+<Warning>  F45053  Symbol 'nDMA' has a constant equation.
+<Warning>  F45053  Symbol 'DelayOut' has a constant equation.
+<Note>  CHECK 'c64ram.log' FOR WARNINGS.
+
+Scanning.......
+
+Fitting.......
+
+Generating Jedec map.......
+<Note>  JEDEC map ...
+
+// Fitting was successful.

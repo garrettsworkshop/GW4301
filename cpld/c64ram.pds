@@ -1,0 +1,422 @@
+TITLE    FILE unspecified
+PATTERN  unspecified
+AUTHOR   unspecified
+REVISION Created from PLA file 
+COMPANY  unspecified
+DATE     Sun May 24 21:22:18 2020
+
+CHIP     unspecified mach256100
+PIN    ?           D_7_ 
+PIN    ?         RA_11_ 
+PIN    ?          RD_7_ 
+PIN    ?           PHI2 
+PIN    ?         DotClk 
+PIN    ?           nRES 
+PIN    ?            nWE 
+PIN    ?           nIO1 
+PIN    ?           nIO2 
+PIN    ?           A_7_ 
+PIN    ?           A_6_ 
+PIN    ?           nIRQ 
+PIN    ?           A_5_ 
+PIN    ?           A_4_ 
+PIN    ?           nDMA 
+PIN    ?           A_3_ 
+PIN    ?           nRAS  REG ;
+PIN    ?           A_2_ 
+PIN    ?           nCAS 
+PIN    ?           A_1_ 
+PIN    ?           nRWE 
+PIN    ?           A_0_ 
+PIN    ?       DelayOut 
+PIN    ?           D_6_ 
+PIN    ?           D_5_ 
+PIN    ?           D_4_ 
+PIN    ?           D_3_ 
+PIN    ?           D_2_ 
+PIN    ?           D_1_ 
+PIN    ?           D_0_ 
+PIN    ?         RA_10_ 
+PIN    ?          RA_9_ 
+PIN    ?          RA_8_ 
+PIN    ?          RA_7_ 
+PIN    ?          RA_6_ 
+PIN    ?          RA_5_ 
+PIN    ?          RA_4_ 
+PIN    ?          RA_3_ 
+PIN    ?          RA_2_ 
+PIN    ?          RA_1_ 
+PIN    ?          RA_0_ 
+PIN    ?          RD_6_ 
+PIN    ?          RD_5_ 
+PIN    ?          RD_4_ 
+PIN    ?          RD_3_ 
+PIN    ?          RD_2_ 
+PIN    ?          RD_1_ 
+PIN    ?          RD_0_ 
+NODE   ?           Ref_0_ 
+NODE   ?             S_0_  REG ;
+NODE   ?             S_1_  REG ;
+NODE   ?             S_2_  REG ;
+NODE   ?             S_3_  REG ;
+NODE   ?           Ref_1_ 
+NODE   ?           Ref_2_ 
+NODE   ?           Ref_3_ 
+NODE   ?     inst_PHI2reg  REG ;
+NODE   ?        inst_CASr  REG ;
+NODE   ?   inst_nPHI2seen  REG ;
+NODE   ?        Window_2_  REG ;
+NODE   ?        Window_3_  REG ;
+NODE   ?        Window_4_  REG ;
+NODE   ?        Window_5_  REG ;
+NODE   ?         Block_0_  REG ;
+NODE   ?         Block_1_  REG ;
+NODE   ?         Block_2_  REG ;
+NODE   ?         Block_3_  REG ;
+NODE   ?         Block_4_  REG ;
+NODE   ?         Block_5_  REG ;
+NODE   ?         Block_6_  REG ;
+NODE   ?        Window_0_  REG ;
+NODE   ?        Window_1_  REG ;
+NODE   ?         Block_7_  REG ;
+NODE   ?       inst_RAsel  REG ;
+NODE   ?        inst_CASf  REG ;
+NODE   ?          RN_D_7_ PAIR D_7_
+NODE   ?         RN_RD_7_ PAIR RD_7_
+NODE   ?          RN_D_6_ PAIR D_6_
+NODE   ?          RN_D_5_ PAIR D_5_
+NODE   ?          RN_D_4_ PAIR D_4_
+NODE   ?          RN_D_3_ PAIR D_3_
+NODE   ?          RN_D_2_ PAIR D_2_
+NODE   ?          RN_D_1_ PAIR D_1_
+NODE   ?          RN_D_0_ PAIR D_0_
+NODE   ?         RN_RD_6_ PAIR RD_6_
+NODE   ?         RN_RD_5_ PAIR RD_5_
+NODE   ?         RN_RD_4_ PAIR RD_4_
+NODE   ?         RN_RD_3_ PAIR RD_3_
+NODE   ?         RN_RD_2_ PAIR RD_2_
+NODE   ?         RN_RD_1_ PAIR RD_1_
+NODE   ?         RN_RD_0_ PAIR RD_0_
+
+EQUATIONS
+
+D_7_           = RD_7_
+
+D_7_.TRST      = nWE * /nIO1
+
+RA_11_         = GND
+
+RD_7_          = D_7_
+
+RD_7_.TRST     = /nWE * /nIO1
+
+nIRQ           = GND
+
+nIRQ.TRST      = GND
+nDMA           = GND
+
+nDMA.TRST      = GND
+/nRAS         := /nWE * /nIO1 * /S_0_ * S_1_ * S_2_ * /S_3_
+               + nWE * /nIO1 * /S_1_ * S_2_ * /S_3_
+               + /nIO1 * S_0_ * /S_1_ * S_2_ * /S_3_
+               + /Ref_0_ * S_0_ * /S_1_ * /S_2_ * /S_3_ * /Ref_1_ * 
+             /Ref_2_ * /Ref_3_
+
+nRAS.CLKF      = DotClk
+
+nCAS           = /PHI2 * /inst_CASf
+               + /inst_CASr * /inst_CASf
+
+/nRWE          = PHI2 * /nWE
+
+DelayOut       = GND
+
+D_6_           = RD_6_
+
+D_6_.TRST      = nWE * /nIO1
+
+D_5_           = RD_5_
+
+D_5_.TRST      = nWE * /nIO1
+
+D_4_           = RD_4_
+
+D_4_.TRST      = nWE * /nIO1
+
+D_3_           = RD_3_
+
+D_3_.TRST      = nWE * /nIO1
+
+D_2_           = RD_2_
+
+D_2_.TRST      = nWE * /nIO1
+
+D_1_           = RD_1_
+
+D_1_.TRST      = nWE * /nIO1
+
+D_0_           = RD_0_
+
+D_0_.TRST      = nWE * /nIO1
+
+RA_10_         = Block_7_ * inst_RAsel
+               + Block_6_ * /inst_RAsel
+
+RA_9_          = Window_1_ * inst_RAsel
+               + Block_5_ * /inst_RAsel
+
+RA_8_          = Window_0_ * inst_RAsel
+               + Block_4_ * /inst_RAsel
+
+RA_7_          = A_7_ * inst_RAsel
+               + Block_3_ * /inst_RAsel
+
+RA_6_          = A_6_ * inst_RAsel
+               + Block_2_ * /inst_RAsel
+
+RA_5_          = A_5_ * inst_RAsel
+               + Block_1_ * /inst_RAsel
+
+RA_4_          = A_4_ * inst_RAsel
+               + Block_0_ * /inst_RAsel
+
+RA_3_          = A_3_ * inst_RAsel
+               + Window_5_ * /inst_RAsel
+
+RA_2_          = A_2_ * inst_RAsel
+               + Window_4_ * /inst_RAsel
+
+RA_1_          = A_1_ * inst_RAsel
+               + Window_3_ * /inst_RAsel
+
+RA_0_          = A_0_ * inst_RAsel
+               + Window_2_ * /inst_RAsel
+
+RD_6_          = D_6_
+
+RD_6_.TRST     = /nWE * /nIO1
+
+RD_5_          = D_5_
+
+RD_5_.TRST     = /nWE * /nIO1
+
+RD_4_          = D_4_
+
+RD_4_.TRST     = /nWE * /nIO1
+
+RD_3_          = D_3_
+
+RD_3_.TRST     = /nWE * /nIO1
+
+RD_2_          = D_2_
+
+RD_2_.TRST     = /nWE * /nIO1
+
+RD_1_          = D_1_
+
+RD_1_.TRST     = /nWE * /nIO1
+
+RD_0_          = D_0_
+
+RD_0_.TRST     = /nWE * /nIO1
+
+Ref_0_         = /S_0_ * S_1_ * /S_2_ * /S_3_
+
+S_0_          := /S_0_ * S_1_
+               + /S_0_ * S_2_
+               + /S_0_ * S_3_
+               + S_1_ * S_2_ * S_3_
+               + /PHI2 * inst_PHI2reg * inst_nPHI2seen
+
+S_0_.CLKF      = DotClk
+
+/S_1_         := /PHI2 * inst_PHI2reg * inst_nPHI2seen
+               + /S_0_ * /S_1_
+               + S_0_ * S_1_ * /S_2_
+               + S_0_ * S_1_ * /S_3_
+
+S_1_.CLKF      = DotClk
+
+/S_2_         := /PHI2 * inst_PHI2reg * inst_nPHI2seen
+               + /S_0_ * /S_2_
+               + /S_1_ * /S_2_
+               + S_0_ * S_1_ * S_2_ * /S_3_
+
+S_2_.CLKF      = DotClk
+
+/S_3_         := /PHI2 * inst_PHI2reg * inst_nPHI2seen
+               + /S_0_ * /S_3_
+               + /S_1_ * /S_3_
+               + /S_2_ * /S_3_
+
+S_3_.CLKF      = DotClk
+
+Ref_1_         = /S_0_ * S_1_ * /S_2_ * /S_3_
+
+Ref_2_         = /S_0_ * S_1_ * /S_2_ * /S_3_
+
+Ref_3_         = /S_0_ * S_1_ * /S_2_ * /S_3_
+
+inst_PHI2reg := PHI2
+
+inst_PHI2reg.CLKF  = DotClk
+
+inst_CASr     := nWE * /nIO1 * S_0_ * S_2_ * /S_3_
+               + /nIO1 * /S_0_ * S_1_ * S_2_ * /S_3_
+
+inst_CASr.CLKF  = DotClk
+
+/inst_nPHI2seen := PHI2 * /inst_nPHI2seen
+
+inst_nPHI2seen.CLKF  = DotClk
+
+Window_2_.T    = /nRES * Window_2_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Window_2_ * D_2_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Window_2_ * /D_2_
+
+Window_2_.CLKF  = DotClk
+
+Window_3_.T    = /nRES * Window_3_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Window_3_ * D_3_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Window_3_ * /D_3_
+
+Window_3_.CLKF  = DotClk
+
+Window_4_.T    = /nRES * Window_4_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Window_4_ * D_4_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Window_4_ * /D_4_
+
+Window_4_.CLKF  = DotClk
+
+Window_5_.T    = /nRES * Window_5_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Window_5_ * D_5_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Window_5_ * /D_5_
+
+Window_5_.CLKF  = DotClk
+
+Block_0_.T     = /nRES * Block_0_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_0_ * D_0_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_0_ * /D_0_
+
+Block_0_.CLKF  = DotClk
+
+Block_1_.T     = /nRES * Block_1_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_1_ * D_1_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_1_ * /D_1_
+
+Block_1_.CLKF  = DotClk
+
+Block_2_.T     = /nRES * Block_2_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_2_ * D_2_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_2_ * /D_2_
+
+Block_2_.CLKF  = DotClk
+
+Block_3_.T     = /nRES * Block_3_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_3_ * D_3_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_3_ * /D_3_
+
+Block_3_.CLKF  = DotClk
+
+Block_4_.T     = /nRES * Block_4_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_4_ * D_4_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_4_ * /D_4_
+
+Block_4_.CLKF  = DotClk
+
+Block_5_.T     = /nRES * Block_5_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_5_ * D_5_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_5_ * /D_5_
+
+Block_5_.CLKF  = DotClk
+
+Block_6_.T     = /nRES * Block_6_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_6_ * D_6_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_6_ * /D_6_
+
+Block_6_.CLKF  = DotClk
+
+Window_0_.T    = /nRES * Window_0_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Window_0_ * D_0_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Window_0_ * /D_0_
+
+Window_0_.CLKF  = DotClk
+
+Window_1_.T    = /nRES * Window_1_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Window_1_ * D_1_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * /A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Window_1_ * /D_1_
+
+Window_1_.CLKF  = DotClk
+
+Block_7_.T     = /nRES * Block_7_
+               + nRES * /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * 
+             A_2_ * A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * 
+             /S_3_ * /Block_7_ * D_7_
+               + /nWE * /nIO2 * A_7_ * A_6_ * A_5_ * A_4_ * A_3_ * A_2_ * 
+             A_1_ * A_0_ * S_0_ * S_1_ * S_2_ * /S_3_ * 
+             Block_7_ * /D_7_
+
+Block_7_.CLKF  = DotClk
+
+inst_RAsel    := /nIO1 * S_0_ * /S_1_ * S_2_ * /S_3_
+               + /nIO1 * /S_0_ * S_1_ * S_2_ * /S_3_
+
+inst_RAsel.CLKF  = /DotClk
+
+inst_CASf     := /Ref_0_ * S_0_ * /S_1_ * /S_2_ * /S_3_ * /Ref_1_ * 
+             /Ref_2_ * /Ref_3_
+
+inst_CASf.CLKF  = /DotClk
+

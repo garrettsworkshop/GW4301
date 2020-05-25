@@ -1,0 +1,7 @@
+C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe  -link  -top  CRAM  -multisrs  C:\users\zane\documents\github\cram\cpld\synwork\CRAM_comp.srs  -osyn  C:\users\zane\documents\github\cram\cpld\synwork\CRAM_mult.srs  -log  C:\users\zane\documents\github\cram\cpld\synlog\CRAM_multi_srs_gen.srr 
+rc:0 success:1
+C:\users\zane\documents\github\cram\cpld\synwork\CRAM_comp.srs|i|1590369688|5305
+C:\users\zane\documents\github\cram\cpld\synwork\CRAM_mult.srs|o|1590369689|5354
+C:\users\zane\documents\github\cram\cpld\synlog\CRAM_multi_srs_gen.srr|o|1590369689|376
+C:\ispLEVER_Classic2_0\synpbase\bin\syn_nfilter.exe|i|1401245536|2741760
+C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe|i|1401245732|6337536

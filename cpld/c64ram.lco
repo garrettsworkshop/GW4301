@@ -1,0 +1,212 @@
+[DEVICE]
+Family = M5LV;
+PartType = M5LV-256/68;
+Package = 100PQFP;
+PartNumber = M5LV-256/68-7YC;
+Speed = -7;
+Operating_condition = COM;
+EN_Segment = Yes;
+Pin_MC_1to1 = Yes;
+EN_PinReserve_IO = No;
+EN_PinReserve_BIDIR = No;
+Voltage = 3.0;
+
+[REVISION]
+RCS = $Revision:;
+Parent = m5.lci;
+SDS_File = m5lv.sds;
+DATE = 2002;
+TIME = 0:00:00;
+Source_Format = Pure_Verilog_HDL;
+Type = TT2;
+Pre_Fit_Time = 1;
+
+[IGNORE ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+
+[CLEAR ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+
+[BACKANNOTATE ASSIGNMENTS]
+Pin_Block = No;
+Pin_Macrocell_Block = No;
+Routing = No;
+
+[GLOBAL CONSTRAINTS]
+Max_Fanin = 20;
+Max_PTerm_Split = 16;
+Max_PTerm_Collapse = 16;
+Max_Pin_Percent = 100;
+Max_Macrocell_Percent = 100;
+Max_GLB_Input_Percent = 95;
+Logic_Reduction = Yes;
+XOR_Synthesis = Yes;
+DT_Synthesis = Yes;
+Node_Collapse = Yes;
+Clock_PTerm = Min;
+Reset_PTerm = On;
+Preset_PTerm = On;
+Use_CE = Yes;
+EN_Use_CE = Yes;
+Use_Internal_COM_FB = No;
+EN_use_Internal_COM_FB = Yes;
+Set_Reset_Swap = No;
+EN_Set_Reset_Swap = No;
+Density = No;
+XOR_Gate = Yes;
+DeMorgan = Yes;
+T_FF = Yes;
+Show_Iterations = No;
+Run_Time = 0;
+Set_Reset_Dont_Care = No;
+Clock_Optimize = No;
+In_Reg_Optimize = Yes;
+Routing_Attempts = 2;
+Balanced_Partitioning = No;
+Device_max_fanin = 32;
+Device_max_pterms = 32;
+Usercode = 0;
+Usercode_Format = ASCII;
+
+[LOCATION ASSIGNMENTS]
+Layer = OFF;
+inst_PHI2reg = node,-,0,A,4;
+A_5_ = pin,93,0,A,-;
+A_6_ = pin,94,0,A,-;
+PHI2 = pin,95,0,A,-;
+nRWE = pin,96,0,A,-;
+A_3_ = pin,97,0,A,-;
+A_4_ = pin,98,0,A,-;
+A_0_ = pin,99,0,A,-;
+nDMA = pin,100,0,A,-;
+nCAS = pin,4,0,A,-;
+D_2_ = pin,12,0,B,-;
+D_1_ = pin,11,0,B,-;
+RD_3_ = pin,10,0,B,-;
+RD_0_ = pin,9,0,B,-;
+RD_1_ = pin,8,0,B,-;
+D_4_ = pin,7,0,B,-;
+D_3_ = pin,6,0,B,-;
+RD_2_ = pin,5,0,B,-;
+RA_11_ = pin,38,1,A,-;
+RD_7_ = pin,37,1,A,-;
+RD_4_ = pin,33,1,A,-;
+RD_5_ = pin,32,1,A,-;
+RD_6_ = pin,31,1,A,-;
+DelayOut = pin,27,1,A,-;
+S_2_ = node,-,1,B,0;
+Ref_0_ = node,-,1,B,1;
+inst_CASf = node,-,1,B,2;
+inst_nPHI2seen = node,-,1,B,5;
+Ref_1_ = node,-,1,B,6;
+S_3_ = node,-,1,B,7;
+Ref_2_ = node,-,1,B,8;
+Ref_3_ = node,-,1,B,9;
+inst_CASr = node,-,1,B,10;
+S_0_ = node,-,1,B,14;
+S_1_ = node,-,1,B,15;
+nIO1 = pin,19,1,B,-;
+D_0_ = pin,20,1,B,-;
+nRAS = pin,21,1,B,-;
+D_7_ = pin,24,1,B,-;
+D_6_ = pin,25,1,B,-;
+D_5_ = pin,26,1,B,-;
+nIRQ = pin,59,2,B,-;
+Window_2_ = node,-,3,A,1;
+Window_1_ = node,-,3,A,9;
+Block_2_ = node,-,3,A,12;
+Block_1_ = node,-,3,A,14;
+RA_0_ = pin,88,3,A,-;
+A_2_ = pin,87,3,A,-;
+A_7_ = pin,86,3,A,-;
+A_1_ = pin,85,3,A,-;
+RA_6_ = pin,84,3,A,-;
+RA_5_ = pin,83,3,A,-;
+RA_4_ = pin,82,3,A,-;
+RA_3_ = pin,81,3,A,-;
+nWE = pin,77,3,A,-;
+RA_8_ = pin,69,3,B,-;
+RA_7_ = pin,70,3,B,-;
+nRES = pin,71,3,B,-;
+RA_2_ = pin,72,3,B,-;
+RA_1_ = pin,73,3,B,-;
+RA_10_ = pin,74,3,B,-;
+nIO2 = pin,75,3,B,-;
+RA_9_ = pin,76,3,B,-;
+Window_3_ = node,-,3,C,0;
+Block_3_ = node,-,3,C,3;
+Window_0_ = node,-,3,C,5;
+Block_4_ = node,-,3,C,8;
+Block_0_ = node,-,3,C,11;
+Window_4_ = node,-,3,C,13;
+Block_6_ = node,-,3,D,2;
+Block_7_ = node,-,3,D,3;
+inst_RAsel = node,-,3,D,7;
+Window_5_ = node,-,3,D,10;
+Block_5_ = node,-,3,D,11;
+DotClk = pin,13,-,-,-;
+
+[GROUP ASSIGNMENTS]
+Layer = OFF;
+
+[RESOURCE RESERVATIONS]
+Layer = OFF;
+
+[SLEWRATE]
+Default = FAST;
+
+[PULLUP]
+
+[NETLIST/DELAY FORMAT]
+Delay_File = SDF;
+Netlist = VERILOG;
+VCC_GND = symbol;
+
+[FITTER REPORT FORMAT]
+Fitter_Options = Yes;
+Pinout_Diagram = No;
+Pinout_Listing = Yes;
+Detailed_Block_Segment_Summary = Yes;
+Input_Signal_List = Yes;
+Output_Signal_List = Yes;
+Bidir_Signal_List = Yes;
+Node_Signal_List = Yes;
+Signal_Fanout_List = Yes;
+Block_Segment_Fanin_List = Yes;
+Postfit_Eqn = Yes;
+Page_Break = Yes;
+
+[POWER]
+Powerlevel =  Low,MedLow,MedHigh,High;
+Default = High;
+Type = GLB;
+
+[SOURCE CONSTRAINT OPTION]
+Import_source_constraint = Auto;
+
+[TIMING ANALYZER]
+Last_source=;
+Last_source_type=Fmax;
+
+[INPUT REGISTERS]
+

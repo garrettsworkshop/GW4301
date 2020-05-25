@@ -1,0 +1,2 @@
+@W: MO111 :"c:\users\zane\documents\github\cram\cpld\cram.v":33:15:33:18|Tristate driver nIRQ on net nIRQ has its enable tied to GND (module CRAM) 
+@W: MO111 :"c:\users\zane\documents\github\cram\cpld\cram.v":33:15:33:18|Tristate driver nDMA on net nDMA has its enable tied to GND (module CRAM) 

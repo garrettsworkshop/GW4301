@@ -1,0 +1,62 @@
+ispLEVER Auto-Make Log File
+---------------------------
+
+Updating: Fit Design
+Start to record tcl script...
+Finished recording TCL script.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\blif2eqn.exe c64ram.tt4 -o c64ram.eq3 -gui -use_short -err automake.err'
+
+BLIF2EQN  Open-ABEL Report Generator
+ispLEVER Classic 2.0 Copyright(C), 1992-2005, Lattice Semiconductor Corporation. All rights reserved
+Portions Copyright(c), 1992-1999, Vantis Corporation
+Portions Copyright(C), 1993-1998, Data I/O Corporation
+Portions Copyright(C), 1997-1998, MINC Washington Corporation
+Portions Copyright(C), Alan Phillips, Lancaster University Computer Centre 1992-1998
+Reading Open-ABEL (PLA) file c64ram.tt4...
+Writing report to file c64ram.eq3...
+
+BLIF2EQN complete - 0 errors, 0 warnings. Time: 1 seconds
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\lci2vci.exe -lci c64ram.lct -out c64ram.vct -log c64ram.l2v'
+
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\mach5fit.exe -i c64ram -lib c64ram.cmd -gui'
+
+FITMACH  MACH Device Fitter Shell
+ispLEVER Classic 2.00 Copyright 1992-2015 Lattice Semiconductor. All Rights Reserved.
+ispLEVER R1.0.001.06 - Copyright Lattice Semiconductor Corporation 2001
+
+Setting Up 32-bit Enviornment.
+	Project Navigator Location = C:\ispLEVER_Classic2_0\ispcpld\bin.
+	Fitter Location = C:\ispLEVER_Classic2_0\ispcpld\bin.
+	Configuration File = c64ram.cmd.
+M5DRC.
+M5Dbase.
+.
+M5Check.
+Compiling Design.
+Optimizing Design.
+Scanning Design.
+Fitting Design.
+Generating JEDEC File.
+PLC2VCO.
+.
+M5Clean.
+
+FITMACH complete - 0 errors, 0 warnings. Time: 1 seconds
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\lci2vci.exe -vci c64ram.vco -out c64ram.lco -log c64ram.v2l'
+
+
+Done: completed successfully.
+
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\synsvf.exe -exe "C:\ispLEVER_Classic2_0\ispvmsystem/ispufw" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl -gui'
+
+Need not generate svf file according to the constraints, exit
+Done: completed successfully.

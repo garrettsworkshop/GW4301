@@ -1,0 +1,1 @@
+ -collapse all -pterms 16 -nmax 20 -clust 4 -reduce bypin choose -xorsyn -dev M5LV_clk
