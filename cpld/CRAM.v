@@ -78,8 +78,8 @@ module CRAM	(PHI2, DotClk, nRES,
 			S==4'h0 ? 4'h0 :
 			S==4'hF ? 4'hF : S+1;
 		
-		// Refresh counter allows DRAM refresh once every 8 cycles
-		Ref <= Ref+1;
+		// Refresh counter allows DRAM refresh once every 8 1 MHz cycles
+		if (S==4) Ref <= Ref+1;
 
 		// DRAM RAS/CAS
 		nRAS <= ~((S==2 & Ref==0) | 
