@@ -12,7 +12,7 @@ Project_Summary
 
 Project Name :          c64ram
 Project Path :          C:\Users\Zane\Documents\GitHub\CRAM\cpld
-Project Fitted on :     Sun May 24 21:22:19 2020
+Project Fitted on :     Sun May 24 23:56:00 2020
 
 Device :                M5-256/68
 Package :               100PQFP
@@ -31,11 +31,11 @@ Fitter                          0:00:01
 
 Design_Summary
 ~~~~~~~~~~~~~~
-  Total Input Pins :                 14
+  Total Input Pins :                 22
   Total Output Pins :                18
   Total Bidir I/O Pins :             16
-  Total Flip-Flops :                 28
-  Total Product Terms :             139
+  Total Flip-Flops :                 34
+  Total Product Terms :              92
   Total Reserved Pins :               0
 
 
@@ -46,14 +46,14 @@ Device_Resource_Summary
 Dedicated Pins
   Input-Only Pins                ..       ..     ..    -->    ..
   Clock/Input Pins                4        2      2    -->    50
-I/O Pins                         68       47     21    -->    69
-Logic Macrocells                256       61    195    -->    23
+I/O Pins                         68       54     14    -->    79
+Logic Macrocells                256       58    198    -->    22
   Unusable Macrocells            ..        0     ..
 
-Central Switch Matrix Outputs   512      121    391    -->    23
-Logical Product Terms          1024      135    889    -->    13
-Product Term Clusters           256       57    199    -->    22
-Segment Interconnect Lines      128       25    103    -->    19
+Central Switch Matrix Outputs   512      169    343    -->    33
+Logical Product Terms          1024       88    936    -->     8
+Product Term Clusters           256       54    202    -->    21
+Segment Interconnect Lines      128       41     87    -->    32
 
 
 
@@ -68,33 +68,33 @@ Maximum
   Block       32      *(1)     2   --     --         16       64       16        -
 -----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------
-Segment 0     10     17/17     0   12      0         52       12       11
+Segment 0     51     16/17     0   40      0         24       72       38
 
-  Block 0A     4      9/9      0    4      0         12        4        3       Hi
-  Block 0B    10      8/8      0    8      0          8        8        8       Hi
-  Block 0C     0      0/0      0    0      0         16        0        0       Hi
-  Block 0D     0      0/0      0    0      0         16        0        0       Hi
+  Block 0A    22      9/9      0   12      0          4       24       12       Lo
+  Block 0B    23      7/8      0    7      0          9       13        5       Lo
+  Block 0C    20      0/0      0    9      0          7       10        9       Lo
+  Block 0D    22      0/0      0   12      0          4       25       12       Lo
 -----------------------------------------------------------------------------------
-Segment 1     16     12/17     0   22      0         42       43       20
+Segment 1     10     11/17     0   10      0         54        8        8
 
-  Block 1A     6      6/9      0    6      0         10        4        4       Hi
-  Block 1B    17      6/8      0   16      0          0       39       16       Hi
-  Block 1C     0      0/0      0    0      0         16        0        0       Hi
-  Block 1D     0      0/0      0    0      0         16        0        0       Hi
+  Block 1A     0      3/9      0    2      0         14        0        0       Lo
+  Block 1B    10      8/8      0    8      0          8        8        8       Lo
+  Block 1C     0      0/0      0    0      0         16        0        0       Lo
+  Block 1D     0      0/0      0    0      0         16        0        0       Lo
 -----------------------------------------------------------------------------------
-Segment 2      0      1/17     0    1      0         63        0        0
+Segment 2     20     13/17     0    4      0         60        4        4
 
-  Block 2A     0      0/9      0    0      0         16        0        0       Hi
-  Block 2B     0      1/8      0    1      0         15        0        0       Hi
-  Block 2C     0      0/0      0    0      0         16        0        0       Hi
-  Block 2D     0      0/0      0    0      0         16        0        0       Hi
+  Block 2A    18      6/9      0    2      0         14        2        2       Lo
+  Block 2B    18      7/8      0    2      0         14        2        2       Lo
+  Block 2C     0      0/0      0    0      0         16        0        0       Lo
+  Block 2D     0      0/0      0    0      0         16        0        0       Lo
 -----------------------------------------------------------------------------------
-Segment 3     36     17/17     0   26      0         38       80       26
+Segment 3     20     14/17     0    4      0         60        4        4
 
-  Block 3A    24      9/9      0    9      0          7       26        9       Hi
-  Block 3B    13      8/8      0    6      0         10       12        6       Hi
-  Block 3C    24      0/0      0    6      0         10       24        6       Hi
-  Block 3D    23      0/0      0    5      0         11       18        5       Hi
+  Block 3A    18      7/9      0    2      0         14        2        2       Lo
+  Block 3B    18      7/8      0    2      0         14        2        2       Lo
+  Block 3C     0      0/0      0    0      0         16        0        0       Lo
+  Block 3D     0      0/0      0    0      0         16        0        0       Lo
 -----------------------------------------------------------------------------------
 
 <Note> 1 : For MACH5 devices, the number of IOs depends on the block.
@@ -110,7 +110,7 @@ Segment 3     36     17/17     0   26      0         38       80       26
 
 Optimizer_and_Fitter_Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Pin Assignment :                       No
+Pin Assignment :                       Yes
 Group Assignment :                     No
 Pin Reservation :                      No
 
@@ -154,7 +154,7 @@ Pin Reservation :                      No
   Max. P-Term for Splitting :          16
 
 @Utilization_options
-  Max. 2627133505f Macrocells used :          100
+  Max. 12371312600f Macrocells used :          100
 
 @Import_Source_Constraint_Option       No
 
@@ -162,9 +162,9 @@ Pin Reservation :                      No
 
 @User_Signature                        0
 
-@Output_Slew_Rate                      Default = FAST(2)
+@Output_Slew_Rate                      Default = SLOW(2)
 
-@Power                                 Default = High(2)
+@Power                                 Default = Low(2)
 
 
 Device Options:
@@ -184,41 +184,41 @@ Pin No| Type |Pad |Pin     | Signal name
     1 |  GND |    |        |
     2 |  GND |    |        |
     3 | JTAG |    |        |
-    4 |  I_O |0A12|        |nCAS
-    5 |  I_O |0B13|        |RD_2_
-    6 |  I_O |0B12|        |D_3_
-    7 |  I_O |0B11|        |D_4_
-    8 |  I_O |0B08|        |RD_1_
-    9 |  I_O |0B07|        |RD_0_
-   10 |  I_O |0B04|        |RD_3_
-   11 |  I_O |0B03|        |D_1_
-   12 |  I_O |0B02|        |D_2_
-   13 | CkIn |    |        |DotClk
+    4 |  I_O |0A12|        |RA_8_
+    5 |  I_O |0B13|        |RA_10_
+    6 |  I_O |0B12|        |RA_9_
+    7 |  I_O |0B11|        |RA_11_
+    8 |  I_O |0B08|        |nRAS
+    9 |  I_O |0B07|        |nCAS
+   10 |  I_O |0B04|        |nRWE
+   11 |  I_O |0B03|        |
+   12 |  I_O |0B02|        |DelayOut
+   13 | CkIn |    |        |
    14 |  Vcc |    |        |
    15 |  Vcc |    |        |
    16 |  GND |    |        |
    17 |  GND |    |        |
    18 | CkIn |    |        |
-   19 |  I_O |1B02|        |nIO1
-   20 |  I_O |1B03|        |D_0_
-   21 |  I_O |1B04|        |nRAS
-   22 |  I_O |1B07|        |
-   23 |  I_O |1B08|        |
-   24 |  I_O |1B11|        |D_7_
-   25 |  I_O |1B12|        |D_6_
-   26 |  I_O |1B13|        |D_5_
-   27 |  I_O |1A12|        |DelayOut
+   19 |  I_O |1B02|        |RD_3_
+   20 |  I_O |1B03|        |RD_4_
+   21 |  I_O |1B04|        |RD_2_
+   22 |  I_O |1B07|        |RD_5_
+   23 |  I_O |1B08|        |RD_1_
+   24 |  I_O |1B11|        |RD_6_
+   25 |  I_O |1B12|        |RD_0_
+   26 |  I_O |1B13|        |RD_7_
+   27 |  I_O |1A12|        |
    28 | JTAG |    |        |
    29 |  GND |    |        |
    30 |  GND |    |        |
-   31 |  I_O |1A07|        |RD_6_
-   32 |  I_O |1A06|        |RD_5_
-   33 |  I_O |1A05|        |RD_4_
-   34 |  I_O |1A04|        |
+   31 |  I_O |1A07|        |
+   32 |  I_O |1A06|        |
+   33 |  I_O |1A05|        |nIRQ
+   34 |  I_O |1A04|    *   |nWE
    35 |  I_O |1A03|        |
    36 |  I_O |1A02|        |
-   37 |  I_O |1A01|        |RD_7_
-   38 |  I_O |1A00|        |RA_11_
+   37 |  I_O |1A01|        |nDMA
+   38 |  I_O |1A00|        |
    39 |  Vcc |    |        |
    40 |  GND |    |        |
    41 |  GND |    |        |
@@ -226,61 +226,61 @@ Pin No| Type |Pad |Pin     | Signal name
    43 |  I_O |2A00|        |
    44 |  I_O |2A01|        |
    45 |  I_O |2A02|        |
-   46 |  I_O |2A03|        |
-   47 |  I_O |2A04|        |
-   48 |  I_O |2A05|        |
-   49 |  I_O |2A06|        |
-   50 |  I_O |2A07|        |
+   46 |  I_O |2A03|        |D_2_
+   47 |  I_O |2A04|    *   |A_0_
+   48 |  I_O |2A05|    *   |A_1_
+   49 |  I_O |2A06|    *   |A_2_
+   50 |  I_O |2A07|    *   |A_3_
    51 |  GND |    |        |
    52 |  GND |    |        |
    53 | JTAG |    |        |
-   54 |  I_O |2A12|        |
+   54 |  I_O |2A12|        |D_7_
    55 |  I_O |2B13|        |
-   56 |  I_O |2B12|        |
-   57 |  I_O |2B11|        |
-   58 |  I_O |2B08|        |
-   59 |  I_O |2B07|        |nIRQ
-   60 |  I_O |2B04|        |
-   61 |  I_O |2B03|        |
-   62 |  I_O |2B02|        |
-   63 | CkIn |    |        |
+   56 |  I_O |2B12|        |D_6_
+   57 |  I_O |2B11|    *   |A_4_
+   58 |  I_O |2B08|    *   |A_5_
+   59 |  I_O |2B07|    *   |A_6_
+   60 |  I_O |2B04|    *   |A_7_
+   61 |  I_O |2B03|        |D_1_
+   62 |  I_O |2B02|    *   |nIO1
+   63 | CkIn |    |    *   |DotClk
    64 |  Vcc |    |        |
    65 |  Vcc |    |        |
    66 |  GND |    |        |
    67 |  GND |    |        |
-   68 | CkIn |    |        |
-   69 |  I_O |3B02|        |RA_8_
-   70 |  I_O |3B03|        |RA_7_
-   71 |  I_O |3B04|        |nRES
-   72 |  I_O |3B07|        |RA_2_
-   73 |  I_O |3B08|        |RA_1_
-   74 |  I_O |3B11|        |RA_10_
-   75 |  I_O |3B12|        |nIO2
-   76 |  I_O |3B13|        |RA_9_
-   77 |  I_O |3A12|        |nWE
+   68 | CkIn |    |    *   |PHI2
+   69 |  I_O |3B02|    *   |nIO2
+   70 |  I_O |3B03|        |D_3_
+   71 |  I_O |3B04|        |
+   72 |  I_O |3B07|    *   |A_8_
+   73 |  I_O |3B08|    *   |A_9_
+   74 |  I_O |3B11|    *   |A_10_
+   75 |  I_O |3B12|        |D_5_
+   76 |  I_O |3B13|    *   |A_11_
+   77 |  I_O |3A12|        |D_4_
    78 | JTAG |    |        |
    79 |  GND |    |        |
    80 |  GND |    |        |
-   81 |  I_O |3A07|        |RA_3_
-   82 |  I_O |3A06|        |RA_4_
-   83 |  I_O |3A05|        |RA_5_
-   84 |  I_O |3A04|        |RA_6_
-   85 |  I_O |3A03|        |A_1_
-   86 |  I_O |3A02|        |A_7_
-   87 |  I_O |3A01|        |A_2_
-   88 |  I_O |3A00|        |RA_0_
+   81 |  I_O |3A07|    *   |A_12_
+   82 |  I_O |3A06|    *   |A_13_
+   83 |  I_O |3A05|    *   |A_14_
+   84 |  I_O |3A04|    *   |A_15_
+   85 |  I_O |3A03|        |D_0_
+   86 |  I_O |3A02|        |
+   87 |  I_O |3A01|    *   |nRES
+   88 |  I_O |3A00|        |
    89 |  Vcc |    |        |
    90 |  GND |    |        |
    91 |  GND |    |        |
    92 |  Vcc |    |        |
-   93 |  I_O |0A00|        |A_5_
-   94 |  I_O |0A01|        |A_6_
-   95 |  I_O |0A02|        |PHI2
-   96 |  I_O |0A03|        |nRWE
-   97 |  I_O |0A04|        |A_3_
-   98 |  I_O |0A05|        |A_4_
-   99 |  I_O |0A06|        |A_0_
-  100 |  I_O |0A07|        |nDMA
+   93 |  I_O |0A00|        |RA_4_
+   94 |  I_O |0A01|        |RA_3_
+   95 |  I_O |0A02|        |RA_5_
+   96 |  I_O |0A03|        |RA_2_
+   97 |  I_O |0A04|        |RA_6_
+   98 |  I_O |0A05|        |RA_1_
+   99 |  I_O |0A06|        |RA_7_
+  100 |  I_O |0A07|        |RA_0_
 
 ---------------------------------------------------------------------------
 
@@ -301,20 +301,28 @@ Input_Signal_List
       Seg/    Mc   r e O   Fanout
   Pin Blk PTs Type e s E   /S0\ /S1\ /S2\ /S3\   Pwr Slew      Signal 
 ------------------------------------------------------------------------------------------
-   95  0A  .  I/O          A--- -B-- ---- ----                 PHI2
-   13  0.  . Ck/I          ---- ---- ---- ----                 DotClk
-   71  3B  .  I/O          ---- ---- ---- A-CD                 nRES
-   77  3A  .  I/O          AB-- AB-- ---- A-CD                 nWE
-   19  1B  .  I/O          -B-- AB-- ---- ---D                 nIO1
-   75  3B  .  I/O          ---- ---- ---- A-CD                 nIO2
-   86  3A  .  I/O          ---- ---- ---- ABCD                 A_7_
-   94  0A  .  I/O          ---- ---- ---- A-CD                 A_6_
-   93  0A  .  I/O          ---- ---- ---- A-CD                 A_5_
-   98  0A  .  I/O          ---- ---- ---- A-CD                 A_4_
-   97  0A  .  I/O          ---- ---- ---- A-CD                 A_3_
-   87  3A  .  I/O          ---- ---- ---- ABCD                 A_2_
-   85  3A  .  I/O          ---- ---- ---- ABCD                 A_1_
-   99  0A  .  I/O          ---- ---- ---- A-CD                 A_0_
+   84  3A  .  I/O          -B-- ---- ---- ----                 A_15_
+   68  3.  . Ck/I          -B-D ---- ---- ----                 PHI2
+   63  2.  . Ck/I          ---- ---- ---- ----                 DotClk
+   87  3A  .  I/O          --CD ---- AB-- AB--                 nRES
+   34  1A  .  I/O          -BCD -B-- AB-- AB--                 nWE
+   62  2B  .  I/O          -BC- -B-- AB-- AB--                 nIO1
+   69  3B  .  I/O          --CD ---- AB-- AB--                 nIO2
+   83  3A  .  I/O          -B-- ---- ---- ----                 A_14_
+   82  3A  .  I/O          -B-- ---- ---- ----                 A_13_
+   81  3A  .  I/O          -B-- ---- ---- ----                 A_12_
+   76  3B  .  I/O          -B-- ---- ---- ----                 A_11_
+   74  3B  .  I/O          -B-- ---- ---- ----                 A_10_
+   73  3B  .  I/O          -B-- ---- ---- ----                 A_9_
+   72  3B  .  I/O          -B-- ---- ---- ----                 A_8_
+   60  2B  .  I/O          A-CD ---- AB-- AB--                 A_7_
+   59  2B  .  I/O          A-CD ---- AB-- AB--                 A_6_
+   58  2B  .  I/O          A-CD ---- AB-- AB--                 A_5_
+   57  2B  .  I/O          A-CD ---- AB-- AB--                 A_4_
+   50  2A  .  I/O          A-CD ---- AB-- AB--                 A_3_
+   49  2A  .  I/O          A-CD ---- AB-- AB--                 A_2_
+   48  2A  .  I/O          A-CD ---- AB-- AB--                 A_1_
+   47  2A  .  I/O          A-CD ---- AB-- AB--                 A_0_
 ------------------------------------------------------------------------------------------
 
 <Note> Power : Hi = High
@@ -330,24 +338,24 @@ Output_Signal_List
       Seg/        Mc   r e O   Fanout
   Pin Blk PTs Cls Type e s E   /S0\ /S1\ /S2\ /S3\   Pwr Slew      Signal
 ------------------------------------------------------------------------------------------
-   38  1A  1   1  COM          ---- ---- ---- ----    Hi Fast      RA_11_
-   59  2B  1   1  COM          ---- ---- ---- ----    Hi Fast      nIRQ
-  100  0A  1   1  COM          ---- ---- ---- ----    Hi Fast      nDMA
-   21  1B  4   1  DFF          ---- ---- ---- ----    Hi Fast      nRAS
-    4  0A  2   1  COM          ---- ---- ---- ----    Hi Fast      nCAS
-   96  0A  1   1  COM          ---- ---- ---- ----    Hi Fast      nRWE
-   27  1A  1   1  COM          ---- ---- ---- ----    Hi Fast      DelayOut
-   74  3B  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_10_
-   76  3B  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_9_
-   69  3B  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_8_
-   70  3B  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_7_
-   84  3A  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_6_
-   83  3A  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_5_
-   82  3A  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_4_
-   81  3A  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_3_
-   72  3B  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_2_
-   73  3B  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_1_
-   88  3A  2   1  COM          ---- ---- ---- ----    Hi Fast      RA_0_
+   94  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_3_
+   96  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_2_
+   98  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_1_
+  100  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_0_
+    7  0B  1   1  COM          ---- ---- ---- ----    Lo Slow      RA_11_
+   33  1A  1   1  COM          ---- ---- ---- ----    Lo Slow      nIRQ
+   37  1A  1   1  COM          ---- ---- ---- ----    Lo Slow      nDMA
+   10  0B  1   1  COM          ---- ---- ---- ----    Lo Slow      nRWE
+   12  0B  1   1  COM          ---- ---- ---- ----    Lo Slow      DelayOut
+    5  0B  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_10_
+    6  0B  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_9_
+    4  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_8_
+   99  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_7_
+   97  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_6_
+   95  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_5_
+   93  0A  2   1  COM          ---- ---- ---- ----    Lo Slow      RA_4_
+    8  0B  4   1  DFF          ---- ---- ---- ----    Lo Slow      nRAS
+    9  0B  4   1  DFF          ---- ---- ---- ----    Lo Slow      nCAS
 ------------------------------------------------------------------------------------------
 
 <Note> Power : Hi = High
@@ -365,22 +373,22 @@ Bidir_Signal_List
       Seg/        Mc   r e O   Fanout
   Pin Blk PTs Cls Type e s E   /S0\ /S1\ /S2\ /S3\   Pwr Slew      Signal
 ------------------------------------------------------------------------------------------
-   24  1B  1   1  COM          ---- A--- ---- ---D    Hi Fast      D_7_
-   37  1A  1   1  COM          ---- -B-- ---- ----    Hi Fast      RD_7_
-   25  1B  1   1  COM          ---- A--- ---- ---D    Hi Fast      D_6_
-   26  1B  1   1  COM          ---- A--- ---- ---D    Hi Fast      D_5_
-    7  0B  1   1  COM          ---- A--- ---- --C-    Hi Fast      D_4_
-    6  0B  1   1  COM          -B-- ---- ---- --C-    Hi Fast      D_3_
-   12  0B  1   1  COM          -B-- ---- ---- A---    Hi Fast      D_2_
-   11  0B  1   1  COM          -B-- ---- ---- A---    Hi Fast      D_1_
-   20  1B  1   1  COM          -B-- ---- ---- --C-    Hi Fast      D_0_
-   31  1A  1   1  COM          ---- -B-- ---- ----    Hi Fast      RD_6_
-   32  1A  1   1  COM          ---- -B-- ---- ----    Hi Fast      RD_5_
-   33  1A  1   1  COM          -B-- ---- ---- ----    Hi Fast      RD_4_
-   10  0B  1   1  COM          -B-- ---- ---- ----    Hi Fast      RD_3_
-    5  0B  1   1  COM          -B-- ---- ---- ----    Hi Fast      RD_2_
-    8  0B  1   1  COM          -B-- ---- ---- ----    Hi Fast      RD_1_
-    9  0B  1   1  COM          ---- -B-- ---- ----    Hi Fast      RD_0_
+   24  1B  1   1  COM          ---- ---- -B-- ----    Lo Slow      RD_6_
+   22  1B  1   1  COM          ---- ---- ---- -B--    Lo Slow      RD_5_
+   20  1B  1   1  COM          ---- ---- ---- A---    Lo Slow      RD_4_
+   19  1B  1   1  COM          ---- ---- ---- -B--    Lo Slow      RD_3_
+   26  1B  1   1  COM          ---- ---- A--- ----    Lo Slow      RD_7_
+   21  1B  1   1  COM          ---- ---- A--- ----    Lo Slow      RD_2_
+   23  1B  1   1  COM          ---- ---- -B-- ----    Lo Slow      RD_1_
+   25  1B  1   1  COM          ---- ---- ---- A---    Lo Slow      RD_0_
+   54  2A  1   1  DFF          ---D -B-- ---- ----    Lo Slow      D_7_
+   56  2B  1   1  DFF          ---D -B-- ---- ----    Lo Slow      D_6_
+   75  3B  1   1  DFF          ---D -B-- ---- ----    Lo Slow      D_5_
+   77  3A  1   1  DFF          --C- -B-- ---- ----    Lo Slow      D_4_
+   70  3B  1   1  DFF          --C- -B-- ---- ----    Lo Slow      D_3_
+   46  2A  1   1  DFF          ---D -B-- ---- ----    Lo Slow      D_2_
+   61  2B  1   1  DFF          --C- -B-- ---- ----    Lo Slow      D_1_
+   85  3A  1   1  DFF          --C- -B-- ---- ----    Lo Slow      D_0_
 ------------------------------------------------------------------------------------------
 
 <Note> Power : Hi = High
@@ -398,33 +406,30 @@ Buried_Signal_List
       Seg/        Mc   r e O   Fanout
   Mc# Blk PTs Cls Type e s E   /S0\ /S1\ /S2\ /S3\   Pwr Slew      Signal
 ------------------------------------------------------------------------------------------
-    1  1B  2   1  DFF          ---- -B-- ---- ----    Hi           Ref_0_
-   14  1B  5   2  DFF          ---- -B-- ---- A-CD    Hi           S_0_
-   15  1B  4   1  DFF          ---- -B-- ---- A-CD    Hi           S_1_
-    0  1B  4   1  DFF          ---- -B-- ---- A-CD    Hi           S_2_
-    7  1B  4   1  DFF          ---- -B-- ---- A-CD    Hi           S_3_
-    6  1B  3   1  DFF          ---- -B-- ---- ----    Hi           Ref_1_
-    8  1B  3   1  DFF          ---- -B-- ---- ----    Hi           Ref_2_
-    9  1B  2   1  DFF          ---- -B-- ---- ----    Hi           Ref_3_
-    4  0A  1   1  DFF          ---- -B-- ---- ----    Hi           inst_PHI2reg
-   10  1B  2   1  DFF          A--- ---- ---- ----    Hi           inst_CASr
-    5  1B  1   1  DFF          ---- -B-- ---- ----    Hi           inst_nPHI2seen
-    1  3A  4   1  TFF          ---- ---- ---- A---    Hi           Window_2_
-    0  3C  4   1  TFF          ---- ---- ---- -BC-    Hi           Window_3_
-   13  3C  4   1  TFF          ---- ---- ---- -BC-    Hi           Window_4_
-   10  3D  4   1  TFF          ---- ---- ---- A--D    Hi           Window_5_
-   11  3C  4   1  TFF          ---- ---- ---- A-C-    Hi           Block_0_
-   14  3A  4   1  TFF          ---- ---- ---- A---    Hi           Block_1_
-   12  3A  4   1  TFF          ---- ---- ---- A---    Hi           Block_2_
-    3  3C  4   1  TFF          ---- ---- ---- -BC-    Hi           Block_3_
-    8  3C  4   1  TFF          ---- ---- ---- -BC-    Hi           Block_4_
-   11  3D  4   1  TFF          ---- ---- ---- -B-D    Hi           Block_5_
-    2  3D  4   1  TFF          ---- ---- ---- -B-D    Hi           Block_6_
-    5  3C  4   1  TFF          ---- ---- ---- -BC-    Hi           Window_0_
-    9  3A  4   1  TFF          ---- ---- ---- AB--    Hi           Window_1_
-    3  3D  4   1  TFF          ---- ---- ---- -B-D    Hi           Block_7_
-    7  3D  2   1  DFF          ---- ---- ---- AB--    Hi           inst_RAsel
-    2  1B  1   1  DFF          A--- ---- ---- ----    Hi           inst_CASf
+    3  0D  5   2  DFF          -BCD ---- AB-- AB--    Lo           S_0_
+    9  0D  4   1  DFF          -BCD ---- AB-- AB--    Lo           S_1_
+   13  0D  4   1  DFF          -BCD ---- AB-- AB--    Lo           S_2_
+   11  0D  4   1  DFF          -BCD ---- AB-- AB--    Lo           S_3_
+   10  0A  1   1  DFF          AB-- ---- ---- ----    Lo           Ref_0_
+   13  0A  2   1  DFF          AB-- ---- ---- ----    Lo           Ref_1_
+   11  0A  3   1  DFF          AB-- ---- ---- ----    Lo           Ref_2_
+    0  0D  1   1  DFF          ---D ---- ---- ----    Lo           inst_PHI2reg
+    1  0D  1   1  DFF          ---D ---- ---- ----    Lo           inst_nPHI2seen
+   10  0D  1   1  DFF          A--- ---- ---- ----    Lo           Window_2_
+    1  0C  1   1  DFF          A--- ---- ---- ----    Lo           Window_3_
+   10  0C  1   1  DFF          A--- ---- ---- ----    Lo           Window_4_
+    2  0D  1   1  DFF          A--- ---- ---- ----    Lo           Window_5_
+    2  0C  1   1  DFF          A--- ---- ---- ----    Lo           Block_0_
+    3  0C  1   1  DFF          A--- ---- ---- ----    Lo           Block_1_
+    4  0D  1   1  DFF          A--- ---- ---- ----    Lo           Block_2_
+   11  0C  1   1  DFF          A--- ---- ---- ----    Lo           Block_3_
+    5  0C  1   1  DFF          A--- ---- ---- ----    Lo           Block_4_
+    5  0D  1   1  DFF          -B-- ---- ---- ----    Lo           Block_5_
+    6  0D  1   1  DFF          -B-- ---- ---- ----    Lo           Block_6_
+    6  0C  1   1  DFF          A--- ---- ---- ----    Lo           Window_0_
+    9  0C  1   1  DFF          -B-- ---- ---- ----    Lo           Window_1_
+    7  0D  1   1  DFF          -B-- ---- ---- ----    Lo           Block_7_
+   13  0C  2   1  DFF          AB-- ---- ---- ----    Lo           inst_RAsel
 ------------------------------------------------------------------------------------------
 
 <Note> Power : Hi = High
@@ -440,173 +445,212 @@ Signals_Fanout_List
 ~~~~~~~~~~~~~~~~~~~
 Signal Source :    Fanout List
 -----------------------------------------------------------------------------
-      PHI2{0A}:           nCAS{0A}           nRWE{0A}           S_0_{1B}
-              :           S_1_{1B}           S_2_{1B}           S_3_{1B}
-              :   inst_PHI2reg{0A} inst_nPHI2seen{1B}
-    DotClk{0.}:           nRAS{1B}         Ref_0_{1B}           S_0_{1B}
-              :           S_1_{1B}           S_2_{1B}           S_3_{1B}
-              :         Ref_1_{1B}         Ref_2_{1B}         Ref_3_{1B}
-              :   inst_PHI2reg{0A}      inst_CASr{1B} inst_nPHI2seen{1B}
-              :      Window_2_{3A}      Window_3_{3C}      Window_4_{3C}
-              :      Window_5_{3D}       Block_0_{3C}       Block_1_{3A}
-              :       Block_2_{3A}       Block_3_{3C}       Block_4_{3C}
-              :       Block_5_{3D}       Block_6_{3D}      Window_0_{3C}
-              :      Window_1_{3A}       Block_7_{3D}     inst_RAsel{3D}
-              :      inst_CASf{1B}
-      nRES{3B}:      Window_2_{3A}      Window_3_{3C}      Window_4_{3C}
-              :      Window_5_{3D}       Block_0_{3C}       Block_1_{3A}
-              :       Block_2_{3A}       Block_3_{3C}       Block_4_{3C}
-              :       Block_5_{3D}       Block_6_{3D}      Window_0_{3C}
-              :      Window_1_{3A}       Block_7_{3D}
-       nWE{3A}:           D_7_{1B}          RD_7_{1A}           nRAS{1B}
-              :           nRWE{0A}           D_6_{1B}           D_5_{1B}
-              :           D_4_{0B}           D_3_{0B}           D_2_{0B}
-              :           D_1_{0B}           D_0_{1B}          RD_6_{1A}
-              :          RD_5_{1A}          RD_4_{1A}          RD_3_{0B}
-              :          RD_2_{0B}          RD_1_{0B}          RD_0_{0B}
-              :      inst_CASr{1B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      nIO1{1B}:           D_7_{1B}          RD_7_{1A}           nRAS{1B}
-              :           D_6_{1B}           D_5_{1B}           D_4_{0B}
-              :           D_3_{0B}           D_2_{0B}           D_1_{0B}
-              :           D_0_{1B}          RD_6_{1A}          RD_5_{1A}
-              :          RD_4_{1A}          RD_3_{0B}          RD_2_{0B}
-              :          RD_1_{0B}          RD_0_{0B}      inst_CASr{1B}
-              :     inst_RAsel{3D}
-      nIO2{3B}:      Window_2_{3A}      Window_3_{3C}      Window_4_{3C}
-              :      Window_5_{3D}       Block_0_{3C}       Block_1_{3A}
-              :       Block_2_{3A}       Block_3_{3C}       Block_4_{3C}
-              :       Block_5_{3D}       Block_6_{3D}      Window_0_{3C}
-              :      Window_1_{3A}       Block_7_{3D}
-      A_7_{3A}:          RA_7_{3B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_6_{0A}:          RA_6_{3A}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_5_{0A}:          RA_5_{3A}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_4_{0A}:          RA_4_{3A}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_3_{0A}:          RA_3_{3A}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_2_{3A}:          RA_2_{3B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_1_{3A}:          RA_1_{3B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      A_0_{0A}:          RA_0_{3A}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-      D_7_{1B}:          RD_7_{1A}       Block_7_{3D}
-     RD_7_{1A}:           D_7_{1B}
-      D_6_{1B}:          RD_6_{1A}       Block_6_{3D}
-      D_5_{1B}:          RD_5_{1A}      Window_5_{3D}       Block_5_{3D}
-      D_4_{0B}:          RD_4_{1A}      Window_4_{3C}       Block_4_{3C}
-      D_3_{0B}:          RD_3_{0B}      Window_3_{3C}       Block_3_{3C}
-      D_2_{0B}:          RD_2_{0B}      Window_2_{3A}       Block_2_{3A}
-      D_1_{0B}:          RD_1_{0B}       Block_1_{3A}      Window_1_{3A}
-      D_0_{1B}:          RD_0_{0B}       Block_0_{3C}      Window_0_{3C}
-     RD_6_{1A}:           D_6_{1B}
-     RD_5_{1A}:           D_5_{1B}
-     RD_4_{1A}:           D_4_{0B}
-     RD_3_{0B}:           D_3_{0B}
-     RD_2_{0B}:           D_2_{0B}
-     RD_1_{0B}:           D_1_{0B}
-     RD_0_{0B}:           D_0_{1B}
-    Ref_0_{1B}:           nRAS{1B}         Ref_0_{1B}         Ref_1_{1B}
-              :         Ref_2_{1B}         Ref_3_{1B}      inst_CASf{1B}
-      S_0_{1B}:           nRAS{1B}         Ref_0_{1B}           S_0_{1B}
-              :           S_1_{1B}           S_2_{1B}           S_3_{1B}
-              :         Ref_1_{1B}         Ref_2_{1B}         Ref_3_{1B}
-              :      inst_CASr{1B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-              :     inst_RAsel{3D}      inst_CASf{1B}
-      S_1_{1B}:           nRAS{1B}         Ref_0_{1B}           S_0_{1B}
-              :           S_1_{1B}           S_2_{1B}           S_3_{1B}
-              :         Ref_1_{1B}         Ref_2_{1B}         Ref_3_{1B}
-              :      inst_CASr{1B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-              :     inst_RAsel{3D}      inst_CASf{1B}
-      S_2_{1B}:           nRAS{1B}         Ref_0_{1B}           S_0_{1B}
-              :           S_1_{1B}           S_2_{1B}           S_3_{1B}
-              :         Ref_1_{1B}         Ref_2_{1B}         Ref_3_{1B}
-              :      inst_CASr{1B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-              :     inst_RAsel{3D}      inst_CASf{1B}
-      S_3_{1B}:           nRAS{1B}         Ref_0_{1B}           S_0_{1B}
-              :           S_1_{1B}           S_2_{1B}           S_3_{1B}
-              :         Ref_1_{1B}         Ref_2_{1B}         Ref_3_{1B}
-              :      inst_CASr{1B}      Window_2_{3A}      Window_3_{3C}
-              :      Window_4_{3C}      Window_5_{3D}       Block_0_{3C}
-              :       Block_1_{3A}       Block_2_{3A}       Block_3_{3C}
-              :       Block_4_{3C}       Block_5_{3D}       Block_6_{3D}
-              :      Window_0_{3C}      Window_1_{3A}       Block_7_{3D}
-              :     inst_RAsel{3D}      inst_CASf{1B}
-    Ref_1_{1B}:           nRAS{1B}         Ref_1_{1B}         Ref_2_{1B}
-              :         Ref_3_{1B}      inst_CASf{1B}
-    Ref_2_{1B}:           nRAS{1B}         Ref_0_{1B}         Ref_1_{1B}
-              :         Ref_2_{1B}         Ref_3_{1B}      inst_CASf{1B}
-    Ref_3_{1B}:           nRAS{1B}         Ref_0_{1B}         Ref_1_{1B}
-              :         Ref_2_{1B}         Ref_3_{1B}      inst_CASf{1B}
-inst_PHI2reg{0A}:
-              :           S_0_{1B}           S_1_{1B}           S_2_{1B}
-              :           S_3_{1B}
- inst_CASr{1B}:           nCAS{0A}
-inst_nPHI2seen{1B}:
-              :           S_0_{1B}           S_1_{1B}           S_2_{1B}
-              :           S_3_{1B} inst_nPHI2seen{1B}
- Window_2_{3A}:          RA_0_{3A}      Window_2_{3A}
- Window_3_{3C}:          RA_1_{3B}      Window_3_{3C}
- Window_4_{3C}:          RA_2_{3B}      Window_4_{3C}
- Window_5_{3D}:          RA_3_{3A}      Window_5_{3D}
-  Block_0_{3C}:          RA_4_{3A}       Block_0_{3C}
-  Block_1_{3A}:          RA_5_{3A}       Block_1_{3A}
-  Block_2_{3A}:          RA_6_{3A}       Block_2_{3A}
-  Block_3_{3C}:          RA_7_{3B}       Block_3_{3C}
-  Block_4_{3C}:          RA_8_{3B}       Block_4_{3C}
-  Block_5_{3D}:          RA_9_{3B}       Block_5_{3D}
-  Block_6_{3D}:         RA_10_{3B}       Block_6_{3D}
- Window_0_{3C}:          RA_8_{3B}      Window_0_{3C}
- Window_1_{3A}:          RA_9_{3B}      Window_1_{3A}
-  Block_7_{3D}:         RA_10_{3B}       Block_7_{3D}
-inst_RAsel{3D}:         RA_10_{3B}          RA_9_{3B}          RA_8_{3B}
-              :          RA_7_{3B}          RA_6_{3A}          RA_5_{3A}
-              :          RA_4_{3A}          RA_3_{3A}          RA_2_{3B}
-              :          RA_1_{3B}          RA_0_{3A}
- inst_CASf{1B}:           nCAS{0A}
+     A_15_{3A}:           nRAS{0B}
+      PHI2{3.}:           nRWE{0B}           S_0_{0D}           S_1_{0D}
+              :           S_2_{0D}           S_3_{0D}   inst_PHI2reg{0D}
+              : inst_nPHI2seen{0D}
+    DotClk{2.}:           nRAS{0B}           nCAS{0B}           S_0_{0D}
+              :           S_1_{0D}           S_2_{0D}           S_3_{0D}
+              :         Ref_0_{0A}         Ref_1_{0A}         Ref_2_{0A}
+              :   inst_PHI2reg{0D} inst_nPHI2seen{0D}      Window_2_{0D}
+              :      Window_3_{0C}      Window_4_{0C}      Window_5_{0D}
+              :       Block_0_{0C}       Block_1_{0C}       Block_2_{0D}
+              :       Block_3_{0C}       Block_4_{0C}       Block_5_{0D}
+              :       Block_6_{0D}      Window_0_{0C}      Window_1_{0C}
+              :       Block_7_{0D}     inst_RAsel{0C}           D_7_{2A}
+              :           D_6_{2B}           D_5_{3B}           D_4_{3A}
+              :           D_3_{3B}           D_2_{2A}           D_1_{2B}
+              :           D_0_{3A}
+      nRES{3A}:      Window_2_{0D}      Window_3_{0C}      Window_4_{0C}
+              :      Window_5_{0D}       Block_0_{0C}       Block_1_{0C}
+              :       Block_2_{0D}       Block_3_{0C}       Block_4_{0C}
+              :       Block_5_{0D}       Block_6_{0D}      Window_0_{0C}
+              :      Window_1_{0C}       Block_7_{0D}           D_7_{2A}
+              :           D_6_{2B}           D_5_{3B}           D_4_{3A}
+              :           D_3_{3B}           D_2_{2A}           D_1_{2B}
+              :           D_0_{3A}
+       nWE{1A}:          RD_6_{1B}          RD_5_{1B}          RD_4_{1B}
+              :          RD_3_{1B}          RD_7_{1B}          RD_2_{1B}
+              :          RD_1_{1B}          RD_0_{1B}           nRWE{0B}
+              :           nRAS{0B}           nCAS{0B}      Window_2_{0D}
+              :      Window_3_{0C}      Window_4_{0C}      Window_5_{0D}
+              :       Block_0_{0C}       Block_1_{0C}       Block_2_{0D}
+              :       Block_3_{0C}       Block_4_{0C}       Block_5_{0D}
+              :       Block_6_{0D}      Window_0_{0C}      Window_1_{0C}
+              :       Block_7_{0D}           D_7_{2A}           D_6_{2B}
+              :           D_5_{3B}           D_4_{3A}           D_3_{3B}
+              :           D_2_{2A}           D_1_{2B}           D_0_{3A}
+      nIO1{2B}:          RD_6_{1B}          RD_5_{1B}          RD_4_{1B}
+              :          RD_3_{1B}          RD_7_{1B}          RD_2_{1B}
+              :          RD_1_{1B}          RD_0_{1B}           nRAS{0B}
+              :           nCAS{0B}     inst_RAsel{0C}           D_7_{2A}
+              :           D_6_{2B}           D_5_{3B}           D_4_{3A}
+              :           D_3_{3B}           D_2_{2A}           D_1_{2B}
+              :           D_0_{3A}
+      nIO2{3B}:      Window_2_{0D}      Window_3_{0C}      Window_4_{0C}
+              :      Window_5_{0D}       Block_0_{0C}       Block_1_{0C}
+              :       Block_2_{0D}       Block_3_{0C}       Block_4_{0C}
+              :       Block_5_{0D}       Block_6_{0D}      Window_0_{0C}
+              :      Window_1_{0C}       Block_7_{0D}           D_7_{2A}
+              :           D_6_{2B}           D_5_{3B}           D_4_{3A}
+              :           D_3_{3B}           D_2_{2A}           D_1_{2B}
+              :           D_0_{3A}
+     A_14_{3A}:           nRAS{0B}
+     A_13_{3A}:           nRAS{0B}
+     A_12_{3A}:           nRAS{0B}
+     A_11_{3B}:           nRAS{0B}
+     A_10_{3B}:           nRAS{0B}
+      A_9_{3B}:           nRAS{0B}
+      A_8_{3B}:           nRAS{0B}
+      A_7_{2B}:          RA_7_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_6_{2B}:          RA_6_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_5_{2B}:          RA_5_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_4_{2B}:          RA_4_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_3_{2A}:          RA_3_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_2_{2A}:          RA_2_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_1_{2A}:          RA_1_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      A_0_{2A}:          RA_0_{0A}      Window_2_{0D}      Window_3_{0C}
+              :      Window_4_{0C}      Window_5_{0D}       Block_0_{0C}
+              :       Block_1_{0C}       Block_2_{0D}       Block_3_{0C}
+              :       Block_4_{0C}       Block_5_{0D}       Block_6_{0D}
+              :      Window_0_{0C}      Window_1_{0C}       Block_7_{0D}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+     RD_6_{1B}:           D_6_{2B}
+     RD_5_{1B}:           D_5_{3B}
+     RD_4_{1B}:           D_4_{3A}
+     RD_3_{1B}:           D_3_{3B}
+     RD_7_{1B}:           D_7_{2A}
+     RD_2_{1B}:           D_2_{2A}
+     RD_1_{1B}:           D_1_{2B}
+     RD_0_{1B}:           D_0_{3A}
+      D_7_{2A}:          RD_7_{1B}       Block_7_{0D}
+      D_6_{2B}:          RD_6_{1B}       Block_6_{0D}
+      D_5_{3B}:          RD_5_{1B}      Window_5_{0D}       Block_5_{0D}
+      D_4_{3A}:          RD_4_{1B}      Window_4_{0C}       Block_4_{0C}
+      D_3_{3B}:          RD_3_{1B}      Window_3_{0C}       Block_3_{0C}
+      D_2_{2A}:          RD_2_{1B}      Window_2_{0D}       Block_2_{0D}
+      D_1_{2B}:          RD_1_{1B}       Block_1_{0C}      Window_1_{0C}
+      D_0_{3A}:          RD_0_{1B}       Block_0_{0C}      Window_0_{0C}
+      S_0_{0D}:           nRAS{0B}           nCAS{0B}           S_0_{0D}
+              :           S_1_{0D}           S_2_{0D}           S_3_{0D}
+              :      Window_2_{0D}      Window_3_{0C}      Window_4_{0C}
+              :      Window_5_{0D}       Block_0_{0C}       Block_1_{0C}
+              :       Block_2_{0D}       Block_3_{0C}       Block_4_{0C}
+              :       Block_5_{0D}       Block_6_{0D}      Window_0_{0C}
+              :      Window_1_{0C}       Block_7_{0D}     inst_RAsel{0C}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      S_1_{0D}:           nRAS{0B}           nCAS{0B}           S_0_{0D}
+              :           S_1_{0D}           S_2_{0D}           S_3_{0D}
+              :      Window_2_{0D}      Window_3_{0C}      Window_4_{0C}
+              :      Window_5_{0D}       Block_0_{0C}       Block_1_{0C}
+              :       Block_2_{0D}       Block_3_{0C}       Block_4_{0C}
+              :       Block_5_{0D}       Block_6_{0D}      Window_0_{0C}
+              :      Window_1_{0C}       Block_7_{0D}     inst_RAsel{0C}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      S_2_{0D}:           nRAS{0B}           nCAS{0B}           S_0_{0D}
+              :           S_1_{0D}           S_2_{0D}           S_3_{0D}
+              :      Window_2_{0D}      Window_3_{0C}      Window_4_{0C}
+              :      Window_5_{0D}       Block_0_{0C}       Block_1_{0C}
+              :       Block_2_{0D}       Block_3_{0C}       Block_4_{0C}
+              :       Block_5_{0D}       Block_6_{0D}      Window_0_{0C}
+              :      Window_1_{0C}       Block_7_{0D}     inst_RAsel{0C}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+      S_3_{0D}:           nRAS{0B}           nCAS{0B}           S_0_{0D}
+              :           S_1_{0D}           S_2_{0D}           S_3_{0D}
+              :      Window_2_{0D}      Window_3_{0C}      Window_4_{0C}
+              :      Window_5_{0D}       Block_0_{0C}       Block_1_{0C}
+              :       Block_2_{0D}       Block_3_{0C}       Block_4_{0C}
+              :       Block_5_{0D}       Block_6_{0D}      Window_0_{0C}
+              :      Window_1_{0C}       Block_7_{0D}     inst_RAsel{0C}
+              :           D_7_{2A}           D_6_{2B}           D_5_{3B}
+              :           D_4_{3A}           D_3_{3B}           D_2_{2A}
+              :           D_1_{2B}           D_0_{3A}
+    Ref_0_{0A}:           nRAS{0B}           nCAS{0B}         Ref_0_{0A}
+              :         Ref_1_{0A}         Ref_2_{0A}
+    Ref_1_{0A}:           nRAS{0B}           nCAS{0B}         Ref_1_{0A}
+              :         Ref_2_{0A}
+    Ref_2_{0A}:           nRAS{0B}           nCAS{0B}         Ref_2_{0A}
+inst_PHI2reg{0D}:
+              :           S_0_{0D}           S_1_{0D}           S_2_{0D}
+              :           S_3_{0D}
+inst_nPHI2seen{0D}:
+              :           S_0_{0D}           S_1_{0D}           S_2_{0D}
+              :           S_3_{0D} inst_nPHI2seen{0D}
+ Window_2_{0D}:          RA_0_{0A}
+ Window_3_{0C}:          RA_1_{0A}
+ Window_4_{0C}:          RA_2_{0A}
+ Window_5_{0D}:          RA_3_{0A}
+  Block_0_{0C}:          RA_4_{0A}
+  Block_1_{0C}:          RA_5_{0A}
+  Block_2_{0D}:          RA_6_{0A}
+  Block_3_{0C}:          RA_7_{0A}
+  Block_4_{0C}:          RA_8_{0A}
+  Block_5_{0D}:          RA_9_{0B}
+  Block_6_{0D}:         RA_10_{0B}
+ Window_0_{0C}:          RA_8_{0A}
+ Window_1_{0C}:          RA_9_{0B}
+  Block_7_{0D}:         RA_10_{0B}
+inst_RAsel{0C}:          RA_3_{0A}          RA_2_{0A}          RA_1_{0A}
+              :          RA_0_{0A}         RA_10_{0B}          RA_9_{0B}
+              :          RA_8_{0A}          RA_7_{0A}          RA_6_{0A}
+              :          RA_5_{0A}          RA_4_{0A}
 -----------------------------------------------------------------------------
 
 <Note> {.} : Indicates block location of signal
@@ -618,21 +662,21 @@ BLOCK_0A_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx0A00         ...              ...     mx0A16         ...              ...
-mx0A01         ...              ...     mx0A17         ...              ...
-mx0A02         ...              ...     mx0A18      pin 95             PHI2
-mx0A03         ...              ...     mx0A19         ...              ...
-mx0A04         ...              ...     mx0A20         ...              ...
-mx0A05         ...              ...     mx0A21 mcell 1B-10        inst_CASr
-mx0A06         ...              ...     mx0A22         ...              ...
-mx0A07         ...              ...     mx0A23         ...              ...
-mx0A08         ...              ...     mx0A24         ...              ...
-mx0A09      pin 77              nWE     mx0A25         ...              ...
-mx0A10         ...              ...     mx0A26         ...              ...
-mx0A11         ...              ...     mx0A27         ...              ...
-mx0A12         ...              ...     mx0A28         ...              ...
-mx0A13         ...              ...     mx0A29         ...              ...
-mx0A14 mcell 1B-02        inst_CASf     mx0A30         ...              ...
+mx0A00      pin 47             A_0_     mx0A16 mcell 0D-02        Window_5_
+mx0A01      pin 50             A_3_     mx0A17 mcell 0C-05         Block_4_
+mx0A02         ...              ...     mx0A18      pin 58             A_5_
+mx0A03         ...              ...     mx0A19 mcell 0C-02         Block_0_
+mx0A04 mcell 0C-10        Window_4_     mx0A20 mcell 0D-04         Block_2_
+mx0A05         ...              ...     mx0A21      pin 59             A_6_
+mx0A06         ...              ...     mx0A22 mcell 0C-03         Block_1_
+mx0A07      pin 60             A_7_     mx0A23         ...              ...
+mx0A08      pin 48             A_1_     mx0A24 mcell 0C-11         Block_3_
+mx0A09 mcell 0C-06        Window_0_     mx0A25 mcell 0D-10        Window_2_
+mx0A10 mcell 0A-10           Ref_0_     mx0A26         ...              ...
+mx0A11 mcell 0A-11           Ref_2_     mx0A27         ...              ...
+mx0A12      pin 49             A_2_     mx0A28         ...              ...
+mx0A13 mcell 0A-13           Ref_1_     mx0A29 mcell 0C-01        Window_3_
+mx0A14      pin 57             A_4_     mx0A30 mcell 0C-13       inst_RAsel
 mx0A15         ...              ...     mx0A31         ...              ...
 ----------------------------------------------------------------------------
 
@@ -641,22 +685,22 @@ BLOCK_0B_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx0B00         ...              ...     mx0B16         ...              ...
-mx0B01         ...              ...     mx0B17         ...              ...
-mx0B02         ...              ...     mx0B18      pin 12             D_2_
-mx0B03      pin 20             D_0_     mx0B19      pin 11             D_1_
-mx0B04      pin 33            RD_4_     mx0B20      pin 10            RD_3_
-mx0B05         ...              ...     mx0B21         ...              ...
-mx0B06         ...              ...     mx0B22         ...              ...
-mx0B07      pin 77              nWE     mx0B23         ...              ...
-mx0B08         ...              ...     mx0B24       pin 8            RD_1_
-mx0B09      pin 19             nIO1     mx0B25         ...              ...
-mx0B10         ...              ...     mx0B26         ...              ...
-mx0B11         ...              ...     mx0B27         ...              ...
-mx0B12         ...              ...     mx0B28       pin 6             D_3_
-mx0B13         ...              ...     mx0B29       pin 5            RD_2_
-mx0B14         ...              ...     mx0B30         ...              ...
-mx0B15         ...              ...     mx0B31         ...              ...
+mx0B00         ...              ...     mx0B16 mcell 0D-06         Block_6_
+mx0B01         ...              ...     mx0B17 mcell 0D-13             S_2_
+mx0B02 mcell 0D-11             S_3_     mx0B18      pin 74            A_10_
+mx0B03 mcell 0A-10           Ref_0_     mx0B19 mcell 0A-11           Ref_2_
+mx0B04 mcell 0C-09        Window_1_     mx0B20 mcell 0D-07         Block_7_
+mx0B05         ...              ...     mx0B21      pin 76            A_11_
+mx0B06         ...              ...     mx0B22      pin 73             A_9_
+mx0B07         ...              ...     mx0B23 mcell 0D-03             S_0_
+mx0B08      pin 62             nIO1     mx0B24 mcell 0A-13           Ref_1_
+mx0B09      pin 81            A_12_     mx0B25 mcell 0C-13       inst_RAsel
+mx0B10      pin 82            A_13_     mx0B26         ...              ...
+mx0B11      pin 34              nWE     mx0B27         ...              ...
+mx0B12      pin 84            A_15_     mx0B28      pin 72             A_8_
+mx0B13         ...              ...     mx0B29      pin 83            A_14_
+mx0B14         ...              ...     mx0B30 mcell 0D-09             S_1_
+mx0B15      pin 68             PHI2     mx0B31 mcell 0D-05         Block_5_
 ----------------------------------------------------------------------------
 
 
@@ -665,21 +709,21 @@ BLOCK_0C_LOGIC_ARRAY_FANIN
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
 mx0C00         ...              ...     mx0C16         ...              ...
-mx0C01         ...              ...     mx0C17         ...              ...
-mx0C02         ...              ...     mx0C18         ...              ...
-mx0C03         ...              ...     mx0C19         ...              ...
-mx0C04         ...              ...     mx0C20         ...              ...
-mx0C05         ...              ...     mx0C21         ...              ...
-mx0C06         ...              ...     mx0C22         ...              ...
-mx0C07         ...              ...     mx0C23         ...              ...
+mx0C01      pin 60             A_7_     mx0C17      pin 59             A_6_
+mx0C02      pin 87             nRES     mx0C18      pin 50             A_3_
+mx0C03      pin 77             D_4_     mx0C19         ...              ...
+mx0C04 mcell 0D-11             S_3_     mx0C20 mcell 0D-09             S_1_
+mx0C05         ...              ...     mx0C21      pin 58             A_5_
+mx0C06      pin 47             A_0_     mx0C22      pin 49             A_2_
+mx0C07      pin 62             nIO1     mx0C23         ...              ...
 mx0C08         ...              ...     mx0C24         ...              ...
-mx0C09         ...              ...     mx0C25         ...              ...
-mx0C10         ...              ...     mx0C26         ...              ...
-mx0C11         ...              ...     mx0C27         ...              ...
-mx0C12         ...              ...     mx0C28         ...              ...
-mx0C13         ...              ...     mx0C29         ...              ...
-mx0C14         ...              ...     mx0C30         ...              ...
-mx0C15         ...              ...     mx0C31         ...              ...
+mx0C09      pin 57             A_4_     mx0C25      pin 48             A_1_
+mx0C10      pin 70             D_3_     mx0C26         ...              ...
+mx0C11 mcell 0D-03             S_0_     mx0C27         ...              ...
+mx0C12         ...              ...     mx0C28      pin 34              nWE
+mx0C13 mcell 0D-13             S_2_     mx0C29      pin 61             D_1_
+mx0C14         ...              ...     mx0C30      pin 85             D_0_
+mx0C15      pin 69             nIO2     mx0C31         ...              ...
 ----------------------------------------------------------------------------
 
 
@@ -687,22 +731,22 @@ BLOCK_0D_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx0D00         ...              ...     mx0D16         ...              ...
-mx0D01         ...              ...     mx0D17         ...              ...
-mx0D02         ...              ...     mx0D18         ...              ...
-mx0D03         ...              ...     mx0D19         ...              ...
+mx0D00 mcell 0D-00     inst_PHI2reg     mx0D16      pin 54             D_7_
+mx0D01 mcell 0D-01   inst_nPHI2seen     mx0D17      pin 75             D_5_
+mx0D02      pin 34              nWE     mx0D18      pin 46             D_2_
+mx0D03 mcell 0D-03             S_0_     mx0D19      pin 49             A_2_
 mx0D04         ...              ...     mx0D20         ...              ...
-mx0D05         ...              ...     mx0D21         ...              ...
-mx0D06         ...              ...     mx0D22         ...              ...
-mx0D07         ...              ...     mx0D23         ...              ...
-mx0D08         ...              ...     mx0D24         ...              ...
-mx0D09         ...              ...     mx0D25         ...              ...
-mx0D10         ...              ...     mx0D26         ...              ...
-mx0D11         ...              ...     mx0D27         ...              ...
-mx0D12         ...              ...     mx0D28         ...              ...
-mx0D13         ...              ...     mx0D29         ...              ...
+mx0D05      pin 48             A_1_     mx0D21      pin 57             A_4_
+mx0D06      pin 50             A_3_     mx0D22         ...              ...
+mx0D07      pin 56             D_6_     mx0D23      pin 58             A_5_
+mx0D08      pin 69             nIO2     mx0D24      pin 59             A_6_
+mx0D09 mcell 0D-09             S_1_     mx0D25      pin 87             nRES
+mx0D10      pin 47             A_0_     mx0D26         ...              ...
+mx0D11 mcell 0D-11             S_3_     mx0D27         ...              ...
+mx0D12         ...              ...     mx0D28      pin 60             A_7_
+mx0D13 mcell 0D-13             S_2_     mx0D29         ...              ...
 mx0D14         ...              ...     mx0D30         ...              ...
-mx0D15         ...              ...     mx0D31         ...              ...
+mx0D15         ...              ...     mx0D31      pin 68             PHI2
 ----------------------------------------------------------------------------
 
 
@@ -710,18 +754,18 @@ BLOCK_1A_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx1A00         ...              ...     mx1A16      pin 77              nWE
+mx1A00         ...              ...     mx1A16         ...              ...
 mx1A01         ...              ...     mx1A17         ...              ...
 mx1A02         ...              ...     mx1A18         ...              ...
 mx1A03         ...              ...     mx1A19         ...              ...
-mx1A04      pin 25             D_6_     mx1A20         ...              ...
-mx1A05         ...              ...     mx1A21      pin 26             D_5_
+mx1A04         ...              ...     mx1A20         ...              ...
+mx1A05         ...              ...     mx1A21         ...              ...
 mx1A06         ...              ...     mx1A22         ...              ...
-mx1A07         ...              ...     mx1A23      pin 24             D_7_
-mx1A08       pin 7             D_4_     mx1A24         ...              ...
+mx1A07         ...              ...     mx1A23         ...              ...
+mx1A08         ...              ...     mx1A24         ...              ...
 mx1A09         ...              ...     mx1A25         ...              ...
 mx1A10         ...              ...     mx1A26         ...              ...
-mx1A11      pin 19             nIO1     mx1A27         ...              ...
+mx1A11         ...              ...     mx1A27         ...              ...
 mx1A12         ...              ...     mx1A28         ...              ...
 mx1A13         ...              ...     mx1A29         ...              ...
 mx1A14         ...              ...     mx1A30         ...              ...
@@ -733,22 +777,22 @@ BLOCK_1B_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx1B00 mcell 1B-00             S_2_     mx1B16 mcell 0A-04     inst_PHI2reg
-mx1B01 mcell 1B-01           Ref_0_     mx1B17         ...              ...
-mx1B02         ...              ...     mx1B18      pin 19             nIO1
-mx1B03         ...              ...     mx1B19         ...              ...
-mx1B04         ...              ...     mx1B20       pin 9            RD_0_
-mx1B05 mcell 1B-05   inst_nPHI2seen     mx1B21         ...              ...
-mx1B06 mcell 1B-06           Ref_1_     mx1B22         ...              ...
-mx1B07 mcell 1B-07             S_3_     mx1B23      pin 77              nWE
-mx1B08 mcell 1B-08           Ref_2_     mx1B24      pin 31            RD_6_
-mx1B09 mcell 1B-09           Ref_3_     mx1B25         ...              ...
+mx1B00         ...              ...     mx1B16      pin 56             D_6_
+mx1B01         ...              ...     mx1B17      pin 75             D_5_
+mx1B02         ...              ...     mx1B18         ...              ...
+mx1B03      pin 34              nWE     mx1B19         ...              ...
+mx1B04      pin 61             D_1_     mx1B20         ...              ...
+mx1B05         ...              ...     mx1B21         ...              ...
+mx1B06         ...              ...     mx1B22         ...              ...
+mx1B07         ...              ...     mx1B23      pin 46             D_2_
+mx1B08      pin 62             nIO1     mx1B24         ...              ...
+mx1B09      pin 70             D_3_     mx1B25         ...              ...
 mx1B10         ...              ...     mx1B26         ...              ...
 mx1B11         ...              ...     mx1B27         ...              ...
-mx1B12         ...              ...     mx1B28      pin 32            RD_5_
+mx1B12      pin 77             D_4_     mx1B28         ...              ...
 mx1B13         ...              ...     mx1B29         ...              ...
-mx1B14 mcell 1B-14             S_0_     mx1B30      pin 37            RD_7_
-mx1B15 mcell 1B-15             S_1_     mx1B31      pin 95             PHI2
+mx1B14      pin 54             D_7_     mx1B30         ...              ...
+mx1B15      pin 85             D_0_     mx1B31         ...              ...
 ----------------------------------------------------------------------------
 
 
@@ -802,21 +846,21 @@ BLOCK_2A_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx2A00         ...              ...     mx2A16         ...              ...
-mx2A01         ...              ...     mx2A17         ...              ...
+mx2A00      pin 60             A_7_     mx2A16      pin 59             A_6_
+mx2A01      pin 69             nIO2     mx2A17         ...              ...
 mx2A02         ...              ...     mx2A18         ...              ...
-mx2A03         ...              ...     mx2A19         ...              ...
-mx2A04         ...              ...     mx2A20         ...              ...
-mx2A05         ...              ...     mx2A21         ...              ...
-mx2A06         ...              ...     mx2A22         ...              ...
-mx2A07         ...              ...     mx2A23         ...              ...
-mx2A08         ...              ...     mx2A24         ...              ...
-mx2A09         ...              ...     mx2A25         ...              ...
+mx2A03 mcell 0D-03             S_0_     mx2A19         ...              ...
+mx2A04      pin 26            RD_7_     mx2A20      pin 47             A_0_
+mx2A05         ...              ...     mx2A21      pin 48             A_1_
+mx2A06      pin 57             A_4_     mx2A22      pin 49             A_2_
+mx2A07 mcell 0D-13             S_2_     mx2A23      pin 50             A_3_
+mx2A08      pin 34              nWE     mx2A24      pin 87             nRES
+mx2A09 mcell 0D-11             S_3_     mx2A25 mcell 0D-09             S_1_
 mx2A10         ...              ...     mx2A26         ...              ...
-mx2A11         ...              ...     mx2A27         ...              ...
+mx2A11      pin 58             A_5_     mx2A27         ...              ...
 mx2A12         ...              ...     mx2A28         ...              ...
-mx2A13         ...              ...     mx2A29         ...              ...
-mx2A14         ...              ...     mx2A30         ...              ...
+mx2A13      pin 21            RD_2_     mx2A29         ...              ...
+mx2A14      pin 62             nIO1     mx2A30         ...              ...
 mx2A15         ...              ...     mx2A31         ...              ...
 ----------------------------------------------------------------------------
 
@@ -825,21 +869,21 @@ BLOCK_2B_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx2B00         ...              ...     mx2B16         ...              ...
-mx2B01         ...              ...     mx2B17         ...              ...
-mx2B02         ...              ...     mx2B18         ...              ...
+mx2B00      pin 50             A_3_     mx2B16         ...              ...
+mx2B01 mcell 0D-09             S_1_     mx2B17         ...              ...
+mx2B02      pin 69             nIO2     mx2B18      pin 62             nIO1
 mx2B03         ...              ...     mx2B19         ...              ...
-mx2B04         ...              ...     mx2B20         ...              ...
-mx2B05         ...              ...     mx2B21         ...              ...
-mx2B06         ...              ...     mx2B22         ...              ...
-mx2B07         ...              ...     mx2B23         ...              ...
-mx2B08         ...              ...     mx2B24         ...              ...
-mx2B09         ...              ...     mx2B25         ...              ...
+mx2B04         ...              ...     mx2B20      pin 60             A_7_
+mx2B05      pin 34              nWE     mx2B21         ...              ...
+mx2B06      pin 48             A_1_     mx2B22 mcell 0D-11             S_3_
+mx2B07      pin 87             nRES     mx2B23      pin 59             A_6_
+mx2B08 mcell 0D-03             S_0_     mx2B24      pin 58             A_5_
+mx2B09      pin 47             A_0_     mx2B25         ...              ...
 mx2B10         ...              ...     mx2B26         ...              ...
-mx2B11         ...              ...     mx2B27         ...              ...
-mx2B12         ...              ...     mx2B28         ...              ...
-mx2B13         ...              ...     mx2B29         ...              ...
-mx2B14         ...              ...     mx2B30         ...              ...
+mx2B11         ...              ...     mx2B27      pin 57             A_4_
+mx2B12      pin 49             A_2_     mx2B28      pin 23            RD_1_
+mx2B13      pin 24            RD_6_     mx2B29         ...              ...
+mx2B14 mcell 0D-13             S_2_     mx2B30         ...              ...
 mx2B15         ...              ...     mx2B31         ...              ...
 ----------------------------------------------------------------------------
 
@@ -894,22 +938,22 @@ BLOCK_3A_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx3A00      pin 71             nRES     mx3A16 mcell 1B-07             S_3_
-mx3A01 mcell 3A-01        Window_2_     mx3A17      pin 87             A_2_
-mx3A02      pin 11             D_1_     mx3A18      pin 86             A_7_
-mx3A03      pin 12             D_2_     mx3A19      pin 85             A_1_
-mx3A04 mcell 1B-00             S_2_     mx3A20         ...              ...
-mx3A05 mcell 3D-07       inst_RAsel     mx3A21 mcell 1B-15             S_1_
-mx3A06      pin 97             A_3_     mx3A22         ...              ...
-mx3A07         ...              ...     mx3A23      pin 94             A_6_
-mx3A08 mcell 3C-11         Block_0_     mx3A24      pin 99             A_0_
-mx3A09 mcell 3A-09        Window_1_     mx3A25 mcell 3D-10        Window_5_
-mx3A10         ...              ...     mx3A26         ...              ...
-mx3A11      pin 98             A_4_     mx3A27         ...              ...
-mx3A12 mcell 3A-12         Block_2_     mx3A28      pin 77              nWE
-mx3A13         ...              ...     mx3A29      pin 75             nIO2
-mx3A14 mcell 3A-14         Block_1_     mx3A30         ...              ...
-mx3A15      pin 93             A_5_     mx3A31 mcell 1B-14             S_0_
+mx3A00      pin 57             A_4_     mx3A16         ...              ...
+mx3A01         ...              ...     mx3A17      pin 87             nRES
+mx3A02         ...              ...     mx3A18      pin 47             A_0_
+mx3A03      pin 69             nIO2     mx3A19      pin 49             A_2_
+mx3A04      pin 25            RD_0_     mx3A20         ...              ...
+mx3A05      pin 58             A_5_     mx3A21         ...              ...
+mx3A06      pin 59             A_6_     mx3A22         ...              ...
+mx3A07         ...              ...     mx3A23         ...              ...
+mx3A08      pin 60             A_7_     mx3A24         ...              ...
+mx3A09         ...              ...     mx3A25         ...              ...
+mx3A10 mcell 0D-09             S_1_     mx3A26      pin 48             A_1_
+mx3A11      pin 20            RD_4_     mx3A27 mcell 0D-03             S_0_
+mx3A12         ...              ...     mx3A28         ...              ...
+mx3A13      pin 50             A_3_     mx3A29      pin 34              nWE
+mx3A14      pin 62             nIO1     mx3A30 mcell 0D-13             S_2_
+mx3A15 mcell 0D-11             S_3_     mx3A31         ...              ...
 ----------------------------------------------------------------------------
 
 
@@ -917,22 +961,22 @@ BLOCK_3B_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx3B00         ...              ...     mx3B16         ...              ...
-mx3B01      pin 87             A_2_     mx3B17 mcell 3C-05        Window_0_
-mx3B02 mcell 3C-08         Block_4_     mx3B18 mcell 3C-00        Window_3_
-mx3B03         ...              ...     mx3B19         ...              ...
-mx3B04      pin 86             A_7_     mx3B20 mcell 3D-07       inst_RAsel
-mx3B05 mcell 3A-09        Window_1_     mx3B21 mcell 3C-03         Block_3_
-mx3B06         ...              ...     mx3B22 mcell 3C-13        Window_4_
-mx3B07      pin 85             A_1_     mx3B23         ...              ...
+mx3B00         ...              ...     mx3B16      pin 59             A_6_
+mx3B01      pin 87             nRES     mx3B17         ...              ...
+mx3B02 mcell 0D-13             S_2_     mx3B18      pin 69             nIO2
+mx3B03         ...              ...     mx3B19      pin 50             A_3_
+mx3B04         ...              ...     mx3B20 mcell 0D-03             S_0_
+mx3B05      pin 62             nIO1     mx3B21      pin 49             A_2_
+mx3B06      pin 47             A_0_     mx3B22         ...              ...
+mx3B07         ...              ...     mx3B23      pin 34              nWE
 mx3B08         ...              ...     mx3B24         ...              ...
-mx3B09         ...              ...     mx3B25         ...              ...
-mx3B10         ...              ...     mx3B26         ...              ...
+mx3B09      pin 58             A_5_     mx3B25 mcell 0D-09             S_1_
+mx3B10      pin 60             A_7_     mx3B26      pin 19            RD_3_
 mx3B11         ...              ...     mx3B27         ...              ...
-mx3B12         ...              ...     mx3B28         ...              ...
-mx3B13         ...              ...     mx3B29 mcell 3D-11         Block_5_
-mx3B14 mcell 3D-03         Block_7_     mx3B30         ...              ...
-mx3B15 mcell 3D-02         Block_6_     mx3B31         ...              ...
+mx3B12      pin 57             A_4_     mx3B28         ...              ...
+mx3B13      pin 22            RD_5_     mx3B29         ...              ...
+mx3B14         ...              ...     mx3B30 mcell 0D-11             S_3_
+mx3B15         ...              ...     mx3B31      pin 48             A_1_
 ----------------------------------------------------------------------------
 
 
@@ -940,22 +984,22 @@ BLOCK_3C_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx3C00 mcell 3C-00        Window_3_     mx3C16 mcell 1B-00             S_2_
-mx3C01 mcell 1B-07             S_3_     mx3C17      pin 97             A_3_
-mx3C02      pin 87             A_2_     mx3C18      pin 20             D_0_
-mx3C03 mcell 3C-03         Block_3_     mx3C19         ...              ...
-mx3C04         ...              ...     mx3C20      pin 99             A_0_
-mx3C05 mcell 3C-05        Window_0_     mx3C21         ...              ...
-mx3C06 mcell 1B-15             S_1_     mx3C22 mcell 1B-14             S_0_
+mx3C00         ...              ...     mx3C16         ...              ...
+mx3C01         ...              ...     mx3C17         ...              ...
+mx3C02         ...              ...     mx3C18         ...              ...
+mx3C03         ...              ...     mx3C19         ...              ...
+mx3C04         ...              ...     mx3C20         ...              ...
+mx3C05         ...              ...     mx3C21         ...              ...
+mx3C06         ...              ...     mx3C22         ...              ...
 mx3C07         ...              ...     mx3C23         ...              ...
-mx3C08 mcell 3C-08         Block_4_     mx3C24      pin 86             A_7_
-mx3C09       pin 7             D_4_     mx3C25      pin 71             nRES
-mx3C10      pin 75             nIO2     mx3C26      pin 93             A_5_
-mx3C11 mcell 3C-11         Block_0_     mx3C27       pin 6             D_3_
-mx3C12      pin 94             A_6_     mx3C28      pin 98             A_4_
-mx3C13 mcell 3C-13        Window_4_     mx3C29         ...              ...
-mx3C14      pin 77              nWE     mx3C30         ...              ...
-mx3C15      pin 85             A_1_     mx3C31         ...              ...
+mx3C08         ...              ...     mx3C24         ...              ...
+mx3C09         ...              ...     mx3C25         ...              ...
+mx3C10         ...              ...     mx3C26         ...              ...
+mx3C11         ...              ...     mx3C27         ...              ...
+mx3C12         ...              ...     mx3C28         ...              ...
+mx3C13         ...              ...     mx3C29         ...              ...
+mx3C14         ...              ...     mx3C30         ...              ...
+mx3C15         ...              ...     mx3C31         ...              ...
 ----------------------------------------------------------------------------
 
 
@@ -963,22 +1007,22 @@ BLOCK_3D_LOGIC_ARRAY_FANIN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 CSM    Source             Signal        CSM    Source             Signal
 ------------------------------------    ------------------------------------
-mx3D00      pin 19             nIO1     mx3D16      pin 94             A_6_
-mx3D01      pin 77              nWE     mx3D17         ...              ...
-mx3D02 mcell 3D-02         Block_6_     mx3D18 mcell 1B-07             S_3_
-mx3D03 mcell 3D-03         Block_7_     mx3D19         ...              ...
-mx3D04 mcell 1B-00             S_2_     mx3D20         ...              ...
-mx3D05      pin 97             A_3_     mx3D21 mcell 1B-14             S_0_
-mx3D06         ...              ...     mx3D22      pin 99             A_0_
-mx3D07      pin 86             A_7_     mx3D23 mcell 1B-15             S_1_
-mx3D08      pin 85             A_1_     mx3D24         ...              ...
-mx3D09      pin 25             D_6_     mx3D25      pin 87             A_2_
-mx3D10 mcell 3D-10        Window_5_     mx3D26      pin 71             nRES
-mx3D11 mcell 3D-11         Block_5_     mx3D27         ...              ...
-mx3D12      pin 26             D_5_     mx3D28         ...              ...
-mx3D13      pin 75             nIO2     mx3D29         ...              ...
-mx3D14      pin 98             A_4_     mx3D30         ...              ...
-mx3D15      pin 24             D_7_     mx3D31      pin 93             A_5_
+mx3D00         ...              ...     mx3D16         ...              ...
+mx3D01         ...              ...     mx3D17         ...              ...
+mx3D02         ...              ...     mx3D18         ...              ...
+mx3D03         ...              ...     mx3D19         ...              ...
+mx3D04         ...              ...     mx3D20         ...              ...
+mx3D05         ...              ...     mx3D21         ...              ...
+mx3D06         ...              ...     mx3D22         ...              ...
+mx3D07         ...              ...     mx3D23         ...              ...
+mx3D08         ...              ...     mx3D24         ...              ...
+mx3D09         ...              ...     mx3D25         ...              ...
+mx3D10         ...              ...     mx3D26         ...              ...
+mx3D11         ...              ...     mx3D27         ...              ...
+mx3D12         ...              ...     mx3D28         ...              ...
+mx3D13         ...              ...     mx3D29         ...              ...
+mx3D14         ...              ...     mx3D30         ...              ...
+mx3D15         ...              ...     mx3D31         ...              ...
 ----------------------------------------------------------------------------
 
 
@@ -990,15 +1034,51 @@ mx3D15      pin 24             D_7_     mx3D31      pin 93             A_5_
 Fit Equations
 ~~~~~~~~~~~~~~~~
 
-D_7_ = (RD_7_.PIN);
+RA_3_ = (A_3_ & inst_RAsel.Q
+     # Window_5_.Q & !inst_RAsel.Q);
 
-D_7_.OE = (nWE & !nIO1);
+RA_2_ = (A_2_ & inst_RAsel.Q
+     # Window_4_.Q & !inst_RAsel.Q);
+
+RA_1_ = (A_1_ & inst_RAsel.Q
+     # Window_3_.Q & !inst_RAsel.Q);
+
+RA_0_ = (A_0_ & inst_RAsel.Q
+     # Window_2_.Q & !inst_RAsel.Q);
+
+RD_6_ = (D_6_.PIN);
+
+RD_6_.OE = (!nWE & !nIO1);
+
+RD_5_ = (D_5_.PIN);
+
+RD_5_.OE = (!nWE & !nIO1);
 
 RA_11_ = (0);
+
+RD_4_ = (D_4_.PIN);
+
+RD_4_.OE = (!nWE & !nIO1);
+
+RD_3_ = (D_3_.PIN);
+
+RD_3_.OE = (!nWE & !nIO1);
 
 RD_7_ = (D_7_.PIN);
 
 RD_7_.OE = (!nWE & !nIO1);
+
+RD_2_ = (D_2_.PIN);
+
+RD_2_.OE = (!nWE & !nIO1);
+
+RD_1_ = (D_1_.PIN);
+
+RD_1_.OE = (!nWE & !nIO1);
+
+RD_0_ = (D_0_.PIN);
+
+RD_0_.OE = (!nWE & !nIO1);
 
 nIRQ = (0);
 
@@ -1008,47 +1088,9 @@ nDMA = (0);
 
 nDMA.OE = (0);
 
-!nRAS.D = (nWE & !nIO1 & !S_1_.Q & S_2_.Q & !S_3_.Q
-     # !nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q
-     # !nWE & !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
-     # !Ref_0_.Q & S_0_.Q & !S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_1_.Q & !Ref_2_.Q & !Ref_3_.Q);
-
-nRAS.C = (DotClk);
-
-nCAS = (!PHI2 & !inst_CASf.Q
-     # !inst_CASr.Q & !inst_CASf.Q);
-
 !nRWE = (PHI2 & !nWE);
 
 DelayOut = (0);
-
-D_6_ = (RD_6_.PIN);
-
-D_6_.OE = (nWE & !nIO1);
-
-D_5_ = (RD_5_.PIN);
-
-D_5_.OE = (nWE & !nIO1);
-
-D_4_ = (RD_4_.PIN);
-
-D_4_.OE = (nWE & !nIO1);
-
-D_3_ = (RD_3_.PIN);
-
-D_3_.OE = (nWE & !nIO1);
-
-D_2_ = (RD_2_.PIN);
-
-D_2_.OE = (nWE & !nIO1);
-
-D_1_ = (RD_1_.PIN);
-
-D_1_.OE = (nWE & !nIO1);
-
-D_0_ = (RD_0_.PIN);
-
-D_0_.OE = (nWE & !nIO1);
 
 RA_10_ = (Block_7_.Q & inst_RAsel.Q
      # Block_6_.Q & !inst_RAsel.Q);
@@ -1071,52 +1113,99 @@ RA_5_ = (A_5_ & inst_RAsel.Q
 RA_4_ = (A_4_ & inst_RAsel.Q
      # Block_0_.Q & !inst_RAsel.Q);
 
-RA_3_ = (A_3_ & inst_RAsel.Q
-     # Window_5_.Q & !inst_RAsel.Q);
+D_7_.OE = (nWE & !nIO1);
 
-RA_2_ = (A_2_ & inst_RAsel.Q
-     # Window_4_.Q & !inst_RAsel.Q);
+D_7_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RA_1_ = (A_1_ & inst_RAsel.Q
-     # Window_3_.Q & !inst_RAsel.Q);
+D_7_.AR = (!nRES);
 
-RA_0_ = (A_0_ & inst_RAsel.Q
-     # Window_2_.Q & !inst_RAsel.Q);
+D_7_.D = (RD_7_.PIN);
 
-RD_6_ = (D_6_.PIN);
+D_7_.C = (DotClk);
 
-RD_6_.OE = (!nWE & !nIO1);
+!nRAS.D = (!nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q
+     # !nWE & !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
+     # !S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_0_.Q & !Ref_1_.Q & !Ref_2_.Q
+     # A_15_ & nWE & A_14_ & !A_13_ & A_12_ & A_11_ & A_10_ & A_9_ & !A_8_ & !S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RD_5_ = (D_5_.PIN);
+nRAS.C = (DotClk);
 
-RD_5_.OE = (!nWE & !nIO1);
+!nCAS.D = (!nWE & !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
+     # nWE & !nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q
+     # !S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_0_.Q & !Ref_1_.Q & !Ref_2_.Q
+     # S_0_.Q & !S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_0_.Q & !Ref_1_.Q & !Ref_2_.Q);
 
-RD_4_ = (D_4_.PIN);
+nCAS.C = (DotClk);
 
-RD_4_.OE = (!nWE & !nIO1);
+D_6_.OE = (nWE & !nIO1);
 
-RD_3_ = (D_3_.PIN);
+D_6_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RD_3_.OE = (!nWE & !nIO1);
+D_6_.AR = (!nRES);
 
-RD_2_ = (D_2_.PIN);
+D_6_.D = (RD_6_.PIN);
 
-RD_2_.OE = (!nWE & !nIO1);
+D_6_.C = (DotClk);
 
-RD_1_ = (D_1_.PIN);
+D_5_.OE = (nWE & !nIO1);
 
-RD_1_.OE = (!nWE & !nIO1);
+D_5_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RD_0_ = (D_0_.PIN);
+D_5_.AR = (!nRES);
 
-RD_0_.OE = (!nWE & !nIO1);
+D_5_.D = (RD_5_.PIN);
 
-Ref_0_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
+D_5_.C = (DotClk);
 
-Ref_0_.D = (!Ref_0_.Q & !Ref_2_.Q
-     # !Ref_0_.Q & !Ref_3_.Q);
+D_4_.OE = (nWE & !nIO1);
 
-Ref_0_.C = (DotClk);
+D_4_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_4_.AR = (!nRES);
+
+D_4_.D = (RD_4_.PIN);
+
+D_4_.C = (DotClk);
+
+D_3_.OE = (nWE & !nIO1);
+
+D_3_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_3_.AR = (!nRES);
+
+D_3_.D = (RD_3_.PIN);
+
+D_3_.C = (DotClk);
+
+D_2_.OE = (nWE & !nIO1);
+
+D_2_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_2_.AR = (!nRES);
+
+D_2_.D = (RD_2_.PIN);
+
+D_2_.C = (DotClk);
+
+D_1_.OE = (nWE & !nIO1);
+
+D_1_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_1_.AR = (!nRES);
+
+D_1_.D = (RD_1_.PIN);
+
+D_1_.C = (DotClk);
+
+D_0_.OE = (nWE & !nIO1);
+
+D_0_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_0_.AR = (!nRES);
+
+D_0_.D = (RD_0_.PIN);
+
+D_0_.C = (DotClk);
 
 S_0_.D = (!S_0_.Q & S_1_.Q
      # !S_0_.Q & S_2_.Q
@@ -1147,123 +1236,138 @@ S_2_.C = (DotClk);
 
 S_3_.C = (DotClk);
 
-Ref_1_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
+Ref_0_.D = (!Ref_0_.Q);
 
-!Ref_1_.D = (Ref_0_.Q & Ref_1_.Q
-     # !Ref_0_.Q & !Ref_1_.Q
-     # Ref_2_.Q & Ref_3_.Q);
+Ref_0_.C = (DotClk);
+
+Ref_1_.D = (!Ref_0_.Q & Ref_1_.Q
+     # Ref_0_.Q & !Ref_1_.Q);
 
 Ref_1_.C = (DotClk);
 
-Ref_2_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
-
-Ref_2_.D = (Ref_0_.Q & Ref_1_.Q & !Ref_2_.Q
-     # !Ref_0_.Q & Ref_2_.Q & !Ref_3_.Q
-     # !Ref_1_.Q & Ref_2_.Q & !Ref_3_.Q);
+Ref_2_.D = (!Ref_0_.Q & Ref_2_.Q
+     # !Ref_1_.Q & Ref_2_.Q
+     # Ref_0_.Q & Ref_1_.Q & !Ref_2_.Q);
 
 Ref_2_.C = (DotClk);
-
-Ref_3_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
-
-Ref_3_.D = (!Ref_2_.Q & Ref_3_.Q
-     # Ref_0_.Q & Ref_1_.Q & Ref_2_.Q & !Ref_3_.Q);
-
-Ref_3_.C = (DotClk);
 
 inst_PHI2reg.D = (PHI2);
 
 inst_PHI2reg.C = (DotClk);
 
-inst_CASr.D = (nWE & !nIO1 & S_0_.Q & S_2_.Q & !S_3_.Q
-     # !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
-
-inst_CASr.C = (DotClk);
-
 !inst_nPHI2seen.D = (PHI2 & !inst_nPHI2seen.Q);
 
 inst_nPHI2seen.C = (DotClk);
 
-Window_2_.T = (!nRES & Window_2_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_2_.Q & !D_2_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_2_.Q & D_2_.PIN);
+Window_2_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_2_.AR = (!nRES);
+
+Window_2_.D = (D_2_.PIN);
 
 Window_2_.C = (DotClk);
 
-Window_3_.T = (!nRES & Window_3_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_3_.Q & !D_3_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_3_.Q & D_3_.PIN);
+Window_3_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_3_.AR = (!nRES);
+
+Window_3_.D = (D_3_.PIN);
 
 Window_3_.C = (DotClk);
 
-Window_4_.T = (!nRES & Window_4_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_4_.Q & !D_4_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_4_.Q & D_4_.PIN);
+Window_4_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_4_.AR = (!nRES);
+
+Window_4_.D = (D_4_.PIN);
 
 Window_4_.C = (DotClk);
 
-Window_5_.T = (!nRES & Window_5_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_5_.Q & !D_5_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_5_.Q & D_5_.PIN);
+Window_5_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_5_.AR = (!nRES);
+
+Window_5_.D = (D_5_.PIN);
 
 Window_5_.C = (DotClk);
 
-Block_0_.T = (!nRES & Block_0_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_0_.Q & !D_0_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_0_.Q & D_0_.PIN);
+Block_0_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_0_.AR = (!nRES);
+
+Block_0_.D = (D_0_.PIN);
 
 Block_0_.C = (DotClk);
 
-Block_1_.T = (!nRES & Block_1_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_1_.Q & !D_1_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_1_.Q & D_1_.PIN);
+Block_1_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_1_.AR = (!nRES);
+
+Block_1_.D = (D_1_.PIN);
 
 Block_1_.C = (DotClk);
 
-Block_2_.T = (!nRES & Block_2_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_2_.Q & !D_2_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_2_.Q & D_2_.PIN);
+Block_2_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_2_.AR = (!nRES);
+
+Block_2_.D = (D_2_.PIN);
 
 Block_2_.C = (DotClk);
 
-Block_3_.T = (!nRES & Block_3_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_3_.Q & !D_3_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_3_.Q & D_3_.PIN);
+Block_3_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_3_.AR = (!nRES);
+
+Block_3_.D = (D_3_.PIN);
 
 Block_3_.C = (DotClk);
 
-Block_4_.T = (!nRES & Block_4_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_4_.Q & !D_4_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_4_.Q & D_4_.PIN);
+Block_4_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_4_.AR = (!nRES);
+
+Block_4_.D = (D_4_.PIN);
 
 Block_4_.C = (DotClk);
 
-Block_5_.T = (!nRES & Block_5_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_5_.Q & !D_5_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_5_.Q & D_5_.PIN);
+Block_5_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_5_.AR = (!nRES);
+
+Block_5_.D = (D_5_.PIN);
 
 Block_5_.C = (DotClk);
 
-Block_6_.T = (!nRES & Block_6_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_6_.Q & !D_6_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_6_.Q & D_6_.PIN);
+Block_6_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_6_.AR = (!nRES);
+
+Block_6_.D = (D_6_.PIN);
 
 Block_6_.C = (DotClk);
 
-Window_0_.T = (!nRES & Window_0_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_0_.Q & !D_0_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_0_.Q & D_0_.PIN);
+Window_0_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_0_.AR = (!nRES);
+
+Window_0_.D = (D_0_.PIN);
 
 Window_0_.C = (DotClk);
 
-Window_1_.T = (!nRES & Window_1_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_1_.Q & !D_1_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_1_.Q & D_1_.PIN);
+Window_1_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_1_.AR = (!nRES);
+
+Window_1_.D = (D_1_.PIN);
 
 Window_1_.C = (DotClk);
 
-Block_7_.T = (!nRES & Block_7_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_7_.Q & !D_7_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_7_.Q & D_7_.PIN);
+Block_7_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_7_.AR = (!nRES);
+
+Block_7_.D = (D_7_.PIN);
 
 Block_7_.C = (DotClk);
 
@@ -1271,10 +1375,6 @@ inst_RAsel.D = (!nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
      # !nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q);
 
 inst_RAsel.C = (!DotClk);
-
-inst_CASf.D = (!Ref_0_.Q & S_0_.Q & !S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_1_.Q & !Ref_2_.Q & !Ref_3_.Q);
-
-inst_CASf.C = (!DotClk);
 
 
 

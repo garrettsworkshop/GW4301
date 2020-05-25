@@ -2,46 +2,11 @@
 Copyright(C), 1992-2015, Lattice Semiconductor Corp.
 All Rights Reserved.
 
-Design cram created  Sun May 24 21:21:42 2020
+Design cram created  Sun May 24 23:37:58 2020
 
 
  P-Terms   Fan-in  Fan-out  Type  Name (attributes)
 ---------  ------  -------  ----  -----------------
-   1          1        1    Pin   D_7_ 
-   1          2        1    Pin   D_7_.OE 
-   0          0        1    Pin   RA_11_ 
-   1          1        1    Pin   RD_7_ 
-   1          2        1    Pin   RD_7_.OE 
-   0          0        1    Pin   nIRQ 
-   0          0        1    Pin   nIRQ.OE 
-   0          0        1    Pin   nDMA 
-   0          0        1    Pin   nDMA.OE 
-   4         10        1    Pin   nRAS.D- 
-   1          1        1    Pin   nRAS.C 
-   2          3        1    Pin   nCAS 
-   1          2        1    Pin   nRWE- 
-   0          0        1    Pin   DelayOut 
-   1          1        1    Pin   D_6_ 
-   1          2        1    Pin   D_6_.OE 
-   1          1        1    Pin   D_5_ 
-   1          2        1    Pin   D_5_.OE 
-   1          1        1    Pin   D_4_ 
-   1          2        1    Pin   D_4_.OE 
-   1          1        1    Pin   D_3_ 
-   1          2        1    Pin   D_3_.OE 
-   1          1        1    Pin   D_2_ 
-   1          2        1    Pin   D_2_.OE 
-   1          1        1    Pin   D_1_ 
-   1          2        1    Pin   D_1_.OE 
-   1          1        1    Pin   D_0_ 
-   1          2        1    Pin   D_0_.OE 
-   2          3        1    Pin   RA_10_ 
-   2          3        1    Pin   RA_9_ 
-   2          3        1    Pin   RA_8_ 
-   2          3        1    Pin   RA_7_ 
-   2          3        1    Pin   RA_6_ 
-   2          3        1    Pin   RA_5_ 
-   2          3        1    Pin   RA_4_ 
    2          3        1    Pin   RA_3_ 
    2          3        1    Pin   RA_2_ 
    2          3        1    Pin   RA_1_ 
@@ -50,19 +15,76 @@ Design cram created  Sun May 24 21:21:42 2020
    1          2        1    Pin   RD_6_.OE 
    1          1        1    Pin   RD_5_ 
    1          2        1    Pin   RD_5_.OE 
+   0          0        1    Pin   RA_11_ 
    1          1        1    Pin   RD_4_ 
    1          2        1    Pin   RD_4_.OE 
    1          1        1    Pin   RD_3_ 
    1          2        1    Pin   RD_3_.OE 
+   1          1        1    Pin   RD_7_ 
+   1          2        1    Pin   RD_7_.OE 
    1          1        1    Pin   RD_2_ 
    1          2        1    Pin   RD_2_.OE 
    1          1        1    Pin   RD_1_ 
    1          2        1    Pin   RD_1_.OE 
    1          1        1    Pin   RD_0_ 
    1          2        1    Pin   RD_0_.OE 
-   1          4        1    Node  Ref_0_.CE 
-   2          3        1    Node  Ref_0_.D 
-   1          1        1    Node  Ref_0_.C 
+   0          0        1    Pin   nIRQ 
+   0          0        1    Pin   nIRQ.OE 
+   0          0        1    Pin   nDMA 
+   0          0        1    Pin   nDMA.OE 
+   1          2        1    Pin   nRWE- 
+   0          0        1    Pin   DelayOut 
+   2          3        1    Pin   RA_10_ 
+   2          3        1    Pin   RA_9_ 
+   2          3        1    Pin   RA_8_ 
+   2          3        1    Pin   RA_7_ 
+   2          3        1    Pin   RA_6_ 
+   2          3        1    Pin   RA_5_ 
+   2          3        1    Pin   RA_4_ 
+   1          2        1    Pin   D_7_.OE 
+   1         14        1    Pin   D_7_.CE 
+   1          1        1    Pin   D_7_.AR 
+   1          1        1    Pin   D_7_.D 
+   1          1        1    Pin   D_7_.C 
+   4         17        1    Pin   nRAS.D- 
+   1          1        1    Pin   nRAS.C 
+   4          9        1    Pin   nCAS.D- 
+   1          1        1    Pin   nCAS.C 
+   1          2        1    Pin   D_6_.OE 
+   1         14        1    Pin   D_6_.CE 
+   1          1        1    Pin   D_6_.AR 
+   1          1        1    Pin   D_6_.D 
+   1          1        1    Pin   D_6_.C 
+   1          2        1    Pin   D_5_.OE 
+   1         14        1    Pin   D_5_.CE 
+   1          1        1    Pin   D_5_.AR 
+   1          1        1    Pin   D_5_.D 
+   1          1        1    Pin   D_5_.C 
+   1          2        1    Pin   D_4_.OE 
+   1         14        1    Pin   D_4_.CE 
+   1          1        1    Pin   D_4_.AR 
+   1          1        1    Pin   D_4_.D 
+   1          1        1    Pin   D_4_.C 
+   1          2        1    Pin   D_3_.OE 
+   1         14        1    Pin   D_3_.CE 
+   1          1        1    Pin   D_3_.AR 
+   1          1        1    Pin   D_3_.D 
+   1          1        1    Pin   D_3_.C 
+   1          2        1    Pin   D_2_.OE 
+   1         14        1    Pin   D_2_.CE 
+   1          1        1    Pin   D_2_.AR 
+   1          1        1    Pin   D_2_.D 
+   1          1        1    Pin   D_2_.C 
+   1          2        1    Pin   D_1_.OE 
+   1         14        1    Pin   D_1_.CE 
+   1          1        1    Pin   D_1_.AR 
+   1          1        1    Pin   D_1_.D 
+   1          1        1    Pin   D_1_.C 
+   1          2        1    Pin   D_0_.OE 
+   1         14        1    Pin   D_0_.CE 
+   1          1        1    Pin   D_0_.AR 
+   1          1        1    Pin   D_0_.D 
+   1          1        1    Pin   D_0_.C 
    5          7        1    Node  S_0_.D 
    1          1        1    Node  S_0_.C 
    4          7        1    Node  S_1_.D- 
@@ -71,71 +93,128 @@ Design cram created  Sun May 24 21:21:42 2020
    1          1        1    Node  S_2_.C 
    4          7        1    Node  S_3_.D- 
    1          1        1    Node  S_3_.C 
-   1          4        1    Node  Ref_1_.CE 
-   3          4        1    Node  Ref_1_.D- 
+   1          1        1    Node  Ref_0_.D 
+   1          1        1    Node  Ref_0_.C 
+   2          2        1    Node  Ref_1_.D 
    1          1        1    Node  Ref_1_.C 
-   1          4        1    Node  Ref_2_.CE 
-   3          4        1    Node  Ref_2_.D 
+   3          3        1    Node  Ref_2_.D 
    1          1        1    Node  Ref_2_.C 
-   1          4        1    Node  Ref_3_.CE 
-   2          4        1    Node  Ref_3_.D 
-   1          1        1    Node  Ref_3_.C 
    1          1        1    Node  inst_PHI2reg.D 
    1          1        1    Node  inst_PHI2reg.C 
-   2          6        1    Node  inst_CASr.D 
-   1          1        1    Node  inst_CASr.C 
    1          2        1    Node  inst_nPHI2seen.D- 
    1          1        1    Node  inst_nPHI2seen.C 
-   3         17        1    Node  Window_2_.T 
+   1         14        1    Node  Window_2_.CE 
+   1          1        1    Node  Window_2_.AR 
+   1          1        1    Node  Window_2_.D 
    1          1        1    Node  Window_2_.C 
-   3         17        1    Node  Window_3_.T 
+   1         14        1    Node  Window_3_.CE 
+   1          1        1    Node  Window_3_.AR 
+   1          1        1    Node  Window_3_.D 
    1          1        1    Node  Window_3_.C 
-   3         17        1    Node  Window_4_.T 
+   1         14        1    Node  Window_4_.CE 
+   1          1        1    Node  Window_4_.AR 
+   1          1        1    Node  Window_4_.D 
    1          1        1    Node  Window_4_.C 
-   3         17        1    Node  Window_5_.T 
+   1         14        1    Node  Window_5_.CE 
+   1          1        1    Node  Window_5_.AR 
+   1          1        1    Node  Window_5_.D 
    1          1        1    Node  Window_5_.C 
-   3         17        1    Node  Block_0_.T 
+   1         14        1    Node  Block_0_.CE 
+   1          1        1    Node  Block_0_.AR 
+   1          1        1    Node  Block_0_.D 
    1          1        1    Node  Block_0_.C 
-   3         17        1    Node  Block_1_.T 
+   1         14        1    Node  Block_1_.CE 
+   1          1        1    Node  Block_1_.AR 
+   1          1        1    Node  Block_1_.D 
    1          1        1    Node  Block_1_.C 
-   3         17        1    Node  Block_2_.T 
+   1         14        1    Node  Block_2_.CE 
+   1          1        1    Node  Block_2_.AR 
+   1          1        1    Node  Block_2_.D 
    1          1        1    Node  Block_2_.C 
-   3         17        1    Node  Block_3_.T 
+   1         14        1    Node  Block_3_.CE 
+   1          1        1    Node  Block_3_.AR 
+   1          1        1    Node  Block_3_.D 
    1          1        1    Node  Block_3_.C 
-   3         17        1    Node  Block_4_.T 
+   1         14        1    Node  Block_4_.CE 
+   1          1        1    Node  Block_4_.AR 
+   1          1        1    Node  Block_4_.D 
    1          1        1    Node  Block_4_.C 
-   3         17        1    Node  Block_5_.T 
+   1         14        1    Node  Block_5_.CE 
+   1          1        1    Node  Block_5_.AR 
+   1          1        1    Node  Block_5_.D 
    1          1        1    Node  Block_5_.C 
-   3         17        1    Node  Block_6_.T 
+   1         14        1    Node  Block_6_.CE 
+   1          1        1    Node  Block_6_.AR 
+   1          1        1    Node  Block_6_.D 
    1          1        1    Node  Block_6_.C 
-   3         17        1    Node  Window_0_.T 
+   1         14        1    Node  Window_0_.CE 
+   1          1        1    Node  Window_0_.AR 
+   1          1        1    Node  Window_0_.D 
    1          1        1    Node  Window_0_.C 
-   3         17        1    Node  Window_1_.T 
+   1         14        1    Node  Window_1_.CE 
+   1          1        1    Node  Window_1_.AR 
+   1          1        1    Node  Window_1_.D 
    1          1        1    Node  Window_1_.C 
-   3         17        1    Node  Block_7_.T 
+   1         14        1    Node  Block_7_.CE 
+   1          1        1    Node  Block_7_.AR 
+   1          1        1    Node  Block_7_.D 
    1          1        1    Node  Block_7_.C 
    2          5        1    Node  inst_RAsel.D 
    1          1        1    Node  inst_RAsel.C 
-   1          8        1    Node  inst_CASf.D 
-   1          1        1    Node  inst_CASf.C 
 =========
- 169                 P-Term Total: 169
-                       Total Pins: 48
-                      Total Nodes: 27
+ 182                 P-Term Total: 182
+                       Total Pins: 56
+                      Total Nodes: 24
             Average P-Term/Output: 1
 
 
 Equations:
 
-D_7_ = (RD_7_.PIN);
+RA_3_ = (A_3_ & inst_RAsel.Q
+     # Window_5_.Q & !inst_RAsel.Q);
 
-D_7_.OE = (nWE & !nIO1);
+RA_2_ = (A_2_ & inst_RAsel.Q
+     # Window_4_.Q & !inst_RAsel.Q);
+
+RA_1_ = (A_1_ & inst_RAsel.Q
+     # Window_3_.Q & !inst_RAsel.Q);
+
+RA_0_ = (A_0_ & inst_RAsel.Q
+     # Window_2_.Q & !inst_RAsel.Q);
+
+RD_6_ = (D_6_.PIN);
+
+RD_6_.OE = (!nWE & !nIO1);
+
+RD_5_ = (D_5_.PIN);
+
+RD_5_.OE = (!nWE & !nIO1);
 
 RA_11_ = (0);
+
+RD_4_ = (D_4_.PIN);
+
+RD_4_.OE = (!nWE & !nIO1);
+
+RD_3_ = (D_3_.PIN);
+
+RD_3_.OE = (!nWE & !nIO1);
 
 RD_7_ = (D_7_.PIN);
 
 RD_7_.OE = (!nWE & !nIO1);
+
+RD_2_ = (D_2_.PIN);
+
+RD_2_.OE = (!nWE & !nIO1);
+
+RD_1_ = (D_1_.PIN);
+
+RD_1_.OE = (!nWE & !nIO1);
+
+RD_0_ = (D_0_.PIN);
+
+RD_0_.OE = (!nWE & !nIO1);
 
 nIRQ = (0);
 
@@ -145,47 +224,9 @@ nDMA = (0);
 
 nDMA.OE = (0);
 
-!nRAS.D = (nWE & !nIO1 & !S_1_.Q & S_2_.Q & !S_3_.Q
-     # !nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q
-     # !nWE & !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
-     # !Ref_0_.Q & S_0_.Q & !S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_1_.Q & !Ref_2_.Q & !Ref_3_.Q);
-
-nRAS.C = (DotClk);
-
-nCAS = (!PHI2 & !inst_CASf.Q
-     # !inst_CASr.Q & !inst_CASf.Q);
-
 !nRWE = (PHI2 & !nWE);
 
 DelayOut = (0);
-
-D_6_ = (RD_6_.PIN);
-
-D_6_.OE = (nWE & !nIO1);
-
-D_5_ = (RD_5_.PIN);
-
-D_5_.OE = (nWE & !nIO1);
-
-D_4_ = (RD_4_.PIN);
-
-D_4_.OE = (nWE & !nIO1);
-
-D_3_ = (RD_3_.PIN);
-
-D_3_.OE = (nWE & !nIO1);
-
-D_2_ = (RD_2_.PIN);
-
-D_2_.OE = (nWE & !nIO1);
-
-D_1_ = (RD_1_.PIN);
-
-D_1_.OE = (nWE & !nIO1);
-
-D_0_ = (RD_0_.PIN);
-
-D_0_.OE = (nWE & !nIO1);
 
 RA_10_ = (Block_7_.Q & inst_RAsel.Q
      # Block_6_.Q & !inst_RAsel.Q);
@@ -208,52 +249,99 @@ RA_5_ = (A_5_ & inst_RAsel.Q
 RA_4_ = (A_4_ & inst_RAsel.Q
      # Block_0_.Q & !inst_RAsel.Q);
 
-RA_3_ = (A_3_ & inst_RAsel.Q
-     # Window_5_.Q & !inst_RAsel.Q);
+D_7_.OE = (nWE & !nIO1);
 
-RA_2_ = (A_2_ & inst_RAsel.Q
-     # Window_4_.Q & !inst_RAsel.Q);
+D_7_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RA_1_ = (A_1_ & inst_RAsel.Q
-     # Window_3_.Q & !inst_RAsel.Q);
+D_7_.AR = (!nRES);
 
-RA_0_ = (A_0_ & inst_RAsel.Q
-     # Window_2_.Q & !inst_RAsel.Q);
+D_7_.D = (RD_7_.PIN);
 
-RD_6_ = (D_6_.PIN);
+D_7_.C = (DotClk);
 
-RD_6_.OE = (!nWE & !nIO1);
+!nRAS.D = (!nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q
+     # !nWE & !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
+     # !S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_0_.Q & !Ref_1_.Q & !Ref_2_.Q
+     # A_15_ & nWE & A_14_ & !A_13_ & A_12_ & A_11_ & A_10_ & A_9_ & !A_8_ & !S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RD_5_ = (D_5_.PIN);
+nRAS.C = (DotClk);
 
-RD_5_.OE = (!nWE & !nIO1);
+!nCAS.D = (!nWE & !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
+     # nWE & !nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q
+     # !S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_0_.Q & !Ref_1_.Q & !Ref_2_.Q
+     # S_0_.Q & !S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_0_.Q & !Ref_1_.Q & !Ref_2_.Q);
 
-RD_4_ = (D_4_.PIN);
+nCAS.C = (DotClk);
 
-RD_4_.OE = (!nWE & !nIO1);
+D_6_.OE = (nWE & !nIO1);
 
-RD_3_ = (D_3_.PIN);
+D_6_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RD_3_.OE = (!nWE & !nIO1);
+D_6_.AR = (!nRES);
 
-RD_2_ = (D_2_.PIN);
+D_6_.D = (RD_6_.PIN);
 
-RD_2_.OE = (!nWE & !nIO1);
+D_6_.C = (DotClk);
 
-RD_1_ = (D_1_.PIN);
+D_5_.OE = (nWE & !nIO1);
 
-RD_1_.OE = (!nWE & !nIO1);
+D_5_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
 
-RD_0_ = (D_0_.PIN);
+D_5_.AR = (!nRES);
 
-RD_0_.OE = (!nWE & !nIO1);
+D_5_.D = (RD_5_.PIN);
 
-Ref_0_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
+D_5_.C = (DotClk);
 
-Ref_0_.D = (!Ref_0_.Q & !Ref_2_.Q
-     # !Ref_0_.Q & !Ref_3_.Q);
+D_4_.OE = (nWE & !nIO1);
 
-Ref_0_.C = (DotClk);
+D_4_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_4_.AR = (!nRES);
+
+D_4_.D = (RD_4_.PIN);
+
+D_4_.C = (DotClk);
+
+D_3_.OE = (nWE & !nIO1);
+
+D_3_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_3_.AR = (!nRES);
+
+D_3_.D = (RD_3_.PIN);
+
+D_3_.C = (DotClk);
+
+D_2_.OE = (nWE & !nIO1);
+
+D_2_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_2_.AR = (!nRES);
+
+D_2_.D = (RD_2_.PIN);
+
+D_2_.C = (DotClk);
+
+D_1_.OE = (nWE & !nIO1);
+
+D_1_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_1_.AR = (!nRES);
+
+D_1_.D = (RD_1_.PIN);
+
+D_1_.C = (DotClk);
+
+D_0_.OE = (nWE & !nIO1);
+
+D_0_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+D_0_.AR = (!nRES);
+
+D_0_.D = (RD_0_.PIN);
+
+D_0_.C = (DotClk);
 
 S_0_.D = (!S_0_.Q & S_1_.Q
      # !S_0_.Q & S_2_.Q
@@ -284,123 +372,138 @@ S_2_.C = (DotClk);
 
 S_3_.C = (DotClk);
 
-Ref_1_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
+Ref_0_.D = (!Ref_0_.Q);
 
-!Ref_1_.D = (Ref_0_.Q & Ref_1_.Q
-     # !Ref_0_.Q & !Ref_1_.Q
-     # Ref_2_.Q & Ref_3_.Q);
+Ref_0_.C = (DotClk);
+
+Ref_1_.D = (!Ref_0_.Q & Ref_1_.Q
+     # Ref_0_.Q & !Ref_1_.Q);
 
 Ref_1_.C = (DotClk);
 
-Ref_2_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
-
-Ref_2_.D = (Ref_0_.Q & Ref_1_.Q & !Ref_2_.Q
-     # !Ref_0_.Q & Ref_2_.Q & !Ref_3_.Q
-     # !Ref_1_.Q & Ref_2_.Q & !Ref_3_.Q);
+Ref_2_.D = (!Ref_0_.Q & Ref_2_.Q
+     # !Ref_1_.Q & Ref_2_.Q
+     # Ref_0_.Q & Ref_1_.Q & !Ref_2_.Q);
 
 Ref_2_.C = (DotClk);
-
-Ref_3_.CE = (!S_0_.Q & S_1_.Q & !S_2_.Q & !S_3_.Q);
-
-Ref_3_.D = (!Ref_2_.Q & Ref_3_.Q
-     # Ref_0_.Q & Ref_1_.Q & Ref_2_.Q & !Ref_3_.Q);
-
-Ref_3_.C = (DotClk);
 
 inst_PHI2reg.D = (PHI2);
 
 inst_PHI2reg.C = (DotClk);
 
-inst_CASr.D = (nWE & !nIO1 & S_0_.Q & S_2_.Q & !S_3_.Q
-     # !nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
-
-inst_CASr.C = (DotClk);
-
 !inst_nPHI2seen.D = (PHI2 & !inst_nPHI2seen.Q);
 
 inst_nPHI2seen.C = (DotClk);
 
-Window_2_.T = (!nRES & Window_2_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_2_.Q & !D_2_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_2_.Q & D_2_.PIN);
+Window_2_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_2_.AR = (!nRES);
+
+Window_2_.D = (D_2_.PIN);
 
 Window_2_.C = (DotClk);
 
-Window_3_.T = (!nRES & Window_3_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_3_.Q & !D_3_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_3_.Q & D_3_.PIN);
+Window_3_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_3_.AR = (!nRES);
+
+Window_3_.D = (D_3_.PIN);
 
 Window_3_.C = (DotClk);
 
-Window_4_.T = (!nRES & Window_4_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_4_.Q & !D_4_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_4_.Q & D_4_.PIN);
+Window_4_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_4_.AR = (!nRES);
+
+Window_4_.D = (D_4_.PIN);
 
 Window_4_.C = (DotClk);
 
-Window_5_.T = (!nRES & Window_5_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_5_.Q & !D_5_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_5_.Q & D_5_.PIN);
+Window_5_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_5_.AR = (!nRES);
+
+Window_5_.D = (D_5_.PIN);
 
 Window_5_.C = (DotClk);
 
-Block_0_.T = (!nRES & Block_0_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_0_.Q & !D_0_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_0_.Q & D_0_.PIN);
+Block_0_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_0_.AR = (!nRES);
+
+Block_0_.D = (D_0_.PIN);
 
 Block_0_.C = (DotClk);
 
-Block_1_.T = (!nRES & Block_1_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_1_.Q & !D_1_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_1_.Q & D_1_.PIN);
+Block_1_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_1_.AR = (!nRES);
+
+Block_1_.D = (D_1_.PIN);
 
 Block_1_.C = (DotClk);
 
-Block_2_.T = (!nRES & Block_2_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_2_.Q & !D_2_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_2_.Q & D_2_.PIN);
+Block_2_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_2_.AR = (!nRES);
+
+Block_2_.D = (D_2_.PIN);
 
 Block_2_.C = (DotClk);
 
-Block_3_.T = (!nRES & Block_3_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_3_.Q & !D_3_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_3_.Q & D_3_.PIN);
+Block_3_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_3_.AR = (!nRES);
+
+Block_3_.D = (D_3_.PIN);
 
 Block_3_.C = (DotClk);
 
-Block_4_.T = (!nRES & Block_4_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_4_.Q & !D_4_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_4_.Q & D_4_.PIN);
+Block_4_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_4_.AR = (!nRES);
+
+Block_4_.D = (D_4_.PIN);
 
 Block_4_.C = (DotClk);
 
-Block_5_.T = (!nRES & Block_5_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_5_.Q & !D_5_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_5_.Q & D_5_.PIN);
+Block_5_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_5_.AR = (!nRES);
+
+Block_5_.D = (D_5_.PIN);
 
 Block_5_.C = (DotClk);
 
-Block_6_.T = (!nRES & Block_6_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_6_.Q & !D_6_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_6_.Q & D_6_.PIN);
+Block_6_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_6_.AR = (!nRES);
+
+Block_6_.D = (D_6_.PIN);
 
 Block_6_.C = (DotClk);
 
-Window_0_.T = (!nRES & Window_0_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_0_.Q & !D_0_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_0_.Q & D_0_.PIN);
+Window_0_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_0_.AR = (!nRES);
+
+Window_0_.D = (D_0_.PIN);
 
 Window_0_.C = (DotClk);
 
-Window_1_.T = (!nRES & Window_1_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Window_1_.Q & !D_1_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Window_1_.Q & D_1_.PIN);
+Window_1_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & !A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Window_1_.AR = (!nRES);
+
+Window_1_.D = (D_1_.PIN);
 
 Window_1_.C = (DotClk);
 
-Block_7_.T = (!nRES & Block_7_.Q
-     # !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & Block_7_.Q & !D_7_.PIN
-     # nRES & !nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q & !Block_7_.Q & D_7_.PIN);
+Block_7_.CE = (!nWE & !nIO2 & A_7_ & A_6_ & A_5_ & A_4_ & A_3_ & A_2_ & A_1_ & A_0_ & S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q);
+
+Block_7_.AR = (!nRES);
+
+Block_7_.D = (D_7_.PIN);
 
 Block_7_.C = (DotClk);
 
@@ -408,10 +511,6 @@ inst_RAsel.D = (!nIO1 & !S_0_.Q & S_1_.Q & S_2_.Q & !S_3_.Q
      # !nIO1 & S_0_.Q & !S_1_.Q & S_2_.Q & !S_3_.Q);
 
 inst_RAsel.C = (!DotClk);
-
-inst_CASf.D = (!Ref_0_.Q & S_0_.Q & !S_1_.Q & !S_2_.Q & !S_3_.Q & !Ref_1_.Q & !Ref_2_.Q & !Ref_3_.Q);
-
-inst_CASf.C = (!DotClk);
 
 
 Reverse-Polarity Equations:

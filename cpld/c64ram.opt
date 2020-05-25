@@ -1,6 +1,6 @@
 Optimizer_and_Fitter_Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Pin Assignment :                       No
+Pin Assignment :                       Yes
 Group Assignment :                     No
 Pin Reservation :                      No
 
@@ -52,9 +52,9 @@ Pin Reservation :                      No
 
 @User_Signature                        0
 
-@Output_Slew_Rate                      Default = FAST(2)
+@Output_Slew_Rate                      Default = SLOW(2)
 
-@Power                                 Default = High(2)
+@Power                                 Default = Low(2)
 
 
 Device Options:

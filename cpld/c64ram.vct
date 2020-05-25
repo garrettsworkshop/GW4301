@@ -15,8 +15,8 @@ Voltage = 3.0;
 RCS = "$Revision: 1.1 $";
 Parent = m5l200.lci;
 SDS_File = m5lv.sds;
-DATE = 2002;
-TIME = 0:00:00;
+DATE = 05/24/2020;
+TIME = 23:55:55;
 Source_Format = Pure_Verilog_HDL;
 Type = TT2;
 Pre_Fit_Time = 1;
@@ -103,7 +103,7 @@ Conf_Unused_IOs = Out_Low;
 [HARDWARE DEVICE OPTIONS]
 Zero_Hold_Time = No;
 Signature_Word = 0;
-Out_Slew_Rate = FAST,SLOW,0;
+Out_Slew_Rate = SLOW,FAST,0;
 Device_max_fanin = 32;
 Device_max_pterms = 32;
 Usercode_Format = ASCII;
@@ -113,6 +113,62 @@ Layer = OFF;
 
 [LOCATION ASSIGNMENT]
 Layer = OFF;
+RA_0_ = input,100,A,0;
+RA_1_ = input,98,A,0;
+RA_2_ = input,96,A,0;
+RA_3_ = input,94,A,0;
+RA_4_ = input,93,A,0;
+RA_5_ = input,95,A,0;
+RA_6_ = input,97,A,0;
+RA_7_ = input,99,A,0;
+RA_8_ = input,4,A,0;
+RA_9_ = input,6,B,0;
+RA_10_ = input,5,B,0;
+RA_11_ = input,7,B,0;
+nCAS = input,9,B,0;
+nRAS = input,8,B,0;
+nRWE = input,10,B,0;
+RD_0_ = input,25,B,1;
+RD_1_ = input,23,B,1;
+RD_2_ = input,21,B,1;
+RD_3_ = input,19,B,1;
+RD_4_ = input,20,B,1;
+RD_5_ = input,22,B,1;
+RD_6_ = input,24,B,1;
+RD_7_ = input,26,B,1;
+D_0_ = input,85,A,3;
+D_1_ = input,61,B,2;
+D_2_ = input,46,A,2;
+D_3_ = input,70,B,3;
+D_4_ = input,77,A,3;
+D_5_ = input,75,B,3;
+D_6_ = input,56,B,2;
+D_7_ = input,54,A,2;
+A_0_ = input,47,A,2;
+A_1_ = input,48,A,2;
+A_2_ = input,49,A,2;
+A_3_ = input,50,A,2;
+A_4_ = input,57,B,2;
+A_5_ = input,58,B,2;
+A_6_ = input,59,B,2;
+A_7_ = input,60,B,2;
+A_8_ = input,72,B,3;
+A_9_ = input,73,B,3;
+A_10_ = input,74,B,3;
+A_11_ = input,76,B,3;
+A_12_ = input,81,A,3;
+A_13_ = input,82,A,3;
+A_14_ = input,83,A,3;
+A_15_ = input,84,A,3;
+DotClk = input,63,-,-;
+PHI2 = input,68,-,-;
+nIO1 = input,62,B,2;
+nIO2 = input,69,B,3;
+nRES = input,87,A,3;
+nWE = input,34,A,1;
+DelayOut = input,12,B,0;
+nDMA = input,37,A,1;
+nIRQ = input,33,A,1;
 
 [GROUP ASSIGNMENT]
 Layer = OFF;
@@ -141,7 +197,8 @@ Page_Break = Yes;
 
 [POWER]
 Powerlevel =  Low,MedLow,MedHigh,High;
-Default = High;
+Default = Low;
+Low = 16,0A,0B,0C,0D,1A,1B,1C,1D,2A,2B,2C,2D,3A,3B,3C,3D;
 Type = GLB;
 
 [SOURCE CONSTRAINT OPTION]

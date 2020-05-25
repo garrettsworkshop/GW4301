@@ -3,7 +3,7 @@ Running in Lattice mode
 
 Starting:    C:\ispLEVER_Classic2_0\synpbase\win64\mbin\synbatch.exe
 Install:     C:\ispLEVER_Classic2_0\synpbase
-Date:        Sun May 24 21:21:28 2020
+Date:        Sun May 24 23:37:51 2020
 Version:     I-2014.03LC 
 
 Arguments:   -product synplify_pro  -batch c:/users/zane/documents/github/cram/cpld\CRAM.prj
@@ -25,7 +25,7 @@ Running: Compile Input on CRAM|cpld
 Copied C:\users\zane\documents\github\cram\cpld\synwork\CRAM_comp.srs to C:\users\zane\documents\github\cram\cpld\CRAM.srs
 compiler Completed with warnings
 Return Code: 1
-Run Time:0h:00m:01s
+Run Time:0h:00m:02s
 
 Running: Multi-srs Generator on CRAM|cpld
 Copied C:\users\zane\documents\github\cram\cpld\synwork\CRAM_comp.srs to C:\users\zane\documents\github\cram\cpld\synwork\CRAM_s.srs
@@ -42,9 +42,8 @@ Running: Map on CRAM|cpld
 Running: Map & Optimize on CRAM|cpld
 fpga_mapper Completed with warnings
 Return Code: 1
-Run Time:0h:00m:01s
+Run Time:0h:00m:00s
 Complete: Map on CRAM|cpld
-Copied C:\users\zane\documents\github\cram\cpld\CRAM.srr to C:\users\zane\documents\github\cram\cpld\cram.srf
 Complete: Logic Synthesis on CRAM|cpld
 
 exit status=0

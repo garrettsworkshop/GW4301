@@ -13,7 +13,7 @@ EN_PinMacrocell = Yes;
 [Revision]
 Parent = m5l200.lci;
 DATE = 05/24/2020;
-TIME = 21:22:34;
+TIME = 23:55:55;
 Source_Format = Pure_Verilog_HDL;
 Synthesis = Synplify;
 
@@ -27,6 +27,62 @@ Synthesis = Synplify;
 
 [Location Assignments]
 layer = OFF;
+RA_0_ = Pin, 100, 0, A, 7;
+RA_1_ = Pin, 98, 0, A, 5;
+RA_2_ = Pin, 96, 0, A, 3;
+RA_3_ = Pin, 94, 0, A, 1;
+RA_4_ = Pin, 93, 0, A, 0;
+RA_5_ = Pin, 95, 0, A, 2;
+RA_6_ = Pin, 97, 0, A, 4;
+RA_7_ = Pin, 99, 0, A, 6;
+RA_8_ = Pin, 4, 0, A, 12;
+RA_9_ = Pin, 6, 0, B, 12;
+RA_10_ = Pin, 5, 0, B, 13;
+RA_11_ = Pin, 7, 0, B, 11;
+nCAS = Pin, 9, 0, B, 7;
+nRAS = Pin, 8, 0, B, 8;
+nRWE = Pin, 10, 0, B, 4;
+RD_0_ = Pin, 25, 1, B, 12;
+RD_1_ = Pin, 23, 1, B, 8;
+RD_2_ = Pin, 21, 1, B, 4;
+RD_3_ = Pin, 19, 1, B, 2;
+RD_4_ = Pin, 20, 1, B, 3;
+RD_5_ = Pin, 22, 1, B, 7;
+RD_6_ = Pin, 24, 1, B, 11;
+RD_7_ = Pin, 26, 1, B, 13;
+D_0_ = Pin, 85, 3, A, 3;
+D_1_ = Pin, 61, 2, B, 3;
+D_2_ = Pin, 46, 2, A, 3;
+D_3_ = Pin, 70, 3, B, 3;
+D_4_ = Pin, 77, 3, A, 12;
+D_5_ = Pin, 75, 3, B, 12;
+D_6_ = Pin, 56, 2, B, 12;
+D_7_ = Pin, 54, 2, A, 12;
+A_0_ = Pin, 47, 2, A, 4;
+A_1_ = Pin, 48, 2, A, 5;
+A_2_ = Pin, 49, 2, A, 6;
+A_3_ = Pin, 50, 2, A, 7;
+A_4_ = Pin, 57, 2, B, 11;
+A_5_ = Pin, 58, 2, B, 8;
+A_6_ = Pin, 59, 2, B, 7;
+A_7_ = Pin, 60, 2, B, 4;
+A_8_ = Pin, 72, 3, B, 7;
+A_9_ = Pin, 73, 3, B, 8;
+A_10_ = Pin, 74, 3, B, 11;
+A_11_ = Pin, 76, 3, B, 13;
+A_12_ = Pin, 81, 3, A, 7;
+A_13_ = Pin, 82, 3, A, 6;
+A_14_ = Pin, 83, 3, A, 5;
+A_15_ = Pin, 84, 3, A, 4;
+DotClk = Pin, 63, -, -, -;
+PHI2 = Pin, 68, -, -, -;
+nIO1 = Pin, 62, 2, B, 2;
+nIO2 = Pin, 69, 3, B, 2;
+nRES = Pin, 87, 3, A, 1;
+nWE = Pin, 34, 1, A, 4;
+DelayOut = Pin, 12, 0, B, 2;
+nDMA = Pin, 37, 1, A, 1;
+nIRQ = Pin, 33, 1, A, 5;
 
 [Group Assignments]
 layer = OFF;
@@ -37,6 +93,8 @@ layer = OFF;
 [Fitter Report Format]
 
 [Power]
+Default = Low;
+Low = 0A, 0B, 0C, 0D, 1A, 1B, 1C, 1D, 2A, 2B, 2C, 2D, 3A, 3B, 3C, 3D;
 
 [Source Constraint Option]
 
@@ -55,6 +113,11 @@ layer = OFF;
 [Pullup]
 
 [Slewrate]
+SLOW = RA_0_, RA_1_, RA_2_, RA_3_, RA_4_, RA_5_, RA_6_, RA_7_, RA_8_, RA_9_, RA_10_, 
+	RA_11_, nCAS, nRAS, nRWE, RD_0_, RD_1_, RD_2_, RD_3_, RD_4_, RD_5_, RD_6_, 
+	RD_7_, D_0_, D_1_, D_2_, D_3_, D_4_, D_5_, D_6_, D_7_, DelayOut, nDMA, 
+	nIRQ;
+Default = SLOW;
 
 [Region]
 

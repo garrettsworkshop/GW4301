@@ -36,3 +36,14 @@ GLB=36,no
 Macrocell=73,no
 Pin=32,no
 State=43,no
+[OPT WINDOWS]
+MAIN_WINDOW_POSITION=0,0,1920,1080
+CHILD_FRAME_STATE=Maximal
+CHILD_WINDOW_SIZE=1920,854
+CHILD_WINDOW_POS=-8,-31
+[OPT GUI SETTING]
+Remember_Setting=1
+ACTIVE_SHEET=Opt Global Constraints
+[Opt Global Constraints]
+Constraint Name=162,no
+Constraint Value=115,no

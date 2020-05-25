@@ -4,21 +4,22 @@ Product Version I-2014.03LC
 @N: MF248 |Running in 64-bit mode.
 @W: MO111 :"c:\users\zane\documents\github\cram\cpld\cram.v":33:15:33:18|Tristate driver nIRQ on net nIRQ has its enable tied to GND (module CRAM) 
 @W: MO111 :"c:\users\zane\documents\github\cram\cpld\cram.v":33:15:33:18|Tristate driver nDMA on net nDMA has its enable tied to GND (module CRAM) 
-@N:"c:\users\zane\documents\github\cram\cpld\cram.v":74:1:74:6|Found counter in view:work.CRAM(verilog) inst Ref[3:0]
-@N:"c:\users\zane\documents\github\cram\cpld\cram.v":74:1:74:6|Found counter in view:work.CRAM(verilog) inst S[3:0]
+@N:"c:\users\zane\documents\github\cram\cpld\cram.v":73:1:73:6|Found counter in view:work.CRAM(verilog) inst S[3:0]
+@N:"c:\users\zane\documents\github\cram\cpld\cram.v":73:1:73:6|Found counter in view:work.CRAM(verilog) inst Ref[2:0]
 ---------------------------------------
 Resource Usage Report
 
 Simple gate primitives:
-DFF             24 uses
-DFFC            4 uses
+DFFCRH          22 uses
+DFF             12 uses
 IBUF            29 uses
 BI_DIR          16 uses
 BUFTH           2 uses
 OBUF            16 uses
-AND2            149 uses
-INV             98 uses
-OR2             17 uses
+AND2            100 uses
+INV             53 uses
+XOR2            1 use
+OR2             11 uses
 
 
 @N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
@@ -28,6 +29,6 @@ Mapper successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun May 24 21:21:30 2020
+# Sun May 24 23:37:53 2020
 
 ###########################################################]

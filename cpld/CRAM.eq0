@@ -2,16 +2,34 @@ EDIF2BLIF version IspLever 1.0  Linked Equations File
 Copyright(C), 1992-2015, Lattice Semiconductor Corp.
 All Rights Reserved.
 
-Design cram created Sun May 24 21:21:42 2020
+Design cram created Sun May 24 23:37:58 2020
 
 
  P-Terms   Fan-in  Fan-out  Type  Name (attributes)
 ---------  ------  -------  ----  -----------------
+   1/1        1        1    Pin   RA_3_ 
+   1/1        1        1    Pin   RA_2_ 
+   1/1        1        1    Pin   RA_1_ 
+   1/1        1        1    Pin   RA_0_ 
    1/1        1        1    Pin   D_7_ 
    1/1        1        1    Pin   D_7_.OE 
+   1/1        1        1    Pin   RD_6_ 
+   1/1        1        1    Pin   RD_6_.OE 
+   1/1        1        1    Pin   RD_5_ 
+   1/1        1        1    Pin   RD_5_.OE 
    1/1        1        1    Pin   RA_11_ 
+   1/1        1        1    Pin   RD_4_ 
+   1/1        1        1    Pin   RD_4_.OE 
+   1/1        1        1    Pin   RD_3_ 
+   1/1        1        1    Pin   RD_3_.OE 
    1/1        1        1    Pin   RD_7_ 
    1/1        1        1    Pin   RD_7_.OE 
+   1/1        1        1    Pin   RD_2_ 
+   1/1        1        1    Pin   RD_2_.OE 
+   1/1        1        1    Pin   RD_1_ 
+   1/1        1        1    Pin   RD_1_.OE 
+   1/1        1        1    Pin   RD_0_ 
+   1/1        1        1    Pin   RD_0_.OE 
    1/1        1        1    Pin   nIRQ 
    1/1        1        1    Pin   nIRQ.OE 
    1/1        1        1    Pin   nDMA 
@@ -41,342 +59,253 @@ Design cram created Sun May 24 21:21:42 2020
    1/1        1        1    Pin   RA_6_ 
    1/1        1        1    Pin   RA_5_ 
    1/1        1        1    Pin   RA_4_ 
-   1/1        1        1    Pin   RA_3_ 
-   1/1        1        1    Pin   RA_2_ 
-   1/1        1        1    Pin   RA_1_ 
-   1/1        1        1    Pin   RA_0_ 
-   1/1        1        1    Pin   RD_6_ 
-   1/1        1        1    Pin   RD_6_.OE 
-   1/1        1        1    Pin   RD_5_ 
-   1/1        1        1    Pin   RD_5_.OE 
-   1/1        1        1    Pin   RD_4_ 
-   1/1        1        1    Pin   RD_4_.OE 
-   1/1        1        1    Pin   RD_3_ 
-   1/1        1        1    Pin   RD_3_.OE 
-   1/1        1        1    Pin   RD_2_ 
-   1/1        1        1    Pin   RD_2_.OE 
-   1/1        1        1    Pin   RD_1_ 
-   1/1        1        1    Pin   RD_1_.OE 
-   1/1        1        1    Pin   RD_0_ 
-   1/1        1        1    Pin   RD_0_.OE 
-   2          2        1    Node  ra_1_8__n 
-   1          1        1    Node  un2_nCAS_i 
-   2          2        1    Node  ra_1_9__n 
-   1          1        1    Node  CASf_i 
-   2          2        1    Node  ra_1_10__n 
-   1          2        1    Node  un1_nCAS_i 
+   1          2        1    Node  N_100_2 
+   1          2        1    Node  N_99_1 
+   1          2        1    Node  N_99_2 
+   1          2        1    Node  N_98_1 
+   1          2        1    Node  N_98_2 
    0          0        1    Node  gnd_n_n 
-   1          2        1    Node  N_85_i 
-   1          2        1    Node  un1_RASr 
-   1          1        1    Node  N_121_i 
-   1          1        1    Node  inst_RASr.D 
-   1/1        1        1    Node  inst_RASr.C 
-   1          1        1    Node  N_120_i 
-   1/1        1        1    Node  Ref_0_.CE 
-   1          2        1    Node  Ref_0_.D 
-   1/1        1        1    Node  Ref_0_.C 
-   1          2        1    Node  N_91_i 
+   1          2        1    Node  N_98_3 
+   1          2        1    Node  un1_nRWE 
+   1          2        1    Node  N_98_4 
    1          1        1    Node  S_0_.D 
    1/1        1        1    Node  S_0_.C 
-   1          1        1    Node  N_124_i 
+   1          2        1    Node  N_98_5 
    1          2        1    Node  S_1_.D 
    1/1        1        1    Node  S_1_.C 
-   1          1        1    Node  N_123_i 
+   1          2        1    Node  N_98_6 
    1          2        1    Node  S_2_.D 
    1/1        1        1    Node  S_2_.C 
-   1          2        1    Node  RAsel_2_0 
+   1          2        1    Node  N_98_7 
    1          2        1    Node  S_3_.D 
    1/1        1        1    Node  S_3_.C 
-   1          2        1    Node  N_64_i 
-   1/1        1        1    Node  Ref_1_.CE 
-   1          2        1    Node  Ref_1_.D 
+   1          2        1    Node  N_98_8 
+   1/1        1        1    Node  Ref_0_.D 
+   1/1        1        1    Node  Ref_0_.C 
+   1          2        1    Node  N_98_9 
+   1/1        1        1    Node  Ref_1_.D 
    1/1        1        1    Node  Ref_1_.C 
-   1          2        1    Node  N_65_i 
-   1/1        1        1    Node  Ref_2_.CE 
-   1          2        1    Node  Ref_2_.D 
+   1          2        1    Node  N_97_1 
+   1          1        1    Node  Ref_2_.D 
    1/1        1        1    Node  Ref_2_.C 
-   1          2        1    Node  N_66_i 
-   1/1        1        1    Node  Ref_3_.CE 
-   1          2        1    Node  Ref_3_.D 
-   1/1        1        1    Node  Ref_3_.C 
-   1          2        1    Node  N_69_i 
+   1          2        1    Node  N_97_2 
    1/1        1        1    Node  inst_PHI2reg.D 
    1/1        1        1    Node  inst_PHI2reg.C 
-   1          2        1    Node  N_70_i 
-   1          2        1    Node  inst_CASr.D 
-   1/1        1        1    Node  inst_CASr.C 
-   1          2        1    Node  N_71_i 
+   1          2        1    Node  un1_nCAS_i_1 
    1          1        1    Node  inst_nPHI2seen.D 
    1/1        1        1    Node  inst_nPHI2seen.C 
-   1          2        1    Node  N_72_i 
-   1          2        1    Node  RAMWE 
-   1          2        1    Node  N_73_i 
-   1          2        1    Node  Window_2_.D 
+   1          2        1    Node  N_9_i_1 
+   1          2        1    Node  RAMWR 
+   1          2        1    Node  N_7_i_1 
+   1/1        1        1    Node  Window_2_.CE 
+   1/1        1        1    Node  Window_2_.AR 
+   1/1        1        1    Node  Window_2_.D 
    1/1        1        1    Node  Window_2_.C 
-   1          2        1    Node  N_75_i 
-   1          2        1    Node  Window_3_.D 
+   1          2        1    Node  N_5_i_1 
+   1/1        1        1    Node  Window_3_.CE 
+   1/1        1        1    Node  Window_3_.AR 
+   1/1        1        1    Node  Window_3_.D 
    1/1        1        1    Node  Window_3_.C 
-   1          1        1    Node  N_126_i 
-   1          2        1    Node  Window_4_.D 
+   1          2        1    Node  Dout6_1 
+   1/1        1        1    Node  Window_4_.CE 
+   1/1        1        1    Node  Window_4_.AR 
+   1/1        1        1    Node  Window_4_.D 
    1/1        1        1    Node  Window_4_.C 
-   1          1        1    Node  N_101_i 
-   1          2        1    Node  Window_5_.D 
+   1          2        1    Node  Block5_1 
+   1/1        1        1    Node  Window_5_.CE 
+   1/1        1        1    Node  Window_5_.AR 
+   1/1        1        1    Node  Window_5_.D 
    1/1        1        1    Node  Window_5_.C 
-   1          1        1    Node  N_102_i 
-   1          2        1    Node  Block_0_.D 
-   1/1        1        1    Node  Block_0_.C 
-   1          1        1    Node  N_97_i 
-   1          2        1    Node  Block_1_.D 
-   1/1        1        1    Node  Block_1_.C 
-   1          2        1    Node  S_n0_0 
-   1          2        1    Node  Block_2_.D 
-   1/1        1        1    Node  Block_2_.C 
-   1          1        1    Node  N_118_i 
-   1          2        1    Node  Block_3_.D 
-   1/1        1        1    Node  Block_3_.C 
-   1          1        1    Node  N_119_i 
-   1          2        1    Node  Block_4_.D 
-   1/1        1        1    Node  Block_4_.C 
-   1          2        1    Node  N_90_i 
-   1          2        1    Node  Block_5_.D 
-   1/1        1        1    Node  Block_5_.C 
-   1          1        1    Node  N_116_i 
-   1          2        1    Node  Block_6_.D 
-   1/1        1        1    Node  Block_6_.C 
-   1          1        1    Node  N_117_i 
-   1          2        1    Node  Window_0_.D 
-   1/1        1        1    Node  Window_0_.C 
-   1          2        1    Node  N_48_i 
-   1          2        1    Node  Window_1_.D 
-   1/1        1        1    Node  Window_1_.C 
-   1          1        1    Node  N_114_i 
-   1          2        1    Node  Block_7_.D 
-   1/1        1        1    Node  Block_7_.C 
-   1          1        1    Node  N_115_i 
-   1          1        1    Node  inst_RAsel.D 
-   1/1        1        1    Node  inst_RAsel.C 
-   1          2        1    Node  N_38_i 
-   1          2        1    Node  Ref14 
-   1          1        1    Node  N_112_i 
-   1/1        1        1    Node  inst_CASf.D 
-   1/1        1        1    Node  inst_CASf.C 
-   1          1        1    Node  N_113_i 
-   1          2        1    Node  N_36_i 
-   1          1        1    Node  N_110_i 
-   1          2        1    Node  Block6 
-   1          1        1    Node  N_111_i 
-   1          2        1    Node  Window7 
-   1          2        1    Node  N_89_i 
-   2          2        1    Node  N_5 
-   1          1        1    Node  N_108_i 
-   2          2        1    Node  N_6 
-   1          1        1    Node  N_109_i 
-   2          2        1    Node  N_7 
-   1          2        1    Node  N_88_i 
-   2          2        1    Node  N_8 
-   1          1        1    Node  N_106_i 
-   2          2        1    Node  N_9 
-   1          1        1    Node  N_107_i 
-   2          2        1    Node  N_10 
-   1          2        1    Node  N_87_i 
-   2          2        1    Node  N_11 
-   1          1        1    Node  N_100_i 
-   2          2        1    Node  N_12 
-   1          1        1    Node  N_105_i 
-   2          2        1    Node  N_13 
-   2          2        1    Node  N_14 
-   1          1        1    Node  N_103_i 
-   2          2        1    Node  N_15 
-   1          1        1    Node  N_104_i 
-   2          2        1    Node  N_16 
-   1          1        1    Node  un1_RASr_i 
-   2          2        1    Node  N_17 
-   1          2        1    Node  RASr_2_0 
-   2          2        1    Node  N_18 
-   1          1        1    Node  N_99_i 
-   1          1        1    Node  N_98_i 
-   1          1        1    Node  N_127_i 
-   1          1        1    Node  N_96_i 
-   1          1        1    Node  N_128_i 
-   1          1        1    Node  N_94_i 
-   1          1        1    Node  N_92_i 
-   1          1        1    Node  N_93_i 
-   1          2        1    Node  S_n0_0_1 
-   1          2        1    Node  S_n0_0_2 
-   1          1        1    Node  N_66 
-   1          2        1    Node  Block6_9_1 
-   1          1        1    Node  N_70 
-   1          2        1    Node  Block6_9_2 
-   1          1        1    Node  N_71 
-   1          2        1    Node  Block6_9_3 
-   1          1        1    Node  N_72 
-   1          2        1    Node  Block6_9_4 
-   1          2        1    Node  N_92 
-   1          2        1    Node  Block6_9_5 
-   1          2        1    Node  N_93 
-   1          2        1    Node  Block6_9_6 
-   1          2        1    Node  N_94 
-   1          2        1    Node  Block6_1 
-   1          2        1    Node  N_96 
-   1          2        1    Node  Block6_2 
-   1          2        1    Node  N_97 
    1          2        1    Node  Window7_1 
+   1/1        1        1    Node  Block_0_.CE 
+   1/1        1        1    Node  Block_0_.AR 
+   1/1        1        1    Node  Block_0_.D 
+   1/1        1        1    Node  Block_0_.C 
+   1          2        1    Node  N_96_1 
+   1/1        1        1    Node  Block_1_.CE 
+   1/1        1        1    Node  Block_1_.AR 
+   1/1        1        1    Node  Block_1_.D 
+   1/1        1        1    Node  Block_1_.C 
+   1          2        1    Node  N_95_1 
+   1/1        1        1    Node  Block_2_.CE 
+   1/1        1        1    Node  Block_2_.AR 
+   1/1        1        1    Node  Block_2_.D 
+   1/1        1        1    Node  Block_2_.C 
+   1          2        1    Node  N_80_1 
+   1/1        1        1    Node  Block_3_.CE 
+   1/1        1        1    Node  Block_3_.AR 
+   1/1        1        1    Node  Block_3_.D 
+   1/1        1        1    Node  Block_3_.C 
+   1          1        1    Node  un12_ra_i_m2_7__un3_n 
+   1/1        1        1    Node  Block_4_.CE 
+   1/1        1        1    Node  Block_4_.AR 
+   1/1        1        1    Node  Block_4_.D 
+   1/1        1        1    Node  Block_4_.C 
+   1          2        1    Node  un12_ra_i_m2_7__un1_n 
+   1/1        1        1    Node  Block_5_.CE 
+   1/1        1        1    Node  Block_5_.AR 
+   1/1        1        1    Node  Block_5_.D 
+   1/1        1        1    Node  Block_5_.C 
+   1          2        1    Node  un12_ra_i_m2_7__un0_n 
+   1/1        1        1    Node  Block_6_.CE 
+   1/1        1        1    Node  Block_6_.AR 
+   1/1        1        1    Node  Block_6_.D 
+   1/1        1        1    Node  Block_6_.C 
+   1          1        1    Node  un12_ra_i_m2_6__un3_n 
+   1/1        1        1    Node  Window_0_.CE 
+   1/1        1        1    Node  Window_0_.AR 
+   1/1        1        1    Node  Window_0_.D 
+   1/1        1        1    Node  Window_0_.C 
+   1          2        1    Node  un12_ra_i_m2_6__un1_n 
+   1/1        1        1    Node  Window_1_.CE 
+   1/1        1        1    Node  Window_1_.AR 
+   1/1        1        1    Node  Window_1_.D 
+   1/1        1        1    Node  Window_1_.C 
+   1          2        1    Node  un12_ra_i_m2_6__un0_n 
+   1/1        1        1    Node  Block_7_.CE 
+   1/1        1        1    Node  Block_7_.AR 
+   1/1        1        1    Node  Block_7_.D 
+   1/1        1        1    Node  Block_7_.C 
+   1          1        1    Node  un12_ra_i_m2_5__un3_n 
+   1          2        1    Node  inst_RAsel.D 
+   1          1        1    Node  inst_RAsel.C 
+   1          2        1    Node  un12_ra_i_m2_5__un1_n 
+   1/1        1        1    Node  Dout_0_.CE 
+   1/1        1        1    Node  Dout_0_.AR 
+   1/1        1        1    Node  Dout_0_.D 
+   1/1        1        1    Node  Dout_0_.C 
+   1          2        1    Node  un12_ra_i_m2_5__un0_n 
+   1/1        1        1    Node  Dout_1_.CE 
+   1/1        1        1    Node  Dout_1_.AR 
+   1/1        1        1    Node  Dout_1_.D 
+   1/1        1        1    Node  Dout_1_.C 
+   1          1        1    Node  un12_ra_i_m2_4__un3_n 
+   1/1        1        1    Node  Dout_2_.CE 
+   1/1        1        1    Node  Dout_2_.AR 
+   1/1        1        1    Node  Dout_2_.D 
+   1/1        1        1    Node  Dout_2_.C 
+   1          2        1    Node  un12_ra_i_m2_4__un1_n 
+   1/1        1        1    Node  Dout_3_.CE 
+   1/1        1        1    Node  Dout_3_.AR 
+   1/1        1        1    Node  Dout_3_.D 
+   1/1        1        1    Node  Dout_3_.C 
+   1          2        1    Node  un12_ra_i_m2_4__un0_n 
+   1/1        1        1    Node  Dout_4_.CE 
+   1/1        1        1    Node  Dout_4_.AR 
+   1/1        1        1    Node  Dout_4_.D 
+   1/1        1        1    Node  Dout_4_.C 
+   1          1        1    Node  un12_ra_i_m2_3__un3_n 
+   1/1        1        1    Node  Dout_5_.CE 
+   1/1        1        1    Node  Dout_5_.AR 
+   1/1        1        1    Node  Dout_5_.D 
+   1/1        1        1    Node  Dout_5_.C 
+   1          2        1    Node  un12_ra_i_m2_3__un1_n 
+   1/1        1        1    Node  Dout_6_.CE 
+   1/1        1        1    Node  Dout_6_.AR 
+   1/1        1        1    Node  Dout_6_.D 
+   1/1        1        1    Node  Dout_6_.C 
+   1          2        1    Node  un12_ra_i_m2_3__un0_n 
+   1/1        1        1    Node  Dout_7_.CE 
+   1/1        1        1    Node  Dout_7_.AR 
+   1/1        1        1    Node  Dout_7_.D 
+   1/1        1        1    Node  Dout_7_.C 
+   1          1        1    Node  un12_ra_i_m2_2__un3_n 
+   1          2        1    Node  un12_ra_i_m2_2__un1_n 
+   1          2        1    Node  Dout6 
+   1          2        1    Node  un12_ra_i_m2_2__un0_n 
+   1          2        1    Node  Block5 
+   1          1        1    Node  un12_ra_i_m2_1__un3_n 
+   1          2        1    Node  Window7 
+   1          2        1    Node  un12_ra_i_m2_1__un1_n 
+   1          2        1    Node  un12_ra_i_m2_1__un0_n 
+   1          1        1    Node  un12_ra_i_m2_0__un3_n 
+   1          1        1    Node  N_87 
+   1          2        1    Node  un12_ra_i_m2_0__un1_n 
+   1          1        1    Node  N_88 
+   1          2        1    Node  un12_ra_i_m2_0__un0_n 
+   1          1        1    Node  N_89 
+   1          1        1    Node  un12_ra_8__un3_n 
+   1          1        1    Node  N_90 
+   1          2        1    Node  un12_ra_8__un1_n 
+   2          2        1    Node  N_68 
+   1          2        1    Node  un12_ra_8__un0_n 
+   2          2        1    Node  N_69 
+   1          1        1    Node  un12_ra_9__un3_n 
+   2          2        1    Node  N_70 
+   1          2        1    Node  un12_ra_9__un1_n 
+   2          2        1    Node  N_71 
+   1          2        1    Node  un12_ra_9__un0_n 
+   2          2        1    Node  N_72 
+   1          1        1    Node  un12_ra_10__un3_n 
+   2          2        1    Node  N_73 
+   1          2        1    Node  un12_ra_10__un1_n 
+   2          2        1    Node  N_74 
+   1          2        1    Node  un12_ra_10__un0_n 
+   2          2        1    Node  N_75 
+   1          2        1    Node  N_91 
+   1          2        1    Node  N_80 
+   1          2        1    Node  N_81 
+   1          2        1    Node  N_82 
+   1          2        1    Node  N_83 
+   1          2        1    Node  N_84 
+   1          2        1    Node  N_92 
+   1          2        1    Node  N_93 
+   1          2        1    Node  N_94 
+   1          2        1    Node  N_95 
+   1          2        1    Node  N_96 
+   1          2        1    Node  N_97 
    1          2        1    Node  N_98 
-   1          2        1    Node  Window7_2 
    1          2        1    Node  N_99 
-   1          2        1    Node  un1_RASr_1 
    1          2        1    Node  N_100 
-   1          2        1    Node  un1_RASr_2 
-   1          2        1    Node  N_103 
-   1          2        1    Node  un1_RASr_3 
-   1          2        1    Node  N_104 
-   1          2        1    Node  un1_RASr_4 
-   1          2        1    Node  N_105 
-   1          2        1    Node  N_86_i_1 
-   1          2        1    Node  N_106 
-   1          2        1    Node  RASr_2_0_1 
-   1          2        1    Node  N_107 
-   1          2        1    Node  N_84_i_1 
-   1          2        1    Node  N_108 
-   1          2        1    Node  N_83_i_1 
-   1          2        1    Node  N_109 
-   1          2        1    Node  N_82_i_1 
-   1          2        1    Node  N_110 
-   1          2        1    Node  N_81_i_1 
-   1          2        1    Node  N_111 
-   1          2        1    Node  N_80_i_1 
-   1          2        1    Node  N_112 
-   1          2        1    Node  N_4_i_1 
-   1          2        1    Node  N_113 
-   1          2        1    Node  N_123_1 
-   1          2        1    Node  N_114 
-   1          2        1    Node  N_104_1 
-   1          2        1    Node  N_115 
-   1          2        1    Node  N_103_1 
-   1          2        1    Node  N_116 
-   1          2        1    Node  N_97_1 
-   1          2        1    Node  N_117 
-   1          1        1    Node  block_0_6__un3_n 
-   1          2        1    Node  N_118 
-   1          2        1    Node  block_0_6__un1_n 
-   1          2        1    Node  N_119 
-   1          2        1    Node  block_0_6__un0_n 
-   1          2        1    Node  N_122 
-   1          1        1    Node  block_0_7__un3_n 
-   1          2        1    Node  N_123 
-   1          2        1    Node  block_0_7__un1_n 
-   1          2        1    Node  N_125 
-   1          2        1    Node  block_0_7__un0_n 
-   1          2        1    Node  N_127 
-   1          1        1    Node  ra_1_8__un3_n 
-   1          2        1    Node  N_128 
-   1          2        1    Node  ra_1_8__un1_n 
-   1          2        1    Node  Block6_9 
-   1          2        1    Node  ra_1_8__un0_n 
-   1          2        1    Node  N_102 
-   1          1        1    Node  ra_1_9__un3_n 
    1          2        1    Node  N_101 
-   1          2        1    Node  ra_1_9__un1_n 
-   1          2        1    Node  N_126 
-   1          2        1    Node  ra_1_9__un0_n 
-   1          1        1    Node  N_75 
-   1          1        1    Node  ra_1_10__un3_n 
-   1          1        1    Node  N_65 
-   1          2        1    Node  ra_1_10__un1_n 
-   1          1        1    Node  N_64 
-   1          2        1    Node  ra_1_10__un0_n 
-   1          2        1    Node  N_124 
-   1          1        1    Node  window_0_0__un3_n 
-   1          2        1    Node  N_120 
-   1          2        1    Node  window_0_0__un1_n 
-   1          2        1    Node  N_121 
-   1          2        1    Node  window_0_0__un0_n 
-   1          1        1    Node  window_0_1__un3_n 
-   1          2        1    Node  un2_nCAS 
-   1          2        1    Node  window_0_1__un1_n 
-   1          1        1    Node  N_125_i 
-   1          2        1    Node  window_0_1__un0_n 
-   1          1        1    Node  RASr_i 
-   1          1        1    Node  window_0_2__un3_n 
-   1          1        1    Node  ref_i_3__n 
-   1          2        1    Node  window_0_2__un1_n 
+   1          2        1    Node  N_102 
+   1          2        1    Node  N_103 
+   1          2        1    Node  N_104 
+   1          2        1    Node  N_105 
+   1          2        1    Node  N_110 
+   1          2        1    Node  N_129 
+   1          2        1    Node  N_131 
+   1/1        1        1    NodeX1  Ref_n1_0_x2.X1 
+   1/1        1        1    NodeX2  Ref_n1_0_x2.X2 
+   2          2        1    Node  N_113 
+   2          2        1    Node  N_114 
+   2          2        1    Node  N_115 
+   1          1        1    Node  un1_nRWE_i 
    1          1        1    Node  ref_i_2__n 
-   1          2        1    Node  window_0_2__un0_n 
-   1          1        1    Node  ref_i_0__n 
-   1          1        1    Node  window_0_3__un3_n 
-   1          1        1    Node  s_i_3__n 
-   1          2        1    Node  window_0_3__un1_n 
-   1          1        1    Node  s_i_2__n 
-   1          2        1    Node  window_0_3__un0_n 
-   1          1        1    Node  s_i_0__n 
-   1          1        1    Node  window_0_4__un3_n 
    1          1        1    Node  s_i_1__n 
-   1          2        1    Node  window_0_4__un1_n 
-   1          1        1    Node  nWE_i 
-   1          2        1    Node  window_0_4__un0_n 
-   1          1        1    Node  a_i_0__n 
-   1          1        1    Node  window_0_5__un3_n 
-   1          1        1    Node  RAsel_i 
-   1          2        1    Node  window_0_5__un1_n 
-   1          1        1    Node  window_i_2__n 
-   1          2        1    Node  window_0_5__un0_n 
-   1          1        1    Node  nPHI2seen_i 
-   1          1        1    Node  block_0_0__un3_n 
-   1          1        1    Node  nIO1_i 
-   1          2        1    Node  block_0_0__un1_n 
    1          1        1    Node  ref_i_1__n 
-   1          2        1    Node  block_0_0__un0_n 
+   1          1        1    Node  ref_i_0__n 
+   1          1        1    Node  s_i_2__n 
+   1          1        1    Node  s_i_3__n 
+   1          1        1    Node  s_i_0__n 
+   1          1        1    Node  nWE_i 
    1          1        1    Node  nIO2_i 
-   1          1        1    Node  block_0_1__un3_n 
-   1          1        1    Node  window_i_3__n 
-   1          2        1    Node  block_0_1__un1_n 
-   1          1        1    Node  a_i_1__n 
-   1          2        1    Node  block_0_1__un0_n 
-   1          1        1    Node  window_i_4__n 
-   1          1        1    Node  block_0_2__un3_n 
-   1          1        1    Node  a_i_2__n 
-   1          2        1    Node  block_0_2__un1_n 
-   1          1        1    Node  window_i_5__n 
-   1          2        1    Node  block_0_2__un0_n 
-   1          1        1    Node  a_i_3__n 
-   1          1        1    Node  block_0_3__un3_n 
-   1          1        1    Node  block_i_0__n 
-   1          2        1    Node  block_0_3__un1_n 
-   1          1        1    Node  a_i_4__n 
-   1          2        1    Node  block_0_3__un0_n 
-   1          1        1    Node  block_i_1__n 
-   1          1        1    Node  block_0_4__un3_n 
-   1          1        1    Node  a_i_5__n 
-   1          2        1    Node  block_0_4__un1_n 
-   1          1        1    Node  block_i_2__n 
-   1          2        1    Node  block_0_4__un0_n 
-   1          1        1    Node  a_i_6__n 
-   1          1        1    Node  block_0_5__un3_n 
-   1          1        1    Node  block_i_3__n 
-   1          2        1    Node  block_0_5__un1_n 
-   1          1        1    Node  a_i_7__n 
-   1          2        1    Node  block_0_5__un0_n 
+   1          1        1    Node  nIO1_i 
+   1          1        1    Node  nPHI2seen_i 
+   1          1        1    Node  a_i_0__n 
    1          1        1    Node  PHI2_i 
-   1/1        1        1    Node  a_15__n 
-   1          1        1    Node  DotClk_i 
-   1/1        1        1    Node  a_14__n 
+   1          1        1    Node  a_i_8__n 
+   1          1        1    Node  a_i_13__n 
+   1          1        1    Node  nRES_i 
    1/1        1        1    Node  PHI2_c 
-   1/1        1        1    Node  a_13__n 
    1/1        1        1    Node  DotClk_c 
-   1/1        1        1    Node  a_12__n 
    1/1        1        1    Node  nRES_c 
-   1/1        1        1    Node  a_11__n 
    1/1        1        1    Node  a_c_0__n 
-   1/1        1        1    Node  a_10__n 
    1/1        1        1    Node  a_c_1__n 
-   1/1        1        1    Node  a_9__n 
    1/1        1        1    Node  a_c_2__n 
-   1/1        1        1    Node  a_8__n 
    1/1        1        1    Node  a_c_3__n 
    1/1        1        1    Node  a_c_4__n 
    1/1        1        1    Node  a_c_5__n 
    1/1        1        1    Node  a_c_6__n 
    1/1        1        1    Node  a_c_7__n 
+   1/1        1        1    Node  a_c_8__n 
+   1/1        1        1    Node  a_c_9__n 
+   1/1        1        1    Node  a_c_10__n 
+   1/1        1        1    Node  a_c_11__n 
+   1/1        1        1    Node  a_c_12__n 
+   1/1        1        1    Node  a_c_13__n 
+   1/1        1        1    Node  a_c_14__n 
+   1/1        1        1    Node  a_c_15__n 
    1/1        1        1    Node  d_c_0__n 
    1/1        1        1    Node  d_c_1__n 
    1/1        1        1    Node  d_c_2__n 
@@ -388,32 +317,101 @@ Design cram created Sun May 24 21:21:42 2020
    1/1        1        1    Node  nWE_c 
    1/1        1        1    Node  nIO1_c 
    1/1        1        1    Node  nIO2_c 
-   1/1        1        1    Node  rd_c_0__n 
-   1/1        1        1    Node  rd_c_1__n 
-   1/1        1        1    Node  rd_c_2__n 
-   1/1        1        1    Node  rd_c_3__n 
-   1/1        1        1    Node  rd_c_4__n 
-   1/1        1        1    Node  rd_c_5__n 
-   1/1        1        1    Node  rd_c_6__n 
-   1/1        1        1    Node  rd_c_7__n 
+   1          2        1    Node  nRASDFFreg.D 
+   1/1        1        1    Node  nRASDFFreg.C 
+   1          2        1    Node  nCASDFFreg.D 
+   1/1        1        1    Node  nCASDFFreg.C 
+   1          2        1    Node  S_n0_0 
+   1          1        1    Node  N_80_i 
+   1          1        1    Node  N_92_i 
+   1          1        1    Node  N_84_i 
+   1          1        1    Node  N_103_i 
+   1          1        1    Node  N_97_i 
+   1          1        1    Node  N_98_i 
+   1          1        1    Node  N_95_i 
+   1          1        1    Node  N_96_i 
+   1          2        1    Node  N_90_i 
+   1          2        1    Node  N_89_i 
+   1          2        1    Node  N_88_i 
+   1          2        1    Node  N_87_i 
+   1          1        1    Node  N_110_i 
+   1          2        1    Node  N_86_i 
+   1          2        1    Node  N_85_i 
+   1          1        1    Node  N_99_i 
+   1          1        1    Node  N_100_i 
+   1          1        1    Node  N_93_i 
+   1          1        1    Node  N_94_i 
+   1          2        1    Node  Ref_n2_0 
+   1          1        1    Node  N_83_i 
+   1          1        1    Node  N_81_i 
+   1          1        1    Node  N_82_i 
+   1          1        1    Node  N_91_i 
+   1          2        1    Node  N_131_1 
+   1          2        1    Node  N_131_2 
+   1          2        1    Node  N_131_3 
+   1          2        1    Node  N_131_4 
+   1          2        1    Node  N_131_5 
+   1          2        1    Node  N_131_6 
+   1          2        1    Node  N_131_7 
+   1          2        1    Node  un1_nRAS_i_1 
+   1          2        1    Node  un1_nRAS_i_2 
+   1          2        1    Node  S_n0_0_1 
+   1          2        1    Node  S_n0_0_2 
+   1          2        1    Node  N_100_1 
 =========
- 405/124        Best P-Term Total: 405
+ 361/186        Best P-Term Total: 361
                        Total Pins: 63
-                      Total Nodes: 305
+                      Total Nodes: 220
             Average P-Term/Output: 1
 
 
 Equations:
 
-D_7_ = (rd_c_7__n);
+RA_3_ = (N_72);
+
+RA_2_ = (N_73);
+
+RA_1_ = (N_74);
+
+RA_0_ = (N_75);
+
+D_7_ = (Dout_7_);
 
 D_7_.OE = (N_85_i);
 
+RD_6_ = (d_c_6__n);
+
+RD_6_.OE = (RAMWR);
+
+RD_5_ = (d_c_5__n);
+
+RD_5_.OE = (RAMWR);
+
 RA_11_ = (gnd_n_n);
+
+RD_4_ = (d_c_4__n);
+
+RD_4_.OE = (RAMWR);
+
+RD_3_ = (d_c_3__n);
+
+RD_3_.OE = (RAMWR);
 
 RD_7_ = (d_c_7__n);
 
-RD_7_.OE = (RAMWE);
+RD_7_.OE = (RAMWR);
+
+RD_2_ = (d_c_2__n);
+
+RD_2_.OE = (RAMWR);
+
+RD_1_ = (d_c_1__n);
+
+RD_1_.OE = (RAMWR);
+
+RD_0_ = (d_c_0__n);
+
+RD_0_.OE = (RAMWR);
 
 nIRQ = (gnd_n_n);
 
@@ -423,734 +421,534 @@ nDMA = (gnd_n_n);
 
 nDMA.OE = (gnd_n_n);
 
-nRAS = (RASr_i);
+nRAS = (nRASDFFreg);
 
-nCAS = (un1_nCAS_i);
+nCAS = (nCASDFFreg);
 
-nRWE = (N_125_i);
+nRWE = (un1_nRWE_i);
 
 DelayOut = (gnd_n_n);
 
-D_6_ = (rd_c_6__n);
+D_6_ = (Dout_6_);
 
 D_6_.OE = (N_85_i);
 
-D_5_ = (rd_c_5__n);
+D_5_ = (Dout_5_);
 
 D_5_.OE = (N_85_i);
 
-D_4_ = (rd_c_4__n);
+D_4_ = (Dout_4_);
 
 D_4_.OE = (N_85_i);
 
-D_3_ = (rd_c_3__n);
+D_3_ = (Dout_3_);
 
 D_3_.OE = (N_85_i);
 
-D_2_ = (rd_c_2__n);
+D_2_ = (Dout_2_);
 
 D_2_.OE = (N_85_i);
 
-D_1_ = (rd_c_1__n);
+D_1_ = (Dout_1_);
 
 D_1_.OE = (N_85_i);
 
-D_0_ = (rd_c_0__n);
+D_0_ = (Dout_0_);
 
 D_0_.OE = (N_85_i);
 
-RA_10_ = (ra_1_10__n);
+RA_10_ = (N_115);
 
-RA_9_ = (ra_1_9__n);
+RA_9_ = (N_114);
 
-RA_8_ = (ra_1_8__n);
+RA_8_ = (N_113);
 
-RA_7_ = (N_87_i);
+RA_7_ = (N_68);
 
-RA_6_ = (N_88_i);
+RA_6_ = (N_69);
 
-RA_5_ = (N_89_i);
+RA_5_ = (N_70);
 
-RA_4_ = (N_36_i);
+RA_4_ = (N_71);
 
-RA_3_ = (N_38_i);
+N_100_2 = (s_i_1__n & nWE_c);
 
-RA_2_ = (N_48_i);
+N_99_1 = (N_86_i & N_88_i);
 
-RA_1_ = (N_90_i);
+N_99_2 = (N_129 & ref_i_2__n);
 
-RA_0_ = (N_91_i);
+N_98_1 = (N_102 & N_110);
 
-RD_6_ = (d_c_6__n);
-
-RD_6_.OE = (RAMWE);
-
-RD_5_ = (d_c_5__n);
-
-RD_5_.OE = (RAMWE);
-
-RD_4_ = (d_c_4__n);
-
-RD_4_.OE = (RAMWE);
-
-RD_3_ = (d_c_3__n);
-
-RD_3_.OE = (RAMWE);
-
-RD_2_ = (d_c_2__n);
-
-RD_2_.OE = (RAMWE);
-
-RD_1_ = (d_c_1__n);
-
-RD_1_.OE = (RAMWE);
-
-RD_0_ = (d_c_0__n);
-
-RD_0_.OE = (RAMWE);
-
-ra_1_8__n = (ra_1_8__un1_n
-     # ra_1_8__un0_n);
-
-un2_nCAS_i = (!un2_nCAS);
-
-ra_1_9__n = (ra_1_9__un1_n
-     # ra_1_9__un0_n);
-
-CASf_i = (!inst_CASf);
-
-ra_1_10__n = (ra_1_10__un1_n
-     # ra_1_10__un0_n);
-
-un1_nCAS_i = (CASf_i & un2_nCAS_i);
+N_98_2 = (nWE_c & a_c_9__n);
 
 gnd_n_n = (0);
 
-N_85_i = (nIO1_i & nWE_c);
+N_98_3 = (a_c_10__n & a_c_11__n);
 
-un1_RASr = (un1_RASr_4 & un1_RASr_3);
+un1_nRWE = (PHI2_c & nWE_i);
 
-N_121_i = (!N_121);
-
-inst_RASr.D = (!RASr_2_0);
-
-inst_RASr.C = (DotClk_c);
-
-N_120_i = (!N_120);
-
-Ref_0_.CE = (Ref14);
-
-Ref_0_.D = (N_64 & ref_i_0__n);
-
-Ref_0_.C = (DotClk_c);
-
-N_91_i = (N_120_i & N_121_i);
+N_98_4 = (a_c_12__n & a_c_14__n);
 
 S_0_.D = (!S_n0_0);
 
 S_0_.C = (DotClk_c);
 
-N_124_i = (!N_124);
+N_98_5 = (a_c_15__n & a_i_8__n);
 
-S_1_.D = (N_84_i_1 & N_100_i);
+S_1_.D = (N_9_i_1 & N_110_i);
 
 S_1_.C = (DotClk_c);
 
-N_123_i = (!N_123);
+N_98_6 = (N_98_1 & N_98_2);
 
-S_2_.D = (N_83_i_1 & N_127_i);
+S_2_.D = (N_7_i_1 & N_82_i);
 
 S_2_.C = (DotClk_c);
 
-RAsel_2_0 = (N_123_i & N_124_i);
+N_98_7 = (N_98_3 & N_98_4);
 
-S_3_.D = (N_82_i_1 & N_97_i);
+S_3_.D = (N_5_i_1 & N_91_i);
 
 S_3_.C = (DotClk_c);
 
-N_64_i = (Ref_2_ & Ref_3_);
+N_98_8 = (N_98_5 & a_i_13__n);
 
-Ref_1_.CE = (Ref14);
+Ref_0_.D = (ref_i_0__n);
 
-Ref_1_.D = (N_81_i_1 & N_128_i);
+Ref_0_.C = (DotClk_c);
+
+N_98_9 = (N_98_6 & N_98_7);
+
+Ref_1_.D = (Ref_n1_0_x2);
 
 Ref_1_.C = (DotClk_c);
 
-N_65_i = (S_0_ & S_1_);
+N_97_1 = (N_88_i & N_103);
 
-Ref_2_.CE = (Ref14);
-
-Ref_2_.D = (N_80_i_1 & N_94_i);
+Ref_2_.D = (!Ref_n2_0);
 
 Ref_2_.C = (DotClk_c);
 
-N_66_i = (Ref_0_ & Ref_1_);
-
-Ref_3_.CE = (Ref14);
-
-Ref_3_.D = (N_4_i_1 & N_93_i);
-
-Ref_3_.C = (DotClk_c);
-
-N_69_i = (S_2_ & s_i_3__n);
+N_97_2 = (N_129 & ref_i_2__n);
 
 inst_PHI2reg.D = (PHI2_c);
 
 inst_PHI2reg.C = (DotClk_c);
 
-N_70_i = (s_i_2__n & s_i_3__n);
+un1_nCAS_i_1 = (N_100_i & N_96_i);
 
-inst_CASr.D = (N_86_i_1 & N_105_i);
-
-inst_CASr.C = (DotClk_c);
-
-N_71_i = (s_i_0__n & nWE_i);
-
-inst_nPHI2seen.D = (!N_122);
+inst_nPHI2seen.D = (!N_101);
 
 inst_nPHI2seen.C = (DotClk_c);
 
-N_72_i = (N_66_i & Ref_2_);
+N_9_i_1 = (N_80_i & N_83_i);
 
-RAMWE = (nIO1_i & nWE_i);
+RAMWR = (nIO1_i & nWE_i);
 
-N_73_i = (N_69_i & nIO1_i);
+N_7_i_1 = (N_80_i & N_81_i);
 
-Window_2_.D = (N_7 & nRES_c);
+Window_2_.CE = (Window7);
+
+Window_2_.AR = (nRES_i);
+
+Window_2_.D = (d_c_2__n);
 
 Window_2_.C = (DotClk_c);
 
-N_75_i = (S_2_ & S_3_);
+N_5_i_1 = (N_80_i & N_88);
 
-Window_3_.D = (N_8 & nRES_c);
+Window_3_.CE = (Window7);
+
+Window_3_.AR = (nRES_i);
+
+Window_3_.D = (d_c_3__n);
 
 Window_3_.C = (DotClk_c);
 
-N_126_i = (!N_126);
+Dout6_1 = (a_c_0__n & N_103);
 
-Window_4_.D = (N_9 & nRES_c);
+Window_4_.CE = (Window7);
+
+Window_4_.AR = (nRES_i);
+
+Window_4_.D = (d_c_4__n);
 
 Window_4_.C = (DotClk_c);
 
-N_101_i = (!N_101);
+Block5_1 = (a_c_0__n & N_87_i);
 
-Window_5_.D = (N_10 & nRES_c);
+Window_5_.CE = (Window7);
+
+Window_5_.AR = (nRES_i);
+
+Window_5_.D = (d_c_5__n);
 
 Window_5_.C = (DotClk_c);
 
-N_102_i = (!N_102);
+Window7_1 = (N_131 & a_i_0__n);
 
-Block_0_.D = (N_11 & nRES_c);
+Block_0_.CE = (Block5);
+
+Block_0_.AR = (nRES_i);
+
+Block_0_.D = (d_c_0__n);
 
 Block_0_.C = (DotClk_c);
 
-N_97_i = (!N_97);
+N_96_1 = (N_103 & N_104);
 
-Block_1_.D = (N_12 & nRES_c);
+Block_1_.CE = (Block5);
+
+Block_1_.AR = (nRES_i);
+
+Block_1_.D = (d_c_1__n);
 
 Block_1_.C = (DotClk_c);
 
-S_n0_0 = (S_n0_0_1 & S_n0_0_2);
+N_95_1 = (N_105 & S_0_);
 
-Block_2_.D = (N_13 & nRES_c);
+Block_2_.CE = (Block5);
+
+Block_2_.AR = (nRES_i);
+
+Block_2_.D = (d_c_2__n);
 
 Block_2_.C = (DotClk_c);
 
-N_118_i = (!N_118);
+N_80_1 = (PHI2_i & inst_PHI2reg);
 
-Block_3_.D = (N_14 & nRES_c);
+Block_3_.CE = (Block5);
+
+Block_3_.AR = (nRES_i);
+
+Block_3_.D = (d_c_3__n);
 
 Block_3_.C = (DotClk_c);
 
-N_119_i = (!N_119);
+un12_ra_i_m2_7__un3_n = (!inst_RAsel);
 
-Block_4_.D = (N_15 & nRES_c);
+Block_4_.CE = (Block5);
+
+Block_4_.AR = (nRES_i);
+
+Block_4_.D = (d_c_4__n);
 
 Block_4_.C = (DotClk_c);
 
-N_90_i = (N_118_i & N_119_i);
+un12_ra_i_m2_7__un1_n = (a_c_7__n & inst_RAsel);
 
-Block_5_.D = (N_16 & nRES_c);
+Block_5_.CE = (Block5);
+
+Block_5_.AR = (nRES_i);
+
+Block_5_.D = (d_c_5__n);
 
 Block_5_.C = (DotClk_c);
 
-N_116_i = (!N_116);
+un12_ra_i_m2_7__un0_n = (Block_3_ & un12_ra_i_m2_7__un3_n);
 
-Block_6_.D = (N_17 & nRES_c);
+Block_6_.CE = (Block5);
+
+Block_6_.AR = (nRES_i);
+
+Block_6_.D = (d_c_6__n);
 
 Block_6_.C = (DotClk_c);
 
-N_117_i = (!N_117);
+un12_ra_i_m2_6__un3_n = (!inst_RAsel);
 
-Window_0_.D = (N_5 & nRES_c);
+Window_0_.CE = (Window7);
+
+Window_0_.AR = (nRES_i);
+
+Window_0_.D = (d_c_0__n);
 
 Window_0_.C = (DotClk_c);
 
-N_48_i = (N_116_i & N_117_i);
+un12_ra_i_m2_6__un1_n = (a_c_6__n & inst_RAsel);
 
-Window_1_.D = (N_6 & nRES_c);
+Window_1_.CE = (Window7);
+
+Window_1_.AR = (nRES_i);
+
+Window_1_.D = (d_c_1__n);
 
 Window_1_.C = (DotClk_c);
 
-N_114_i = (!N_114);
+un12_ra_i_m2_6__un0_n = (Block_2_ & un12_ra_i_m2_6__un3_n);
 
-Block_7_.D = (N_18 & nRES_c);
+Block_7_.CE = (Block5);
+
+Block_7_.AR = (nRES_i);
+
+Block_7_.D = (d_c_7__n);
 
 Block_7_.C = (DotClk_c);
 
-N_115_i = (!N_115);
+un12_ra_i_m2_5__un3_n = (!inst_RAsel);
 
-inst_RAsel.D = (!RAsel_2_0);
+inst_RAsel.D = (N_86_i & N_105);
 
-inst_RAsel.C = (DotClk_i);
+inst_RAsel.C = (!DotClk_c);
 
-N_38_i = (N_114_i & N_115_i);
+un12_ra_i_m2_5__un1_n = (a_c_5__n & inst_RAsel);
 
-Ref14 = (N_70_i & N_126);
+Dout_0_.CE = (Dout6);
 
-N_112_i = (!N_112);
+Dout_0_.AR = (nRES_i);
 
-inst_CASf.D = (un1_RASr);
+Dout_0_.D = (RD_0_.PIN);
 
-inst_CASf.C = (DotClk_i);
+Dout_0_.C = (DotClk_c);
 
-N_113_i = (!N_113);
+un12_ra_i_m2_5__un0_n = (Block_1_ & un12_ra_i_m2_5__un3_n);
 
-N_36_i = (N_112_i & N_113_i);
+Dout_1_.CE = (Dout6);
 
-N_110_i = (!N_110);
+Dout_1_.AR = (nRES_i);
 
-Block6 = (Block6_1 & Block6_2);
+Dout_1_.D = (RD_1_.PIN);
 
-N_111_i = (!N_111);
+Dout_1_.C = (DotClk_c);
 
-Window7 = (Window7_1 & Window7_2);
+un12_ra_i_m2_4__un3_n = (!inst_RAsel);
 
-N_89_i = (N_110_i & N_111_i);
+Dout_2_.CE = (Dout6);
 
-N_5 = (window_0_0__un1_n
-     # window_0_0__un0_n);
+Dout_2_.AR = (nRES_i);
 
-N_108_i = (!N_108);
+Dout_2_.D = (RD_2_.PIN);
 
-N_6 = (window_0_1__un1_n
-     # window_0_1__un0_n);
+Dout_2_.C = (DotClk_c);
 
-N_109_i = (!N_109);
+un12_ra_i_m2_4__un1_n = (a_c_4__n & inst_RAsel);
 
-N_7 = (window_0_2__un1_n
-     # window_0_2__un0_n);
+Dout_3_.CE = (Dout6);
 
-N_88_i = (N_108_i & N_109_i);
+Dout_3_.AR = (nRES_i);
 
-N_8 = (window_0_3__un1_n
-     # window_0_3__un0_n);
+Dout_3_.D = (RD_3_.PIN);
 
-N_106_i = (!N_106);
+Dout_3_.C = (DotClk_c);
 
-N_9 = (window_0_4__un1_n
-     # window_0_4__un0_n);
+un12_ra_i_m2_4__un0_n = (Block_0_ & un12_ra_i_m2_4__un3_n);
 
-N_107_i = (!N_107);
+Dout_4_.CE = (Dout6);
 
-N_10 = (window_0_5__un1_n
-     # window_0_5__un0_n);
+Dout_4_.AR = (nRES_i);
 
-N_87_i = (N_106_i & N_107_i);
+Dout_4_.D = (RD_4_.PIN);
 
-N_11 = (block_0_0__un1_n
-     # block_0_0__un0_n);
+Dout_4_.C = (DotClk_c);
 
-N_100_i = (!N_100);
+un12_ra_i_m2_3__un3_n = (!inst_RAsel);
 
-N_12 = (block_0_1__un1_n
-     # block_0_1__un0_n);
+Dout_5_.CE = (Dout6);
 
-N_105_i = (!N_105);
+Dout_5_.AR = (nRES_i);
 
-N_13 = (block_0_2__un1_n
-     # block_0_2__un0_n);
+Dout_5_.D = (RD_5_.PIN);
 
-N_14 = (block_0_3__un1_n
-     # block_0_3__un0_n);
+Dout_5_.C = (DotClk_c);
 
-N_103_i = (!N_103);
+un12_ra_i_m2_3__un1_n = (a_c_3__n & inst_RAsel);
 
-N_15 = (block_0_4__un1_n
-     # block_0_4__un0_n);
+Dout_6_.CE = (Dout6);
 
-N_104_i = (!N_104);
+Dout_6_.AR = (nRES_i);
 
-N_16 = (block_0_5__un1_n
-     # block_0_5__un0_n);
+Dout_6_.D = (RD_6_.PIN);
 
-un1_RASr_i = (!un1_RASr);
+Dout_6_.C = (DotClk_c);
 
-N_17 = (block_0_6__un1_n
-     # block_0_6__un0_n);
+un12_ra_i_m2_3__un0_n = (Window_5_ & un12_ra_i_m2_3__un3_n);
 
-RASr_2_0 = (RASr_2_0_1 & un1_RASr_i);
+Dout_7_.CE = (Dout6);
 
-N_18 = (block_0_7__un1_n
-     # block_0_7__un0_n);
+Dout_7_.AR = (nRES_i);
 
-N_99_i = (!N_99);
+Dout_7_.D = (RD_7_.PIN);
 
-N_98_i = (!N_98);
+Dout_7_.C = (DotClk_c);
 
-N_127_i = (!N_127);
+un12_ra_i_m2_2__un3_n = (!inst_RAsel);
 
-N_96_i = (!N_96);
+un12_ra_i_m2_2__un1_n = (a_c_2__n & inst_RAsel);
 
-N_128_i = (!N_128);
+Dout6 = (Dout6_1 & N_131);
 
-N_94_i = (!N_94);
+un12_ra_i_m2_2__un0_n = (Window_4_ & un12_ra_i_m2_2__un3_n);
 
-N_92_i = (!N_92);
+Block5 = (Block5_1 & N_131);
 
-N_93_i = (!N_93);
+un12_ra_i_m2_1__un3_n = (!inst_RAsel);
 
-S_n0_0_1 = (N_101_i & N_126_i);
+Window7 = (Window7_1 & N_87_i);
 
-S_n0_0_2 = (N_97_i & N_102_i);
+un12_ra_i_m2_1__un1_n = (a_c_1__n & inst_RAsel);
 
-N_66 = (!N_66_i);
+un12_ra_i_m2_1__un0_n = (Window_3_ & un12_ra_i_m2_1__un3_n);
 
-Block6_9_1 = (a_c_1__n & a_c_2__n);
+un12_ra_i_m2_0__un3_n = (!inst_RAsel);
 
-N_70 = (!N_70_i);
+N_87 = (!N_87_i);
 
-Block6_9_2 = (a_c_3__n & a_c_4__n);
+un12_ra_i_m2_0__un1_n = (a_c_0__n & inst_RAsel);
 
-N_71 = (!N_71_i);
+N_88 = (!N_88_i);
 
-Block6_9_3 = (a_c_5__n & a_c_6__n);
+un12_ra_i_m2_0__un0_n = (Window_2_ & un12_ra_i_m2_0__un3_n);
 
-N_72 = (!N_72_i);
+N_89 = (!N_89_i);
 
-Block6_9_4 = (a_c_7__n & nWE_i);
+un12_ra_8__un3_n = (!inst_RAsel);
 
-N_92 = (N_72 & ref_i_3__n);
+N_90 = (!N_90_i);
 
-Block6_9_5 = (Block6_9_1 & Block6_9_2);
+un12_ra_8__un1_n = (Window_0_ & inst_RAsel);
 
-N_93 = (N_72_i & Ref_3_);
+N_68 = (un12_ra_i_m2_7__un1_n
+     # un12_ra_i_m2_7__un0_n);
 
-Block6_9_6 = (Block6_9_3 & Block6_9_4);
+un12_ra_8__un0_n = (Block_4_ & un12_ra_8__un3_n);
 
-N_94 = (N_66 & ref_i_2__n);
+N_69 = (un12_ra_i_m2_6__un1_n
+     # un12_ra_i_m2_6__un0_n);
 
-Block6_1 = (a_c_0__n & Block6_9);
+un12_ra_9__un3_n = (!inst_RAsel);
 
-N_96 = (N_65 & s_i_3__n);
+N_70 = (un12_ra_i_m2_5__un1_n
+     # un12_ra_i_m2_5__un0_n);
 
-Block6_2 = (N_127 & nIO2_i);
+un12_ra_9__un1_n = (Window_1_ & inst_RAsel);
 
-N_97 = (N_97_1 & inst_nPHI2seen);
+N_71 = (un12_ra_i_m2_4__un1_n
+     # un12_ra_i_m2_4__un0_n);
 
-Window7_1 = (a_i_0__n & Block6_9);
+un12_ra_9__un0_n = (Block_5_ & un12_ra_9__un3_n);
 
-N_98 = (N_65 & s_i_2__n);
+N_72 = (un12_ra_i_m2_3__un1_n
+     # un12_ra_i_m2_3__un0_n);
 
-Window7_2 = (N_127 & nIO2_i);
+un12_ra_10__un3_n = (!inst_RAsel);
 
-N_99 = (N_65_i & N_75);
+N_73 = (un12_ra_i_m2_2__un1_n
+     # un12_ra_i_m2_2__un0_n);
 
-un1_RASr_1 = (S_0_ & s_i_1__n);
+un12_ra_10__un1_n = (Block_7_ & inst_RAsel);
 
-N_100 = (s_i_0__n & s_i_1__n);
+N_74 = (un12_ra_i_m2_1__un1_n
+     # un12_ra_i_m2_1__un0_n);
 
-un1_RASr_2 = (N_70_i & N_128);
+un12_ra_10__un0_n = (Block_6_ & un12_ra_10__un3_n);
 
-N_103 = (N_103_1 & s_i_1__n);
+N_75 = (un12_ra_i_m2_0__un1_n
+     # un12_ra_i_m2_0__un0_n);
 
-un1_RASr_3 = (ref_i_2__n & ref_i_3__n);
+N_91 = (N_87 & s_i_3__n);
 
-N_104 = (N_104_1 & S_1_);
+N_80 = (N_80_1 & inst_nPHI2seen);
 
-un1_RASr_4 = (un1_RASr_1 & un1_RASr_2);
+N_81 = (N_87 & s_i_2__n);
 
-N_105 = (S_0_ & nWE_i);
+N_82 = (N_87_i & N_102);
 
-N_86_i_1 = (N_73_i & N_100_i);
+N_83 = (N_87_i & N_89);
 
-N_106 = (a_i_7__n & inst_RAsel);
+N_84 = (N_88 & s_i_0__n);
 
-RASr_2_0_1 = (N_103_i & N_104_i);
+N_92 = (N_89_i & S_1_);
 
-N_107 = (block_i_3__n & RAsel_i);
+N_93 = (N_90 & Ref_2_);
 
-N_84_i_1 = (N_97_i & N_99_i);
+N_94 = (N_90_i & ref_i_2__n);
 
-N_108 = (a_i_6__n & inst_RAsel);
+N_95 = (N_95_1 & s_i_1__n);
 
-N_83_i_1 = (N_97_i & N_98_i);
+N_96 = (N_96_1 & nIO1_i);
 
-N_109 = (block_i_2__n & RAsel_i);
+N_97 = (N_97_1 & N_97_2);
 
-N_82_i_1 = (N_70 & N_96_i);
+N_98 = (N_98_9 & N_98_8);
 
-N_110 = (a_i_5__n & inst_RAsel);
+N_99 = (N_99_1 & N_99_2);
 
-N_81_i_1 = (N_64 & N_66);
+N_100 = (N_100_1 & N_100_2);
 
-N_111 = (block_i_1__n & RAsel_i);
+N_101 = (PHI2_c & nPHI2seen_i);
 
-N_80_i_1 = (N_64 & N_72);
+N_102 = (S_2_ & s_i_3__n);
 
-N_112 = (a_i_4__n & inst_RAsel);
+N_103 = (S_1_ & s_i_0__n);
 
-N_4_i_1 = (N_64 & N_92_i);
+N_104 = (N_102 & nWE_i);
 
-N_113 = (block_i_0__n & RAsel_i);
+N_105 = (N_102 & nIO1_i);
 
-N_123_1 = (N_73_i & S_0_);
+N_110 = (s_i_0__n & s_i_1__n);
 
-N_114 = (a_i_3__n & inst_RAsel);
+N_129 = (ref_i_0__n & ref_i_1__n);
 
-N_104_1 = (N_71_i & N_73_i);
+N_131 = (N_131_7 & nIO2_i);
 
-N_115 = (RAsel_i & window_i_5__n);
+Ref_n1_0_x2.X1 = (Ref_0_);
 
-N_103_1 = (N_71 & N_73_i);
+Ref_n1_0_x2.X2 = (Ref_1_);
 
-N_116 = (a_i_2__n & inst_RAsel);
+N_113 = (un12_ra_8__un1_n
+     # un12_ra_8__un0_n);
 
-N_97_1 = (PHI2_i & inst_PHI2reg);
+N_114 = (un12_ra_9__un1_n
+     # un12_ra_9__un0_n);
 
-N_117 = (RAsel_i & window_i_4__n);
+N_115 = (un12_ra_10__un1_n
+     # un12_ra_10__un0_n);
 
-block_0_6__un3_n = (!Block6);
-
-N_118 = (a_i_1__n & inst_RAsel);
-
-block_0_6__un1_n = (d_c_6__n & Block6);
-
-N_119 = (RAsel_i & window_i_3__n);
-
-block_0_6__un0_n = (Block_6_ & block_0_6__un3_n);
-
-N_122 = (PHI2_c & nPHI2seen_i);
-
-block_0_7__un3_n = (!Block6);
-
-N_123 = (N_123_1 & s_i_1__n);
-
-block_0_7__un1_n = (d_c_7__n & Block6);
-
-N_125 = (PHI2_c & nWE_i);
-
-block_0_7__un0_n = (Block_7_ & block_0_7__un3_n);
-
-N_127 = (N_65_i & N_69_i);
-
-ra_1_8__un3_n = (!inst_RAsel);
-
-N_128 = (ref_i_0__n & ref_i_1__n);
-
-ra_1_8__un1_n = (Window_0_ & inst_RAsel);
-
-Block6_9 = (Block6_9_5 & Block6_9_6);
-
-ra_1_8__un0_n = (Block_4_ & ra_1_8__un3_n);
-
-N_102 = (N_75_i & S_1_);
-
-ra_1_9__un3_n = (!inst_RAsel);
-
-N_101 = (N_70 & s_i_0__n);
-
-ra_1_9__un1_n = (Window_1_ & inst_RAsel);
-
-N_126 = (S_1_ & s_i_0__n);
-
-ra_1_9__un0_n = (Block_5_ & ra_1_9__un3_n);
-
-N_75 = (!N_75_i);
-
-ra_1_10__un3_n = (!inst_RAsel);
-
-N_65 = (!N_65_i);
-
-ra_1_10__un1_n = (Block_7_ & inst_RAsel);
-
-N_64 = (!N_64_i);
-
-ra_1_10__un0_n = (Block_6_ & ra_1_10__un3_n);
-
-N_124 = (N_73_i & N_126);
-
-window_0_0__un3_n = (!Window7);
-
-N_120 = (a_i_0__n & inst_RAsel);
-
-window_0_0__un1_n = (d_c_0__n & Window7);
-
-N_121 = (RAsel_i & window_i_2__n);
-
-window_0_0__un0_n = (Window_0_ & window_0_0__un3_n);
-
-window_0_1__un3_n = (!Window7);
-
-un2_nCAS = (inst_CASr & PHI2_c);
-
-window_0_1__un1_n = (d_c_1__n & Window7);
-
-N_125_i = (!N_125);
-
-window_0_1__un0_n = (Window_1_ & window_0_1__un3_n);
-
-RASr_i = (!inst_RASr);
-
-window_0_2__un3_n = (!Window7);
-
-ref_i_3__n = (!Ref_3_);
-
-window_0_2__un1_n = (d_c_2__n & Window7);
+un1_nRWE_i = (!un1_nRWE);
 
 ref_i_2__n = (!Ref_2_);
 
-window_0_2__un0_n = (Window_2_ & window_0_2__un3_n);
-
-ref_i_0__n = (!Ref_0_);
-
-window_0_3__un3_n = (!Window7);
-
-s_i_3__n = (!S_3_);
-
-window_0_3__un1_n = (d_c_3__n & Window7);
-
-s_i_2__n = (!S_2_);
-
-window_0_3__un0_n = (Window_3_ & window_0_3__un3_n);
-
-s_i_0__n = (!S_0_);
-
-window_0_4__un3_n = (!Window7);
-
 s_i_1__n = (!S_1_);
-
-window_0_4__un1_n = (d_c_4__n & Window7);
-
-nWE_i = (!nWE_c);
-
-window_0_4__un0_n = (Window_4_ & window_0_4__un3_n);
-
-a_i_0__n = (!a_c_0__n);
-
-window_0_5__un3_n = (!Window7);
-
-RAsel_i = (!inst_RAsel);
-
-window_0_5__un1_n = (d_c_5__n & Window7);
-
-window_i_2__n = (!Window_2_);
-
-window_0_5__un0_n = (Window_5_ & window_0_5__un3_n);
-
-nPHI2seen_i = (!inst_nPHI2seen);
-
-block_0_0__un3_n = (!Block6);
-
-nIO1_i = (!nIO1_c);
-
-block_0_0__un1_n = (d_c_0__n & Block6);
 
 ref_i_1__n = (!Ref_1_);
 
-block_0_0__un0_n = (Block_0_ & block_0_0__un3_n);
+ref_i_0__n = (!Ref_0_);
+
+s_i_2__n = (!S_2_);
+
+s_i_3__n = (!S_3_);
+
+s_i_0__n = (!S_0_);
+
+nWE_i = (!nWE_c);
 
 nIO2_i = (!nIO2_c);
 
-block_0_1__un3_n = (!Block6);
+nIO1_i = (!nIO1_c);
 
-window_i_3__n = (!Window_3_);
+nPHI2seen_i = (!inst_nPHI2seen);
 
-block_0_1__un1_n = (d_c_1__n & Block6);
-
-a_i_1__n = (!a_c_1__n);
-
-block_0_1__un0_n = (Block_1_ & block_0_1__un3_n);
-
-window_i_4__n = (!Window_4_);
-
-block_0_2__un3_n = (!Block6);
-
-a_i_2__n = (!a_c_2__n);
-
-block_0_2__un1_n = (d_c_2__n & Block6);
-
-window_i_5__n = (!Window_5_);
-
-block_0_2__un0_n = (Block_2_ & block_0_2__un3_n);
-
-a_i_3__n = (!a_c_3__n);
-
-block_0_3__un3_n = (!Block6);
-
-block_i_0__n = (!Block_0_);
-
-block_0_3__un1_n = (d_c_3__n & Block6);
-
-a_i_4__n = (!a_c_4__n);
-
-block_0_3__un0_n = (Block_3_ & block_0_3__un3_n);
-
-block_i_1__n = (!Block_1_);
-
-block_0_4__un3_n = (!Block6);
-
-a_i_5__n = (!a_c_5__n);
-
-block_0_4__un1_n = (d_c_4__n & Block6);
-
-block_i_2__n = (!Block_2_);
-
-block_0_4__un0_n = (Block_4_ & block_0_4__un3_n);
-
-a_i_6__n = (!a_c_6__n);
-
-block_0_5__un3_n = (!Block6);
-
-block_i_3__n = (!Block_3_);
-
-block_0_5__un1_n = (d_c_5__n & Block6);
-
-a_i_7__n = (!a_c_7__n);
-
-block_0_5__un0_n = (Block_5_ & block_0_5__un3_n);
+a_i_0__n = (!a_c_0__n);
 
 PHI2_i = (!PHI2_c);
 
-a_15__n = (A_15_);
+a_i_8__n = (!a_c_8__n);
 
-DotClk_i = (!DotClk_c);
+a_i_13__n = (!a_c_13__n);
 
-a_14__n = (A_14_);
+nRES_i = (!nRES_c);
 
 PHI2_c = (PHI2);
 
-a_13__n = (A_13_);
-
 DotClk_c = (DotClk);
-
-a_12__n = (A_12_);
 
 nRES_c = (nRES);
 
-a_11__n = (A_11_);
-
 a_c_0__n = (A_0_);
-
-a_10__n = (A_10_);
 
 a_c_1__n = (A_1_);
 
-a_9__n = (A_9_);
-
 a_c_2__n = (A_2_);
-
-a_8__n = (A_8_);
 
 a_c_3__n = (A_3_);
 
@@ -1161,6 +959,22 @@ a_c_5__n = (A_5_);
 a_c_6__n = (A_6_);
 
 a_c_7__n = (A_7_);
+
+a_c_8__n = (A_8_);
+
+a_c_9__n = (A_9_);
+
+a_c_10__n = (A_10_);
+
+a_c_11__n = (A_11_);
+
+a_c_12__n = (A_12_);
+
+a_c_13__n = (A_13_);
+
+a_c_14__n = (A_14_);
+
+a_c_15__n = (A_15_);
 
 d_c_0__n = (D_0_.PIN);
 
@@ -1184,34 +998,136 @@ nIO1_c = (nIO1);
 
 nIO2_c = (nIO2);
 
-rd_c_0__n = (RD_0_.PIN);
+nRASDFFreg.D = (un1_nRAS_i_1 & un1_nRAS_i_2);
 
-rd_c_1__n = (RD_1_.PIN);
+nRASDFFreg.C = (DotClk_c);
 
-rd_c_2__n = (RD_2_.PIN);
+nCASDFFreg.D = (un1_nCAS_i_1 & N_99_i);
 
-rd_c_3__n = (RD_3_.PIN);
+nCASDFFreg.C = (DotClk_c);
 
-rd_c_4__n = (RD_4_.PIN);
+S_n0_0 = (S_n0_0_1 & S_n0_0_2);
 
-rd_c_5__n = (RD_5_.PIN);
+N_80_i = (!N_80);
 
-rd_c_6__n = (RD_6_.PIN);
+N_92_i = (!N_92);
 
-rd_c_7__n = (RD_7_.PIN);
+N_84_i = (!N_84);
+
+N_103_i = (!N_103);
+
+N_97_i = (!N_97);
+
+N_98_i = (!N_98);
+
+N_95_i = (!N_95);
+
+N_96_i = (!N_96);
+
+N_90_i = (Ref_0_ & Ref_1_);
+
+N_89_i = (S_2_ & S_3_);
+
+N_88_i = (s_i_2__n & s_i_3__n);
+
+N_87_i = (S_0_ & S_1_);
+
+N_110_i = (!N_110);
+
+N_86_i = (N_87 & N_110_i);
+
+N_85_i = (nIO1_i & nWE_c);
+
+N_99_i = (!N_99);
+
+N_100_i = (!N_100);
+
+N_93_i = (!N_93);
+
+N_94_i = (!N_94);
+
+Ref_n2_0 = (N_93_i & N_94_i);
+
+N_83_i = (!N_83);
+
+N_81_i = (!N_81);
+
+N_82_i = (!N_82);
+
+N_91_i = (!N_91);
+
+N_131_1 = (a_c_1__n & a_c_2__n);
+
+N_131_2 = (a_c_3__n & a_c_4__n);
+
+N_131_3 = (a_c_5__n & a_c_6__n);
+
+N_131_4 = (a_c_7__n & N_104);
+
+N_131_5 = (N_131_1 & N_131_2);
+
+N_131_6 = (N_131_3 & N_131_4);
+
+N_131_7 = (N_131_5 & N_131_6);
+
+un1_nRAS_i_1 = (N_95_i & N_96_i);
+
+un1_nRAS_i_2 = (N_97_i & N_98_i);
+
+S_n0_0_1 = (N_80_i & N_84_i);
+
+S_n0_0_2 = (N_92_i & N_103_i);
+
+N_100_1 = (N_105 & S_0_);
 
 
 Reverse-Polarity Equations:
 
-!D_7_ = (!rd_c_7__n);
+!RA_3_ = (!N_72);
+
+!RA_2_ = (!N_73);
+
+!RA_1_ = (!N_74);
+
+!RA_0_ = (!N_75);
+
+!D_7_ = (!Dout_7_);
 
 !D_7_.OE = (!N_85_i);
 
+!RD_6_ = (!d_c_6__n);
+
+!RD_6_.OE = (!RAMWR);
+
+!RD_5_ = (!d_c_5__n);
+
+!RD_5_.OE = (!RAMWR);
+
 !RA_11_ = (!gnd_n_n);
+
+!RD_4_ = (!d_c_4__n);
+
+!RD_4_.OE = (!RAMWR);
+
+!RD_3_ = (!d_c_3__n);
+
+!RD_3_.OE = (!RAMWR);
 
 !RD_7_ = (!d_c_7__n);
 
-!RD_7_.OE = (!RAMWE);
+!RD_7_.OE = (!RAMWR);
+
+!RD_2_ = (!d_c_2__n);
+
+!RD_2_.OE = (!RAMWR);
+
+!RD_1_ = (!d_c_1__n);
+
+!RD_1_.OE = (!RAMWR);
+
+!RD_0_ = (!d_c_0__n);
+
+!RD_0_.OE = (!RAMWR);
 
 !nIRQ = (!gnd_n_n);
 
@@ -1221,97 +1137,55 @@ Reverse-Polarity Equations:
 
 !nDMA.OE = (!gnd_n_n);
 
-!nRAS = (!RASr_i);
+!nRAS = (!nRASDFFreg);
 
-!nCAS = (!un1_nCAS_i);
+!nCAS = (!nCASDFFreg);
 
-!nRWE = (!N_125_i);
+!nRWE = (!un1_nRWE_i);
 
 !DelayOut = (!gnd_n_n);
 
-!D_6_ = (!rd_c_6__n);
+!D_6_ = (!Dout_6_);
 
 !D_6_.OE = (!N_85_i);
 
-!D_5_ = (!rd_c_5__n);
+!D_5_ = (!Dout_5_);
 
 !D_5_.OE = (!N_85_i);
 
-!D_4_ = (!rd_c_4__n);
+!D_4_ = (!Dout_4_);
 
 !D_4_.OE = (!N_85_i);
 
-!D_3_ = (!rd_c_3__n);
+!D_3_ = (!Dout_3_);
 
 !D_3_.OE = (!N_85_i);
 
-!D_2_ = (!rd_c_2__n);
+!D_2_ = (!Dout_2_);
 
 !D_2_.OE = (!N_85_i);
 
-!D_1_ = (!rd_c_1__n);
+!D_1_ = (!Dout_1_);
 
 !D_1_.OE = (!N_85_i);
 
-!D_0_ = (!rd_c_0__n);
+!D_0_ = (!Dout_0_);
 
 !D_0_.OE = (!N_85_i);
 
-!RA_10_ = (!ra_1_10__n);
+!RA_10_ = (!N_115);
 
-!RA_9_ = (!ra_1_9__n);
+!RA_9_ = (!N_114);
 
-!RA_8_ = (!ra_1_8__n);
+!RA_8_ = (!N_113);
 
-!RA_7_ = (!N_87_i);
+!RA_7_ = (!N_68);
 
-!RA_6_ = (!N_88_i);
+!RA_6_ = (!N_69);
 
-!RA_5_ = (!N_89_i);
+!RA_5_ = (!N_70);
 
-!RA_4_ = (!N_36_i);
-
-!RA_3_ = (!N_38_i);
-
-!RA_2_ = (!N_48_i);
-
-!RA_1_ = (!N_90_i);
-
-!RA_0_ = (!N_91_i);
-
-!RD_6_ = (!d_c_6__n);
-
-!RD_6_.OE = (!RAMWE);
-
-!RD_5_ = (!d_c_5__n);
-
-!RD_5_.OE = (!RAMWE);
-
-!RD_4_ = (!d_c_4__n);
-
-!RD_4_.OE = (!RAMWE);
-
-!RD_3_ = (!d_c_3__n);
-
-!RD_3_.OE = (!RAMWE);
-
-!RD_2_ = (!d_c_2__n);
-
-!RD_2_.OE = (!RAMWE);
-
-!RD_1_ = (!d_c_1__n);
-
-!RD_1_.OE = (!RAMWE);
-
-!RD_0_ = (!d_c_0__n);
-
-!RD_0_.OE = (!RAMWE);
-
-!inst_RASr.C = (!DotClk_c);
-
-!Ref_0_.CE = (!Ref14);
-
-!Ref_0_.C = (!DotClk_c);
+!RA_4_ = (!N_71);
 
 !S_0_.C = (!DotClk_c);
 
@@ -1321,87 +1195,213 @@ Reverse-Polarity Equations:
 
 !S_3_.C = (!DotClk_c);
 
-!Ref_1_.CE = (!Ref14);
+!Ref_0_.D = (!ref_i_0__n);
+
+!Ref_0_.C = (!DotClk_c);
+
+!Ref_1_.D = (!Ref_n1_0_x2);
 
 !Ref_1_.C = (!DotClk_c);
 
-!Ref_2_.CE = (!Ref14);
-
 !Ref_2_.C = (!DotClk_c);
-
-!Ref_3_.CE = (!Ref14);
-
-!Ref_3_.C = (!DotClk_c);
 
 !inst_PHI2reg.D = (!PHI2_c);
 
 !inst_PHI2reg.C = (!DotClk_c);
 
-!inst_CASr.C = (!DotClk_c);
-
 !inst_nPHI2seen.C = (!DotClk_c);
+
+!Window_2_.CE = (!Window7);
+
+!Window_2_.AR = (!nRES_i);
+
+!Window_2_.D = (!d_c_2__n);
 
 !Window_2_.C = (!DotClk_c);
 
+!Window_3_.CE = (!Window7);
+
+!Window_3_.AR = (!nRES_i);
+
+!Window_3_.D = (!d_c_3__n);
+
 !Window_3_.C = (!DotClk_c);
+
+!Window_4_.CE = (!Window7);
+
+!Window_4_.AR = (!nRES_i);
+
+!Window_4_.D = (!d_c_4__n);
 
 !Window_4_.C = (!DotClk_c);
 
+!Window_5_.CE = (!Window7);
+
+!Window_5_.AR = (!nRES_i);
+
+!Window_5_.D = (!d_c_5__n);
+
 !Window_5_.C = (!DotClk_c);
+
+!Block_0_.CE = (!Block5);
+
+!Block_0_.AR = (!nRES_i);
+
+!Block_0_.D = (!d_c_0__n);
 
 !Block_0_.C = (!DotClk_c);
 
+!Block_1_.CE = (!Block5);
+
+!Block_1_.AR = (!nRES_i);
+
+!Block_1_.D = (!d_c_1__n);
+
 !Block_1_.C = (!DotClk_c);
+
+!Block_2_.CE = (!Block5);
+
+!Block_2_.AR = (!nRES_i);
+
+!Block_2_.D = (!d_c_2__n);
 
 !Block_2_.C = (!DotClk_c);
 
+!Block_3_.CE = (!Block5);
+
+!Block_3_.AR = (!nRES_i);
+
+!Block_3_.D = (!d_c_3__n);
+
 !Block_3_.C = (!DotClk_c);
+
+!Block_4_.CE = (!Block5);
+
+!Block_4_.AR = (!nRES_i);
+
+!Block_4_.D = (!d_c_4__n);
 
 !Block_4_.C = (!DotClk_c);
 
+!Block_5_.CE = (!Block5);
+
+!Block_5_.AR = (!nRES_i);
+
+!Block_5_.D = (!d_c_5__n);
+
 !Block_5_.C = (!DotClk_c);
+
+!Block_6_.CE = (!Block5);
+
+!Block_6_.AR = (!nRES_i);
+
+!Block_6_.D = (!d_c_6__n);
 
 !Block_6_.C = (!DotClk_c);
 
+!Window_0_.CE = (!Window7);
+
+!Window_0_.AR = (!nRES_i);
+
+!Window_0_.D = (!d_c_0__n);
+
 !Window_0_.C = (!DotClk_c);
+
+!Window_1_.CE = (!Window7);
+
+!Window_1_.AR = (!nRES_i);
+
+!Window_1_.D = (!d_c_1__n);
 
 !Window_1_.C = (!DotClk_c);
 
+!Block_7_.CE = (!Block5);
+
+!Block_7_.AR = (!nRES_i);
+
+!Block_7_.D = (!d_c_7__n);
+
 !Block_7_.C = (!DotClk_c);
 
-!inst_RAsel.C = (!DotClk_i);
+!Dout_0_.CE = (!Dout6);
 
-!inst_CASf.D = (!un1_RASr);
+!Dout_0_.AR = (!nRES_i);
 
-!inst_CASf.C = (!DotClk_i);
+!Dout_0_.D = (!RD_0_.PIN);
 
-!a_15__n = (!A_15_);
+!Dout_0_.C = (!DotClk_c);
 
-!a_14__n = (!A_14_);
+!Dout_1_.CE = (!Dout6);
+
+!Dout_1_.AR = (!nRES_i);
+
+!Dout_1_.D = (!RD_1_.PIN);
+
+!Dout_1_.C = (!DotClk_c);
+
+!Dout_2_.CE = (!Dout6);
+
+!Dout_2_.AR = (!nRES_i);
+
+!Dout_2_.D = (!RD_2_.PIN);
+
+!Dout_2_.C = (!DotClk_c);
+
+!Dout_3_.CE = (!Dout6);
+
+!Dout_3_.AR = (!nRES_i);
+
+!Dout_3_.D = (!RD_3_.PIN);
+
+!Dout_3_.C = (!DotClk_c);
+
+!Dout_4_.CE = (!Dout6);
+
+!Dout_4_.AR = (!nRES_i);
+
+!Dout_4_.D = (!RD_4_.PIN);
+
+!Dout_4_.C = (!DotClk_c);
+
+!Dout_5_.CE = (!Dout6);
+
+!Dout_5_.AR = (!nRES_i);
+
+!Dout_5_.D = (!RD_5_.PIN);
+
+!Dout_5_.C = (!DotClk_c);
+
+!Dout_6_.CE = (!Dout6);
+
+!Dout_6_.AR = (!nRES_i);
+
+!Dout_6_.D = (!RD_6_.PIN);
+
+!Dout_6_.C = (!DotClk_c);
+
+!Dout_7_.CE = (!Dout6);
+
+!Dout_7_.AR = (!nRES_i);
+
+!Dout_7_.D = (!RD_7_.PIN);
+
+!Dout_7_.C = (!DotClk_c);
+
+!Ref_n1_0_x2.X1 = (!Ref_0_);
+
+!Ref_n1_0_x2.X2 = (!Ref_1_);
 
 !PHI2_c = (!PHI2);
 
-!a_13__n = (!A_13_);
-
 !DotClk_c = (!DotClk);
-
-!a_12__n = (!A_12_);
 
 !nRES_c = (!nRES);
 
-!a_11__n = (!A_11_);
-
 !a_c_0__n = (!A_0_);
-
-!a_10__n = (!A_10_);
 
 !a_c_1__n = (!A_1_);
 
-!a_9__n = (!A_9_);
-
 !a_c_2__n = (!A_2_);
-
-!a_8__n = (!A_8_);
 
 !a_c_3__n = (!A_3_);
 
@@ -1412,6 +1412,22 @@ Reverse-Polarity Equations:
 !a_c_6__n = (!A_6_);
 
 !a_c_7__n = (!A_7_);
+
+!a_c_8__n = (!A_8_);
+
+!a_c_9__n = (!A_9_);
+
+!a_c_10__n = (!A_10_);
+
+!a_c_11__n = (!A_11_);
+
+!a_c_12__n = (!A_12_);
+
+!a_c_13__n = (!A_13_);
+
+!a_c_14__n = (!A_14_);
+
+!a_c_15__n = (!A_15_);
 
 !d_c_0__n = (!D_0_.PIN);
 
@@ -1435,19 +1451,7 @@ Reverse-Polarity Equations:
 
 !nIO2_c = (!nIO2);
 
-!rd_c_0__n = (!RD_0_.PIN);
+!nRASDFFreg.C = (!DotClk_c);
 
-!rd_c_1__n = (!RD_1_.PIN);
-
-!rd_c_2__n = (!RD_2_.PIN);
-
-!rd_c_3__n = (!RD_3_.PIN);
-
-!rd_c_4__n = (!RD_4_.PIN);
-
-!rd_c_5__n = (!RD_5_.PIN);
-
-!rd_c_6__n = (!RD_6_.PIN);
-
-!rd_c_7__n = (!RD_7_.PIN);
+!nCASDFFreg.C = (!DotClk_c);
 

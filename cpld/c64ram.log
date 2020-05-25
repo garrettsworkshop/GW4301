@@ -12,7 +12,7 @@ Copyright(C),1992-2015, Lattice Semiconductor Corporation. All Rights Reserved.
                  through the central switch matrix before being latched or
                  registered.
 <Note>  z40016:  0 pins have been reserved out of 72 .
-<Note>  z40021:  72 pins are available after reservation, 48 are required
+<Note>  z40021:  72 pins are available after reservation, 56 are required
                  by the design.
 <Note>  z35065:  For outputs, implicit output enables will be set to VCC.
 <Warning>  z35064:  Output signal nIRQ has output enable set to GND.

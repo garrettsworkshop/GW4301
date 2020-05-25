@@ -6,7 +6,7 @@
 #Implementation: cpld
 
 $ Start of Compile
-#Sun May 24 21:21:28 2020
+#Sun May 24 23:37:51 2020
 
 Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
 @N|Running in 64-bit mode
@@ -24,8 +24,6 @@ Verilog syntax check successful!
 Selecting top level module CRAM
 @N: CG364 :"C:\users\zane\documents\github\cram\cpld\cram.v":1:7:1:10|Synthesizing module CRAM
 
-@W: CL246 :"C:\users\zane\documents\github\cram\cpld\cram.v":22:14:22:14|Input port bits 15 to 8 of A[15:0] are unused
-
 @W: CL157 :"C:\users\zane\documents\github\cram\cpld\cram.v":34:8:34:11|*Output nIRQ has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\users\zane\documents\github\cram\cpld\cram.v":32:8:32:11|*Output nDMA has undriven bits -- simulation mismatch possible.
 @W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":38:19:38:23|Input nROML is unused
@@ -40,50 +38,16 @@ Selecting top level module CRAM
 At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 79MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun May 24 21:21:28 2020
+# Sun May 24 23:37:51 2020
 
 ###########################################################]
 Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
 @N|Running in 64-bit mode
+File C:\users\zane\documents\github\cram\cpld\synwork\CRAM_comp.srs changed - recompiling
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun May 24 21:21:29 2020
-
-###########################################################]
-Map & Optimize Report
-
-Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
-Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
-Product Version I-2014.03LC 
-@N: MF248 |Running in 64-bit mode.
-@W: MO111 :"c:\users\zane\documents\github\cram\cpld\cram.v":33:15:33:18|Tristate driver nIRQ on net nIRQ has its enable tied to GND (module CRAM) 
-@W: MO111 :"c:\users\zane\documents\github\cram\cpld\cram.v":33:15:33:18|Tristate driver nDMA on net nDMA has its enable tied to GND (module CRAM) 
-@N:"c:\users\zane\documents\github\cram\cpld\cram.v":74:1:74:6|Found counter in view:work.CRAM(verilog) inst Ref[3:0]
-@N:"c:\users\zane\documents\github\cram\cpld\cram.v":74:1:74:6|Found counter in view:work.CRAM(verilog) inst S[3:0]
----------------------------------------
-Resource Usage Report
-
-Simple gate primitives:
-DFF             24 uses
-DFFC            4 uses
-IBUF            29 uses
-BI_DIR          16 uses
-BUFTH           2 uses
-OBUF            16 uses
-AND2            149 uses
-INV             98 uses
-OR2             17 uses
-
-
-@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
-I-2014.03LC 
-Mapper successful!
-
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 103MB)
-
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun May 24 21:21:30 2020
+# Sun May 24 23:37:53 2020
 
 ###########################################################]

@@ -40,7 +40,7 @@ module CRAM	(PHI2, DotClk, nRES,
 	wire RAMSELpre = A[15:8]==8'hDE;
 	wire RAMRD = RAMSEL & nWE;
 	wire RAMRDpre = RAMSELpre & nWE;
-	wire RAMWE = RAMSEL & ~nWE;
+	wire RAMWR = RAMSEL & ~nWE;
 	wire BlockSEL = ~nIO2 & A[7:0]==8'hFF;
 	wire BlockWE = BlockSEL & ~nWE;
 	wire WindowSEL = ~nIO2 & A[7:0]==8'hFE;
@@ -58,7 +58,7 @@ module CRAM	(PHI2, DotClk, nRES,
 		{Block[6:0], Window[5:2]} : // Row
 		{Block[7], Window[1:0], A[7:0]}; // Column
 	inout [7:0] RD;
-	assign RD[7:0] = RAMWE ? D[7:0] : 8'bZ;
+	assign RD[7:0] = RAMWR ? D[7:0] : 8'bZ;
 	
 	/* Registers */
 	reg [7:0] Block;
@@ -82,10 +82,10 @@ module CRAM	(PHI2, DotClk, nRES,
 		Ref <= Ref+1;
 
 		// DRAM RAS/CAS
-		RAS <= (S==2 & Ref==0) | 
-			   (S==4 & RAMRDpre) | (S==5 & RAMSEL) | (S==6 & RAMWE);
-		CAS <= (S==1) & Ref==0) | (S==2 & Ref==0) | 
-			   (S==5 & RAMRD) | (S==6 & RAMWR);
+		nRAS <= ~((S==2 & Ref==0) | 
+			   (S==4 & RAMRDpre) | (S==5 & RAMSEL) | (S==6 & RAMWR));
+		nCAS <= ~((S==1 & Ref==0) | (S==2 & Ref==0) | 
+			   (S==5 & RAMRD) | (S==6 & RAMWR));
 	end
 
 	always @(negedge DotClk) begin

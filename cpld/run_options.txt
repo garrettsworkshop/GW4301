@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version I-2014.03LC 
 #--  Project file C:\users\zane\documents\github\cram\cpld\run_options.txt
-#--  Written on Sun May 24 21:21:28 2020
+#--  Written on Sun May 24 23:37:51 2020
 
 
 #project files
