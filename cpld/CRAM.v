@@ -41,9 +41,9 @@ module CRAM	(PHI2, DotClk, nRES,
 	wire RAMRD = RAMSEL & nWE;
 	wire RAMRDpre = RAMSELpre & nWE;
 	wire RAMWR = RAMSEL & ~nWE;
-	wire BlockSEL = ~nIO2 & A[7:0]==8'hFF;
+	wire BlockSEL = ~nIO2 & A[7] & A[6] & A[0];
 	wire BlockWE = BlockSEL & ~nWE;
-	wire WindowSEL = ~nIO2 & A[7:0]==8'hFE;
+	wire WindowSEL = ~nIO2 & A[7] & A[6] & ~A[0];
 	wire WindowWE = WindowSEL & ~nWE;
 
 	/* DRAM */
