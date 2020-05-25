@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -1240,4 +1240,10 @@ TDO
 NoConn ~ 5750 6700
 NoConn ~ 5750 6800
 NoConn ~ 5250 6800
+$Sheet
+S 5950 1450 700  350 
+U CF1C1573
+F0 "Docs" 50
+F1 "Docs.sch" 50
+$EndSheet
 $EndSCHEMATC
