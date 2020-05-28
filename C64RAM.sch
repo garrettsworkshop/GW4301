@@ -1134,7 +1134,6 @@ NoConn ~ 1000 4950
 NoConn ~ 1000 5250
 NoConn ~ 1000 5350
 NoConn ~ 1000 5750
-NoConn ~ 1000 6350
 NoConn ~ 1000 6150
 Text Label 8350 6050 0    50   ~ 0
 R~OE~
@@ -1248,4 +1247,6 @@ Text Label 3100 5550 0    50   ~ 0
 D3
 Text Label 3100 6750 0    50   ~ 0
 A2
+Text Label 1000 6350 2    50   ~ 0
+A3
 $EndSCHEMATC
