@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:C64RAM-cache
+EELAYER 26 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -427,45 +428,45 @@ F 3 "" H 9350 3800 50  0001 C CNN
 	1    9350 3800
 	1    0    0    -1  
 $EndComp
-Text Label 9350 3700 0    50   ~ 0
-~ROMH~
-Text Label 9350 3600 0    50   ~ 0
-~RESET~
-Text Label 9350 3500 0    50   ~ 0
-~NMI~
-Text Label 9350 3400 0    50   ~ 0
-PHI2
-Text Label 9350 3300 0    50   ~ 0
-A15
-Text Label 9350 3200 0    50   ~ 0
-A14
-Text Label 9350 3100 0    50   ~ 0
-A13
-Text Label 9350 3000 0    50   ~ 0
-A12
-Text Label 9350 2900 0    50   ~ 0
-A11
-Text Label 9350 2800 0    50   ~ 0
-A10
-Text Label 9350 2700 0    50   ~ 0
-A9
-Text Label 9350 2600 0    50   ~ 0
-A8
-Text Label 9350 2500 0    50   ~ 0
-A7
-Text Label 9350 2400 0    50   ~ 0
-A6
-Text Label 9350 2300 0    50   ~ 0
-A5
-Text Label 9350 2200 0    50   ~ 0
-A4
-Text Label 9350 2100 0    50   ~ 0
-A3
-Text Label 9350 2000 0    50   ~ 0
-A2
-Text Label 9350 1900 0    50   ~ 0
-A1
 Text Label 9350 1800 0    50   ~ 0
+~ROMH~
+Text Label 9350 1900 0    50   ~ 0
+~RESET~
+Text Label 9350 2000 0    50   ~ 0
+~NMI~
+Text Label 9350 2100 0    50   ~ 0
+PHI2
+Text Label 9350 2200 0    50   ~ 0
+A15
+Text Label 9350 2300 0    50   ~ 0
+A14
+Text Label 9350 2400 0    50   ~ 0
+A13
+Text Label 9350 2500 0    50   ~ 0
+A12
+Text Label 9350 2600 0    50   ~ 0
+A11
+Text Label 9350 2700 0    50   ~ 0
+A10
+Text Label 9350 2800 0    50   ~ 0
+A9
+Text Label 9350 2900 0    50   ~ 0
+A8
+Text Label 9350 3000 0    50   ~ 0
+A7
+Text Label 9350 3100 0    50   ~ 0
+A6
+Text Label 9350 3200 0    50   ~ 0
+A5
+Text Label 9350 3300 0    50   ~ 0
+A4
+Text Label 9350 3400 0    50   ~ 0
+A3
+Text Label 9350 3500 0    50   ~ 0
+A2
+Text Label 9350 3600 0    50   ~ 0
+A1
+Text Label 9350 3700 0    50   ~ 0
 A0
 $Comp
 L power:GND #PWR0125
@@ -478,24 +479,6 @@ F 3 "" H 9350 1700 50  0001 C CNN
 	1    9350 1700
 	-1   0    0    1   
 $EndComp
-Text Label 3100 4950 0    50   ~ 0
-A11
-Text Label 3100 5150 0    50   ~ 0
-A10
-Text Label 3100 5250 0    50   ~ 0
-A9
-Text Label 3100 5350 0    50   ~ 0
-A8
-Text Label 3100 6250 0    50   ~ 0
-A7
-Text Label 3100 6350 0    50   ~ 0
-A6
-Text Label 3100 6450 0    50   ~ 0
-A5
-Text Label 3100 6550 0    50   ~ 0
-A4
-Text Label 3100 5750 0    50   ~ 0
-PHI2
 Text Label 3100 5950 0    50   ~ 0
 DotClk
 Text Label 3100 5650 0    50   ~ 0
@@ -520,8 +503,6 @@ Text Label 3100 6850 0    50   ~ 0
 D7
 Text Label 3100 6150 0    50   ~ 0
 D1
-Text Label 3100 5550 0    50   ~ 0
-D3
 Text Label 3100 4850 0    50   ~ 0
 D4
 Text Label 3100 5050 0    50   ~ 0
@@ -550,8 +531,6 @@ Text Label 1000 5950 2    50   ~ 0
 BA
 Text Label 3100 5450 0    50   ~ 0
 ~ROML~
-Text Label 3100 3850 0    50   ~ 0
-~ROMH~
 $Comp
 L GW_PLD:M5LV-PQFP-100 U4
 U 1 1 5DEF5C07
@@ -579,16 +558,8 @@ Text Label 8350 5550 0    50   ~ 0
 RD6
 Text Label 8350 5250 0    50   ~ 0
 RD3
-Text Label 1000 6850 2    50   ~ 0
-A3
 Text Label 1000 6450 2    50   ~ 0
 D2
-Text Label 1000 6550 2    50   ~ 0
-A0
-Text Label 1000 6650 2    50   ~ 0
-A1
-Text Label 1000 6750 2    50   ~ 0
-A2
 Text Label 1000 5550 2    50   ~ 0
 R~W~
 Text Label 1000 5450 2    50   ~ 0
@@ -603,16 +574,6 @@ Text Label 1000 3050 2    50   ~ 0
 RA10
 Text Label 1000 3250 2    50   ~ 0
 RA11
-Text Label 3100 4450 0    50   ~ 0
-A13
-Text Label 3100 4550 0    50   ~ 0
-A12
-Text Label 3100 4350 0    50   ~ 0
-A14
-Text Label 3100 4250 0    50   ~ 0
-A15
-Text Label 3100 3950 0    50   ~ 0
-~RESET~
 Text Label 3100 3250 0    50   ~ 0
 RA6
 Text Label 3100 3450 0    50   ~ 0
@@ -1169,7 +1130,6 @@ F 3 "" H 7900 4100 50  0001 C CNN
 $EndComp
 NoConn ~ 1000 3650
 NoConn ~ 1000 4050
-NoConn ~ 3100 6750
 NoConn ~ 1000 4950
 NoConn ~ 1000 5250
 NoConn ~ 1000 5350
@@ -1195,16 +1155,16 @@ U 1 1 5E20123D
 P 5450 6600
 F 0 "J4" H 5500 6900 50  0000 C CNN
 F 1 "JTAG" H 5500 6300 50  0000 C CNN
-F 2 "" H 5450 6600 50  0001 C CNN
+F 2 "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical" H 5450 6600 50  0001 C CNN
 F 3 "~" H 5450 6600 50  0001 C CNN
 	1    5450 6600
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0120
 U 1 1 5E201B49
 P 5850 6400
-F 0 "#PWR?" H 5850 6150 50  0001 C CNN
+F 0 "#PWR0120" H 5850 6150 50  0001 C CNN
 F 1 "GND" H 5850 6250 50  0000 C CNN
 F 2 "" H 5850 6400 50  0001 C CNN
 F 3 "" H 5850 6400 50  0001 C CNN
@@ -1217,10 +1177,10 @@ Wire Wire Line
 	5750 6400 5750 6500
 Connection ~ 5750 6400
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0127
 U 1 1 5E2050E2
 P 6050 6600
-F 0 "#PWR?" H 6050 6450 50  0001 C CNN
+F 0 "#PWR0127" H 6050 6450 50  0001 C CNN
 F 1 "+3V3" H 6050 6750 50  0000 C CNN
 F 2 "" H 6050 6600 50  0001 C CNN
 F 3 "" H 6050 6600 50  0001 C CNN
@@ -1246,4 +1206,46 @@ U CF1C1573
 F0 "Docs" 50
 F1 "Docs.sch" 50
 $EndSheet
+Text Label 1000 6550 2    50   ~ 0
+~ROMH~
+Text Label 1000 6650 2    50   ~ 0
+~RESET~
+Text Label 1000 6750 2    50   ~ 0
+~NMI~
+Text Label 1000 6850 2    50   ~ 0
+PHI2
+Text Label 3100 6550 0    50   ~ 0
+A15
+Text Label 3100 6450 0    50   ~ 0
+A14
+Text Label 3100 6350 0    50   ~ 0
+A13
+Text Label 3100 6250 0    50   ~ 0
+A12
+Text Label 3100 5350 0    50   ~ 0
+A11
+Text Label 3100 5250 0    50   ~ 0
+A10
+Text Label 3100 4450 0    50   ~ 0
+A6
+Text Label 3100 4350 0    50   ~ 0
+A5
+Text Label 3100 4250 0    50   ~ 0
+A4
+Text Label 3100 5750 0    50   ~ 0
+A3
+Text Label 3100 3950 0    50   ~ 0
+A1
+Text Label 3100 3850 0    50   ~ 0
+A0
+Text Label 3100 5150 0    50   ~ 0
+A9
+Text Label 3100 4950 0    50   ~ 0
+A8
+Text Label 3100 4550 0    50   ~ 0
+A7
+Text Label 3100 5550 0    50   ~ 0
+D3
+Text Label 3100 6750 0    50   ~ 0
+A2
 $EndSCHEMATC
