@@ -12,8 +12,8 @@ EN_PinMacrocell = Yes;
 
 [Revision]
 Parent = m5l200.lci;
-DATE = 05/24/2020;
-TIME = 23:55:55;
+DATE = 05/27/2020;
+TIME = 21:02:32;
 Source_Format = Pure_Verilog_HDL;
 Synthesis = Synplify;
 
@@ -58,31 +58,23 @@ D_4_ = Pin, 77, 3, A, 12;
 D_5_ = Pin, 75, 3, B, 12;
 D_6_ = Pin, 56, 2, B, 12;
 D_7_ = Pin, 54, 2, A, 12;
-A_0_ = Pin, 47, 2, A, 4;
-A_1_ = Pin, 48, 2, A, 5;
-A_2_ = Pin, 49, 2, A, 6;
-A_3_ = Pin, 50, 2, A, 7;
-A_4_ = Pin, 57, 2, B, 11;
-A_5_ = Pin, 58, 2, B, 8;
-A_6_ = Pin, 59, 2, B, 7;
-A_7_ = Pin, 60, 2, B, 4;
-A_8_ = Pin, 72, 3, B, 7;
-A_9_ = Pin, 73, 3, B, 8;
-A_10_ = Pin, 74, 3, B, 11;
-A_11_ = Pin, 76, 3, B, 13;
-A_12_ = Pin, 81, 3, A, 7;
-A_13_ = Pin, 82, 3, A, 6;
-A_14_ = Pin, 83, 3, A, 5;
-A_15_ = Pin, 84, 3, A, 4;
 DotClk = Pin, 63, -, -, -;
-PHI2 = Pin, 68, -, -, -;
 nIO1 = Pin, 62, 2, B, 2;
 nIO2 = Pin, 69, 3, B, 2;
-nRES = Pin, 87, 3, A, 1;
 nWE = Pin, 34, 1, A, 4;
-DelayOut = Pin, 12, 0, B, 2;
-nDMA = Pin, 37, 1, A, 1;
-nIRQ = Pin, 33, 1, A, 5;
+PHI2 = Pin, 50, 2, A, 7;
+nRES = Pin, 48, 2, A, 5;
+A_0_ = Pin, 88, 3, A, 0;
+A_1_ = Pin, 87, 3, A, 1;
+A_3_ = Pin, 68, -, -, -;
+A_4_ = Pin, 84, 3, A, 4;
+A_5_ = Pin, 83, 3, A, 5;
+A_6_ = Pin, 82, 3, A, 6;
+A_7_ = Pin, 81, 3, A, 7;
+nMode = Pin, 35, 1, A, 3;
+Size0 = Pin, 44, 2, A, 1;
+Size1 = Pin, 86, 3, A, 2;
+A_2_ = Pin, 55, 2, B, 13;
 
 [Group Assignments]
 layer = OFF;
@@ -115,9 +107,8 @@ layer = OFF;
 [Slewrate]
 SLOW = RA_0_, RA_1_, RA_2_, RA_3_, RA_4_, RA_5_, RA_6_, RA_7_, RA_8_, RA_9_, RA_10_, 
 	RA_11_, nCAS, nRAS, nRWE, RD_0_, RD_1_, RD_2_, RD_3_, RD_4_, RD_5_, RD_6_, 
-	RD_7_, D_0_, D_1_, D_2_, D_3_, D_4_, D_5_, D_6_, D_7_, DelayOut, nDMA, 
-	nIRQ;
-Default = SLOW;
+	RD_7_, D_0_, D_1_, D_2_, D_3_, D_4_, D_5_, D_6_, D_7_;
+Default = Slow;
 
 [Region]
 
