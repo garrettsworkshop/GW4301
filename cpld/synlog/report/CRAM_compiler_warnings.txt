@@ -1,10 +1,2 @@
-@W: CL157 :"C:\users\zane\documents\github\cram\cpld\cram.v":34:8:34:11|*Output nIRQ has undriven bits -- simulation mismatch possible.
-@W: CL157 :"C:\users\zane\documents\github\cram\cpld\cram.v":32:8:32:11|*Output nDMA has undriven bits -- simulation mismatch possible.
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":38:19:38:23|Input nROML is unused
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":38:26:38:30|Input nROMH is unused
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":31:7:31:8|Input BA is unused
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":19:7:19:13|Input DelayIn is unused
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":14:7:14:11|Input nMode is unused
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":14:14:14:18|Input Size0 is unused
-@W: CL159 :"C:\users\zane\documents\github\cram\cpld\cram.v":14:21:14:25|Input Size1 is unused
+@W: CL246 :"C:\users\zane\documents\github\cram\cpld\cram.v":18:14:18:14|Input port bits 15 to 8 of A[15:0] are unused
 

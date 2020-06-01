@@ -2826,3 +2826,4075 @@ if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c
 
 ########## Tcl recorder end at 05/24/20 23:56:03 ###########
 
+
+########## Tcl recorder starts at 05/27/20 18:34:46 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:34:46 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:34:47 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:34:47 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:38:45 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:38:45 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:38:46 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:38:46 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:39:51 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:39:51 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:39:51 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:39:51 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:40:08 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:40:08 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:40:08 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:40:08 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:42:36 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:42:36 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:42:36 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:42:36 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:43:36 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:43:36 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:43:36 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:43:36 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:44:59 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:44:59 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:44:59 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:44:59 ###########
+
+
+########## Tcl recorder starts at 05/27/20 18:56:42 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 18:56:42 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:07:22 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:07:22 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:07:22 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:07:22 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:09:35 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:09:35 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:14:50 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:14:50 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:14:51 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:14:51 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:39:12 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:39:12 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:39:12 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:39:12 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:40:00 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:40:00 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:40:01 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:40:01 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:40:21 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:40:21 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:40:21 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:40:21 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:56:46 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:56:46 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:56:47 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:56:47 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:57:52 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:57:52 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:57:52 ##########
+
+# Commands to make the Process: 
+# Fitter Report
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:57:52 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:58:10 ##########
+
+# Commands to make the Process: 
+# Synplify Synthesize Verilog File
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+
+########## Tcl recorder end at 05/27/20 19:58:10 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:59:49 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:59:49 ###########
+
+
+########## Tcl recorder starts at 05/27/20 19:59:49 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 19:59:49 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:01:20 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:01:20 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:01:20 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:01:20 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:02:29 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:02:29 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:04:53 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+# - none -
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:04:53 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:06:22 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:06:22 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:09:20 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:09:20 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:09:21 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:09:21 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:14:17 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:14:17 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:14:17 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:14:17 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:45:26 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vlog2jhd\" cram.v -p \"$install_dir/ispcpld/generic\" -predefine c64ram.h"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:45:26 ###########
+
+
+########## Tcl recorder starts at 05/27/20 20:45:26 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [catch {open CRAM.cmd w} rspFile] {
+	puts stderr "Cannot create response file CRAM.cmd: $rspFile"
+} else {
+	puts $rspFile "STYFILENAME: c64ram.sty
+PROJECT: CRAM
+WORKING_PATH: \"$proj_dir\"
+MODULE: CRAM
+VERILOG_FILE_LIST: c64ram.h cram.v
+OUTPUT_FILE_NAME: CRAM
+SUFFIX_NAME: edi
+PART: M5LV-256/68-7YC
+Vlog_std_v2001: true
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/Synpwrap\" -e CRAM -target mach -pro "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete CRAM.cmd
+if [runCmd "\"$cpld_bin/edif2blf\" -edf CRAM.edi -out CRAM.bl0 -err automake.err -log CRAM.log -prj c64ram -lib \"$install_dir/ispcpld/dat/mach.edn\" -net_Vcc VCC -net_GND GND -nbx -dse -tlw -cvt YES -xor"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" CRAM.bl0 -collapse none -reduce none -keepwires  -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblflink\" \"CRAM.bl1\" -o \"c64ram.bl2\" -omod \"c64ram\"  -err \"automake.err\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/impsrc\"  -prj c64ram -lci c64ram.lct -log c64ram.imp -err automake.err -tti c64ram.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -blifopt  c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" c64ram.bl2 -sweep -mergefb -err automake.err -o c64ram.bl3  @c64ram.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -diofft  c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" c64ram.bl3 -pla -family AMDMACH -idev van -o c64ram.tt2 -oxrf c64ram.xrf -err automake.err  @c64ram.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/tt2tott3\" -prj c64ram -dir $proj_dir -log c64ram.log -tti c64ram.tt2 -tto c64ram.tt3"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci c64ram.lct -dev mach5 -prefit  c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -inp c64ram.tt3 -out c64ram.tt4 -err automake.err -log c64ram.log -mod CRAM  @c64ram.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 20:45:26 ###########
+
+
+########## Tcl recorder starts at 05/27/20 21:01:26 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+# - none -
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 21:01:26 ###########
+
+
+########## Tcl recorder starts at 05/27/20 21:01:40 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+# - none -
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 21:01:40 ###########
+
+
+########## Tcl recorder starts at 05/27/20 21:02:34 ##########
+
+# Commands to make the Process: 
+# Constraint Editor
+# - none -
+# Application to view the Process: 
+# Constraint Editor
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src c64ram.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/mach5/mach256100ce.dev\" -lci \"c64ram.lct\" -touch \"c64ram.tt4\"
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 21:02:34 ###########
+
+
+########## Tcl recorder starts at 05/27/20 21:02:37 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [runCmd "\"$cpld_bin/blif2eqn\" c64ram.tt4 -o c64ram.eq3  -use_short -err automake.err"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/lci2vci\" -lci c64ram.lct -out c64ram.vct -log c64ram.l2v"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open c64ram.cmd w} rspFile] {
+	puts stderr "Cannot create response file c64ram.cmd: $rspFile"
+} else {
+	puts $rspFile "M5drc=-inp c64ram.tt4 -vci c64ram.vct -log c64ram.log -eqn c64ram.eq3 -dev mach256100 -dat $install_dir/ispcpld/dat/mach5/ -msg $install_dir/ispcpld/dat/ -err automake.err -tmv NoInput.tmv
+M5dbase=-i c64ram.tt4 -device M5LV-256/68-7YC -lib $install_dir/ispcpld/lib5/amdmach.prt -strategy max_pterms 50
+M5check=-i c64ram.vct -o c64ram.opt
+M5COMP=-venus -menu
+M5OPT=-venus -menu
+M5SCAN=-venus -menu
+M5FIT=-venus -menu
+TMV2TV=c64ram.tv1 c64ram.tv
+M5FUSE=-venus -menu
+PLC2VCO=-d -i c64ram.npi -o c64ram.vco
+M5CLEAN
+"
+	close $rspFile
+}
+if [catch {open c64ram.prp w} rspFile] {
+	puts stderr "Cannot create response file c64ram.prp: $rspFile"
+} else {
+	puts $rspFile "MAX_SYMBOLS:0
+MAX_PTERMS:0
+MAX_XOR_PTERMS:0
+POLARITY_CONTROL:TRUE
+XOR_POLARITY_CONTROL:TRUE
+EQN_SPLIT_CHUNK_SIZE:0
+FF_SYNTH:OFF
+XOR_TO_SOP_SYNTH:OFF
+CONTROL_COLLAPSE:FALSE
+EQN_SPLIT_OFF
+VENUS_FLOW
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/mach5fit\" -i c64ram -lib c64ram.cmd "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete c64ram.cmd
+file delete c64ram.prp
+if [runCmd "\"$cpld_bin/lci2vci\" -vci c64ram.vco -out c64ram.lco -log c64ram.v2l"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj c64ram -if c64ram.jed -j2s -log c64ram.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/27/20 21:02:37 ###########
+

@@ -1,2 +1,2 @@
-@E: CG906 :"C:\users\zane\documents\github\cram\cpld\cram.v":86:52:86:56|Reference to unknown variable RAMWE.
+@E: CL123 :"C:\users\zane\documents\github\cram\cpld\cram.v":84:1:84:6|Logic for Dout[7:0] does not match a standard flip-flop
 

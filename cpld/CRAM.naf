@@ -28,11 +28,6 @@ D[0]  b
 nWE  i
 nIO1  i
 nIO2  i
-nROML  i
-nROMH  i
-nIRQ  o
-BA  i
-nDMA  o
 RA[11]  o
 RA[10]  o
 RA[9]  o
@@ -56,8 +51,6 @@ RD[0]  b
 nRAS  o
 nCAS  o
 nRWE  o
-DelayOut  o
-DelayIn  i
-nMode  i
-Size0  i
-Size1  i
+nMode  o
+Size0  o
+Size1  o

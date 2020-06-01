@@ -1,494 +1,449 @@
 #$ TOOL ispLEVER Classic 2.0.00.17.20.15
-#$ DATE Sun May 24 23:37:58 2020
+#$ DATE Wed May 27 20:45:55 2020
 #$ MODULE c64ram
-#$ PINS 63 RA_3_ RA_2_ A_15_ RA_1_ RA_0_ D_7_ RD_6_ RD_5_ RA_11_ RD_4_ RD_3_ RD_7_ RD_2_ \
-#  PHI2 RD_1_ DotClk RD_0_ nRES nWE nIO1 nIO2 nROML nROMH nIRQ BA nDMA nRAS nCAS nRWE DelayOut \
-#  DelayIn nMode Size0 Size1 A_14_ A_13_ A_12_ A_11_ A_10_ A_9_ A_8_ A_7_ A_6_ A_5_ A_4_ A_3_ \
-#  A_2_ A_1_ A_0_ D_6_ D_5_ D_4_ D_3_ D_2_ D_1_ D_0_ RA_10_ RA_9_ RA_8_ RA_7_ RA_6_ RA_5_ RA_4_
-#$ NODES 220 N_100_2 N_99_1 N_99_2 N_98_1 N_98_2 gnd_n_n N_98_3 un1_nRWE N_98_4 S_0_ \
-#  N_98_5 S_1_ N_98_6 S_2_ N_98_7 S_3_ N_98_8 Ref_0_ N_98_9 Ref_1_ N_97_1 Ref_2_ N_97_2 \
-#  inst_PHI2reg un1_nCAS_i_1 inst_nPHI2seen N_9_i_1 RAMWR N_7_i_1 Window_2_ N_5_i_1 \
-#  Window_3_ Dout6_1 Window_4_ Block5_1 Window_5_ Window7_1 Block_0_ N_96_1 Block_1_ \
-#  N_95_1 Block_2_ N_80_1 Block_3_ un12_ra_i_m2_7__un3_n Block_4_ un12_ra_i_m2_7__un1_n \
-#  Block_5_ un12_ra_i_m2_7__un0_n Block_6_ un12_ra_i_m2_6__un3_n Window_0_ \
-#  un12_ra_i_m2_6__un1_n Window_1_ un12_ra_i_m2_6__un0_n Block_7_ \
-#  un12_ra_i_m2_5__un3_n inst_RAsel un12_ra_i_m2_5__un1_n Dout_0_ \
-#  un12_ra_i_m2_5__un0_n Dout_1_ un12_ra_i_m2_4__un3_n Dout_2_ un12_ra_i_m2_4__un1_n \
-#  Dout_3_ un12_ra_i_m2_4__un0_n Dout_4_ un12_ra_i_m2_3__un3_n Dout_5_ \
-#  un12_ra_i_m2_3__un1_n Dout_6_ un12_ra_i_m2_3__un0_n Dout_7_ un12_ra_i_m2_2__un3_n \
-#  un12_ra_i_m2_2__un1_n Dout6 un12_ra_i_m2_2__un0_n Block5 un12_ra_i_m2_1__un3_n \
-#  Window7 un12_ra_i_m2_1__un1_n un12_ra_i_m2_1__un0_n un12_ra_i_m2_0__un3_n N_87 \
-#  un12_ra_i_m2_0__un1_n N_88 un12_ra_i_m2_0__un0_n N_89 un12_ra_8__un3_n N_90 \
-#  un12_ra_8__un1_n N_68 un12_ra_8__un0_n N_69 un12_ra_9__un3_n N_70 un12_ra_9__un1_n \
-#  N_71 un12_ra_9__un0_n N_72 un12_ra_10__un3_n N_73 un12_ra_10__un1_n N_74 \
-#  un12_ra_10__un0_n N_75 N_91 N_80 N_81 N_82 N_83 N_84 N_92 N_93 N_94 N_95 N_96 N_97 N_98 N_99 \
-#  N_100 N_101 N_102 N_103 N_104 N_105 N_110 N_129 N_131 Ref_n1_0_x2 N_113 N_114 N_115 \
-#  un1_nRWE_i ref_i_2__n s_i_1__n ref_i_1__n ref_i_0__n s_i_2__n s_i_3__n s_i_0__n nWE_i \
-#  nIO2_i nIO1_i nPHI2seen_i a_i_0__n PHI2_i a_i_8__n a_i_13__n nRES_i PHI2_c DotClk_c \
-#  nRES_c a_c_0__n a_c_1__n a_c_2__n a_c_3__n a_c_4__n a_c_5__n a_c_6__n a_c_7__n a_c_8__n \
-#  a_c_9__n a_c_10__n a_c_11__n a_c_12__n a_c_13__n a_c_14__n a_c_15__n d_c_0__n d_c_1__n \
-#  d_c_2__n d_c_3__n d_c_4__n d_c_5__n d_c_6__n d_c_7__n nWE_c nIO1_c nIO2_c nRASDFFreg \
-#  nCASDFFreg S_n0_0 N_80_i N_92_i N_84_i N_103_i N_97_i N_98_i N_95_i N_96_i N_90_i N_89_i \
-#  N_88_i N_87_i N_110_i N_86_i N_85_i N_99_i N_100_i N_93_i N_94_i Ref_n2_0 N_83_i N_81_i \
-#  N_82_i N_91_i N_131_1 N_131_2 N_131_3 N_131_4 N_131_5 N_131_6 N_131_7 un1_nRAS_i_1 \
-#  un1_nRAS_i_2 S_n0_0_1 S_n0_0_2 N_100_1
+#$ PINS 56 A_15_ D_7_ RA_11_ RD_7_ PHI2 DotClk nRES nWE nIO1 nIO2 nRAS nCAS nRWE nMode A_14_ \
+#  Size0 A_13_ Size1 A_12_ A_11_ A_10_ A_9_ A_8_ A_7_ A_6_ A_5_ A_4_ A_3_ A_2_ A_1_ A_0_ D_6_ D_5_ \
+#  D_4_ D_3_ D_2_ D_1_ D_0_ RA_10_ RA_9_ RA_8_ RA_7_ RA_6_ RA_5_ RA_4_ RA_3_ RA_2_ RA_1_ RA_0_ \
+#  RD_6_ RD_5_ RD_4_ RD_3_ RD_2_ RD_1_ RD_0_
+#$ NODES 209 N_99_1 N_98_1 N_98_2 N_98_3 N_96_1 gnd_n_n N_96_2 S_2_reg N_96_3 S_0_reg \
+#  N_89_1 S_1_reg un12_ra_1__un3_n un1_nRWE un12_ra_1__un1_n Ref_0_ un12_ra_1__un0_n \
+#  Ref_1_ un12_ra_2__un3_n Ref_2_ un12_ra_2__un1_n inst_PHI2reg un12_ra_2__un0_n \
+#  inst_nPHI2seen un12_ra_3__un3_n RAMWR un12_ra_3__un1_n Dout3 un12_ra_3__un0_n \
+#  Window_2_ un12_ra_4__un3_n Window_3_ un12_ra_4__un1_n Window_4_ un12_ra_4__un0_n \
+#  Window_5_ un12_ra_5__un3_n Block_0_ un12_ra_5__un1_n Block_1_ un12_ra_5__un0_n \
+#  Block_2_ un12_ra_8__un3_n Block_3_ un12_ra_8__un1_n Block_4_ un12_ra_8__un0_n \
+#  Block_5_ un12_ra_9__un3_n Block_6_ un12_ra_9__un1_n Window_0_ un12_ra_9__un0_n \
+#  Window_1_ un12_ra_10__un3_n Block_7_ un12_ra_10__un1_n inst_RAsel un12_ra_10__un0_n \
+#  Dout_0_ a_15__n Dout_1_ Dout_2_ a_14__n Dout_3_ Dout_4_ a_13__n Dout_5_ Dout_6_ a_12__n \
+#  Dout_7_ Block6 a_11__n Window7 Ref7 a_10__n a_9__n N_74 a_8__n N_75 N_76 N_77 N_78 N_79 N_80 \
+#  N_81 N_84 N_86 N_87 N_88 N_89 N_90 N_91 N_92 N_93 N_94 N_95 N_96 N_97 N_98 N_99 N_60 N_63 N_64 \
+#  N_65 N_68 N_69 N_70 N_71 N_73 N_100 N_101 N_102 RAsel_2_i_x2 un1_nRWE_i s_i_0__n nIO1_i \
+#  ref_i_1__n ref_i_0__n s_i_1__n nWE_i s_i_2__n nPHI2seen_i_0 RAsel_i_0 window_i_0_2__n \
+#  a_i_0__n block_i_0_2__n a_i_0_6__n block_i_0_3__n a_i_0_7__n nIO2_i ref_i_2__n PHI2_i \
+#  nRES_i PHI2_c DotClk_c nRES_c a_c_0__n a_c_1__n a_c_2__n a_c_3__n a_c_4__n a_c_5__n \
+#  a_c_6__n a_c_7__n d_c_0__n d_c_1__n d_c_2__n d_c_3__n d_c_4__n d_c_5__n d_c_6__n \
+#  d_c_7__n nWE_c nIO1_c nIO2_c nRASDFFreg nCASDFFreg N_87_0 N_86_0 N_73_i N_100_i N_102_i \
+#  N_84_0 N_82_0 N_69_i N_70_i N_22_0 N_65_i N_68_i N_20_0 N_63_i N_64_i N_18_0 N_60_i N_99_i \
+#  N_101_i N_96_i N_97_i N_98_i N_94_i N_95_i Ref_n1_0 N_92_i N_93_i Ref_n2_0 N_89_i S_n0_0 \
+#  N_90_i N_91_i N_88_i S_n0_0_1 S_n0_0_2 un1_nRAS_i_1 un1_nCAS_i_1 N_7_0_1 Window7_1 \
+#  Window7_2 Window7_3 Window7_4 Window7_5 Block6_1 Block6_2 Block6_3 Block6_4 Block6_5 \
+#  N_60_1 N_60_2 N_60_3
 .model cram
 .inputs A_15_.BLIF PHI2.BLIF DotClk.BLIF nRES.BLIF nWE.BLIF nIO1.BLIF \
 nIO2.BLIF A_14_.BLIF A_13_.BLIF A_12_.BLIF A_11_.BLIF A_10_.BLIF A_9_.BLIF \
 A_8_.BLIF A_7_.BLIF A_6_.BLIF A_5_.BLIF A_4_.BLIF A_3_.BLIF A_2_.BLIF \
 A_1_.BLIF A_0_.BLIF D_7_.BLIF RD_7_.BLIF D_6_.BLIF D_5_.BLIF D_4_.BLIF \
 D_3_.BLIF D_2_.BLIF D_1_.BLIF D_0_.BLIF RD_6_.BLIF RD_5_.BLIF RD_4_.BLIF \
-RD_3_.BLIF RD_2_.BLIF RD_1_.BLIF RD_0_.BLIF N_100_2.BLIF N_99_1.BLIF \
-N_99_2.BLIF N_98_1.BLIF N_98_2.BLIF gnd_n_n.BLIF N_98_3.BLIF un1_nRWE.BLIF \
-N_98_4.BLIF S_0_.BLIF N_98_5.BLIF S_1_.BLIF N_98_6.BLIF S_2_.BLIF N_98_7.BLIF \
-S_3_.BLIF N_98_8.BLIF Ref_0_.BLIF N_98_9.BLIF Ref_1_.BLIF N_97_1.BLIF \
-Ref_2_.BLIF N_97_2.BLIF inst_PHI2reg.BLIF un1_nCAS_i_1.BLIF \
-inst_nPHI2seen.BLIF N_9_i_1.BLIF RAMWR.BLIF N_7_i_1.BLIF Window_2_.BLIF \
-N_5_i_1.BLIF Window_3_.BLIF Dout6_1.BLIF Window_4_.BLIF Block5_1.BLIF \
-Window_5_.BLIF Window7_1.BLIF Block_0_.BLIF N_96_1.BLIF Block_1_.BLIF \
-N_95_1.BLIF Block_2_.BLIF N_80_1.BLIF Block_3_.BLIF un12_ra_i_m2_7__un3_n.BLIF \
-Block_4_.BLIF un12_ra_i_m2_7__un1_n.BLIF Block_5_.BLIF \
-un12_ra_i_m2_7__un0_n.BLIF Block_6_.BLIF un12_ra_i_m2_6__un3_n.BLIF \
-Window_0_.BLIF un12_ra_i_m2_6__un1_n.BLIF Window_1_.BLIF \
-un12_ra_i_m2_6__un0_n.BLIF Block_7_.BLIF un12_ra_i_m2_5__un3_n.BLIF \
-inst_RAsel.BLIF un12_ra_i_m2_5__un1_n.BLIF Dout_0_.BLIF \
-un12_ra_i_m2_5__un0_n.BLIF Dout_1_.BLIF un12_ra_i_m2_4__un3_n.BLIF \
-Dout_2_.BLIF un12_ra_i_m2_4__un1_n.BLIF Dout_3_.BLIF \
-un12_ra_i_m2_4__un0_n.BLIF Dout_4_.BLIF un12_ra_i_m2_3__un3_n.BLIF \
-Dout_5_.BLIF un12_ra_i_m2_3__un1_n.BLIF Dout_6_.BLIF \
-un12_ra_i_m2_3__un0_n.BLIF Dout_7_.BLIF un12_ra_i_m2_2__un3_n.BLIF \
-un12_ra_i_m2_2__un1_n.BLIF Dout6.BLIF un12_ra_i_m2_2__un0_n.BLIF Block5.BLIF \
-un12_ra_i_m2_1__un3_n.BLIF Window7.BLIF un12_ra_i_m2_1__un1_n.BLIF \
-un12_ra_i_m2_1__un0_n.BLIF un12_ra_i_m2_0__un3_n.BLIF N_87.BLIF \
-un12_ra_i_m2_0__un1_n.BLIF N_88.BLIF un12_ra_i_m2_0__un0_n.BLIF N_89.BLIF \
-un12_ra_8__un3_n.BLIF N_90.BLIF un12_ra_8__un1_n.BLIF N_68.BLIF \
-un12_ra_8__un0_n.BLIF N_69.BLIF un12_ra_9__un3_n.BLIF N_70.BLIF \
-un12_ra_9__un1_n.BLIF N_71.BLIF un12_ra_9__un0_n.BLIF N_72.BLIF \
-un12_ra_10__un3_n.BLIF N_73.BLIF un12_ra_10__un1_n.BLIF N_74.BLIF \
-un12_ra_10__un0_n.BLIF N_75.BLIF N_91.BLIF N_80.BLIF N_81.BLIF N_82.BLIF \
-N_83.BLIF N_84.BLIF N_92.BLIF N_93.BLIF N_94.BLIF N_95.BLIF N_96.BLIF \
-N_97.BLIF N_98.BLIF N_99.BLIF N_100.BLIF N_101.BLIF N_102.BLIF N_103.BLIF \
-N_104.BLIF N_105.BLIF N_110.BLIF N_129.BLIF N_131.BLIF Ref_n1_0_x2.BLIF \
-N_113.BLIF N_114.BLIF N_115.BLIF un1_nRWE_i.BLIF ref_i_2__n.BLIF s_i_1__n.BLIF \
-ref_i_1__n.BLIF ref_i_0__n.BLIF s_i_2__n.BLIF s_i_3__n.BLIF s_i_0__n.BLIF \
-nWE_i.BLIF nIO2_i.BLIF nIO1_i.BLIF nPHI2seen_i.BLIF a_i_0__n.BLIF PHI2_i.BLIF \
-a_i_8__n.BLIF a_i_13__n.BLIF nRES_i.BLIF PHI2_c.BLIF DotClk_c.BLIF nRES_c.BLIF \
+RD_3_.BLIF RD_2_.BLIF RD_1_.BLIF RD_0_.BLIF N_99_1.BLIF N_98_1.BLIF \
+N_98_2.BLIF N_98_3.BLIF N_96_1.BLIF gnd_n_n.BLIF N_96_2.BLIF S_2_reg.BLIF \
+N_96_3.BLIF S_0_reg.BLIF N_89_1.BLIF S_1_reg.BLIF un12_ra_1__un3_n.BLIF \
+un1_nRWE.BLIF un12_ra_1__un1_n.BLIF Ref_0_.BLIF un12_ra_1__un0_n.BLIF \
+Ref_1_.BLIF un12_ra_2__un3_n.BLIF Ref_2_.BLIF un12_ra_2__un1_n.BLIF \
+inst_PHI2reg.BLIF un12_ra_2__un0_n.BLIF inst_nPHI2seen.BLIF \
+un12_ra_3__un3_n.BLIF RAMWR.BLIF un12_ra_3__un1_n.BLIF Dout3.BLIF \
+un12_ra_3__un0_n.BLIF Window_2_.BLIF un12_ra_4__un3_n.BLIF Window_3_.BLIF \
+un12_ra_4__un1_n.BLIF Window_4_.BLIF un12_ra_4__un0_n.BLIF Window_5_.BLIF \
+un12_ra_5__un3_n.BLIF Block_0_.BLIF un12_ra_5__un1_n.BLIF Block_1_.BLIF \
+un12_ra_5__un0_n.BLIF Block_2_.BLIF un12_ra_8__un3_n.BLIF Block_3_.BLIF \
+un12_ra_8__un1_n.BLIF Block_4_.BLIF un12_ra_8__un0_n.BLIF Block_5_.BLIF \
+un12_ra_9__un3_n.BLIF Block_6_.BLIF un12_ra_9__un1_n.BLIF Window_0_.BLIF \
+un12_ra_9__un0_n.BLIF Window_1_.BLIF un12_ra_10__un3_n.BLIF Block_7_.BLIF \
+un12_ra_10__un1_n.BLIF inst_RAsel.BLIF un12_ra_10__un0_n.BLIF Dout_0_.BLIF \
+a_15__n.BLIF Dout_1_.BLIF Dout_2_.BLIF a_14__n.BLIF Dout_3_.BLIF Dout_4_.BLIF \
+a_13__n.BLIF Dout_5_.BLIF Dout_6_.BLIF a_12__n.BLIF Dout_7_.BLIF Block6.BLIF \
+a_11__n.BLIF Window7.BLIF Ref7.BLIF a_10__n.BLIF a_9__n.BLIF N_74.BLIF \
+a_8__n.BLIF N_75.BLIF N_76.BLIF N_77.BLIF N_78.BLIF N_79.BLIF N_80.BLIF \
+N_81.BLIF N_84.BLIF N_86.BLIF N_87.BLIF N_88.BLIF N_89.BLIF N_90.BLIF \
+N_91.BLIF N_92.BLIF N_93.BLIF N_94.BLIF N_95.BLIF N_96.BLIF N_97.BLIF \
+N_98.BLIF N_99.BLIF N_60.BLIF N_63.BLIF N_64.BLIF N_65.BLIF N_68.BLIF \
+N_69.BLIF N_70.BLIF N_71.BLIF N_73.BLIF N_100.BLIF N_101.BLIF N_102.BLIF \
+RAsel_2_i_x2.BLIF un1_nRWE_i.BLIF s_i_0__n.BLIF nIO1_i.BLIF ref_i_1__n.BLIF \
+ref_i_0__n.BLIF s_i_1__n.BLIF nWE_i.BLIF s_i_2__n.BLIF nPHI2seen_i_0.BLIF \
+RAsel_i_0.BLIF window_i_0_2__n.BLIF a_i_0__n.BLIF block_i_0_2__n.BLIF \
+a_i_0_6__n.BLIF block_i_0_3__n.BLIF a_i_0_7__n.BLIF nIO2_i.BLIF \
+ref_i_2__n.BLIF PHI2_i.BLIF nRES_i.BLIF PHI2_c.BLIF DotClk_c.BLIF nRES_c.BLIF \
 a_c_0__n.BLIF a_c_1__n.BLIF a_c_2__n.BLIF a_c_3__n.BLIF a_c_4__n.BLIF \
-a_c_5__n.BLIF a_c_6__n.BLIF a_c_7__n.BLIF a_c_8__n.BLIF a_c_9__n.BLIF \
-a_c_10__n.BLIF a_c_11__n.BLIF a_c_12__n.BLIF a_c_13__n.BLIF a_c_14__n.BLIF \
-a_c_15__n.BLIF d_c_0__n.BLIF d_c_1__n.BLIF d_c_2__n.BLIF d_c_3__n.BLIF \
-d_c_4__n.BLIF d_c_5__n.BLIF d_c_6__n.BLIF d_c_7__n.BLIF nWE_c.BLIF nIO1_c.BLIF \
-nIO2_c.BLIF nRASDFFreg.BLIF nCASDFFreg.BLIF S_n0_0.BLIF N_80_i.BLIF \
-N_92_i.BLIF N_84_i.BLIF N_103_i.BLIF N_97_i.BLIF N_98_i.BLIF N_95_i.BLIF \
-N_96_i.BLIF N_90_i.BLIF N_89_i.BLIF N_88_i.BLIF N_87_i.BLIF N_110_i.BLIF \
-N_86_i.BLIF N_85_i.BLIF N_99_i.BLIF N_100_i.BLIF N_93_i.BLIF N_94_i.BLIF \
-Ref_n2_0.BLIF N_83_i.BLIF N_81_i.BLIF N_82_i.BLIF N_91_i.BLIF N_131_1.BLIF \
-N_131_2.BLIF N_131_3.BLIF N_131_4.BLIF N_131_5.BLIF N_131_6.BLIF N_131_7.BLIF \
-un1_nRAS_i_1.BLIF un1_nRAS_i_2.BLIF S_n0_0_1.BLIF S_n0_0_2.BLIF N_100_1.BLIF \
+a_c_5__n.BLIF a_c_6__n.BLIF a_c_7__n.BLIF d_c_0__n.BLIF d_c_1__n.BLIF \
+d_c_2__n.BLIF d_c_3__n.BLIF d_c_4__n.BLIF d_c_5__n.BLIF d_c_6__n.BLIF \
+d_c_7__n.BLIF nWE_c.BLIF nIO1_c.BLIF nIO2_c.BLIF nRASDFFreg.BLIF \
+nCASDFFreg.BLIF N_87_0.BLIF N_86_0.BLIF N_73_i.BLIF N_100_i.BLIF N_102_i.BLIF \
+N_84_0.BLIF N_82_0.BLIF N_69_i.BLIF N_70_i.BLIF N_22_0.BLIF N_65_i.BLIF \
+N_68_i.BLIF N_20_0.BLIF N_63_i.BLIF N_64_i.BLIF N_18_0.BLIF N_60_i.BLIF \
+N_99_i.BLIF N_101_i.BLIF N_96_i.BLIF N_97_i.BLIF N_98_i.BLIF N_94_i.BLIF \
+N_95_i.BLIF Ref_n1_0.BLIF N_92_i.BLIF N_93_i.BLIF Ref_n2_0.BLIF N_89_i.BLIF \
+S_n0_0.BLIF N_90_i.BLIF N_91_i.BLIF N_88_i.BLIF S_n0_0_1.BLIF S_n0_0_2.BLIF \
+un1_nRAS_i_1.BLIF un1_nCAS_i_1.BLIF N_7_0_1.BLIF Window7_1.BLIF Window7_2.BLIF \
+Window7_3.BLIF Window7_4.BLIF Window7_5.BLIF Block6_1.BLIF Block6_2.BLIF \
+Block6_3.BLIF Block6_4.BLIF Block6_5.BLIF N_60_1.BLIF N_60_2.BLIF N_60_3.BLIF \
 D_0_.PIN.BLIF D_1_.PIN.BLIF D_2_.PIN.BLIF D_3_.PIN.BLIF D_4_.PIN.BLIF \
 D_5_.PIN.BLIF D_6_.PIN.BLIF D_7_.PIN.BLIF RD_0_.PIN.BLIF RD_1_.PIN.BLIF \
 RD_2_.PIN.BLIF RD_3_.PIN.BLIF RD_4_.PIN.BLIF RD_5_.PIN.BLIF RD_6_.PIN.BLIF \
 RD_7_.PIN.BLIF
-.outputs RA_11_ nIRQ nDMA nRAS nCAS nRWE DelayOut RA_10_ RA_9_ RA_8_ RA_7_ \
-RA_6_ RA_5_ RA_4_ RA_3_ RA_2_ RA_1_ RA_0_ Dout_5_.D Dout_5_.C Dout_5_.CE \
-Dout_5_.AR Dout_6_.D Dout_6_.C Dout_6_.CE Dout_6_.AR Dout_7_.D Dout_7_.C \
-Dout_7_.CE Dout_7_.AR Window_2_.D Window_2_.C Window_2_.CE Window_2_.AR \
-Window_3_.D Window_3_.C Window_3_.CE Window_3_.AR Window_4_.D Window_4_.C \
-Window_4_.CE Window_4_.AR Window_5_.D Window_5_.C Window_5_.CE Window_5_.AR \
-Dout_0_.D Dout_0_.C Dout_0_.CE Dout_0_.AR Dout_1_.D Dout_1_.C Dout_1_.CE \
-Dout_1_.AR Dout_2_.D Dout_2_.C Dout_2_.CE Dout_2_.AR Dout_3_.D Dout_3_.C \
-Dout_3_.CE Dout_3_.AR Dout_4_.D Dout_4_.C Dout_4_.CE Dout_4_.AR Block_3_.D \
-Block_3_.C Block_3_.CE Block_3_.AR Block_4_.D Block_4_.C Block_4_.CE \
-Block_4_.AR Block_5_.D Block_5_.C Block_5_.CE Block_5_.AR Block_6_.D \
-Block_6_.C Block_6_.CE Block_6_.AR Block_7_.D Block_7_.C Block_7_.CE \
-Block_7_.AR Window_0_.D Window_0_.C Window_0_.CE Window_0_.AR Window_1_.D \
-Window_1_.C Window_1_.CE Window_1_.AR S_3_.D S_3_.C Block_0_.D Block_0_.C \
-Block_0_.CE Block_0_.AR Block_1_.D Block_1_.C Block_1_.CE Block_1_.AR \
-Block_2_.D Block_2_.C Block_2_.CE Block_2_.AR S_0_.D S_0_.C S_1_.D S_1_.C \
-S_2_.D S_2_.C nRASDFFreg.D nRASDFFreg.C inst_nPHI2seen.D inst_nPHI2seen.C \
-Ref_0_.D Ref_0_.C Ref_1_.D Ref_1_.C Ref_2_.D Ref_2_.C inst_RAsel.D \
-inst_RAsel.C nCASDFFreg.D nCASDFFreg.C inst_PHI2reg.D inst_PHI2reg.C D_7_ \
+.outputs RA_11_ nRAS nCAS nRWE nMode Size0 Size1 RA_10_ RA_9_ RA_8_ RA_7_ \
+RA_6_ RA_5_ RA_4_ RA_3_ RA_2_ RA_1_ RA_0_ Window_0_.D Window_0_.C Window_0_.CE \
+Window_0_.AR Window_1_.D Window_1_.C Window_1_.CE Window_1_.AR Window_2_.D \
+Window_2_.C Window_2_.CE Window_2_.AR Window_3_.D Window_3_.C Window_3_.CE \
+Window_3_.AR Window_4_.D Window_4_.C Window_4_.CE Window_4_.AR Window_5_.D \
+Window_5_.C Window_5_.CE Window_5_.AR Block_0_.D Block_0_.C Block_0_.CE \
+Block_0_.AR Block_1_.D Block_1_.C Block_1_.CE Block_1_.AR Block_2_.D \
+Block_2_.C Block_2_.CE Block_2_.AR Block_3_.D Block_3_.C Block_3_.CE \
+Block_3_.AR Block_4_.D Block_4_.C Block_4_.CE Block_4_.AR Block_5_.D \
+Block_5_.C Block_5_.CE Block_5_.AR Block_6_.D Block_6_.C Block_6_.CE \
+Block_6_.AR Block_7_.D Block_7_.C Block_7_.CE Block_7_.AR Dout_0_.D Dout_0_.C \
+Dout_0_.CE Dout_1_.D Dout_1_.C Dout_1_.CE Dout_2_.D Dout_2_.C Dout_2_.CE \
+Dout_3_.D Dout_3_.C Dout_3_.CE Dout_4_.D Dout_4_.C Dout_4_.CE Dout_5_.D \
+Dout_5_.C Dout_5_.CE Dout_6_.D Dout_6_.C Dout_6_.CE Dout_7_.D Dout_7_.C \
+Dout_7_.CE S_0_reg.D S_0_reg.C S_1_reg.D S_1_reg.C S_2_reg.D S_2_reg.C \
+Ref_0_.D Ref_0_.C Ref_0_.CE Ref_1_.D Ref_1_.C Ref_1_.CE Ref_2_.D Ref_2_.C \
+Ref_2_.CE nRASDFFreg.D nRASDFFreg.C nCASDFFreg.D nCASDFFreg.C inst_nPHI2seen.D \
+inst_nPHI2seen.C inst_RAsel.D inst_RAsel.C inst_PHI2reg.D inst_PHI2reg.C D_7_ \
 RD_7_ D_6_ D_5_ D_4_ D_3_ D_2_ D_1_ D_0_ RD_6_ RD_5_ RD_4_ RD_3_ RD_2_ RD_1_ \
-RD_0_ N_100_2 N_99_1 N_99_2 N_98_1 N_98_2 gnd_n_n N_98_3 un1_nRWE N_98_4 \
-N_98_5 N_98_6 N_98_7 N_98_8 N_98_9 N_97_1 N_97_2 un1_nCAS_i_1 N_9_i_1 RAMWR \
-N_7_i_1 N_5_i_1 Dout6_1 Block5_1 Window7_1 N_96_1 N_95_1 N_80_1 \
-un12_ra_i_m2_7__un3_n un12_ra_i_m2_7__un1_n un12_ra_i_m2_7__un0_n \
-un12_ra_i_m2_6__un3_n un12_ra_i_m2_6__un1_n un12_ra_i_m2_6__un0_n \
-un12_ra_i_m2_5__un3_n un12_ra_i_m2_5__un1_n un12_ra_i_m2_5__un0_n \
-un12_ra_i_m2_4__un3_n un12_ra_i_m2_4__un1_n un12_ra_i_m2_4__un0_n \
-un12_ra_i_m2_3__un3_n un12_ra_i_m2_3__un1_n un12_ra_i_m2_3__un0_n \
-un12_ra_i_m2_2__un3_n un12_ra_i_m2_2__un1_n Dout6 un12_ra_i_m2_2__un0_n Block5 \
-un12_ra_i_m2_1__un3_n Window7 un12_ra_i_m2_1__un1_n un12_ra_i_m2_1__un0_n \
-un12_ra_i_m2_0__un3_n N_87 un12_ra_i_m2_0__un1_n N_88 un12_ra_i_m2_0__un0_n \
-N_89 un12_ra_8__un3_n N_90 un12_ra_8__un1_n N_68 un12_ra_8__un0_n N_69 \
-un12_ra_9__un3_n N_70 un12_ra_9__un1_n N_71 un12_ra_9__un0_n N_72 \
-un12_ra_10__un3_n N_73 un12_ra_10__un1_n N_74 un12_ra_10__un0_n N_75 N_91 N_80 \
-N_81 N_82 N_83 N_84 N_92 N_93 N_94 N_95 N_96 N_97 N_98 N_99 N_100 N_101 N_102 \
-N_103 N_104 N_105 N_110 N_129 N_131 N_113 N_114 N_115 un1_nRWE_i ref_i_2__n \
-s_i_1__n ref_i_1__n ref_i_0__n s_i_2__n s_i_3__n s_i_0__n nWE_i nIO2_i nIO1_i \
-nPHI2seen_i a_i_0__n PHI2_i a_i_8__n a_i_13__n nRES_i PHI2_c DotClk_c nRES_c \
-a_c_0__n a_c_1__n a_c_2__n a_c_3__n a_c_4__n a_c_5__n a_c_6__n a_c_7__n \
-a_c_8__n a_c_9__n a_c_10__n a_c_11__n a_c_12__n a_c_13__n a_c_14__n a_c_15__n \
-d_c_0__n d_c_1__n d_c_2__n d_c_3__n d_c_4__n d_c_5__n d_c_6__n d_c_7__n nWE_c \
-nIO1_c nIO2_c S_n0_0 N_80_i N_92_i N_84_i N_103_i N_97_i N_98_i N_95_i N_96_i \
-N_90_i N_89_i N_88_i N_87_i N_110_i N_86_i N_85_i N_99_i N_100_i N_93_i N_94_i \
-Ref_n2_0 N_83_i N_81_i N_82_i N_91_i N_131_1 N_131_2 N_131_3 N_131_4 N_131_5 \
-N_131_6 N_131_7 un1_nRAS_i_1 un1_nRAS_i_2 S_n0_0_1 S_n0_0_2 N_100_1 D_0_.OE \
-D_1_.OE D_2_.OE D_3_.OE D_4_.OE D_5_.OE D_6_.OE D_7_.OE RD_0_.OE RD_1_.OE \
-RD_2_.OE RD_3_.OE RD_4_.OE RD_5_.OE RD_6_.OE RD_7_.OE nIRQ.OE nDMA.OE \
-Ref_n1_0_x2
-.names N_5_i_1.BLIF N_91_i.BLIF S_3_.D
-11 1
-.names S_n0_0.BLIF S_0_.D
+RD_0_ N_99_1 N_98_1 N_98_2 N_98_3 N_96_1 gnd_n_n N_96_2 N_96_3 N_89_1 \
+un12_ra_1__un3_n un1_nRWE un12_ra_1__un1_n un12_ra_1__un0_n un12_ra_2__un3_n \
+un12_ra_2__un1_n un12_ra_2__un0_n un12_ra_3__un3_n RAMWR un12_ra_3__un1_n \
+Dout3 un12_ra_3__un0_n un12_ra_4__un3_n un12_ra_4__un1_n un12_ra_4__un0_n \
+un12_ra_5__un3_n un12_ra_5__un1_n un12_ra_5__un0_n un12_ra_8__un3_n \
+un12_ra_8__un1_n un12_ra_8__un0_n un12_ra_9__un3_n un12_ra_9__un1_n \
+un12_ra_9__un0_n un12_ra_10__un3_n un12_ra_10__un1_n un12_ra_10__un0_n a_15__n \
+a_14__n a_13__n a_12__n Block6 a_11__n Window7 Ref7 a_10__n a_9__n N_74 a_8__n \
+N_75 N_76 N_77 N_78 N_79 N_80 N_81 N_84 N_86 N_87 N_88 N_89 N_90 N_91 N_92 \
+N_93 N_94 N_95 N_96 N_97 N_98 N_99 N_60 N_63 N_64 N_65 N_68 N_69 N_70 N_71 \
+N_73 N_100 N_101 N_102 un1_nRWE_i s_i_0__n nIO1_i ref_i_1__n ref_i_0__n \
+s_i_1__n nWE_i s_i_2__n nPHI2seen_i_0 RAsel_i_0 window_i_0_2__n a_i_0__n \
+block_i_0_2__n a_i_0_6__n block_i_0_3__n a_i_0_7__n nIO2_i ref_i_2__n PHI2_i \
+nRES_i PHI2_c DotClk_c nRES_c a_c_0__n a_c_1__n a_c_2__n a_c_3__n a_c_4__n \
+a_c_5__n a_c_6__n a_c_7__n d_c_0__n d_c_1__n d_c_2__n d_c_3__n d_c_4__n \
+d_c_5__n d_c_6__n d_c_7__n nWE_c nIO1_c nIO2_c N_87_0 N_86_0 N_73_i N_100_i \
+N_102_i N_84_0 N_82_0 N_69_i N_70_i N_22_0 N_65_i N_68_i N_20_0 N_63_i N_64_i \
+N_18_0 N_60_i N_99_i N_101_i N_96_i N_97_i N_98_i N_94_i N_95_i Ref_n1_0 \
+N_92_i N_93_i Ref_n2_0 N_89_i S_n0_0 N_90_i N_91_i N_88_i S_n0_0_1 S_n0_0_2 \
+un1_nRAS_i_1 un1_nCAS_i_1 N_7_0_1 Window7_1 Window7_2 Window7_3 Window7_4 \
+Window7_5 Block6_1 Block6_2 Block6_3 Block6_4 Block6_5 N_60_1 N_60_2 N_60_3 \
+D_0_.OE D_1_.OE D_2_.OE D_3_.OE D_4_.OE D_5_.OE D_6_.OE D_7_.OE RD_0_.OE \
+RD_1_.OE RD_2_.OE RD_3_.OE RD_4_.OE RD_5_.OE RD_6_.OE RD_7_.OE RAsel_2_i_x2
+.names S_n0_0.BLIF S_0_reg.D
 0 1
-.names N_9_i_1.BLIF N_110_i.BLIF S_1_.D
+.names N_7_0_1.BLIF N_91_i.BLIF S_1_reg.D
 11 1
-.names N_7_i_1.BLIF N_82_i.BLIF S_2_.D
+.names N_88_i.BLIF N_89_i.BLIF S_2_reg.D
 11 1
-.names un1_nRAS_i_1.BLIF un1_nRAS_i_2.BLIF nRASDFFreg.D
-11 1
-.names N_101.BLIF inst_nPHI2seen.D
+.names Ref_n1_0.BLIF Ref_1_.D
 0 1
 .names Ref_n2_0.BLIF Ref_2_.D
 0 1
-.names N_86_i.BLIF N_105.BLIF inst_RAsel.D
+.names un1_nRAS_i_1.BLIF N_99_i.BLIF nRASDFFreg.D
+11 1
+.names un1_nCAS_i_1.BLIF N_97_i.BLIF nCASDFFreg.D
+11 1
+.names N_71.BLIF inst_nPHI2seen.D
+0 1
+.names RAsel_2_i_x2.BLIF S_2_reg.BLIF inst_RAsel.D
 11 1
 .names DotClk_c.BLIF inst_RAsel.C
 0 1
-.names un1_nCAS_i_1.BLIF N_99_i.BLIF nCASDFFreg.D
+.names N_87.BLIF S_2_reg.BLIF N_99_1
 11 1
-.names s_i_1__n.BLIF nWE_c.BLIF N_100_2
+.names S_0_reg.BLIF S_2_reg.BLIF N_98_1
 11 1
-.names N_86_i.BLIF N_88_i.BLIF N_99_1
+.names s_i_1__n.BLIF nIO1_i.BLIF N_98_2
 11 1
-.names N_129.BLIF ref_i_2__n.BLIF N_99_2
+.names N_98_1.BLIF N_98_2.BLIF N_98_3
 11 1
-.names N_102.BLIF N_110.BLIF N_98_1
-11 1
-.names nWE_c.BLIF a_c_9__n.BLIF N_98_2
+.names RAsel_2_i_x2.BLIF ref_i_0__n.BLIF N_96_1
 11 1
 .names gnd_n_n
-.names a_c_10__n.BLIF a_c_11__n.BLIF N_98_3
+.names ref_i_1__n.BLIF ref_i_2__n.BLIF N_96_2
 11 1
+.names N_96_1.BLIF N_96_2.BLIF N_96_3
+11 1
+.names PHI2_i.BLIF inst_PHI2reg.BLIF N_89_1
+11 1
+.names inst_RAsel.BLIF un12_ra_1__un3_n
+0 1
 .names PHI2_c.BLIF nWE_i.BLIF un1_nRWE
 11 1
-.names a_c_12__n.BLIF a_c_14__n.BLIF N_98_4
+.names a_c_1__n.BLIF inst_RAsel.BLIF un12_ra_1__un1_n
 11 1
-.names a_c_15__n.BLIF a_i_8__n.BLIF N_98_5
+.names Window_3_.BLIF un12_ra_1__un3_n.BLIF un12_ra_1__un0_n
 11 1
-.names N_98_1.BLIF N_98_2.BLIF N_98_6
+.names inst_RAsel.BLIF un12_ra_2__un3_n
+0 1
+.names a_c_2__n.BLIF inst_RAsel.BLIF un12_ra_2__un1_n
 11 1
-.names N_98_3.BLIF N_98_4.BLIF N_98_7
+.names Window_4_.BLIF un12_ra_2__un3_n.BLIF un12_ra_2__un0_n
 11 1
-.names N_98_5.BLIF a_i_13__n.BLIF N_98_8
-11 1
-.names N_98_6.BLIF N_98_7.BLIF N_98_9
-11 1
-.names N_88_i.BLIF N_103.BLIF N_97_1
-11 1
-.names N_129.BLIF ref_i_2__n.BLIF N_97_2
-11 1
-.names N_100_i.BLIF N_96_i.BLIF un1_nCAS_i_1
-11 1
-.names N_80_i.BLIF N_83_i.BLIF N_9_i_1
-11 1
+.names inst_RAsel.BLIF un12_ra_3__un3_n
+0 1
 .names nIO1_i.BLIF nWE_i.BLIF RAMWR
 11 1
-.names N_80_i.BLIF N_81_i.BLIF N_7_i_1
+.names a_c_3__n.BLIF inst_RAsel.BLIF un12_ra_3__un1_n
 11 1
-.names N_80_i.BLIF N_88.BLIF N_5_i_1
+.names N_100.BLIF S_1_reg.BLIF Dout3
 11 1
-.names a_c_0__n.BLIF N_103.BLIF Dout6_1
+.names Window_5_.BLIF un12_ra_3__un3_n.BLIF un12_ra_3__un0_n
 11 1
-.names a_c_0__n.BLIF N_87_i.BLIF Block5_1
-11 1
-.names N_131.BLIF a_i_0__n.BLIF Window7_1
-11 1
-.names N_103.BLIF N_104.BLIF N_96_1
-11 1
-.names N_105.BLIF S_0_.BLIF N_95_1
-11 1
-.names PHI2_i.BLIF inst_PHI2reg.BLIF N_80_1
-11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_7__un3_n
+.names inst_RAsel.BLIF un12_ra_4__un3_n
 0 1
-.names a_c_7__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_7__un1_n
+.names a_c_4__n.BLIF inst_RAsel.BLIF un12_ra_4__un1_n
 11 1
-.names Block_3_.BLIF un12_ra_i_m2_7__un3_n.BLIF un12_ra_i_m2_7__un0_n
+.names Block_0_.BLIF un12_ra_4__un3_n.BLIF un12_ra_4__un0_n
 11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_6__un3_n
+.names inst_RAsel.BLIF un12_ra_5__un3_n
 0 1
-.names a_c_6__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_6__un1_n
+.names a_c_5__n.BLIF inst_RAsel.BLIF un12_ra_5__un1_n
 11 1
-.names Block_2_.BLIF un12_ra_i_m2_6__un3_n.BLIF un12_ra_i_m2_6__un0_n
+.names Block_1_.BLIF un12_ra_5__un3_n.BLIF un12_ra_5__un0_n
 11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_5__un3_n
-0 1
-.names a_c_5__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_5__un1_n
-11 1
-.names Block_1_.BLIF un12_ra_i_m2_5__un3_n.BLIF un12_ra_i_m2_5__un0_n
-11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_4__un3_n
-0 1
-.names a_c_4__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_4__un1_n
-11 1
-.names Block_0_.BLIF un12_ra_i_m2_4__un3_n.BLIF un12_ra_i_m2_4__un0_n
-11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_3__un3_n
-0 1
-.names a_c_3__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_3__un1_n
-11 1
-.names Window_5_.BLIF un12_ra_i_m2_3__un3_n.BLIF un12_ra_i_m2_3__un0_n
-11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_2__un3_n
-0 1
-.names a_c_2__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_2__un1_n
-11 1
-.names Dout6_1.BLIF N_131.BLIF Dout6
-11 1
-.names Window_4_.BLIF un12_ra_i_m2_2__un3_n.BLIF un12_ra_i_m2_2__un0_n
-11 1
-.names Block5_1.BLIF N_131.BLIF Block5
-11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_1__un3_n
-0 1
-.names Window7_1.BLIF N_87_i.BLIF Window7
-11 1
-.names a_c_1__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_1__un1_n
-11 1
-.names Window_3_.BLIF un12_ra_i_m2_1__un3_n.BLIF un12_ra_i_m2_1__un0_n
-11 1
-.names inst_RAsel.BLIF un12_ra_i_m2_0__un3_n
-0 1
-.names N_87_i.BLIF N_87
-0 1
-.names a_c_0__n.BLIF inst_RAsel.BLIF un12_ra_i_m2_0__un1_n
-11 1
-.names N_88_i.BLIF N_88
-0 1
-.names Window_2_.BLIF un12_ra_i_m2_0__un3_n.BLIF un12_ra_i_m2_0__un0_n
-11 1
-.names N_89_i.BLIF N_89
-0 1
 .names inst_RAsel.BLIF un12_ra_8__un3_n
-0 1
-.names N_90_i.BLIF N_90
 0 1
 .names Window_0_.BLIF inst_RAsel.BLIF un12_ra_8__un1_n
 11 1
-.names un12_ra_i_m2_7__un1_n.BLIF un12_ra_i_m2_7__un0_n.BLIF N_68
-1- 1
--1 1
 .names Block_4_.BLIF un12_ra_8__un3_n.BLIF un12_ra_8__un0_n
 11 1
-.names un12_ra_i_m2_6__un1_n.BLIF un12_ra_i_m2_6__un0_n.BLIF N_69
-1- 1
--1 1
 .names inst_RAsel.BLIF un12_ra_9__un3_n
 0 1
-.names un12_ra_i_m2_5__un1_n.BLIF un12_ra_i_m2_5__un0_n.BLIF N_70
-1- 1
--1 1
 .names Window_1_.BLIF inst_RAsel.BLIF un12_ra_9__un1_n
 11 1
-.names un12_ra_i_m2_4__un1_n.BLIF un12_ra_i_m2_4__un0_n.BLIF N_71
-1- 1
--1 1
 .names Block_5_.BLIF un12_ra_9__un3_n.BLIF un12_ra_9__un0_n
 11 1
-.names un12_ra_i_m2_3__un1_n.BLIF un12_ra_i_m2_3__un0_n.BLIF N_72
-1- 1
--1 1
 .names inst_RAsel.BLIF un12_ra_10__un3_n
 0 1
-.names un12_ra_i_m2_2__un1_n.BLIF un12_ra_i_m2_2__un0_n.BLIF N_73
-1- 1
--1 1
 .names Block_7_.BLIF inst_RAsel.BLIF un12_ra_10__un1_n
 11 1
-.names un12_ra_i_m2_1__un1_n.BLIF un12_ra_i_m2_1__un0_n.BLIF N_74
-1- 1
--1 1
 .names Block_6_.BLIF un12_ra_10__un3_n.BLIF un12_ra_10__un0_n
 11 1
-.names un12_ra_i_m2_0__un1_n.BLIF un12_ra_i_m2_0__un0_n.BLIF N_75
+.names Block6_4.BLIF Block6_5.BLIF Block6
+11 1
+.names Window7_4.BLIF Window7_5.BLIF Window7
+11 1
+.names N_100.BLIF s_i_1__n.BLIF Ref7
+11 1
+.names un12_ra_1__un1_n.BLIF un12_ra_1__un0_n.BLIF N_74
 1- 1
 -1 1
-.names N_87.BLIF s_i_3__n.BLIF N_91
-11 1
-.names N_80_1.BLIF inst_nPHI2seen.BLIF N_80
-11 1
-.names N_87.BLIF s_i_2__n.BLIF N_81
-11 1
-.names N_87_i.BLIF N_102.BLIF N_82
-11 1
-.names N_87_i.BLIF N_89.BLIF N_83
-11 1
-.names N_88.BLIF s_i_0__n.BLIF N_84
-11 1
-.names N_89_i.BLIF S_1_.BLIF N_92
-11 1
-.names N_90.BLIF Ref_2_.BLIF N_93
-11 1
-.names N_90_i.BLIF ref_i_2__n.BLIF N_94
-11 1
-.names N_95_1.BLIF s_i_1__n.BLIF N_95
-11 1
-.names N_96_1.BLIF nIO1_i.BLIF N_96
-11 1
-.names N_97_1.BLIF N_97_2.BLIF N_97
-11 1
-.names N_98_9.BLIF N_98_8.BLIF N_98
-11 1
-.names N_99_1.BLIF N_99_2.BLIF N_99
-11 1
-.names N_100_1.BLIF N_100_2.BLIF N_100
-11 1
-.names PHI2_c.BLIF nPHI2seen_i.BLIF N_101
-11 1
-.names S_2_.BLIF s_i_3__n.BLIF N_102
-11 1
-.names S_1_.BLIF s_i_0__n.BLIF N_103
-11 1
-.names N_102.BLIF nWE_i.BLIF N_104
-11 1
-.names N_102.BLIF nIO1_i.BLIF N_105
-11 1
-.names s_i_0__n.BLIF s_i_1__n.BLIF N_110
-11 1
-.names ref_i_0__n.BLIF ref_i_1__n.BLIF N_129
-11 1
-.names N_131_7.BLIF nIO2_i.BLIF N_131
-11 1
-.names un12_ra_8__un1_n.BLIF un12_ra_8__un0_n.BLIF N_113
+.names un12_ra_2__un1_n.BLIF un12_ra_2__un0_n.BLIF N_75
 1- 1
 -1 1
-.names un12_ra_9__un1_n.BLIF un12_ra_9__un0_n.BLIF N_114
+.names un12_ra_3__un1_n.BLIF un12_ra_3__un0_n.BLIF N_76
 1- 1
 -1 1
-.names un12_ra_10__un1_n.BLIF un12_ra_10__un0_n.BLIF N_115
+.names un12_ra_4__un1_n.BLIF un12_ra_4__un0_n.BLIF N_77
 1- 1
 -1 1
+.names un12_ra_5__un1_n.BLIF un12_ra_5__un0_n.BLIF N_78
+1- 1
+-1 1
+.names un12_ra_8__un1_n.BLIF un12_ra_8__un0_n.BLIF N_79
+1- 1
+-1 1
+.names un12_ra_9__un1_n.BLIF un12_ra_9__un0_n.BLIF N_80
+1- 1
+-1 1
+.names un12_ra_10__un1_n.BLIF un12_ra_10__un0_n.BLIF N_81
+1- 1
+-1 1
+.names N_84_0.BLIF N_84
+0 1
+.names N_86_0.BLIF N_86
+0 1
+.names N_87_0.BLIF N_87
+0 1
+.names N_84.BLIF s_i_2__n.BLIF N_88
+11 1
+.names N_89_1.BLIF inst_nPHI2seen.BLIF N_89
+11 1
+.names s_i_0__n.BLIF s_i_1__n.BLIF N_90
+11 1
+.names N_84_0.BLIF s_i_2__n.BLIF N_91
+11 1
+.names N_86.BLIF Ref_2_.BLIF N_92
+11 1
+.names N_86_0.BLIF ref_i_2__n.BLIF N_93
+11 1
+.names Ref_1_.BLIF ref_i_0__n.BLIF N_94
+11 1
+.names Ref_0_.BLIF ref_i_1__n.BLIF N_95
+11 1
+.names N_96_3.BLIF s_i_2__n.BLIF N_96
+11 1
+.names N_101.BLIF S_1_reg.BLIF N_97
+11 1
+.names N_98_3.BLIF nWE_c.BLIF N_98
+11 1
+.names N_99_1.BLIF s_i_1__n.BLIF N_99
+11 1
+.names N_60_3.BLIF s_i_2__n.BLIF N_60
+11 1
+.names a_i_0_7__n.BLIF inst_RAsel.BLIF N_63
+11 1
+.names block_i_0_3__n.BLIF RAsel_i_0.BLIF N_64
+11 1
+.names a_i_0_6__n.BLIF inst_RAsel.BLIF N_65
+11 1
+.names block_i_0_2__n.BLIF RAsel_i_0.BLIF N_68
+11 1
+.names a_i_0__n.BLIF inst_RAsel.BLIF N_69
+11 1
+.names RAsel_i_0.BLIF window_i_0_2__n.BLIF N_70
+11 1
+.names PHI2_c.BLIF nPHI2seen_i_0.BLIF N_71
+11 1
+.names S_1_reg.BLIF S_2_reg.BLIF N_73
+11 1
+.names S_2_reg.BLIF s_i_0__n.BLIF N_100
+11 1
+.names N_100.BLIF RAMWR.BLIF N_101
+11 1
+.names S_1_reg.BLIF s_i_0__n.BLIF N_102
+11 1
 .names un1_nRWE.BLIF un1_nRWE_i
 0 1
-.names Ref_2_.BLIF ref_i_2__n
+.names S_0_reg.BLIF s_i_0__n
 0 1
-.names S_1_.BLIF s_i_1__n
+.names nIO1_c.BLIF nIO1_i
 0 1
 .names Ref_1_.BLIF ref_i_1__n
 0 1
 .names Ref_0_.BLIF ref_i_0__n
 0 1
-.names S_2_.BLIF s_i_2__n
-0 1
-.names S_3_.BLIF s_i_3__n
-0 1
-.names S_0_.BLIF s_i_0__n
+.names S_1_reg.BLIF s_i_1__n
 0 1
 .names nWE_c.BLIF nWE_i
 0 1
-.names nIO2_c.BLIF nIO2_i
+.names S_2_reg.BLIF s_i_2__n
 0 1
-.names nIO1_c.BLIF nIO1_i
+.names inst_nPHI2seen.BLIF nPHI2seen_i_0
 0 1
-.names inst_nPHI2seen.BLIF nPHI2seen_i
+.names inst_RAsel.BLIF RAsel_i_0
+0 1
+.names Window_2_.BLIF window_i_0_2__n
 0 1
 .names a_c_0__n.BLIF a_i_0__n
 0 1
+.names Block_2_.BLIF block_i_0_2__n
+0 1
+.names a_c_6__n.BLIF a_i_0_6__n
+0 1
+.names Block_3_.BLIF block_i_0_3__n
+0 1
+.names a_c_7__n.BLIF a_i_0_7__n
+0 1
+.names nIO2_c.BLIF nIO2_i
+0 1
+.names Ref_2_.BLIF ref_i_2__n
+0 1
 .names PHI2_c.BLIF PHI2_i
-0 1
-.names a_c_8__n.BLIF a_i_8__n
-0 1
-.names a_c_13__n.BLIF a_i_13__n
 0 1
 .names nRES_c.BLIF nRES_i
 0 1
-.names S_n0_0_1.BLIF S_n0_0_2.BLIF S_n0_0
+.names S_0_reg.BLIF nIO1_c.BLIF N_87_0
 11 1
-.names N_80.BLIF N_80_i
+.names Ref_0_.BLIF Ref_1_.BLIF N_86_0
+11 1
+.names N_73.BLIF N_73_i
 0 1
-.names N_92.BLIF N_92_i
+.names N_100.BLIF N_100_i
 0 1
-.names N_84.BLIF N_84_i
+.names N_102.BLIF N_102_i
 0 1
-.names N_103.BLIF N_103_i
+.names S_0_reg.BLIF S_1_reg.BLIF N_84_0
+11 1
+.names nIO1_i.BLIF nWE_c.BLIF N_82_0
+11 1
+.names N_69.BLIF N_69_i
+0 1
+.names N_70.BLIF N_70_i
+0 1
+.names N_69_i.BLIF N_70_i.BLIF N_22_0
+11 1
+.names N_65.BLIF N_65_i
+0 1
+.names N_68.BLIF N_68_i
+0 1
+.names N_65_i.BLIF N_68_i.BLIF N_20_0
+11 1
+.names N_63.BLIF N_63_i
+0 1
+.names N_64.BLIF N_64_i
+0 1
+.names N_63_i.BLIF N_64_i.BLIF N_18_0
+11 1
+.names N_60.BLIF N_60_i
+0 1
+.names N_99.BLIF N_99_i
+0 1
+.names N_101.BLIF N_101_i
+0 1
+.names N_96.BLIF N_96_i
 0 1
 .names N_97.BLIF N_97_i
 0 1
 .names N_98.BLIF N_98_i
 0 1
+.names N_94.BLIF N_94_i
+0 1
 .names N_95.BLIF N_95_i
 0 1
-.names N_96.BLIF N_96_i
-0 1
-.names Ref_0_.BLIF Ref_1_.BLIF N_90_i
+.names N_94_i.BLIF N_95_i.BLIF Ref_n1_0
 11 1
-.names S_2_.BLIF S_3_.BLIF N_89_i
-11 1
-.names s_i_2__n.BLIF s_i_3__n.BLIF N_88_i
-11 1
-.names S_0_.BLIF S_1_.BLIF N_87_i
-11 1
-.names N_110.BLIF N_110_i
-0 1
-.names N_87.BLIF N_110_i.BLIF N_86_i
-11 1
-.names nIO1_i.BLIF nWE_c.BLIF N_85_i
-11 1
-.names N_99.BLIF N_99_i
-0 1
-.names N_100.BLIF N_100_i
+.names N_92.BLIF N_92_i
 0 1
 .names N_93.BLIF N_93_i
 0 1
-.names N_94.BLIF N_94_i
-0 1
-.names N_93_i.BLIF N_94_i.BLIF Ref_n2_0
+.names N_92_i.BLIF N_93_i.BLIF Ref_n2_0
 11 1
-.names N_83.BLIF N_83_i
+.names N_89.BLIF N_89_i
 0 1
-.names N_81.BLIF N_81_i
-0 1
-.names N_82.BLIF N_82_i
+.names S_n0_0_1.BLIF S_n0_0_2.BLIF S_n0_0
+11 1
+.names N_90.BLIF N_90_i
 0 1
 .names N_91.BLIF N_91_i
 0 1
-.names a_c_1__n.BLIF a_c_2__n.BLIF N_131_1
+.names N_88.BLIF N_88_i
+0 1
+.names N_73_i.BLIF N_100_i.BLIF S_n0_0_1
 11 1
-.names a_c_3__n.BLIF a_c_4__n.BLIF N_131_2
+.names N_102_i.BLIF N_89_i.BLIF S_n0_0_2
 11 1
-.names a_c_5__n.BLIF a_c_6__n.BLIF N_131_3
+.names N_101_i.BLIF N_60_i.BLIF un1_nRAS_i_1
 11 1
-.names a_c_7__n.BLIF N_104.BLIF N_131_4
+.names N_98_i.BLIF N_96_i.BLIF un1_nCAS_i_1
 11 1
-.names N_131_1.BLIF N_131_2.BLIF N_131_5
+.names N_89_i.BLIF N_90_i.BLIF N_7_0_1
 11 1
-.names N_131_3.BLIF N_131_4.BLIF N_131_6
+.names a_c_6__n.BLIF a_c_7__n.BLIF Window7_1
 11 1
-.names N_131_5.BLIF N_131_6.BLIF N_131_7
+.names a_i_0__n.BLIF N_84_0.BLIF Window7_2
 11 1
-.names N_95_i.BLIF N_96_i.BLIF un1_nRAS_i_1
+.names S_2_reg.BLIF nIO2_i.BLIF Window7_3
 11 1
-.names N_97_i.BLIF N_98_i.BLIF un1_nRAS_i_2
+.names Window7_1.BLIF Window7_2.BLIF Window7_4
 11 1
-.names N_80_i.BLIF N_84_i.BLIF S_n0_0_1
+.names Window7_3.BLIF nWE_i.BLIF Window7_5
 11 1
-.names N_92_i.BLIF N_103_i.BLIF S_n0_0_2
+.names a_c_0__n.BLIF a_c_6__n.BLIF Block6_1
 11 1
-.names N_105.BLIF S_0_.BLIF N_100_1
+.names a_c_7__n.BLIF N_84_0.BLIF Block6_2
 11 1
-.names Ref_0_.BLIF Ref_1_.BLIF Ref_n1_0_x2
+.names S_2_reg.BLIF nIO2_i.BLIF Block6_3
+11 1
+.names Block6_1.BLIF Block6_2.BLIF Block6_4
+11 1
+.names Block6_3.BLIF nWE_i.BLIF Block6_5
+11 1
+.names N_102.BLIF ref_i_0__n.BLIF N_60_1
+11 1
+.names ref_i_1__n.BLIF ref_i_2__n.BLIF N_60_2
+11 1
+.names N_60_1.BLIF N_60_2.BLIF N_60_3
+11 1
+.names S_0_reg.BLIF S_1_reg.BLIF RAsel_2_i_x2
 01 1
 10 1
 11 0
 00 0
 .names gnd_n_n.BLIF RA_11_
-1 1
-0 0
-.names gnd_n_n.BLIF nIRQ
-1 1
-0 0
-.names gnd_n_n.BLIF nDMA
 1 1
 0 0
 .names nRASDFFreg.BLIF nRAS
@@ -500,76 +455,70 @@ Ref_n1_0_x2
 .names un1_nRWE_i.BLIF nRWE
 1 1
 0 0
-.names gnd_n_n.BLIF DelayOut
+.names S_2_reg.BLIF nMode
 1 1
 0 0
-.names N_115.BLIF RA_10_
+.names S_0_reg.BLIF Size0
 1 1
 0 0
-.names N_114.BLIF RA_9_
+.names S_1_reg.BLIF Size1
 1 1
 0 0
-.names N_113.BLIF RA_8_
+.names N_81.BLIF RA_10_
 1 1
 0 0
-.names N_68.BLIF RA_7_
+.names N_80.BLIF RA_9_
 1 1
 0 0
-.names N_69.BLIF RA_6_
+.names N_79.BLIF RA_8_
 1 1
 0 0
-.names N_70.BLIF RA_5_
+.names N_18_0.BLIF RA_7_
 1 1
 0 0
-.names N_71.BLIF RA_4_
+.names N_20_0.BLIF RA_6_
 1 1
 0 0
-.names N_72.BLIF RA_3_
+.names N_78.BLIF RA_5_
 1 1
 0 0
-.names N_73.BLIF RA_2_
+.names N_77.BLIF RA_4_
+1 1
+0 0
+.names N_76.BLIF RA_3_
+1 1
+0 0
+.names N_75.BLIF RA_2_
 1 1
 0 0
 .names N_74.BLIF RA_1_
 1 1
 0 0
-.names N_75.BLIF RA_0_
+.names N_22_0.BLIF RA_0_
 1 1
 0 0
-.names RD_5_.PIN.BLIF Dout_5_.D
+.names d_c_0__n.BLIF Window_0_.D
 1 1
 0 0
-.names DotClk_c.BLIF Dout_5_.C
+.names DotClk_c.BLIF Window_0_.C
 1 1
 0 0
-.names Dout6.BLIF Dout_5_.CE
+.names Window7.BLIF Window_0_.CE
 1 1
 0 0
-.names nRES_i.BLIF Dout_5_.AR
+.names nRES_i.BLIF Window_0_.AR
 1 1
 0 0
-.names RD_6_.PIN.BLIF Dout_6_.D
+.names d_c_1__n.BLIF Window_1_.D
 1 1
 0 0
-.names DotClk_c.BLIF Dout_6_.C
+.names DotClk_c.BLIF Window_1_.C
 1 1
 0 0
-.names Dout6.BLIF Dout_6_.CE
+.names Window7.BLIF Window_1_.CE
 1 1
 0 0
-.names nRES_i.BLIF Dout_6_.AR
-1 1
-0 0
-.names RD_7_.PIN.BLIF Dout_7_.D
-1 1
-0 0
-.names DotClk_c.BLIF Dout_7_.C
-1 1
-0 0
-.names Dout6.BLIF Dout_7_.CE
-1 1
-0 0
-.names nRES_i.BLIF Dout_7_.AR
+.names nRES_i.BLIF Window_1_.AR
 1 1
 0 0
 .names d_c_2__n.BLIF Window_2_.D
@@ -620,160 +569,13 @@ Ref_n1_0_x2
 .names nRES_i.BLIF Window_5_.AR
 1 1
 0 0
-.names RD_0_.PIN.BLIF Dout_0_.D
-1 1
-0 0
-.names DotClk_c.BLIF Dout_0_.C
-1 1
-0 0
-.names Dout6.BLIF Dout_0_.CE
-1 1
-0 0
-.names nRES_i.BLIF Dout_0_.AR
-1 1
-0 0
-.names RD_1_.PIN.BLIF Dout_1_.D
-1 1
-0 0
-.names DotClk_c.BLIF Dout_1_.C
-1 1
-0 0
-.names Dout6.BLIF Dout_1_.CE
-1 1
-0 0
-.names nRES_i.BLIF Dout_1_.AR
-1 1
-0 0
-.names RD_2_.PIN.BLIF Dout_2_.D
-1 1
-0 0
-.names DotClk_c.BLIF Dout_2_.C
-1 1
-0 0
-.names Dout6.BLIF Dout_2_.CE
-1 1
-0 0
-.names nRES_i.BLIF Dout_2_.AR
-1 1
-0 0
-.names RD_3_.PIN.BLIF Dout_3_.D
-1 1
-0 0
-.names DotClk_c.BLIF Dout_3_.C
-1 1
-0 0
-.names Dout6.BLIF Dout_3_.CE
-1 1
-0 0
-.names nRES_i.BLIF Dout_3_.AR
-1 1
-0 0
-.names RD_4_.PIN.BLIF Dout_4_.D
-1 1
-0 0
-.names DotClk_c.BLIF Dout_4_.C
-1 1
-0 0
-.names Dout6.BLIF Dout_4_.CE
-1 1
-0 0
-.names nRES_i.BLIF Dout_4_.AR
-1 1
-0 0
-.names d_c_3__n.BLIF Block_3_.D
-1 1
-0 0
-.names DotClk_c.BLIF Block_3_.C
-1 1
-0 0
-.names Block5.BLIF Block_3_.CE
-1 1
-0 0
-.names nRES_i.BLIF Block_3_.AR
-1 1
-0 0
-.names d_c_4__n.BLIF Block_4_.D
-1 1
-0 0
-.names DotClk_c.BLIF Block_4_.C
-1 1
-0 0
-.names Block5.BLIF Block_4_.CE
-1 1
-0 0
-.names nRES_i.BLIF Block_4_.AR
-1 1
-0 0
-.names d_c_5__n.BLIF Block_5_.D
-1 1
-0 0
-.names DotClk_c.BLIF Block_5_.C
-1 1
-0 0
-.names Block5.BLIF Block_5_.CE
-1 1
-0 0
-.names nRES_i.BLIF Block_5_.AR
-1 1
-0 0
-.names d_c_6__n.BLIF Block_6_.D
-1 1
-0 0
-.names DotClk_c.BLIF Block_6_.C
-1 1
-0 0
-.names Block5.BLIF Block_6_.CE
-1 1
-0 0
-.names nRES_i.BLIF Block_6_.AR
-1 1
-0 0
-.names d_c_7__n.BLIF Block_7_.D
-1 1
-0 0
-.names DotClk_c.BLIF Block_7_.C
-1 1
-0 0
-.names Block5.BLIF Block_7_.CE
-1 1
-0 0
-.names nRES_i.BLIF Block_7_.AR
-1 1
-0 0
-.names d_c_0__n.BLIF Window_0_.D
-1 1
-0 0
-.names DotClk_c.BLIF Window_0_.C
-1 1
-0 0
-.names Window7.BLIF Window_0_.CE
-1 1
-0 0
-.names nRES_i.BLIF Window_0_.AR
-1 1
-0 0
-.names d_c_1__n.BLIF Window_1_.D
-1 1
-0 0
-.names DotClk_c.BLIF Window_1_.C
-1 1
-0 0
-.names Window7.BLIF Window_1_.CE
-1 1
-0 0
-.names nRES_i.BLIF Window_1_.AR
-1 1
-0 0
-.names DotClk_c.BLIF S_3_.C
-1 1
-0 0
 .names d_c_0__n.BLIF Block_0_.D
 1 1
 0 0
 .names DotClk_c.BLIF Block_0_.C
 1 1
 0 0
-.names Block5.BLIF Block_0_.CE
+.names Block6.BLIF Block_0_.CE
 1 1
 0 0
 .names nRES_i.BLIF Block_0_.AR
@@ -785,7 +587,7 @@ Ref_n1_0_x2
 .names DotClk_c.BLIF Block_1_.C
 1 1
 0 0
-.names Block5.BLIF Block_1_.CE
+.names Block6.BLIF Block_1_.CE
 1 1
 0 0
 .names nRES_i.BLIF Block_1_.AR
@@ -797,25 +599,151 @@ Ref_n1_0_x2
 .names DotClk_c.BLIF Block_2_.C
 1 1
 0 0
-.names Block5.BLIF Block_2_.CE
+.names Block6.BLIF Block_2_.CE
 1 1
 0 0
 .names nRES_i.BLIF Block_2_.AR
 1 1
 0 0
-.names DotClk_c.BLIF S_0_.C
+.names d_c_3__n.BLIF Block_3_.D
 1 1
 0 0
-.names DotClk_c.BLIF S_1_.C
+.names DotClk_c.BLIF Block_3_.C
 1 1
 0 0
-.names DotClk_c.BLIF S_2_.C
+.names Block6.BLIF Block_3_.CE
 1 1
 0 0
-.names DotClk_c.BLIF nRASDFFreg.C
+.names nRES_i.BLIF Block_3_.AR
 1 1
 0 0
-.names DotClk_c.BLIF inst_nPHI2seen.C
+.names d_c_4__n.BLIF Block_4_.D
+1 1
+0 0
+.names DotClk_c.BLIF Block_4_.C
+1 1
+0 0
+.names Block6.BLIF Block_4_.CE
+1 1
+0 0
+.names nRES_i.BLIF Block_4_.AR
+1 1
+0 0
+.names d_c_5__n.BLIF Block_5_.D
+1 1
+0 0
+.names DotClk_c.BLIF Block_5_.C
+1 1
+0 0
+.names Block6.BLIF Block_5_.CE
+1 1
+0 0
+.names nRES_i.BLIF Block_5_.AR
+1 1
+0 0
+.names d_c_6__n.BLIF Block_6_.D
+1 1
+0 0
+.names DotClk_c.BLIF Block_6_.C
+1 1
+0 0
+.names Block6.BLIF Block_6_.CE
+1 1
+0 0
+.names nRES_i.BLIF Block_6_.AR
+1 1
+0 0
+.names d_c_7__n.BLIF Block_7_.D
+1 1
+0 0
+.names DotClk_c.BLIF Block_7_.C
+1 1
+0 0
+.names Block6.BLIF Block_7_.CE
+1 1
+0 0
+.names nRES_i.BLIF Block_7_.AR
+1 1
+0 0
+.names RD_0_.PIN.BLIF Dout_0_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_0_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_0_.CE
+1 1
+0 0
+.names RD_1_.PIN.BLIF Dout_1_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_1_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_1_.CE
+1 1
+0 0
+.names RD_2_.PIN.BLIF Dout_2_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_2_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_2_.CE
+1 1
+0 0
+.names RD_3_.PIN.BLIF Dout_3_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_3_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_3_.CE
+1 1
+0 0
+.names RD_4_.PIN.BLIF Dout_4_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_4_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_4_.CE
+1 1
+0 0
+.names RD_5_.PIN.BLIF Dout_5_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_5_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_5_.CE
+1 1
+0 0
+.names RD_6_.PIN.BLIF Dout_6_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_6_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_6_.CE
+1 1
+0 0
+.names RD_7_.PIN.BLIF Dout_7_.D
+1 1
+0 0
+.names DotClk_c.BLIF Dout_7_.C
+1 1
+0 0
+.names Dout3.BLIF Dout_7_.CE
+1 1
+0 0
+.names DotClk_c.BLIF S_0_reg.C
+1 1
+0 0
+.names DotClk_c.BLIF S_1_reg.C
+1 1
+0 0
+.names DotClk_c.BLIF S_2_reg.C
 1 1
 0 0
 .names ref_i_0__n.BLIF Ref_0_.D
@@ -824,16 +752,28 @@ Ref_n1_0_x2
 .names DotClk_c.BLIF Ref_0_.C
 1 1
 0 0
-.names Ref_n1_0_x2.BLIF Ref_1_.D
+.names Ref7.BLIF Ref_0_.CE
 1 1
 0 0
 .names DotClk_c.BLIF Ref_1_.C
 1 1
 0 0
+.names Ref7.BLIF Ref_1_.CE
+1 1
+0 0
 .names DotClk_c.BLIF Ref_2_.C
 1 1
 0 0
+.names Ref7.BLIF Ref_2_.CE
+1 1
+0 0
+.names DotClk_c.BLIF nRASDFFreg.C
+1 1
+0 0
 .names DotClk_c.BLIF nCASDFFreg.C
+1 1
+0 0
+.names DotClk_c.BLIF inst_nPHI2seen.C
 1 1
 0 0
 .names PHI2_c.BLIF inst_PHI2reg.D
@@ -890,6 +830,30 @@ Ref_n1_0_x2
 .names d_c_0__n.BLIF RD_0_
 1 1
 0 0
+.names A_15_.BLIF a_15__n
+1 1
+0 0
+.names A_14_.BLIF a_14__n
+1 1
+0 0
+.names A_13_.BLIF a_13__n
+1 1
+0 0
+.names A_12_.BLIF a_12__n
+1 1
+0 0
+.names A_11_.BLIF a_11__n
+1 1
+0 0
+.names A_10_.BLIF a_10__n
+1 1
+0 0
+.names A_9_.BLIF a_9__n
+1 1
+0 0
+.names A_8_.BLIF a_8__n
+1 1
+0 0
 .names PHI2.BLIF PHI2_c
 1 1
 0 0
@@ -921,30 +885,6 @@ Ref_n1_0_x2
 1 1
 0 0
 .names A_7_.BLIF a_c_7__n
-1 1
-0 0
-.names A_8_.BLIF a_c_8__n
-1 1
-0 0
-.names A_9_.BLIF a_c_9__n
-1 1
-0 0
-.names A_10_.BLIF a_c_10__n
-1 1
-0 0
-.names A_11_.BLIF a_c_11__n
-1 1
-0 0
-.names A_12_.BLIF a_c_12__n
-1 1
-0 0
-.names A_13_.BLIF a_c_13__n
-1 1
-0 0
-.names A_14_.BLIF a_c_14__n
-1 1
-0 0
-.names A_15_.BLIF a_c_15__n
 1 1
 0 0
 .names D_0_.PIN.BLIF d_c_0__n
@@ -980,28 +920,28 @@ Ref_n1_0_x2
 .names nIO2.BLIF nIO2_c
 1 1
 0 0
-.names N_85_i.BLIF D_0_.OE
+.names N_82_0.BLIF D_0_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_1_.OE
+.names N_82_0.BLIF D_1_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_2_.OE
+.names N_82_0.BLIF D_2_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_3_.OE
+.names N_82_0.BLIF D_3_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_4_.OE
+.names N_82_0.BLIF D_4_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_5_.OE
+.names N_82_0.BLIF D_5_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_6_.OE
+.names N_82_0.BLIF D_6_.OE
 1 1
 0 0
-.names N_85_i.BLIF D_7_.OE
+.names N_82_0.BLIF D_7_.OE
 1 1
 0 0
 .names RAMWR.BLIF RD_0_.OE
@@ -1026,12 +966,6 @@ Ref_n1_0_x2
 1 1
 0 0
 .names RAMWR.BLIF RD_7_.OE
-1 1
-0 0
-.names gnd_n_n.BLIF nIRQ.OE
-1 1
-0 0
-.names gnd_n_n.BLIF nDMA.OE
 1 1
 0 0
 .end

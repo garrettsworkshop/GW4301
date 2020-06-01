@@ -53,49 +53,40 @@ Section Member   Rename                   Array-Notation          Array Number  
         Port      RD_0_                       RD[0]                       4            7            
 End
 Section Cross Reference File
-Design 'CRAM' created Sun May 24 23:37:58 2020
+Design 'CRAM' created Wed May 27 20:45:55 2020
    Type              New Name                               Original Name
 // ----------------------------------------------------------------------
-   Inst                 i_2U2U                                    nIRQ
-   Inst                 i_3030                                    nDMA
-   Inst                 A_i_0_                                    A_i[0]
-   Inst                 A_i_8_                                    A_i[8]
-   Inst                A_i_13_                                   A_i[13]
-   Inst           un12_RA_8__r                              un12_RA_8_.r
-   Inst           un12_RA_8__m                              un12_RA_8_.m
-   Inst           un12_RA_8__n                              un12_RA_8_.n
    Inst           un12_RA_8__p                              un12_RA_8_.p
    Inst           un12_RA_9__r                              un12_RA_9_.r
    Inst           un12_RA_9__m                              un12_RA_9_.m
-   Inst                Dout_5_                                   Dout[5]
    Inst           un12_RA_9__n                              un12_RA_9_.n
-   Inst                Dout_6_                                   Dout[6]
    Inst           un12_RA_9__p                              un12_RA_9_.p
-   Inst                Dout_7_                                   Dout[7]
    Inst          un12_RA_10__r                             un12_RA_10_.r
-   Inst              Window_2_                                 Window[2]
    Inst          un12_RA_10__m                             un12_RA_10_.m
-   Inst              Window_3_                                 Window[3]
    Inst          un12_RA_10__n                             un12_RA_10_.n
-   Inst              Window_4_                                 Window[4]
    Inst          un12_RA_10__p                             un12_RA_10_.p
+   Inst              Window_0_                                 Window[0]
+   Inst              Window_1_                                 Window[1]
+   Inst              Window_2_                                 Window[2]
+   Inst              Window_3_                                 Window[3]
+   Inst              Window_4_                                 Window[4]
    Inst              Window_5_                                 Window[5]
-   Inst                Dout_0_                                   Dout[0]
-   Inst                Dout_1_                                   Dout[1]
-   Inst                Dout_2_                                   Dout[2]
-   Inst                Dout_3_                                   Dout[3]
-   Inst                Dout_4_                                   Dout[4]
+   Inst               Block_0_                                  Block[0]
+   Inst               Block_1_                                  Block[1]
+   Inst               Block_2_                                  Block[2]
    Inst               Block_3_                                  Block[3]
    Inst               Block_4_                                  Block[4]
    Inst               Block_5_                                  Block[5]
    Inst               Block_6_                                  Block[6]
    Inst               Block_7_                                  Block[7]
-   Inst              Window_0_                                 Window[0]
-   Inst              Window_1_                                 Window[1]
-   Inst                   S_3_                                      S[3]
-   Inst               Block_0_                                  Block[0]
-   Inst               Block_1_                                  Block[1]
-   Inst               Block_2_                                  Block[2]
+   Inst                Dout_0_                                   Dout[0]
+   Inst                Dout_1_                                   Dout[1]
+   Inst                Dout_2_                                   Dout[2]
+   Inst                Dout_3_                                   Dout[3]
+   Inst                Dout_4_                                   Dout[4]
+   Inst                Dout_5_                                   Dout[5]
+   Inst                Dout_6_                                   Dout[6]
+   Inst                Dout_7_                                   Dout[7]
    Inst                   S_0_                                      S[0]
    Inst                   S_1_                                      S[1]
    Inst                   S_2_                                      S[2]
@@ -110,14 +101,6 @@ Design 'CRAM' created Sun May 24 23:37:58 2020
    Inst                   A_5_                                      A[5]
    Inst                   A_6_                                      A[6]
    Inst                   A_7_                                      A[7]
-   Inst                   A_8_                                      A[8]
-   Inst                   A_9_                                      A[9]
-   Inst                  A_10_                                     A[10]
-   Inst                  A_11_                                     A[11]
-   Inst                  A_12_                                     A[12]
-   Inst                  A_13_                                     A[13]
-   Inst                  A_14_                                     A[14]
-   Inst                  A_15_                                     A[15]
    Inst                   D_0_                                      D[0]
    Inst                   D_1_                                      D[1]
    Inst                   D_2_                                      D[2]
@@ -146,118 +129,123 @@ Design 'CRAM' created Sun May 24 23:37:58 2020
    Inst                  RD_5_                                     RD[5]
    Inst                  RD_6_                                     RD[6]
    Inst                  RD_7_                                     RD[7]
+   Inst                 S_i_1_                                    S_i[1]
    Inst               Ref_i_1_                                  Ref_i[1]
    Inst               Ref_i_0_                                  Ref_i[0]
-   Inst      un12_RA_i_m2_7__r                         un12_RA_i_m2_7_.r
-   Inst      un12_RA_i_m2_7__m                         un12_RA_i_m2_7_.m
-   Inst      un12_RA_i_m2_7__n                         un12_RA_i_m2_7_.n
-   Inst      un12_RA_i_m2_7__p                         un12_RA_i_m2_7_.p
-   Inst      un12_RA_i_m2_6__r                         un12_RA_i_m2_6_.r
-   Inst      un12_RA_i_m2_6__m                         un12_RA_i_m2_6_.m
-   Inst      un12_RA_i_m2_6__n                         un12_RA_i_m2_6_.n
-   Inst      un12_RA_i_m2_6__p                         un12_RA_i_m2_6_.p
-   Inst      un12_RA_i_m2_5__r                         un12_RA_i_m2_5_.r
-   Inst      un12_RA_i_m2_5__m                         un12_RA_i_m2_5_.m
-   Inst      un12_RA_i_m2_5__n                         un12_RA_i_m2_5_.n
-   Inst      un12_RA_i_m2_5__p                         un12_RA_i_m2_5_.p
-   Inst      un12_RA_i_m2_4__r                         un12_RA_i_m2_4_.r
-   Inst      un12_RA_i_m2_4__m                         un12_RA_i_m2_4_.m
-   Inst      un12_RA_i_m2_4__n                         un12_RA_i_m2_4_.n
-   Inst      un12_RA_i_m2_4__p                         un12_RA_i_m2_4_.p
-   Inst      un12_RA_i_m2_3__r                         un12_RA_i_m2_3_.r
-   Inst      un12_RA_i_m2_3__m                         un12_RA_i_m2_3_.m
-   Inst      un12_RA_i_m2_3__n                         un12_RA_i_m2_3_.n
-   Inst      un12_RA_i_m2_3__p                         un12_RA_i_m2_3_.p
-   Inst      un12_RA_i_m2_2__r                         un12_RA_i_m2_2_.r
-   Inst      un12_RA_i_m2_2__m                         un12_RA_i_m2_2_.m
-   Inst      un12_RA_i_m2_2__n                         un12_RA_i_m2_2_.n
-   Inst      un12_RA_i_m2_2__p                         un12_RA_i_m2_2_.p
-   Inst      un12_RA_i_m2_1__r                         un12_RA_i_m2_1_.r
-   Inst      un12_RA_i_m2_1__m                         un12_RA_i_m2_1_.m
-   Inst      un12_RA_i_m2_1__n                         un12_RA_i_m2_1_.n
-   Inst      un12_RA_i_m2_1__p                         un12_RA_i_m2_1_.p
-   Inst      un12_RA_i_m2_0__r                         un12_RA_i_m2_0_.r
-   Inst      un12_RA_i_m2_0__m                         un12_RA_i_m2_0_.m
-   Inst      un12_RA_i_m2_0__n                         un12_RA_i_m2_0_.n
-   Inst      un12_RA_i_m2_0__p                         un12_RA_i_m2_0_.p
-   Inst                 S_i_1_                                    S_i[1]
-   Inst               Ref_i_2_                                  Ref_i[2]
    Inst                 S_i_0_                                    S_i[0]
+   Inst           un12_RA_i_7_                              un12_RA_i[7]
+   Inst           un12_RA_i_6_                              un12_RA_i[6]
+   Inst           un12_RA_i_0_                              un12_RA_i[0]
    Inst                 S_i_2_                                    S_i[2]
-   Inst                 S_i_3_                                    S_i[3]
+   Inst             Block_i_3_                                Block_i[3]
+   Inst      un12_RA_i_a2_0_7_                         un12_RA_i_a2_0[7]
+   Inst                 A_i_6_                                    A_i[6]
+   Inst        un12_RA_i_a2_6_                           un12_RA_i_a2[6]
+   Inst             Block_i_2_                                Block_i[2]
+   Inst      un12_RA_i_a2_0_6_                         un12_RA_i_a2_0[6]
+   Inst                 A_i_0_                                    A_i[0]
+   Inst        un12_RA_i_a2_0_                           un12_RA_i_a2[0]
+   Inst            Window_i_2_                               Window_i[2]
+   Inst      un12_RA_i_a2_0_0_                         un12_RA_i_a2_0[0]
+   Inst               Ref_i_2_                                  Ref_i[2]
+   Inst                 A_i_7_                                    A_i[7]
+   Inst        un12_RA_i_a2_7_                           un12_RA_i_a2[7]
+   Inst           un12_RA_1__r                              un12_RA_1_.r
+   Inst           un12_RA_1__m                              un12_RA_1_.m
+   Inst           un12_RA_1__n                              un12_RA_1_.n
+   Inst           un12_RA_1__p                              un12_RA_1_.p
+   Inst           un12_RA_2__r                              un12_RA_2_.r
+   Inst           un12_RA_2__m                              un12_RA_2_.m
+   Inst           un12_RA_2__n                              un12_RA_2_.n
+   Inst           un12_RA_2__p                              un12_RA_2_.p
+   Inst           un12_RA_3__r                              un12_RA_3_.r
+   Inst           un12_RA_3__m                              un12_RA_3_.m
+   Inst           un12_RA_3__n                              un12_RA_3_.n
+   Inst           un12_RA_3__p                              un12_RA_3_.p
+   Inst           un12_RA_4__r                              un12_RA_4_.r
+   Inst           un12_RA_4__m                              un12_RA_4_.m
+   Inst           un12_RA_4__n                              un12_RA_4_.n
+   Inst           un12_RA_4__p                              un12_RA_4_.p
+   Inst           un12_RA_5__r                              un12_RA_5_.r
+   Inst           un12_RA_5__m                              un12_RA_5_.m
+   Inst           un12_RA_5__n                              un12_RA_5_.n
+   Inst           un12_RA_5__p                              un12_RA_5_.p
+   Inst           un12_RA_8__r                              un12_RA_8_.r
+   Inst           un12_RA_8__m                              un12_RA_8_.m
+   Inst           un12_RA_8__n                              un12_RA_8_.n
    Net                 gnd_n_n                                       GND
+   Net                  s_2__n                                      S[2]
    Net                  s_0__n                                      S[0]
    Net                  s_1__n                                      S[1]
-   Net                  s_2__n                                      S[2]
-   Net                  s_3__n                                      S[3]
+   Net        un12_ra_1__un3_n                            un12_RA_1_.un3
+   Net        un12_ra_1__un1_n                            un12_RA_1_.un1
    Net                ref_0__n                                    Ref[0]
+   Net        un12_ra_1__un0_n                            un12_RA_1_.un0
    Net                ref_1__n                                    Ref[1]
+   Net        un12_ra_2__un3_n                            un12_RA_2_.un3
    Net                ref_2__n                                    Ref[2]
+   Net        un12_ra_2__un1_n                            un12_RA_2_.un1
+   Net        un12_ra_2__un0_n                            un12_RA_2_.un0
+   Net        un12_ra_3__un3_n                            un12_RA_3_.un3
+   Net        un12_ra_3__un1_n                            un12_RA_3_.un1
+   Net        un12_ra_3__un0_n                            un12_RA_3_.un0
    Net             window_2__n                                 Window[2]
+   Net        un12_ra_4__un3_n                            un12_RA_4_.un3
    Net             window_3__n                                 Window[3]
+   Net        un12_ra_4__un1_n                            un12_RA_4_.un1
    Net             window_4__n                                 Window[4]
+   Net        un12_ra_4__un0_n                            un12_RA_4_.un0
    Net             window_5__n                                 Window[5]
+   Net        un12_ra_5__un3_n                            un12_RA_5_.un3
    Net              block_0__n                                  Block[0]
+   Net        un12_ra_5__un1_n                            un12_RA_5_.un1
    Net              block_1__n                                  Block[1]
+   Net        un12_ra_5__un0_n                            un12_RA_5_.un0
    Net              block_2__n                                  Block[2]
-   Net              block_3__n                                  Block[3]
-   Net    un12_ra_i_m2_7__un3_n                       un12_RA_i_m2_7_.un3
-   Net              block_4__n                                  Block[4]
-   Net    un12_ra_i_m2_7__un1_n                       un12_RA_i_m2_7_.un1
-   Net              block_5__n                                  Block[5]
-   Net    un12_ra_i_m2_7__un0_n                       un12_RA_i_m2_7_.un0
-   Net              block_6__n                                  Block[6]
-   Net    un12_ra_i_m2_6__un3_n                       un12_RA_i_m2_6_.un3
-   Net             window_0__n                                 Window[0]
-   Net    un12_ra_i_m2_6__un1_n                       un12_RA_i_m2_6_.un1
-   Net             window_1__n                                 Window[1]
-   Net    un12_ra_i_m2_6__un0_n                       un12_RA_i_m2_6_.un0
-   Net              block_7__n                                  Block[7]
-   Net    un12_ra_i_m2_5__un3_n                       un12_RA_i_m2_5_.un3
-   Net    un12_ra_i_m2_5__un1_n                       un12_RA_i_m2_5_.un1
-   Net               dout_0__n                                   Dout[0]
-   Net    un12_ra_i_m2_5__un0_n                       un12_RA_i_m2_5_.un0
-   Net               dout_1__n                                   Dout[1]
-   Net    un12_ra_i_m2_4__un3_n                       un12_RA_i_m2_4_.un3
-   Net               dout_2__n                                   Dout[2]
-   Net    un12_ra_i_m2_4__un1_n                       un12_RA_i_m2_4_.un1
-   Net               dout_3__n                                   Dout[3]
-   Net    un12_ra_i_m2_4__un0_n                       un12_RA_i_m2_4_.un0
-   Net               dout_4__n                                   Dout[4]
-   Net    un12_ra_i_m2_3__un3_n                       un12_RA_i_m2_3_.un3
-   Net               dout_5__n                                   Dout[5]
-   Net    un12_ra_i_m2_3__un1_n                       un12_RA_i_m2_3_.un1
-   Net               dout_6__n                                   Dout[6]
-   Net    un12_ra_i_m2_3__un0_n                       un12_RA_i_m2_3_.un0
-   Net               dout_7__n                                   Dout[7]
-   Net    un12_ra_i_m2_2__un3_n                       un12_RA_i_m2_2_.un3
-   Net    un12_ra_i_m2_2__un1_n                       un12_RA_i_m2_2_.un1
-   Net    un12_ra_i_m2_2__un0_n                       un12_RA_i_m2_2_.un0
-   Net    un12_ra_i_m2_1__un3_n                       un12_RA_i_m2_1_.un3
-   Net    un12_ra_i_m2_1__un1_n                       un12_RA_i_m2_1_.un1
-   Net    un12_ra_i_m2_1__un0_n                       un12_RA_i_m2_1_.un0
-   Net    un12_ra_i_m2_0__un3_n                       un12_RA_i_m2_0_.un3
-   Net    un12_ra_i_m2_0__un1_n                       un12_RA_i_m2_0_.un1
-   Net    un12_ra_i_m2_0__un0_n                       un12_RA_i_m2_0_.un0
    Net        un12_ra_8__un3_n                            un12_RA_8_.un3
+   Net              block_3__n                                  Block[3]
    Net        un12_ra_8__un1_n                            un12_RA_8_.un1
+   Net              block_4__n                                  Block[4]
    Net        un12_ra_8__un0_n                            un12_RA_8_.un0
+   Net              block_5__n                                  Block[5]
    Net        un12_ra_9__un3_n                            un12_RA_9_.un3
+   Net              block_6__n                                  Block[6]
    Net        un12_ra_9__un1_n                            un12_RA_9_.un1
+   Net             window_0__n                                 Window[0]
    Net        un12_ra_9__un0_n                            un12_RA_9_.un0
+   Net             window_1__n                                 Window[1]
    Net       un12_ra_10__un3_n                           un12_RA_10_.un3
+   Net              block_7__n                                  Block[7]
    Net       un12_ra_10__un1_n                           un12_RA_10_.un1
    Net       un12_ra_10__un0_n                           un12_RA_10_.un0
-   Net              ref_i_2__n                                  Ref_i[2]
-   Net                s_i_1__n                                    S_i[1]
+   Net               dout_0__n                                   Dout[0]
+   Net                 a_15__n                                     A[15]
+   Net               dout_1__n                                   Dout[1]
+   Net               dout_2__n                                   Dout[2]
+   Net                 a_14__n                                     A[14]
+   Net               dout_3__n                                   Dout[3]
+   Net               dout_4__n                                   Dout[4]
+   Net                 a_13__n                                     A[13]
+   Net               dout_5__n                                   Dout[5]
+   Net               dout_6__n                                   Dout[6]
+   Net                 a_12__n                                     A[12]
+   Net               dout_7__n                                   Dout[7]
+   Net                 a_11__n                                     A[11]
+   Net                 a_10__n                                     A[10]
+   Net                  a_9__n                                      A[9]
+   Net                  a_8__n                                      A[8]
+   Net                s_i_0__n                                    S_i[0]
    Net              ref_i_1__n                                  Ref_i[1]
    Net              ref_i_0__n                                  Ref_i[0]
+   Net                s_i_1__n                                    S_i[1]
    Net                s_i_2__n                                    S_i[2]
-   Net                s_i_3__n                                    S_i[3]
-   Net                s_i_0__n                                    S_i[0]
+   Net         window_i_0_2__n                             Window_i_0[2]
    Net                a_i_0__n                                    A_i[0]
-   Net                a_i_8__n                                    A_i[8]
-   Net               a_i_13__n                                   A_i[13]
+   Net          block_i_0_2__n                              Block_i_0[2]
+   Net              a_i_0_6__n                                  A_i_0[6]
+   Net          block_i_0_3__n                              Block_i_0[3]
+   Net              a_i_0_7__n                                  A_i_0[7]
+   Net              ref_i_2__n                                  Ref_i[2]
    Net                a_c_0__n                                    A_c[0]
    Net                  a_0__n                                      A[0]
    Net                a_c_1__n                                    A_c[1]
@@ -274,21 +262,6 @@ Design 'CRAM' created Sun May 24 23:37:58 2020
    Net                  a_6__n                                      A[6]
    Net                a_c_7__n                                    A_c[7]
    Net                  a_7__n                                      A[7]
-   Net                a_c_8__n                                    A_c[8]
-   Net                  a_8__n                                      A[8]
-   Net                a_c_9__n                                    A_c[9]
-   Net                  a_9__n                                      A[9]
-   Net               a_c_10__n                                   A_c[10]
-   Net                 a_10__n                                     A[10]
-   Net               a_c_11__n                                   A_c[11]
-   Net                 a_11__n                                     A[11]
-   Net               a_c_12__n                                   A_c[12]
-   Net                 a_12__n                                     A[12]
-   Net               a_c_13__n                                   A_c[13]
-   Net                 a_13__n                                     A[13]
-   Net               a_c_14__n                                   A_c[14]
-   Net                 a_14__n                                     A[14]
-   Net               a_c_15__n                                   A_c[15]
    Net                d_c_0__n                                    D_c[0]
    Net                  d_0__n                                      D[0]
    Net                d_c_1__n                                    D_c[1]
@@ -340,13 +313,6 @@ Section Type      Name
         Input     nWE
         Input     nIO1
         Input     nIO2
-        Input     nROML
-        Input     nROMH
-        Input     BA
-        Input     DelayIn
-        Input     nMode
-        Input     Size0
-        Input     Size1
         Input     A_14_
         Input     A_13_
         Input     A_12_
@@ -363,12 +329,12 @@ Section Type      Name
         Input     A_1_
         Input     A_0_
         Output     RA_11_
-        Output     nIRQ
-        Output     nDMA
         Output     nRAS
         Output     nCAS
         Output     nRWE
-        Output     DelayOut
+        Output     nMode
+        Output     Size0
+        Output     Size1
         Output     RA_10_
         Output     RA_9_
         Output     RA_8_
