@@ -1,4 +1,4 @@
-### Module positions - created on Thursday, May 14, 2020 at 06:26:41 PM ###
+### Module positions - created on Thursday, June 04, 2020 at 06:59:38 PM ###
 ### Printed by Pcbnew version kicad (5.1.5-0-10_14)
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -16,15 +16,17 @@ C11       2u2           C_0805                                         150.2020 
 C12       2u2           C_0805                                         138.0500   -53.3500  270.0000  top
 C13       2u2           C_0805                                         140.5500   -53.3500  270.0000  top
 C14       10p           C_0805                                         122.5000   -56.0500    0.0000  top
-FID1      Fiducial      Fiducial                                       104.9020   -49.6570    0.0000  top
-FID2      Fiducial      Fiducial                                       159.2580   -49.6570    0.0000  top
+FID1      Fiducial      Fiducial                                       105.0925   -49.5300    0.0000  top
+FID2      Fiducial      Fiducial                                       159.0675   -49.5300    0.0000  top
 FID3      Fiducial      Fiducial                                       158.7500   -85.4710    0.0000  top
 FID4      Fiducial      Fiducial                                       105.4100   -85.4710    0.0000  top
 JP1       Mode          PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left   107.9500   -55.8800    0.0000  top
 JP2       Size          PinHeader_2x02_P2.54mm_Vertical_SMD            153.0350   -76.5810    0.0000  top
 R1        0             R_0805                                         122.5000   -50.1500  180.0000  top
 R2        0             R_0805                                         122.5000   -52.6500  180.0000  top
+R3        1k            R_0805                                         119.2000   -53.7000   90.0000  top
 R3        1k            R_0805                                         122.5000   -58.0500    0.0000  top
+R3        1k            R_0805                                         119.2000   -57.1000   90.0000  top
 R4        470           R_0805                                         118.1100   -81.5950  270.0000  top
 R5        22k           R_0805                                         154.7470   -72.3900    0.0000  top
 R6        22k           R_0805                                         152.8420   -80.7720  180.0000  top
