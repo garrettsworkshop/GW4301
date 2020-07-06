@@ -1,4 +1,4 @@
-### Module positions - created on Thursday, June 04, 2020 at 06:59:38 PM ###
+### Module positions - created on Sunday, July 05, 2020 at 10:40:23 PM ###
 ### Printed by Pcbnew version kicad (5.1.5-0-10_14)
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -24,14 +24,14 @@ JP1       Mode          PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left   107.9500 
 JP2       Size          PinHeader_2x02_P2.54mm_Vertical_SMD            153.0350   -76.5810    0.0000  top
 R1        0             R_0805                                         122.5000   -50.1500  180.0000  top
 R2        0             R_0805                                         122.5000   -52.6500  180.0000  top
-R3        1k            R_0805                                         119.2000   -53.7000   90.0000  top
 R3        1k            R_0805                                         122.5000   -58.0500    0.0000  top
-R3        1k            R_0805                                         119.2000   -57.1000   90.0000  top
 R4        470           R_0805                                         118.1100   -81.5950  270.0000  top
 R5        22k           R_0805                                         154.7470   -72.3900    0.0000  top
 R6        22k           R_0805                                         152.8420   -80.7720  180.0000  top
 R7        22k           R_0805                                         109.6620   -51.8160  180.0000  top
+R8        22k           R_0805                                         119.2000   -53.7000  270.0000  top
+R9        22k           R_0805                                         119.2000   -57.1000   90.0000  top
+U1        M5LV-PQFP100  PQFP-100_14x20mm_P0.65mm                       129.5750   -69.9750  270.0000  top
+U2        DRAM_2Mx8     SOJ-28-300mil                                  153.0350   -61.5950    0.0000  top
 U3        LD1117S33     SOT-223                                        109.3500   -67.3000   90.0000  top
-U4        M5LV-PQFP100  PQFP-100_14x20mm_P0.65mm                       129.5750   -69.9750  270.0000  top
-U6        DRAM_2Mx8     SOJ-28-300mil                                  153.0350   -61.5950    0.0000  top
 ## End

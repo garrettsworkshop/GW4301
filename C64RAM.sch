@@ -25,10 +25,10 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L GW_RAM:DRAM-2Mx8-SOP-28 U6
+L GW_RAM:DRAM-2Mx8-SOP-28 U2
 U 1 1 5D8FA7A6
 P 7950 5450
-F 0 "U6" H 7950 6317 50  0000 C CNN
+F 0 "U2" H 7950 6317 50  0000 C CNN
 F 1 "DRAM_2Mx8" H 7950 6226 50  0000 C CNN
 F 2 "stdpads:SOJ-28-300mil" H 7950 4600 50  0001 C CNN
 F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C8008.pdf" H 7950 4900 50  0001 C CNN
@@ -780,10 +780,10 @@ F 3 "~" H 4550 4000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J4
+L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5E20123D
 P 5450 6600
-F 0 "J4" H 5500 6900 50  0000 C CNN
+F 0 "J2" H 5500 6900 50  0000 C CNN
 F 1 "JTAG" H 5500 6300 50  0000 C CNN
 F 2 "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical" H 5450 6600 50  0001 C CNN
 F 3 "~" H 5450 6600 50  0001 C CNN
@@ -1089,10 +1089,10 @@ BA
 Text Label 3400 5450 0    50   ~ 0
 ~ROML~
 $Comp
-L GW_PLD:M5LV-PQFP-100 U4
+L GW_PLD:M5LV-PQFP-100 U1
 U 1 1 5DEF5C07
 P 2350 5150
-F 0 "U4" H 2350 7800 50  0000 C CNN
+F 0 "U1" H 2350 7800 50  0000 C CNN
 F 1 "M5LV-PQFP100" H 2350 7700 50  0000 C BNN
 F 2 "stdpads:PQFP-100_14x20mm_P0.65mm" H 2350 2550 50  0001 C TNN
 F 3 "" H 2350 5150 50  0001 C CNN
@@ -1247,4 +1247,54 @@ $EndComp
 Wire Wire Line
 	1100 4950 1100 5000
 Connection ~ 1100 4950
+$Comp
+L Device:R_Small R9
+U 1 1 5EF96489
+P 4950 5450
+F 0 "R9" H 4891 5496 50  0000 R CNN
+F 1 "22k" H 4891 5405 50  0000 R CNN
+F 2 "stdpads:R_0805" H 4950 5450 50  0001 C CNN
+F 3 "~" H 4950 5450 50  0001 C CNN
+	1    4950 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 5EF9648F
+P 4650 5450
+F 0 "R8" H 4591 5496 50  0000 R CNN
+F 1 "22k" H 4591 5405 50  0000 R CNN
+F 2 "stdpads:R_0805" H 4650 5450 50  0001 C CNN
+F 3 "~" H 4650 5450 50  0001 C CNN
+	1    4650 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 5EF98E13
+P 4950 5550
+F 0 "#PWR0128" H 4950 5300 50  0001 C CNN
+F 1 "GND" H 4950 5400 50  0000 C CNN
+F 2 "" H 4950 5550 50  0001 C CNN
+F 3 "" H 4950 5550 50  0001 C CNN
+	1    4950 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0129
+U 1 1 5EF99287
+P 4650 5350
+F 0 "#PWR0129" H 4650 5200 50  0001 C CNN
+F 1 "+3V3" H 4650 5500 50  0000 C CNN
+F 2 "" H 4650 5350 50  0001 C CNN
+F 3 "" H 4650 5350 50  0001 C CNN
+	1    4650 5350
+	1    0    0    -1  
+$EndComp
+Text Label 4950 5350 2    50   ~ 0
+TCK
+Text Label 4600 5550 2    50   ~ 0
+TMS
+Wire Wire Line
+	4600 5550 4650 5550
 $EndSCHEMATC
