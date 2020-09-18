@@ -4,10 +4,10 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 2
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "GW4301A"
+Date "2020-09-18"
+Rev "1.0"
+Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
 Comment3 ""
