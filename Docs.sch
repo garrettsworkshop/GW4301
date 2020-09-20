@@ -109,8 +109,6 @@ Wire Wire Line
 	6300 1350 6350 1450
 Wire Wire Line
 	6350 1450 7500 1450
-Wire Wire Line
-	4000 1500 4400 1500
 Text Notes 1050 1300 2    50   ~ 0
 DotCk (8 MHz)
 Text Notes 1050 1450 2    50   ~ 0
@@ -122,38 +120,15 @@ Wire Wire Line
 Wire Wire Line
 	1550 1450 3900 1450
 Wire Wire Line
-	1600 1500 1650 1600
-Wire Wire Line
 	1650 1500 1700 1600
-Wire Wire Line
-	1700 1500 1750 1600
 Wire Wire Line
 	1750 1500 1800 1600
 Wire Wire Line
 	1800 1500 1850 1600
 Wire Wire Line
-	1600 1600 1650 1600
-Wire Wire Line
 	3950 1600 4000 1500
-Connection ~ 1650 1600
-Wire Wire Line
-	1650 1600 1700 1600
-Connection ~ 1700 1600
-Wire Wire Line
-	1700 1600 1750 1600
-Connection ~ 1750 1600
-Wire Wire Line
-	1750 1600 1800 1600
-Connection ~ 1800 1600
-Wire Wire Line
-	1800 1600 1850 1600
-Connection ~ 1850 1600
-Wire Wire Line
-	3950 1600 4350 1600
 Wire Wire Line
 	4350 1600 4400 1500
-Connection ~ 3950 1600
-Connection ~ 4400 1500
 Wire Wire Line
 	4000 1600 4050 1500
 Wire Wire Line
@@ -169,14 +144,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 1600 4350 1500
 Wire Wire Line
-	1850 1500 1900 1600
-Wire Wire Line
 	1900 1500 1950 1600
-Wire Wire Line
-	2000 1600 3950 1600
-Wire Wire Line
-	1850 1600 2000 1600
-Connection ~ 2000 1600
 Wire Wire Line
 	1950 1500 2000 1600
 Wire Notes Line
@@ -266,61 +234,13 @@ Wire Wire Line
 Wire Wire Line
 	6500 1500 6550 1600
 Wire Wire Line
-	6550 1500 6600 1600
-Wire Wire Line
 	6600 1500 6650 1600
-Wire Wire Line
-	6400 1600 6450 1600
-Connection ~ 6450 1600
-Wire Wire Line
-	6450 1600 6500 1600
-Connection ~ 6500 1600
-Wire Wire Line
-	6500 1600 6550 1600
-Connection ~ 6550 1600
-Wire Wire Line
-	6550 1600 6600 1600
-Connection ~ 6600 1600
-Wire Wire Line
-	6600 1600 6650 1600
-Connection ~ 6650 1600
 Wire Wire Line
 	6650 1500 6700 1600
 Wire Wire Line
 	6700 1500 6750 1600
 Wire Wire Line
-	6800 1600 7500 1600
-Wire Wire Line
-	6650 1600 6800 1600
-Connection ~ 6800 1600
-Wire Wire Line
 	6750 1500 6800 1600
-Wire Wire Line
-	4400 1500 6350 1500
-Connection ~ 6350 1500
-Wire Wire Line
-	6350 1500 6400 1500
-Connection ~ 6400 1500
-Wire Wire Line
-	6400 1500 6450 1500
-Connection ~ 6450 1500
-Wire Wire Line
-	6450 1500 6500 1500
-Connection ~ 6500 1500
-Wire Wire Line
-	6500 1500 6550 1500
-Connection ~ 6550 1500
-Wire Wire Line
-	6550 1500 6600 1500
-Connection ~ 6600 1500
-Wire Wire Line
-	6600 1500 6650 1500
-Connection ~ 6650 1500
-Wire Wire Line
-	6650 1500 6700 1500
-Connection ~ 6700 1500
-Wire Wire Line
-	6700 1500 6750 1500
 Wire Wire Line
 	5150 2050 5700 2050
 Wire Wire Line
@@ -395,4 +315,18 @@ Wire Wire Line
 	5100 2100 5150 2200
 Wire Wire Line
 	3950 2100 5100 2100
+Wire Wire Line
+	1700 1500 1750 1600
+Wire Wire Line
+	1600 1500 1650 1600
+Wire Wire Line
+	1850 1500 1900 1600
+Wire Wire Line
+	1600 1600 4350 1600
+Wire Wire Line
+	4000 1500 6750 1500
+Wire Wire Line
+	6550 1500 6600 1600
+Wire Wire Line
+	6400 1600 7500 1600
 $EndSCHEMATC
