@@ -191,34 +191,6 @@ Wire Wire Line
 	1100 1350 1500 1350
 Wire Wire Line
 	1100 1500 1950 1500
-Text Notes 1050 1900 2    50   ~ 0
-~RAS~(rd)
-Text Notes 1050 2050 2    50   ~ 0
-~CAS~(rd)
-Wire Wire Line
-	1100 1800 3300 1800
-Wire Wire Line
-	3300 1800 3350 1900
-Wire Wire Line
-	1100 1950 2700 1950
-Wire Wire Line
-	2700 1950 2750 2050
-Wire Wire Line
-	2750 2050 3900 2050
-Wire Wire Line
-	3900 2050 3950 1950
-Wire Wire Line
-	3350 1900 3900 1900
-Wire Wire Line
-	3900 1900 3950 1800
-Wire Wire Line
-	3950 1950 5100 1950
-Wire Wire Line
-	4500 1800 4550 1900
-Wire Wire Line
-	5100 1950 5150 2050
-Wire Wire Line
-	3950 1800 4500 1800
 Wire Notes Line
 	6850 1150 6850 1050
 Text Notes 7100 1150 0    50   ~ 0
@@ -242,80 +214,6 @@ Wire Wire Line
 Wire Wire Line
 	6750 1500 6800 1600
 Wire Wire Line
-	5150 2050 5700 2050
-Wire Wire Line
-	5700 2050 5750 1950
-Wire Wire Line
-	4550 1900 5700 1900
-Wire Wire Line
-	5700 1900 5750 1800
-Text Notes 1050 2500 2    50   ~ 0
-RA
-Wire Wire Line
-	1100 2400 4800 2400
-Wire Wire Line
-	4800 2400 4850 2500
-Wire Wire Line
-	1100 2500 4800 2500
-Wire Wire Line
-	4800 2500 4850 2400
-Wire Wire Line
-	4850 2400 6000 2400
-Wire Wire Line
-	6000 2400 6050 2500
-Wire Wire Line
-	4850 2500 6000 2500
-Wire Wire Line
-	6050 2500 7500 2500
-Wire Wire Line
-	5750 1800 7500 1800
-Wire Wire Line
-	5750 1950 7500 1950
-Text Notes 1050 2200 2    50   ~ 0
-~RAS~(wr)
-Text Notes 1050 2350 2    50   ~ 0
-~CAS~(wr)
-Wire Wire Line
-	1100 2100 3300 2100
-Wire Wire Line
-	3300 2100 3350 2200
-Wire Wire Line
-	1100 2250 2700 2250
-Wire Wire Line
-	2700 2250 2750 2350
-Wire Wire Line
-	2750 2350 3900 2350
-Wire Wire Line
-	3900 2350 3950 2250
-Wire Wire Line
-	3350 2200 3900 2200
-Wire Wire Line
-	3900 2200 3950 2100
-Wire Wire Line
-	3950 2250 5700 2250
-Wire Wire Line
-	5700 2250 5750 2350
-Wire Wire Line
-	5750 2350 6300 2350
-Wire Wire Line
-	6300 2350 6350 2250
-Wire Wire Line
-	6300 2200 6350 2100
-Wire Wire Line
-	6350 2100 7500 2100
-Wire Wire Line
-	6350 2250 7500 2250
-Wire Wire Line
-	6050 2400 7500 2400
-Wire Wire Line
-	6000 2500 6050 2400
-Wire Wire Line
-	5150 2200 6300 2200
-Wire Wire Line
-	5100 2100 5150 2200
-Wire Wire Line
-	3950 2100 5100 2100
-Wire Wire Line
 	1700 1500 1750 1600
 Wire Wire Line
 	1600 1500 1650 1600
@@ -329,4 +227,144 @@ Wire Wire Line
 	6550 1500 6600 1600
 Wire Wire Line
 	6400 1600 7500 1600
+Wire Wire Line
+	3950 2250 4500 2250
+Wire Wire Line
+	4500 2250 4550 2350
+Wire Wire Line
+	4550 2350 6300 2350
+Wire Wire Line
+	6000 2650 6050 2550
+Wire Wire Line
+	6050 2550 7500 2550
+Wire Wire Line
+	6350 2400 7500 2400
+Wire Wire Line
+	6350 2250 7500 2250
+Wire Wire Line
+	6300 2350 6350 2250
+Wire Wire Line
+	6300 2500 6350 2400
+Wire Wire Line
+	5750 2500 6300 2500
+Wire Wire Line
+	5700 2400 5750 2500
+Wire Wire Line
+	3950 2400 5700 2400
+Wire Wire Line
+	3900 2350 3950 2250
+Wire Wire Line
+	3350 2350 3900 2350
+Wire Wire Line
+	3900 2500 3950 2400
+Wire Wire Line
+	2750 2500 3900 2500
+Wire Wire Line
+	2700 2400 2750 2500
+Wire Wire Line
+	1100 2400 2700 2400
+Wire Wire Line
+	3300 2250 3350 2350
+Wire Wire Line
+	1100 2250 3300 2250
+Text Notes 1050 2500 2    50   ~ 0
+~CAS~ (write)
+Text Notes 1050 2350 2    50   ~ 0
+~RAS~ (write)
+Wire Wire Line
+	5750 2100 7500 2100
+Wire Wire Line
+	5750 1950 7500 1950
+Wire Wire Line
+	6050 2650 7500 2650
+Wire Wire Line
+	4850 2650 6000 2650
+Wire Wire Line
+	6000 2550 6050 2650
+Wire Wire Line
+	4850 2550 6000 2550
+Wire Wire Line
+	4800 2650 4850 2550
+Wire Wire Line
+	1100 2650 4800 2650
+Wire Wire Line
+	4800 2550 4850 2650
+Wire Wire Line
+	1100 2550 4800 2550
+Text Notes 1050 2650 2    50   ~ 0
+RA
+Wire Wire Line
+	5700 2050 5750 1950
+Wire Wire Line
+	4550 2050 5700 2050
+Wire Wire Line
+	5700 2200 5750 2100
+Wire Wire Line
+	5150 2200 5700 2200
+Wire Wire Line
+	3950 1950 4500 1950
+Wire Wire Line
+	5100 2100 5150 2200
+Wire Wire Line
+	4500 1950 4550 2050
+Wire Wire Line
+	3950 2100 5100 2100
+Wire Wire Line
+	3900 2050 3950 1950
+Wire Wire Line
+	3350 2050 3900 2050
+Wire Wire Line
+	3900 2200 3950 2100
+Wire Wire Line
+	2750 2200 3900 2200
+Wire Wire Line
+	2700 2100 2750 2200
+Wire Wire Line
+	1100 2100 2700 2100
+Wire Wire Line
+	3300 1950 3350 2050
+Wire Wire Line
+	1100 1950 3300 1950
+Text Notes 1050 2200 2    50   ~ 0
+~CAS~ (read)
+Text Notes 1050 2050 2    50   ~ 0
+~RAS~ (read)
+Wire Wire Line
+	5150 1650 7500 1650
+Wire Wire Line
+	5100 1750 5150 1650
+Wire Wire Line
+	4550 1750 5100 1750
+Wire Wire Line
+	3950 1650 4500 1650
+Wire Wire Line
+	4500 1650 4550 1750
+Wire Wire Line
+	3900 1750 3950 1650
+Wire Wire Line
+	3350 1750 3900 1750
+Wire Wire Line
+	3900 1900 3950 1800
+Wire Wire Line
+	2750 1900 3900 1900
+Wire Wire Line
+	2700 1800 2750 1900
+Wire Wire Line
+	1100 1800 2700 1800
+Wire Wire Line
+	3300 1650 3350 1750
+Wire Wire Line
+	1100 1650 3300 1650
+Text Notes 1050 1750 2    50   ~ 0
+~RAS~ (idle)
+Text Notes 1050 1900 2    50   ~ 0
+~CAS~ (idle)
+Wire Wire Line
+	3950 1800 7500 1800
+Text Notes 4050 2650 0    50   ~ 0
+row address
+Text Notes 5100 2650 0    50   ~ 0
+column address
+Text Notes 6250 2650 0    50   ~ 0
+row address
 $EndSCHEMATC
