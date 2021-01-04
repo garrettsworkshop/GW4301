@@ -412,7 +412,7 @@ $EndComp
 Wire Wire Line
 	4800 3700 4700 3700
 Wire Wire Line
-	4700 3700 4700 4000
+	4700 3700 4700 3750
 Wire Wire Line
 	4700 4000 4650 4000
 Wire Wire Line
@@ -1297,4 +1297,12 @@ Text Label 4600 5550 2    50   ~ 0
 TMS
 Wire Wire Line
 	4600 5550 4650 5550
+Wire Wire Line
+	4450 3700 4450 3750
+Wire Wire Line
+	4450 3750 4700 3750
+Connection ~ 4450 3700
+Connection ~ 4700 3750
+Wire Wire Line
+	4700 3750 4700 4000
 $EndSCHEMATC
