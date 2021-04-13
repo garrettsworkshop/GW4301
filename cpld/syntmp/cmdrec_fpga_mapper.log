@@ -1,9 +1,0 @@
-C:\ispLEVER_Classic2_0\synpbase\bin64\m_cpld.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  C:\users\zane\documents\github\cram\cpld  -part M5LV-256   -RWCheckOnRam 1 -areadelay 0 -minc -summaryfile C:\users\zane\documents\github\cram\cpld\synlog\report\CRAM_fpga_mapper.xml -top_level_module  CRAM  -multisrs  -oedif  C:\users\zane\documents\github\cram\cpld\CRAM.edi  -freq 1.000  C:\users\zane\documents\github\cram\cpld\synwork\CRAM_mult.srs  -ologparam  C:\users\zane\documents\github\cram\cpld\syntmp\CRAM.plg  -osyn  C:\users\zane\documents\github\cram\cpld\CRAM.srm  -prjdir  c:\users\zane\documents\github\cram\cpld\  -prjname  CRAM  -log  C:\users\zane\documents\github\cram\cpld\synlog\CRAM_fpga_mapper.srr 
-rc:0 success:1
-C:\users\zane\documents\github\cram\cpld\CRAM.edi|o|1590626750|78985
-C:\users\zane\documents\github\cram\cpld\synwork\CRAM_mult.srs|i|1590626750|4764
-C:\users\zane\documents\github\cram\cpld\syntmp\CRAM.plg|o|1590626750|0
-C:\users\zane\documents\github\cram\cpld\CRAM.srm|o|1590626750|28734
-C:\users\zane\documents\github\cram\cpld\synlog\CRAM_fpga_mapper.srr|o|1590626750|1452
-C:\ispLEVER_Classic2_0\synpbase\bin\m_cpld.exe|i|1399387284|7067648
-C:\ispLEVER_Classic2_0\synpbase\bin64\m_cpld.exe|i|1399390122|8049664

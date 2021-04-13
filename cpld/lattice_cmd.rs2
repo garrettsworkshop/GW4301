@@ -1,1 +1,0 @@
--src c64ram.tt4 -type PLA -devfile "C:/ispLEVER_Classic2_0/ispcpld/dat/mach5/mach256100ce.dev" -lci "c64ram.lct" -touch "c64ram.tt4"

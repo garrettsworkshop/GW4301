@@ -1,2 +1,0 @@
-@E: CL123 :"C:\users\zane\documents\github\cram\cpld\cram.v":84:1:84:6|Logic for Dout[7:0] does not match a standard flip-flop
-
