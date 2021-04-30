@@ -66,28 +66,26 @@ Text Label 6700 4950 2    50   ~ 0
 RA2
 Text Label 6700 4850 2    50   ~ 0
 RA3
-Text Label 4600 5450 0    50   ~ 0
-A0
-Text Label 4600 5250 0    50   ~ 0
-A1
-Text Label 4600 5050 0    50   ~ 0
-A2
-Text Label 4600 4850 0    50   ~ 0
-A3
-Text Label 4600 4250 0    50   ~ 0
-A4
 Text Label 4600 4050 0    50   ~ 0
-A5
+A0
 Text Label 4600 3850 0    50   ~ 0
-A6
+A1
+Text Label 4600 4250 0    50   ~ 0
+A2
 Text Label 4600 3650 0    50   ~ 0
+A3
+Text Label 4600 5050 0    50   ~ 0
+A4
+Text Label 4600 5450 0    50   ~ 0
+A5
+Text Label 4600 5250 0    50   ~ 0
+A6
+Text Label 4600 4850 0    50   ~ 0
 A7
 Text Label 6700 3650 2    50   ~ 0
 RA7
 Text Label 6700 3750 2    50   ~ 0
 RA6
-Text Label 6700 3850 2    50   ~ 0
-RA5
 Text Label 6700 3950 2    50   ~ 0
 RA4
 Text Label 4600 5350 0    50   ~ 0
@@ -131,19 +129,19 @@ W5
 Wire Wire Line
 	4600 5150 4700 5150
 Wire Wire Line
-	4600 5250 4700 5250
+	4600 3850 4700 3850
 Wire Wire Line
 	4600 5350 4700 5350
 Wire Wire Line
-	4600 5450 4700 5450
+	4600 4050 4700 4050
 Wire Wire Line
 	4600 4750 4700 4750
 Wire Wire Line
-	4600 4850 4700 4850
+	4600 3650 4700 3650
 Wire Wire Line
 	4600 4950 4700 4950
 Wire Wire Line
-	4600 5050 4700 5050
+	4600 4250 4700 4250
 Wire Wire Line
 	5700 5250 5500 5250
 Connection ~ 5700 4550
@@ -207,11 +205,11 @@ F 3 "" H 5500 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 3850 4700 3850
+	4600 5250 4700 5250
 Wire Wire Line
 	4600 3750 4700 3750
 Wire Wire Line
-	4600 3650 4700 3650
+	4600 4850 4700 4850
 Wire Wire Line
 	4600 3550 4700 3550
 $Comp
@@ -233,11 +231,11 @@ Wire Wire Line
 Wire Wire Line
 	4600 4150 4700 4150
 Wire Wire Line
-	4600 4250 4700 4250
+	4600 5050 4700 5050
 Wire Wire Line
 	4600 3950 4700 3950
 Wire Wire Line
-	4600 4050 4700 4050
+	4600 5450 4700 5450
 Wire Wire Line
 	5500 4050 5700 4050
 $Comp
@@ -476,6 +474,8 @@ Wire Wire Line
 	5800 4250 5800 4450
 Text Notes 6900 3950 0    50   ~ 0
 U16D forces SDRAM A10 high as\npart of the precharge all command.\n\nU16C forces SDRAM A5 high as\npart of the mode register.
+Text Label 6700 3850 2    50   ~ 0
+RA5
 Wire Bus Line
 	4200 2850 4200 3350
 Wire Bus Line
