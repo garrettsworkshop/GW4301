@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title "GW4301A"
-Date "2020-09-18"
-Rev "1.0"
+Date "2021-05-02"
+Rev "1.2"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
