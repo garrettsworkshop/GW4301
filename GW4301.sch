@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 2
 Title "GW4301A"
-Date "2020-09-18"
-Rev "1.0"
+Date "2021-05-02"
+Rev "1.2"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
@@ -1044,8 +1044,6 @@ Text Label 3400 5950 0    50   ~ 0
 DotClk
 Text Label 3400 5650 0    50   ~ 0
 ~IO2~
-Text Label 1300 5850 2    50   ~ 0
-~DMA~
 Text Label 3400 2950 0    50   ~ 0
 RA0
 Text Label 3400 3150 0    50   ~ 0
@@ -1084,10 +1082,6 @@ Text Label 1300 4450 2    50   ~ 0
 RD1
 Text Label 3400 4150 0    50   ~ 0
 D0
-Text Label 1300 5950 2    50   ~ 0
-BA
-Text Label 3400 5450 0    50   ~ 0
-~ROML~
 $Comp
 L GW_PLD:M5LV-PQFP-100 U1
 U 1 1 5DEF5C07
@@ -1103,8 +1097,6 @@ Text Label 1300 6450 2    50   ~ 0
 D2
 Text Label 1300 5550 2    50   ~ 0
 R~W~
-Text Label 1300 5450 2    50   ~ 0
-~IRQ~
 Text Label 3400 3050 0    50   ~ 0
 RA7
 Text Label 1300 2950 2    50   ~ 0
@@ -1158,26 +1150,10 @@ NoConn ~ 1300 5250
 NoConn ~ 1300 5350
 NoConn ~ 1300 5750
 NoConn ~ 1300 6150
-Text Label 1300 6550 2    50   ~ 0
-~ROMH~
 Text Label 1300 6650 2    50   ~ 0
 ~RESET~
-Text Label 1300 6750 2    50   ~ 0
-~NMI~
 Text Label 1300 6850 2    50   ~ 0
 PHI2
-Text Label 3400 6550 0    50   ~ 0
-A15
-Text Label 3400 6450 0    50   ~ 0
-A14
-Text Label 3400 6350 0    50   ~ 0
-A13
-Text Label 3400 6250 0    50   ~ 0
-A12
-Text Label 3400 5350 0    50   ~ 0
-A11
-Text Label 3400 5250 0    50   ~ 0
-A10
 Text Label 3400 4450 0    50   ~ 0
 A6
 Text Label 3400 4350 0    50   ~ 0
@@ -1190,10 +1166,6 @@ Text Label 3400 3950 0    50   ~ 0
 A1
 Text Label 3400 3850 0    50   ~ 0
 A0
-Text Label 3400 5150 0    50   ~ 0
-A9
-Text Label 3400 4950 0    50   ~ 0
-A8
 Text Label 3400 4550 0    50   ~ 0
 A7
 Text Label 3400 5550 0    50   ~ 0
@@ -1305,4 +1277,18 @@ Connection ~ 4450 3700
 Connection ~ 4700 3750
 Wire Wire Line
 	4700 3750 4700 4000
+NoConn ~ 3400 5450
+NoConn ~ 1300 6750
+NoConn ~ 1300 6550
+NoConn ~ 1300 5450
+NoConn ~ 1300 5850
+NoConn ~ 1300 5950
+NoConn ~ 3400 4950
+NoConn ~ 3400 5150
+NoConn ~ 3400 5250
+NoConn ~ 3400 5350
+NoConn ~ 3400 6250
+NoConn ~ 3400 6350
+NoConn ~ 3400 6450
+NoConn ~ 3400 6550
 $EndSCHEMATC
