@@ -24,3 +24,5 @@ fp-info-cache
 
 *.DS_Store
 Documentation/~$4301AManual.docx
+cpld/c64ram.jid
+cpld/syndos.env
