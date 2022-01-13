@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 6 6
+Sheet 3 5
 Title ""
 Date ""
 Rev ""
@@ -58,14 +58,6 @@ F 3 "" H 5500 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5500 5450
-Text Label 6700 5150 2    50   ~ 0
-RA0
-Text Label 6700 5050 2    50   ~ 0
-RA1
-Text Label 6700 4950 2    50   ~ 0
-RA2
-Text Label 6700 4850 2    50   ~ 0
-RA3
 Text Label 4600 4050 0    50   ~ 0
 A0
 Text Label 4600 3850 0    50   ~ 0
@@ -82,12 +74,6 @@ Text Label 4600 5250 0    50   ~ 0
 A6
 Text Label 4600 4850 0    50   ~ 0
 A7
-Text Label 6700 3650 2    50   ~ 0
-RA7
-Text Label 6700 3750 2    50   ~ 0
-RA6
-Text Label 6700 3950 2    50   ~ 0
-RA4
 Text Label 4600 5350 0    50   ~ 0
 B0
 Text Label 4600 5150 0    50   ~ 0
@@ -104,24 +90,14 @@ Text Label 4600 3750 0    50   ~ 0
 B6
 Text Label 4600 3550 0    50   ~ 0
 B7
-Text Label 6700 3550 2    50   ~ 0
-RA8
-Text Label 6700 3450 2    50   ~ 0
-RA9
 Text Label 4300 3250 0    50   ~ 0
 W0
 Text Label 4300 3150 0    50   ~ 0
 W1
-Text Label 6700 3150 2    50   ~ 0
-RA10
-Text Label 6700 2950 2    50   ~ 0
-RA11
 Text Label 4300 3050 0    50   ~ 0
 W2
 Text Label 4300 2950 0    50   ~ 0
 W3
-Text Label 6700 2850 2    50   ~ 0
-RBA0
 Text Label 4300 2850 0    50   ~ 0
 W4
 Text Label 4300 2750 0    50   ~ 0
@@ -149,36 +125,6 @@ Wire Wire Line
 	5700 4550 4100 4550
 Wire Wire Line
 	5700 4550 5700 5250
-Wire Wire Line
-	6700 5150 5500 5150
-Wire Wire Line
-	5500 5050 6700 5050
-Wire Wire Line
-	6700 4950 5500 4950
-Wire Wire Line
-	5500 4850 6700 4850
-Wire Wire Line
-	6700 3950 5500 3950
-Wire Wire Line
-	5500 3750 6700 3750
-$Comp
-L 74xx:74LS32 U?
-U 4 1 6061EDB0
-P 6200 3150
-AR Path="/CF1C1573/6061EDB0" Ref="U?"  Part="1" 
-AR Path="/6061EDB0" Ref="U?"  Part="1" 
-AR Path="/6060D166/6061EDB0" Ref="U16"  Part="4" 
-F 0 "U16" H 6200 3150 50  0000 C CNN
-F 1 "74LVC32" H 6200 2950 50  0000 C CNN
-F 2 "stdpads:TSSOP-14_4.4x5mm_P0.65mm" H 6200 3150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 6200 3150 50  0001 C CNN
-	4    6200 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5700 3550 6700 3550
-Wire Wire Line
-	6700 3450 5800 3450
 Wire Wire Line
 	5700 3250 5700 3550
 Wire Wire Line
@@ -252,30 +198,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 5100 3650 50  0001 C CNN
 	1    5100 3900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 3650 6700 3650
-Wire Wire Line
-	6700 3150 6500 3150
-Wire Wire Line
-	6700 3850 6500 3850
-$Comp
-L 74xx:74LS32 U?
-U 3 1 6061EDE7
-P 6200 4150
-AR Path="/CF1C1573/6061EDE7" Ref="U?"  Part="1" 
-AR Path="/6061EDE7" Ref="U?"  Part="1" 
-AR Path="/6060D166/6061EDE7" Ref="U16"  Part="3" 
-F 0 "U16" H 6200 4150 50  0000 C CNN
-F 1 "74LVC32" H 6200 3950 50  0000 C CNN
-F 2 "stdpads:TSSOP-14_4.4x5mm_P0.65mm" H 6200 4150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 6200 4150 50  0001 C CNN
-	3    6200 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6500 3850 6500 4150
-Text Label 6700 2750 2    50   ~ 0
-RBA1
 Text HLabel 4100 2850 0    50   Input ~ 0
 W[5..0]
 Text HLabel 4100 4550 0    50   Input ~ 0
@@ -403,11 +325,9 @@ Entry Wire Line
 Wire Bus Line
 	4100 2850 4200 2850
 Wire Wire Line
-	4300 2750 6700 2750
+	4300 2750 7300 2750
 Wire Wire Line
-	4300 2850 6700 2850
-Wire Wire Line
-	4300 2950 6700 2950
+	4300 2850 7300 2850
 Wire Wire Line
 	4300 3050 5900 3050
 Wire Wire Line
@@ -416,44 +336,20 @@ Wire Wire Line
 	4300 3250 5700 3250
 Wire Wire Line
 	4250 3350 5900 3350
-Text HLabel 6900 2850 2    50   Input ~ 0
+Text HLabel 7500 2850 2    50   Input ~ 0
 RBA[1..0]
 Entry Wire Line
-	6800 2950 6700 2850
+	7400 2950 7300 2850
 Entry Wire Line
-	6800 2850 6700 2750
+	7400 2850 7300 2750
 Wire Bus Line
-	6900 2850 6800 2850
+	7500 2850 7400 2850
 Wire Bus Line
-	6800 2850 6800 2950
-Entry Wire Line
-	6800 3250 6700 3150
-Entry Wire Line
-	6800 3050 6700 2950
+	7400 2850 7400 2950
 Wire Bus Line
-	6900 3050 6800 3050
-Text HLabel 6900 3050 2    50   Input ~ 0
+	7500 3050 7400 3050
+Text HLabel 7500 3050 2    50   Input ~ 0
 RA[11..0]
-Entry Wire Line
-	6800 3650 6700 3550
-Entry Wire Line
-	6800 3550 6700 3450
-Entry Wire Line
-	6800 3750 6700 3650
-Entry Wire Line
-	6800 3950 6700 3850
-Entry Wire Line
-	6800 3850 6700 3750
-Entry Wire Line
-	6800 4050 6700 3950
-Entry Wire Line
-	6800 5050 6700 4950
-Entry Wire Line
-	6800 4950 6700 4850
-Entry Wire Line
-	6800 5150 6700 5050
-Entry Wire Line
-	6800 5250 6700 5150
 Wire Wire Line
 	4250 3400 4250 3350
 Wire Wire Line
@@ -472,10 +368,149 @@ Wire Wire Line
 	5900 4250 5800 4250
 Wire Wire Line
 	5800 4250 5800 4450
-Text Notes 6900 3950 0    50   ~ 0
+Text Notes 7500 3950 0    50   ~ 0
 U16D forces SDRAM A10 high as\npart of the precharge all command.\n\nU16C forces SDRAM A5 high as\npart of the mode register.
-Text Label 6700 3850 2    50   ~ 0
+Wire Wire Line
+	7300 5150 5500 5150
+Wire Wire Line
+	5500 5050 7300 5050
+Wire Wire Line
+	5500 4850 7300 4850
+Wire Wire Line
+	7300 4950 5500 4950
+Wire Wire Line
+	7300 3950 5500 3950
+Wire Wire Line
+	5500 3750 7300 3750
+Wire Wire Line
+	7300 3850 7100 3850
+Wire Wire Line
+	5500 3650 7300 3650
+Wire Wire Line
+	7300 3450 5800 3450
+Wire Wire Line
+	5700 3550 7300 3550
+Wire Wire Line
+	4300 2950 7300 2950
+Entry Wire Line
+	7400 5250 7300 5150
+Entry Wire Line
+	7400 5150 7300 5050
+Entry Wire Line
+	7400 4950 7300 4850
+Entry Wire Line
+	7400 5050 7300 4950
+Entry Wire Line
+	7400 4050 7300 3950
+Entry Wire Line
+	7400 3850 7300 3750
+Entry Wire Line
+	7400 3950 7300 3850
+Entry Wire Line
+	7400 3750 7300 3650
+Entry Wire Line
+	7400 3550 7300 3450
+Entry Wire Line
+	7400 3650 7300 3550
+Entry Wire Line
+	7400 3050 7300 2950
+Entry Wire Line
+	7400 3250 7300 3150
+Text Label 7300 3850 2    50   ~ 0
 RA5
+Text Label 7300 2750 2    50   ~ 0
+RBA1
+Text Label 7300 2850 2    50   ~ 0
+RBA0
+Text Label 7300 2950 2    50   ~ 0
+RA11
+Text Label 7300 3150 2    50   ~ 0
+RA10
+Text Label 7300 3450 2    50   ~ 0
+RA9
+Text Label 7300 3550 2    50   ~ 0
+RA8
+Text Label 7300 3950 2    50   ~ 0
+RA4
+Text Label 7300 3750 2    50   ~ 0
+RA6
+Text Label 7300 3650 2    50   ~ 0
+RA7
+Text Label 7300 4850 2    50   ~ 0
+RA3
+Text Label 7300 4950 2    50   ~ 0
+RA2
+Text Label 7300 5050 2    50   ~ 0
+RA1
+Text Label 7300 5150 2    50   ~ 0
+RA0
+$Comp
+L 74xx:74LS02 U?
+U 3 1 64E55E47
+P 6200 4150
+AR Path="/606ED367/64E55E47" Ref="U?"  Part="1" 
+AR Path="/64E55E47" Ref="U?"  Part="1" 
+AR Path="/6060D166/64E55E47" Ref="U8"  Part="3" 
+F 0 "U8" H 6200 4150 50  0000 C CNN
+F 1 "74LVC02" H 6200 4350 50  0000 C CNN
+F 2 "stdpads:TSSOP-14_4.4x5mm_P0.65mm" H 6200 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6200 4150 50  0001 C CNN
+	3    6200 4150
+	1    0    0    1   
+$EndComp
+$Comp
+L 74xx:74LS02 U?
+U 4 1 64E60EEF
+P 6800 4150
+AR Path="/606ED367/64E60EEF" Ref="U?"  Part="1" 
+AR Path="/64E60EEF" Ref="U?"  Part="1" 
+AR Path="/6060D166/64E60EEF" Ref="U8"  Part="4" 
+F 0 "U8" H 6800 4150 50  0000 C CNN
+F 1 "74LVC02" H 6800 4350 50  0000 C CNN
+F 2 "stdpads:TSSOP-14_4.4x5mm_P0.65mm" H 6800 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6800 4150 50  0001 C CNN
+	4    6800 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7100 4150 7100 3850
+Wire Wire Line
+	6500 4050 6500 4150
+Connection ~ 6500 4150
+Wire Wire Line
+	6500 4150 6500 4250
+$Comp
+L 74xx:74LS02 U?
+U 1 1 64E69A1A
+P 6200 3150
+AR Path="/606ED367/64E69A1A" Ref="U?"  Part="1" 
+AR Path="/64E69A1A" Ref="U?"  Part="1" 
+AR Path="/6060D166/64E69A1A" Ref="U8"  Part="1" 
+F 0 "U8" H 6200 3150 50  0000 C CNN
+F 1 "74LVC02" H 6200 3350 50  0000 C CNN
+F 2 "stdpads:TSSOP-14_4.4x5mm_P0.65mm" H 6200 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6200 3150 50  0001 C CNN
+	1    6200 3150
+	1    0    0    1   
+$EndComp
+$Comp
+L 74xx:74LS02 U?
+U 2 1 64E6CFE8
+P 6800 3150
+AR Path="/606ED367/64E6CFE8" Ref="U?"  Part="1" 
+AR Path="/64E6CFE8" Ref="U?"  Part="1" 
+AR Path="/6060D166/64E6CFE8" Ref="U8"  Part="2" 
+F 0 "U8" H 6800 3150 50  0000 C CNN
+F 1 "74LVC02" H 6800 3350 50  0000 C CNN
+F 2 "stdpads:TSSOP-14_4.4x5mm_P0.65mm" H 6800 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6800 3150 50  0001 C CNN
+	2    6800 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7300 3150 7100 3150
+Wire Wire Line
+	6500 3050 6500 3150
 Wire Bus Line
 	4200 2850 4200 3350
 Wire Bus Line
@@ -483,5 +518,8 @@ Wire Bus Line
 Wire Bus Line
 	4200 3650 4200 4350
 Wire Bus Line
-	6800 3050 6800 5250
+	7400 3050 7400 5250
+Connection ~ 6500 3150
+Wire Wire Line
+	6500 3150 6500 3250
 $EndSCHEMATC
