@@ -24,3 +24,6 @@ fp-info-cache
 
 *.DS_Store
 Documentation/~$4301AManual.docx
+Documentation/~$4301BManual.docx
+GW4301-backups/*
+*.kicad_prl
